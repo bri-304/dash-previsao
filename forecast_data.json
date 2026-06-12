@@ -63,7 +63,7 @@
     [9,  "Ter", 17, 17, 17, "real",    ""],
     [10, "Qua", 17, 17, 17, "real", "Dia normal"],
     [11, "Qui", 13, 13, 13, "real",    "⚽ Copa: abertura (MEX×RSA) 16h"],
-    [12, "Sex", 16, 14, 18, "parcial",    "💝 Dia dos Namorados"],
+    [12, "Sex", 16, 14, 18, "partial",    "💝 Dia dos Namorados"],
     [13, "Sáb",  6,  5,  7, "copa",    "⚽ BR × Marrocos 19h — 1º jogo do Brasil"],
     [14, "Dom",  2,  1,  3, "weekend", "Pós-jogo"],
     [15, "Seg", 16, 14, 18, "work",    "Bolão 2 abre"],
