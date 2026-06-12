@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forecast Junho 2026 — Consolide</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root {
+  --bg:#060c19;--surface:#0b1425;--card:#0f1b30;--card2:#131f35;--border:#1a2a44;--border2:#223252;
+  --blue:#2563eb;--blue-l:#3b82f6;--blue-d:rgba(59,130,246,.18);
+  --gold:#f59e0b;--gold-l:#fbbf24;--gold-d:rgba(245,158,11,.15);
+  --green:#10b981;--green-d:rgba(16,185,129,.15);
+  --red:#ef4444;--red-d:rgba(239,68,68,.14);
+  --amber:#f97316;--amber-d:rgba(249,115,22,.15);
+  --purple:#818cf8;--purple-d:rgba(129,140,248,.15);
+  --text:#dde4f0;--muted:#4e6282;--dim:#7a93b4;
+  --fh:'Barlow Condensed',sans-serif;--fm:'JetBrains Mono',monospace;--fb:'Barlow',sans-serif;
+  --r:8px;--rl:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100vh;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(37,99,235,.08),transparent);pointer-events:none;z-index:0}
+
+/* HEADER */
+.hdr{background:rgba(6,12,25,.93);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;backdrop-filter:blur(16px)}
+.hdr-l{display:flex;align-items:center;gap:16px}
+.logo{background:var(--blue);color:#fff;font-family:var(--fh);font-weight:900;font-size:15px;letter-spacing:2.5px;padding:5px 12px;border-radius:4px}
+.hdr-title{font-family:var(--fh);font-weight:800;font-size:20px}
+.hdr-title em{color:var(--gold);font-style:normal}
+.hdr-sub{font-family:var(--fm);font-size:10px;color:var(--muted);margin-top:2px}
+.hdr-r{display:flex;gap:8px;align-items:center}
+.badge{font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 10px;border-radius:4px;text-transform:uppercase}
+.badge-gold{background:var(--gold-d);border:1px solid rgba(245,158,11,.4);color:var(--gold)}
+.badge-purple{background:var(--purple-d);border:1px solid rgba(129,140,248,.4);color:var(--purple)}
+
+/* LAYOUT */
+.wrap{max-width:1440px;margin:0 auto;padding:24px 28px;position:relative;z-index:1}
+.sec-title{font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.sec-title::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* KPI STRIP */
+.kpi-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:22px}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;position:relative;overflow:hidden;transition:border-color .2s}
+.kpi:hover{border-color:var(--border2)}
+.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.kpi.c-blue::before{background:var(--blue-l)}.kpi.c-gold::before{background:var(--gold)}
+.kpi.c-green::before{background:var(--green)}.kpi.c-amber::before{background:var(--amber)}
+.kpi.c-purple::before{background:var(--purple)}
+.kpi-lbl{font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.kpi-val{font-family:var(--fh);font-size:38px;font-weight:900;line-height:1}
+.kpi-val.blue{color:var(--blue-l)}.kpi-val.gold{color:var(--gold)}.kpi-val.green{color:var(--green)}.kpi-val.amber{color:var(--amber)}.kpi-val.purple{color:var(--purple)}
+.kpi-sub{font-family:var(--fm);font-size:10px;color:var(--muted);margin-top:5px}
+.delta{display:inline-flex;align-items:center;gap:2px;font-family:var(--fm);font-size:10px;padding:2px 6px;border-radius:3px;margin-top:4px}
+.delta.up{background:var(--green-d);color:var(--green)}.delta.dn{background:var(--red-d);color:var(--red)}
+
+/* RANGE KPI SPECIAL */
+.range-wrap{display:flex;align-items:baseline;gap:5px;margin:4px 0}
+.range-lo{font-family:var(--fh);font-size:20px;font-weight:700;color:#f87171;opacity:.85}
+.range-hi{font-family:var(--fh);font-size:20px;font-weight:700;color:#34d399;opacity:.85}
+.range-sep{font-family:var(--fm);font-size:12px;color:var(--muted)}
+.range-c{font-family:var(--fh);font-size:38px;font-weight:900;line-height:1;color:var(--blue-l)}
+.range-lbls{display:flex;justify-content:space-between;font-family:var(--fm);font-size:9px;color:var(--muted);margin-top:2px;letter-spacing:.3px}
+
+/* CHART */
+.chart-box{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);padding:22px;margin-bottom:22px}
+.chart-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;flex-wrap:wrap;gap:10px}
+.chart-title{font-family:var(--fh);font-weight:800;font-size:19px}
+.legend{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.leg{display:flex;align-items:center;gap:5px;font-family:var(--fm);font-size:10px;color:var(--dim)}
+.leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.leg-dash{width:18px;height:2px;border-radius:1px;border-top:2px dashed}
+.chart-note{font-family:var(--fm);font-size:10px;color:var(--muted);margin-bottom:14px;padding:8px 12px;background:rgba(129,140,248,.07);border-left:2px solid rgba(129,140,248,.4);border-radius:0 4px 4px 0}
+.chart-canvas{position:relative;height:330px}
+
+/* METHODOLOGY BOX */
+.method-box{background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.2);border-radius:var(--r);padding:14px 18px;margin-bottom:22px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.method-item{}
+.method-type{font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--blue-l);margin-bottom:3px}
+.method-val{font-family:var(--fm);font-size:13px;color:var(--text)}
+.method-desc{font-family:var(--fb);font-size:11px;color:var(--muted)}
+
+/* WEEKS */
+.week-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:22px}
+.week-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px}
+.week-lbl{font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.week-dates{font-family:var(--fm);font-size:10px;color:var(--muted);margin-bottom:10px}
+.week-num{font-family:var(--fh);font-size:38px;font-weight:900;line-height:1}
+.week-range{font-family:var(--fm);font-size:10px;color:var(--muted);margin-top:3px}
+.week-avg{font-family:var(--fm);font-size:10px;color:var(--muted);margin-top:2px}
+.week-tags{margin-top:10px;display:flex;flex-direction:column;gap:4px}
+.wtag{font-size:11px;padding:3px 7px;border-radius:3px;background:rgba(255,255,255,.04);color:var(--dim)}
+.wtag.copa{background:var(--purple-d);color:var(--purple)}.wtag.hot{background:var(--amber-d);color:var(--amber)}
+.wtag.ok{background:var(--green-d);color:var(--green)}.wtag.warn{background:var(--red-d);color:var(--red)}
+
+/* TABLE */
+.tbl-box{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;margin-bottom:22px}
+.tbl-toggle{width:100%;background:none;border:none;padding:14px 20px;color:var(--text);font-family:var(--fh);font-size:13px;font-weight:700;letter-spacing:1px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
+.tbl-toggle:hover{background:var(--card2)}
+.tbl-toggle .arr{transition:transform .3s;color:var(--muted)}
+.tbl-content{display:none}.tbl-content.open{display:block}
+table{width:100%;border-collapse:collapse}
+th{background:rgba(0,0,0,.3);font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);padding:9px 14px;text-align:left;border-bottom:1px solid var(--border)}
+th.th-range{text-align:center}
+td{padding:7px 14px;border-bottom:1px solid rgba(26,42,68,.4);font-size:12px}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--card2)}
+.td-day{font-family:var(--fm);color:var(--muted);width:32px}
+.td-dow{font-family:var(--fh);font-weight:700;font-size:13px}
+.td-range{font-family:var(--fm);font-size:11px;white-space:nowrap;text-align:center}
+.r-lo{color:#f87171;opacity:.8;font-size:11px}
+.r-hi{color:#34d399;opacity:.8;font-size:11px}
+.r-c{font-size:18px;font-weight:700;font-family:var(--fh)}
+.r-sep{color:var(--muted);font-size:10px;padding:0 3px}
+.td-bar{padding:7px 14px 7px 0}
+.bar-bg{height:6px;background:var(--border);border-radius:3px;overflow:hidden;width:100px}
+.bar-fill{height:100%;border-radius:3px}
+.pill{display:inline-flex;font-family:var(--fm);font-size:9px;padding:2px 6px;border-radius:3px;font-weight:600;letter-spacing:.5px}
+.pill-real{background:var(--green-d);color:var(--green)}.pill-part{background:rgba(245,158,11,.2);color:var(--gold)}
+.pill-fore{background:var(--blue-d);color:var(--blue-l)}.pill-hol{background:var(--red-d);color:var(--red)}
+.pill-wknd{background:rgba(100,116,139,.15);color:var(--muted)}.pill-copa{background:var(--purple-d);color:var(--purple)}
+.pill-spr{background:var(--amber-d);color:var(--amber)}
+.td-event{font-size:11px;color:var(--muted);font-style:italic;max-width:200px}
+
+/* TEAMS */
+.teams-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}
+.team-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden}
+.team-hdr{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.team-hdr.isr{background:rgba(37,99,235,.1)}.team-hdr.lis{background:rgba(245,158,11,.1)}.team-hdr.stl{background:rgba(16,185,129,.1)}
+.team-name{font-family:var(--fh);font-weight:900;font-size:15px;letter-spacing:.3px}
+.team-name.isr{color:var(--blue-l)}.team-name.lis{color:var(--gold)}.team-name.stl{color:var(--green)}
+.team-ldr{font-family:var(--fm);font-size:9px;color:var(--muted)}
+.team-nums{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--border)}
+.tn{padding:12px 14px;border-right:1px solid var(--border)}.tn:last-child{border-right:none}
+.tn-lbl{font-family:var(--fm);font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:3px}
+.tn-val{font-family:var(--fh);font-size:24px;font-weight:900;line-height:1}
+.tn-val.isr{color:var(--blue-l)}.tn-val.lis{color:var(--gold)}.tn-val.stl{color:var(--green)}
+.perf-list{padding:12px 16px}
+.perf-lbl{font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.perf-row{display:flex;align-items:center;gap:7px;margin-bottom:6px}
+.perf-name{font-family:var(--fb);font-size:11px;flex:0 0 130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.perf-bar-bg{flex:1;height:5px;background:var(--border);border-radius:2px;overflow:hidden}
+.perf-bar{height:100%;border-radius:2px}
+.perf-num{font-family:var(--fm);font-size:10px;color:var(--dim);min-width:22px;text-align:right}
+.perf-jun{font-family:var(--fm);font-size:10px;padding:1px 5px;border-radius:2px;min-width:22px;text-align:center}
+.jun-hot{background:var(--green-d);color:var(--green)}.jun-0{color:var(--muted)}
+.team-alert{margin:0 16px 12px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:5px;padding:8px 10px;font-size:11px;color:#f87171;line-height:1.5}
+.team-ok{margin:0 16px 12px;background:var(--green-d);border:1px solid rgba(16,185,129,.2);border-radius:5px;padding:8px 10px;font-size:11px;color:#34d399;line-height:1.5}
+
+/* BOTTLENECKS */
+.risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}
+.risk-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px;border-left:3px solid}
+.risk-card.risk{border-left-color:var(--red)}.risk-card.warn{border-left-color:var(--gold)}
+.risk-card.info{border-left-color:var(--purple)}.risk-card.oppt{border-left-color:var(--green)}
+.risk-date{font-family:var(--fm);font-size:11px;font-weight:600;margin-bottom:5px}
+.risk-card.risk .risk-date{color:var(--red)}.risk-card.warn .risk-date{color:var(--gold)}
+.risk-card.info .risk-date{color:var(--purple)}.risk-card.oppt .risk-date{color:var(--green)}
+.risk-title{font-family:var(--fh);font-size:15px;font-weight:800;margin-bottom:5px}
+.risk-desc{font-family:var(--fb);font-size:12px;color:var(--dim);line-height:1.55}
+.risk-pill{display:inline-flex;gap:4px;align-items:center;background:var(--border);padding:3px 8px;border-radius:3px;font-family:var(--fm);font-size:10px;color:var(--dim);margin-top:7px}
+
+/* COPA */
+.copa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}
+.copa-card{background:rgba(129,140,248,.07);border:1px solid rgba(129,140,248,.25);border-radius:var(--r);padding:16px}
+.copa-num{font-family:var(--fm);font-size:10px;color:var(--purple);margin-bottom:5px;letter-spacing:1px}
+.copa-match{font-family:var(--fh);font-size:22px;font-weight:900;margin-bottom:2px}
+.copa-dt{font-family:var(--fm);font-size:11px;color:var(--muted);margin-bottom:12px}
+.copa-row{display:flex;justify-content:space-between;align-items:center;background:rgba(129,140,248,.1);padding:8px 10px;border-radius:4px;margin-bottom:6px}
+.copa-row-lbl{font-family:var(--fb);font-size:11px;color:var(--dim)}
+.copa-row-val{font-family:var(--fh);font-size:15px;font-weight:700;color:var(--purple)}
+.copa-tip{font-size:11px;color:var(--dim);margin-top:8px;line-height:1.5}
+
+/* STRATEGIES */
+.strat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:22px}
+.strat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:20px}
+.strat-n{font-family:var(--fh);font-size:44px;font-weight:900;color:var(--border2);line-height:1;margin-bottom:6px}
+.strat-title{font-family:var(--fh);font-size:16px;font-weight:800;margin-bottom:8px}
+.strat-desc{font-family:var(--fb);font-size:12px;color:var(--dim);line-height:1.65}
+.strat-desc strong{color:var(--text);font-weight:600}
+.strat-tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:5px}
+.stag{font-family:var(--fm);font-size:9px;padding:2px 7px;border-radius:3px;background:var(--border);color:var(--muted)}
+
+/* LOADING OVERLAY */
+.data-loading{position:fixed;bottom:16px;right:16px;background:rgba(37,99,235,.15);border:1px solid rgba(59,130,246,.3);border-radius:6px;padding:8px 14px;font-family:var(--fm);font-size:10px;color:var(--blue-l);z-index:999;display:none}
+
+.footer{text-align:center;padding:28px;font-family:var(--fm);font-size:10px;color:var(--muted);border-top:1px solid var(--border);margin-top:8px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{opacity:0;animation:fadeUp .5s ease forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.1s}.d3{animation-delay:.15s}.d4{animation-delay:.2s}.d5{animation-delay:.25s}.d6{animation-delay:.3s}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+@media(max-width:1100px){.kpi-strip{grid-template-columns:repeat(3,1fr)}.teams-grid{grid-template-columns:1fr}.method-box{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.wrap{padding:14px}.kpi-strip{grid-template-columns:repeat(2,1fr)}.week-grid{grid-template-columns:repeat(2,1fr)}.strat-grid,.copa-grid,.risk-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- Loading indicator (aparece enquanto busca forecast_data.json) -->
+<div class="data-loading" id="loading-indicator">⟳ Atualizando dados...</div>
+
+<header class="hdr">
+  <div class="hdr-l">
+    <span class="logo">CONSOLIDE</span>
+    <div>
+      <div class="hdr-title">Forecast de Vendas — <em>Junho 2026</em></div>
+      <!-- ▼ PLACEHOLDER: data de atualização e status dos dias confirmados -->
+      <div class="hdr-sub" id="hdr-sub">Atualizado em 05/06/2026 · Dias 1–4 confirmados · Dia 5 parcial · Dias 6–30 com intervalo de confiança</div>
+    </div>
+  </div>
+  <div class="hdr-r">
+    <span class="badge badge-gold">⚡ CONSOLIGA T1 · Mês 2/3</span>
+    <span class="badge badge-purple">⚽ Copa do Mundo 2026</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- KPI STRIP -->
+<div class="sec-title fade-in d1">indicadores-chave do mês</div>
+<div class="kpi-strip fade-in d1">
+
+  <div class="kpi c-blue">
+    <div class="kpi-lbl">Total Previsto (com margem)</div>
+    <div class="range-wrap">
+      <!-- ▼ PLACEHOLDER: cenário pessimista -->
+      <span class="range-lo" id="kpi-total-pess">325</span>
+      <span class="range-sep">—</span>
+      <!-- ▼ PLACEHOLDER: cenário central (animado por counter) -->
+      <span class="range-c" id="kpi1">0</span>
+      <span class="range-sep">—</span>
+      <!-- ▼ PLACEHOLDER: cenário otimista -->
+      <span class="range-hi" id="kpi-total-otim">455</span>
+    </div>
+    <div class="range-lbls"><span>pessimista</span><span>central</span><span>otimista</span></div>
+    <div class="kpi-sub">vendas · junho/2026</div>
+    <!-- ▼ PLACEHOLDER: delta vs mês anterior -->
+    <div class="delta up" id="kpi-total-delta">▲ +0,5% vs maio (central)</div>
+  </div>
+
+  <div class="kpi c-gold">
+    <div class="kpi-lbl">Média / Dia Útil</div>
+    <!-- ▼ PLACEHOLDER: média central por dia útil -->
+    <div class="kpi-val gold" id="kpi-media-val">17,2</div>
+    <div class="range-lbls" style="justify-content:flex-start;gap:6px">
+      <!-- ▼ PLACEHOLDER: mínimo e máximo da média diária -->
+      <span style="color:#f87171" id="kpi-media-min">15,5 mín</span>
+      <span style="color:#34d399" id="kpi-media-max">21,6 máx</span>
+    </div>
+    <div class="kpi-sub">vendas por dia útil estimado</div>
+    <div class="delta up">▲ vs 14,0 jun/2025</div>
+  </div>
+
+  <div class="kpi c-green">
+    <div class="kpi-lbl">Realizado até hoje</div>
+    <!-- ▼ PLACEHOLDER: total realizado acumulado (animado por counter) -->
+    <div class="kpi-val green" id="kpi3">0</div>
+    <!-- ▼ PLACEHOLDER: descrição dos dias confirmados -->
+    <div class="kpi-sub" id="kpi-realizado-sub">vendas confirmadas (dias 1–4 + est. dia 5)</div>
+    <!-- ▼ PLACEHOLDER: % do total previsto já realizado -->
+    <div class="delta up" id="kpi-realizado-delta">▲ 15,9% do total previsto</div>
+  </div>
+
+  <div class="kpi c-amber">
+    <div class="kpi-lbl">vs Junho 2025</div>
+    <!-- ▼ PLACEHOLDER: variação YoY central -->
+    <div class="kpi-val amber" id="kpi-yoy-pct">+31%</div>
+    <div class="range-lbls" style="justify-content:flex-start;gap:6px">
+      <!-- ▼ PLACEHOLDER: variação YoY pessimista e otimista -->
+      <span style="color:#f87171" id="kpi-yoy-pess">+9% pess.</span>
+      <span style="color:#34d399" id="kpi-yoy-otim">+53% otim.</span>
+    </div>
+    <!-- ▼ PLACEHOLDER: comparativo absoluto central vs ano anterior -->
+    <div class="kpi-sub" id="kpi-yoy-sub">390 central vs 298 ano anterior</div>
+    <div class="delta up">▲ crescimento YoY</div>
+  </div>
+
+  <div class="kpi c-purple">
+    <div class="kpi-lbl">Vendedores Ativos</div>
+    <!-- ▼ PLACEHOLDER: quantidade de vendedores ativos -->
+    <div class="kpi-val purple" id="kpi-ativos">28</div>
+    <!-- ▼ PLACEHOLDER: descrição dos times -->
+    <div class="kpi-sub" id="kpi-ativos-sub">em 3 times competindo</div>
+    <!-- ▼ PLACEHOLDER: inativos/férias -->
+    <div class="delta dn" id="kpi-inativos-delta">▼ 8 inativos / férias</div>
+  </div>
+
+</div>
+
+<!-- CHART -->
+<div class="sec-title fade-in d2">previsão diária com intervalo de confiança — junho 2026</div>
+
+<div class="method-box fade-in d2">
+  <div class="method-item">
+    <div class="method-type">Dias úteis normais</div>
+    <div class="method-val">± 15%</div>
+    <div class="method-desc">Variância histórica estável por dia da semana</div>
+  </div>
+  <div class="method-item">
+    <div class="method-type">Dias de Copa</div>
+    <div class="method-val">± 22%</div>
+    <div class="method-desc">Incerteza de comportamento em dias de jogo do Brasil</div>
+  </div>
+  <div class="method-item">
+    <div class="method-type">Sprint final (29–30)</div>
+    <div class="method-val">± 28%</div>
+    <div class="method-desc">Alta pressão CONSOLIGA: teto maior, risco de queima também</div>
+  </div>
+  <div class="method-item">
+    <div class="method-type">Finais de semana</div>
+    <div class="method-val">± 30%</div>
+    <div class="method-desc">Volume baixo com variação proporcional mais alta</div>
+  </div>
+</div>
+
+<!-- ▼ GRÁFICO: atualizado automaticamente via array dias[] — ver script -->
+<div class="chart-box fade-in d2">
+  <div class="chart-hdr">
+    <div>
+      <div class="chart-title">Vendas por Dia · Junho 2026</div>
+    </div>
+    <div class="legend">
+      <!-- Indicadores de realizado: barra estreita sólida -->
+      <div class="leg">
+        <div style="display:flex;align-items:flex-end;gap:1px;height:14px">
+          <div style="width:10px;height:14px;background:rgba(34,197,94,0.32);border:1px solid rgba(34,197,94,0.6);border-radius:2px"></div>
+          <div style="width:5px;height:14px;background:#22c55e;border-radius:2px;margin-left:-7px"></div>
+        </div>
+        Real confirmado
+      </div>
+      <div class="leg">
+        <div style="display:flex;align-items:flex-end;gap:1px;height:14px">
+          <div style="width:10px;height:14px;background:rgba(245,158,11,0.32);border:1px solid rgba(245,158,11,0.6);border-radius:2px"></div>
+          <div style="width:5px;height:14px;background:#f59e0b;border-radius:2px;margin-left:-7px"></div>
+        </div>
+        Parcial (hoje)
+      </div>
+      <!-- Previsão por tipo: barra larga semitransparente -->
+      <div class="leg"><div class="leg-dot" style="background:rgba(59,130,246,0.45);border:1px solid rgba(59,130,246,0.7)"></div>Prev. dia útil</div>
+      <div class="leg"><div class="leg-dot" style="background:rgba(129,140,248,0.45);border:1px solid rgba(129,140,248,0.7)"></div>Copa</div>
+      <div class="leg"><div class="leg-dot" style="background:rgba(249,115,22,0.45);border:1px solid rgba(249,115,22,0.7)"></div>Sprint</div>
+      <div class="leg">
+        <div style="width:18px;height:8px;background:rgba(59,130,246,0.18);border:1px dashed rgba(100,160,255,0.5);border-radius:2px"></div>
+        Intervalo de confiança
+      </div>
+    </div>
+  </div>
+  <div class="chart-note">
+    Cada dia exibe <strong>duas barras sobrepostas</strong>: a <strong>barra larga semitransparente</strong> representa a previsão central (todos os dias); a <strong>barra estreita e sólida</strong> (verde/âmbar) aparece apenas nos dias com vendas confirmadas ou parciais.
+    A faixa tracejada é o intervalo de confiança (mín–máx). · Acumulado no eixo direito (laranja).
+  </div>
+  <div class="chart-canvas"><canvas id="mainChart"></canvas></div>
+</div>
+
+<!-- WEEKLY -->
+<div class="sec-title fade-in d3">resumo por semana</div>
+<div class="week-grid fade-in d3">
+
+  <!-- ▼ SEMANA 1: números atualizados via applyWeeks() -->
+  <div class="week-card">
+    <div class="week-lbl">Semana 1</div>
+    <div class="week-dates">01 a 07/06</div>
+    <div class="week-num" id="week1-num" style="color:var(--green)">67</div>
+    <div class="week-range" style="color:var(--muted)">intervalo:
+      <span style="color:#f87171" id="week1-min">61</span> —
+      <span style="color:#34d399" id="week1-max">75</span>
+    </div>
+    <div class="week-avg" id="week1-avg">~12,4/dia útil · impacto feriado</div>
+    <div class="week-tags">
+      <span class="wtag warn">⛔ Corpus Christi 04/06</span>
+      <span class="wtag warn">⛔ Pto. Fac. 05/06</span>
+      <span class="wtag ok">✅ Dias 1–4 confirmados</span>
+    </div>
+  </div>
+
+  <!-- ▼ SEMANA 2: números atualizados via applyWeeks() -->
+  <div class="week-card">
+    <div class="week-lbl">Semana 2</div>
+    <div class="week-dates">08 a 14/06</div>
+    <div class="week-num" id="week2-num" style="color:var(--blue-l)">94</div>
+    <div class="week-range" style="color:var(--muted)">intervalo:
+      <span style="color:#f87171" id="week2-min">78</span> —
+      <span style="color:#34d399" id="week2-max">111</span>
+    </div>
+    <div class="week-avg" id="week2-avg">~17,2/dia útil · retorno forte</div>
+    <div class="week-tags">
+      <span class="wtag ok">↩ Retorno pós-4 dias de feriado</span>
+      <span class="wtag copa">⚽ Copa abre 11/06 (16h)</span>
+      <span class="wtag copa">⚽ BR × Marrocos 13/06 (19h)</span>
+    </div>
+  </div>
+
+  <!-- ▼ SEMANA 3: números atualizados via applyWeeks() -->
+  <div class="week-card">
+    <div class="week-lbl">Semana 3</div>
+    <div class="week-dates">15 a 21/06</div>
+    <div class="week-num" id="week3-num" style="color:var(--blue-l)">93</div>
+    <div class="week-range" style="color:var(--muted)">intervalo:
+      <span style="color:#f87171" id="week3-min">77</span> —
+      <span style="color:#34d399" id="week3-max">109</span>
+    </div>
+    <div class="week-avg" id="week3-avg">~17,6/dia útil · semana cheia</div>
+    <div class="week-tags">
+      <span class="wtag ok">Semana completa de trabalho</span>
+      <span class="wtag copa">⚽ BR × Haiti 19/06 (21h30)</span>
+      <span class="wtag hot">🎯 Deadline Bolão 2 · 19/06</span>
+    </div>
+  </div>
+
+  <!-- ▼ SEMANA 4: números atualizados via applyWeeks() -->
+  <div class="week-card">
+    <div class="week-lbl">Semana 4</div>
+    <div class="week-dates">22 a 30/06</div>
+    <div class="week-num" id="week4-num" style="color:var(--amber)">136</div>
+    <div class="week-range" style="color:var(--muted)">intervalo:
+      <span style="color:#f87171" id="week4-min">109</span> —
+      <span style="color:#34d399" id="week4-max">160</span>
+    </div>
+    <div class="week-avg" id="week4-avg">~18,7/dia útil · sprint final!</div>
+    <div class="week-tags">
+      <span class="wtag copa">⚽ BR × Escócia 24/06 (19h)</span>
+      <span class="wtag hot">🏁 Fechamento CONSOLIGA</span>
+      <span class="wtag hot">📈 29–30/06: pico do mês</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- DAILY TABLE -->
+<div class="sec-title fade-in d3">tabela diária — mínimo · central · máximo</div>
+<!-- ▼ TABELA: regenerada automaticamente via renderTable() quando dias[] é atualizado -->
+<div class="tbl-box fade-in d3">
+  <button class="tbl-toggle" onclick="toggleTable()">
+    <span>▶ Ver / ocultar tabela completa dos 30 dias com margens</span>
+    <span class="arr" id="tbl-arr">▼</span>
+  </button>
+  <div class="tbl-content" id="tbl-body">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th><th>Dia</th>
+          <th class="th-range" colspan="3">Mín — Central — Máx</th>
+          <th style="width:110px">Barra (central)</th>
+          <th>Tipo</th><th>Observação</th>
+        </tr>
+      </thead>
+      <tbody id="tbl-rows"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TEAMS -->
+<div class="sec-title fade-in d4">desempenho por time — maio real vs junho previsto</div>
+<div class="teams-grid fade-in d4">
+  <div class="team-card">
+    <div class="team-hdr isr">
+      <div>
+        <div class="team-name isr">🔵 Israel Riella</div>
+        <div class="team-ldr">10 ativos · inativos: Angélica, Andressa, Dhulia, Tayna</div>
+      </div>
+    </div>
+    <div class="team-nums">
+      <div class="tn"><div class="tn-lbl">Maio real</div><div class="tn-val isr">102</div></div>
+      <div class="tn"><div class="tn-lbl">Dias 1–4</div><div class="tn-val isr">21</div></div>
+      <div class="tn"><div class="tn-lbl">Prev. Jun</div><div class="tn-val isr">~125</div></div>
+    </div>
+    <div class="perf-list">
+      <div class="perf-lbl">Maio (ativos) + Jun 1–4</div>
+      <div id="perf-isr"></div>
+    </div>
+    <div class="team-ok">⚡ Bruno Ramos lidera junho com 6 em 4 dias. Estevam e Tiago devem sustentar ritmo forte.</div>
+  </div>
+  <div class="team-card">
+    <div class="team-hdr lis">
+      <div>
+        <div class="team-name lis">🟡 Lisdaisy Vieira Costa</div>
+        <div class="team-ldr">10 ativos · inativos: Diego, Fábio, Laís</div>
+      </div>
+    </div>
+    <div class="team-nums">
+      <div class="tn"><div class="tn-lbl">Maio real</div><div class="tn-val lis">161</div></div>
+      <div class="tn"><div class="tn-lbl">Dias 1–4</div><div class="tn-val lis">20</div></div>
+      <div class="tn"><div class="tn-lbl">Prev. Jun</div><div class="tn-val lis">~152</div></div>
+    </div>
+    <div class="perf-list">
+      <div class="perf-lbl">Maio (ativos) + Jun 1–4</div>
+      <div id="perf-lis"></div>
+    </div>
+    <div class="team-alert">⚠️ Makele forte (11), mas Maria Aline (40 em maio) com apenas 3. Adriérre, Iara e Lana zeradas — atenção urgente.</div>
+  </div>
+  <div class="team-card">
+    <div class="team-hdr stl">
+      <div>
+        <div class="team-name stl">🟢 Stella Nieheus</div>
+        <div class="team-ldr">8 ativos · inativos: Mirian, Carla</div>
+      </div>
+    </div>
+    <div class="team-nums">
+      <div class="tn"><div class="tn-lbl">Maio real</div><div class="tn-val stl">96</div></div>
+      <div class="tn"><div class="tn-lbl">Dias 1–4</div><div class="tn-val stl">16</div></div>
+      <div class="tn"><div class="tn-lbl">Prev. Jun</div><div class="tn-val stl">~107</div></div>
+    </div>
+    <div class="perf-list">
+      <div class="perf-lbl">Maio (ativos) + Jun 1–4</div>
+      <div id="perf-stl"></div>
+    </div>
+    <div class="team-alert">⚠️ Guilherme Lopes e Josilea (top performers) ainda zerados. CONSOLIGA deve impulsionar reação esta semana.</div>
+  </div>
+</div>
+
+<!-- BOTTLENECKS -->
+<div class="sec-title fade-in d5">gargalos e dias críticos</div>
+<div class="risk-grid fade-in d5">
+  <div class="risk-card risk">
+    <div class="risk-date">05/06 (Sex) — HOJE</div>
+    <div class="risk-title">Ponto Facultativo Oficial</div>
+    <div class="risk-desc">Portaria MGI nº 11.460/2025. Clientes e leads também fora. Margem ampla: pessimista 3 — central 5 — otimista 7. Feriadão 4 dias comprime toda a semana 1.</div>
+    <div class="risk-pill">📉 Previsão: 3 — 5 — 7 vendas</div>
+  </div>
+  <div class="risk-card warn">
+    <div class="risk-date">11–12/06 (Qui–Sex)</div>
+    <div class="risk-title">Copa começa + Dia dos Namorados</div>
+    <div class="risk-desc">Copa abre na quinta (16h). Véspera do Brasil na sexta reduz engajamento de tarde. Ambos os dias com margem ±22% pela incerteza do evento.</div>
+    <div class="risk-pill">⚠️ Previsão: 12–20 (Qui) · 14–18 (Sex)</div>
+  </div>
+  <div class="risk-card info">
+    <div class="risk-date">13/06 (Sáb) — 1º Jogo Brasil</div>
+    <div class="risk-title">BR × Marrocos 19h</div>
+    <div class="risk-desc">Sábado de Copa: mais incerto que sábado comum. Margem ampla ±22%. Pode surpreender para cima se empolgação + Bolão motivarem vendas até o início da tarde.</div>
+    <div class="risk-pill">⚽ Previsão: 5 — 6 — 7 vendas</div>
+  </div>
+  <div class="risk-card warn">
+    <div class="risk-date">24/06 (Qua) — Jogo 3 do Brasil</div>
+    <div class="risk-title">BR × Escócia 19h + São João</div>
+    <div class="risk-desc">Jogo às 19h pode encerrar o dia antes. São João tem impacto no NE. Margem copa ±22% gera intervalo 12–18. Quarta é historicamente forte, mas evento pressiona para baixo.</div>
+    <div class="risk-pill">⚽ Previsão: 12 — 15 — 18 vendas</div>
+  </div>
+  <div class="risk-card oppt">
+    <div class="risk-date">08/06 (Seg) — Retorno pós-feriado</div>
+    <div class="risk-title">Retorno + urgência Bolão 1</div>
+    <div class="risk-desc">Após 4 dias fora, leads acumuladas reiniciam. Urgência de 5 vendas antes de 13/06. Margem otimista chega a 20 — se o time arrancar forte, pode compensar semana 1.</div>
+    <div class="risk-pill">📈 Previsão: 14 — 17 — 20 vendas</div>
+  </div>
+  <div class="risk-card oppt">
+    <div class="risk-date">29–30/06 — Sprint Final</div>
+    <div class="risk-title">Fechamento CONSOLIGA Mês 2</div>
+    <div class="risk-desc">Maior janela de incerteza do mês (±28%), mas para cima! Cenário otimista: 26+36=62 vendas. Cenário pessimista: 14+20=34. Brasil nas oitavas no dia 29 pode elevar euforia e vendas.</div>
+    <div class="risk-pill">🚀 Previsão: 34–62 nos dois dias</div>
+  </div>
+</div>
+
+<!-- COPA -->
+<div class="sec-title fade-in d5">copa do mundo 2026 — bolão consolide</div>
+<div class="copa-grid fade-in d5">
+  <div class="copa-card">
+    <div class="copa-num">BOLÃO 1 · FASE DE GRUPOS</div>
+    <div class="copa-match">🇧🇷 BR × MAR 🇲🇦</div>
+    <div class="copa-dt">13/06/2026 (Sáb) · 19h · Houston</div>
+    <div class="copa-row"><span class="copa-row-lbl">Período válido</span><span class="copa-row-val">01–13/06</span></div>
+    <div class="copa-row"><span class="copa-row-lbl">1 aposta a cada</span><span class="copa-row-val">5 vendas</span></div>
+    <div class="copa-row"><span class="copa-row-lbl">Status da equipe</span><span class="copa-row-val" style="color:var(--green)">62+ vendas ✓</span></div>
+    <div class="copa-tip">Bruno (6), Tiago (5) e Stella (6) já cruzaram o 1º threshold. Vendedores com urgência de acumular mais apostas antes de sábado.</div>
+  </div>
+  <div class="copa-card">
+    <div class="copa-num">BOLÃO 2 · FASE DE GRUPOS</div>
+    <div class="copa-match">🇧🇷 BR × HAI 🇭🇹</div>
+    <div class="copa-dt">19/06/2026 (Sex) · 21h30</div>
+    <div class="copa-row"><span class="copa-row-lbl">Período válido</span><span class="copa-row-val">14–19/06 (até 20h)</span></div>
+    <div class="copa-row"><span class="copa-row-lbl">1 aposta a cada</span><span class="copa-row-val">5 vendas</span></div>
+    <div class="copa-row"><span class="copa-row-lbl">Dias úteis disponíveis</span><span class="copa-row-val">5 dias</span></div>
+    <div class="copa-tip">Deadline às 20h do dia do jogo cria urgência na sexta. Projeção central de ~88 vendas no período → ~17 apostas coletivas possíveis.</div>
+  </div>
+  <div class="copa-card">
+    <div class="copa-num">BOLÃO 3 · FASE DE GRUPOS</div>
+    <div class="copa-match">🇧🇷 BR × ESC 🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+    <div class="copa-dt">24/06/2026 (Qua) · 19h</div>
+    <div class="copa-row"><span class="copa-row-lbl">Período válido</span><span class="copa-row-val">20–24/06</span></div>
+    <div class="copa-row"><span class="copa-row-lbl">1 aposta a cada</span><span class="copa-row-val">5 vendas</span></div>
+    <div class="copa-row"><span class="copa-row-lbl">Dias úteis disponíveis</span><span class="copa-row-val">3 dias (⚠️ curto!)</span></div>
+    <div class="copa-tip">Janela mais curta: só 22, 23 e 24/06. Apenas 3 dias para atingir 5 vendas por aposta. Alta pressão especialmente na segunda e terça.</div>
+  </div>
+</div>
+
+<!-- STRATEGIES -->
+<!-- ▼ SUGESTÕES: títulos e descrições atualizados via applySugestoes() -->
+<div class="sec-title fade-in d6">sugestões estratégicas para junho</div>
+<div class="strat-grid fade-in d6">
+
+  <div class="strat-card">
+    <div class="strat-n">01</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 1 -->
+    <div class="strat-title" id="strat-title-01">🔁 Compensar a Semana 1 na Semana 2</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 1 (aceita <strong> e <em>) -->
+    <div class="strat-desc" id="strat-desc-01">Os feriados de 04 e 05/06 deixaram a semana 1 com ~67 vendas (vs potencial de ~75 no cenário otimista). <strong>Segunda 08/06 é o dia mais crítico do mês</strong>: retorno com follow-ups prontos + urgência Bolão 1. Sugestão: kick-off de manhã com meta de 20 vendas no dia para ativar o time.</div>
+    <!-- ▼ PLACEHOLDER: tags da sugestão 1 (array de strings) -->
+    <div class="strat-tags" id="strat-tags-01"><span class="stag">08/06</span><span class="stag">retorno</span><span class="stag">follow-up</span></div>
+  </div>
+
+  <div class="strat-card">
+    <div class="strat-n">02</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 2 -->
+    <div class="strat-title" id="strat-title-02">🏆 Usar as Deadlines do Bolão como Sprints</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 2 -->
+    <div class="strat-desc" id="strat-desc-02">Cada Bolão cria um mini-sprint natural (13/06, 19/06, 24/06). <strong>Publique ranking de apostas acumuladas antes de cada jogo</strong> para aumentar a competição interna. O Bolão 3 é o mais difícil (3 dias) — crie alerta especial para que ninguém perca o threshold de 5 vendas nos dias 22–24/06.</div>
+    <div class="strat-tags" id="strat-tags-02"><span class="stag">copa</span><span class="stag">gamificação</span><span class="stag">bolão</span></div>
+  </div>
+
+  <div class="strat-card">
+    <div class="strat-n">03</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 3 -->
+    <div class="strat-title" id="strat-title-03">⚠️ Reativar Vendedores Zerados (Dias 1–4)</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 3 -->
+    <div class="strat-desc" id="strat-desc-03">Guilherme Lopes (18/maio), Josilea (16), Adriérre (14), Iara (14) e Lana (8) estão com <strong>0 vendas nos primeiros dias</strong>. Check-in individual até 09/06. Ver leads em "sem 1º contato" na base de cada um — a taxa de atendimento de alguns está abaixo de 50%.</div>
+    <div class="strat-tags" id="strat-tags-03"><span class="stag">pipeline</span><span class="stag">lisdaisy</span><span class="stag">stella</span></div>
+  </div>
+
+  <div class="strat-card">
+    <div class="strat-n">04</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 4 -->
+    <div class="strat-title" id="strat-title-04">🚀 Sprint 29–30/06: Maior Margem do Mês</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 4 -->
+    <div class="strat-desc" id="strat-desc-04">A semana 4 tem a maior incerteza (±28%) mas também o <strong>maior teto otimista (26+36 = 62 vendas em 2 dias)</strong>. Para maximizar: publique ranking CONSOLIGA em 22/06 para acirrar disputa; crie meta de equipe para o dia 30; Brasil nas oitavas no dia 29 pode alavancar euforia e performance.</div>
+    <div class="strat-tags" id="strat-tags-04"><span class="stag">consoliga</span><span class="stag">29-30/06</span><span class="stag">classificação</span></div>
+  </div>
+
+  <div class="strat-card">
+    <div class="strat-n">05</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 5 -->
+    <div class="strat-title" id="strat-title-05">📊 Reduzir Tempo de 1º Contato</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 5 -->
+    <div class="strat-desc" id="strat-desc-05">Com pipeline de 5.118 leads e 7,17% de conversão MQL→Ganho, existe potencial de ~367 fechamentos do pipe atual. <strong>Reduzir o tempo médio de 1º contato de 4h30 para menos de 2h</strong> pode elevar a conversão em 15–20%, empurrando o resultado para o cenário otimista de 455 vendas.</div>
+    <div class="strat-tags" id="strat-tags-05"><span class="stag">pipeline</span><span class="stag">1º contato</span><span class="stag">conversão</span></div>
+  </div>
+
+  <div class="strat-card">
+    <div class="strat-n">06</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 6 -->
+    <div class="strat-title" id="strat-title-06">📅 Proteger Manhãs nos Dias de Copa</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 6 -->
+    <div class="strat-desc" id="strat-desc-06">65–67% dos movimentos ocorrem de manhã. Nos dias de Copa (11, 13, 19, 24/06) e oitavas (prov. 29/06), <strong>concentrar todas as ligações e pitchs antes das 13h</strong>. Isso protege a meta mesmo que a tarde seja impactada pelo evento.</div>
+    <div class="strat-tags" id="strat-tags-06"><span class="stag">gestão de tempo</span><span class="stag">produtividade</span><span class="stag">dias copa</span></div>
+  </div>
+
+</div>
+
+<div class="footer" id="footer-txt">
+  Consolide · Forecast Junho 2026 com Intervalo de Confiança · Gerado em 05/06/2026<br>
+  Método: Pipeline Ponderado + Rolling WMA (peso 2 últimos 6m) + Cohort por Time · Margens: CV histórico por tipo de dia (±15% úteis · ±22% Copa · ±28% sprint · ±30% FDS)<br>
+  Cenário pessimista: ~325 · Central: ~390 · Cenário otimista: ~455
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+// ╔══════════════════════════════════════════════════════════════════════════╗
+// ║  SISTEMA DE ATUALIZAÇÃO VIA WORKFLOW PENTAHO                            ║
+// ║                                                                          ║
+// ║  Como funciona:                                                          ║
+// ║  1. O Pentaho gera um arquivo "forecast_data.json" na raiz do repo       ║
+// ║  2. Este dashboard faz fetch desse JSON ao carregar a página             ║
+// ║  3. Se encontrar, aplica os novos valores; se não, usa os defaults       ║
+// ║                                                                          ║
+// ║  Esquema esperado do forecast_data.json: ver seção DEFAULT_DATA abaixo  ║
+// ╚══════════════════════════════════════════════════════════════════════════╝
+
+// ── DADOS DEFAULT (fallback se forecast_data.json não existir) ──────────────
+const DEFAULT_DATA = {
+
+  // ─── META: KPIs e cabeçalho ───────────────────────────────────────────────
+  meta: {
+    atualizado_em:        "05/06/2026",
+    status_dias:          "Dias 1–4 confirmados · Dia 5 parcial · Dias 6–30 com intervalo de confiança",
+    kpi_total_pess:       325,
+    kpi_total_central:    390,
+    kpi_total_otim:       455,
+    kpi_total_delta:      "▲ +0,5% vs maio (central)",
+    kpi_media_central:    "17,2",
+    kpi_media_min:        "15,5 mín",
+    kpi_media_max:        "21,6 máx",
+    kpi_realizado:        62,
+    kpi_realizado_sub:    "vendas confirmadas (dias 1–4 + est. dia 5)",
+    kpi_realizado_delta:  "▲ 15,9% do total previsto",
+    kpi_yoy_pct:          "+31%",
+    kpi_yoy_pess:         "+9% pess.",
+    kpi_yoy_otim:         "+53% otim.",
+    kpi_yoy_sub:          "390 central vs 298 ano anterior",
+    kpi_ativos:           28,
+    kpi_ativos_sub:       "em 3 times competindo",
+    kpi_inativos_delta:   "▼ 8 inativos / férias"
+  },
+
+  // ─── SEMANAS: resumo semanal (apenas os números mudam) ────────────────────
+  // Índice 0 = Semana 1, índice 1 = Semana 2, etc.
+  semanas: [
+    { central: 67,  min: 61,  max: 75,  avg_txt: "~12,4/dia útil · impacto feriado" },
+    { central: 94,  min: 78,  max: 111, avg_txt: "~17,2/dia útil · retorno forte"   },
+    { central: 93,  min: 77,  max: 109, avg_txt: "~17,6/dia útil · semana cheia"    },
+    { central: 136, min: 109, max: 160, avg_txt: "~18,7/dia útil · sprint final!"   }
+  ],
+
+  // ─── DIAS: array principal — alimenta gráfico de barras + tabela ──────────
+  // Formato: [num, diaSemana, central, min, max, tipo, evento]
+  // tipos: "real" | "partial" | "work" | "holiday" | "weekend" | "copa" | "sprint"
+  dias: [
+    [1, 'Seg', 10, 10, 10, 'real',    ''],
+    [2, 'Ter', 15, 15, 15, 'real',    ''],
+    [3, 'Qua', 26, 26, 26, 'real',    'Surto pré-feriado'],
+    [4, 'Qui',  6,  6,  6, 'holiday', 'Corpus Christi (feriado)'],
+    [5, 'Sex',  5,  3,  7, 'partial', 'Ponto Facultativo — 2 conf. às 15h'],
+    [6, 'Sáb',  4,  3,  5, 'weekend', ''],
+    [7, 'Dom',  1,  1,  1, 'weekend', ''],
+    [8, 'Seg', 17, 14, 20, 'work',    '⚡ Retorno pós-feriado · urgência Bolão 1'],
+    [9, 'Ter', 19, 16, 22, 'work',    ''],
+    [10,'Qua', 18, 15, 21, 'work',    ''],
+    [11,'Qui', 16, 12, 20, 'copa',    '⚽ Copa: abertura (MEX×RSA) 16h'],
+    [12,'Sex', 16, 14, 18, 'work',    '💝 Dia dos Namorados'],
+    [13,'Sáb',  6,  5,  7, 'copa',    '⚽ BR × Marrocos 19h — 1º jogo do Brasil'],
+    [14,'Dom',  2,  1,  3, 'weekend', 'Pós-jogo'],
+    [15,'Seg', 16, 14, 18, 'work',    'Bolão 2 abre'],
+    [16,'Ter', 19, 16, 22, 'work',    ''],
+    [17,'Qua', 18, 15, 21, 'work',    ''],
+    [18,'Qui', 17, 14, 20, 'work',    ''],
+    [19,'Sex', 18, 14, 22, 'copa',    '⚽ BR × Haiti 21h30 · Deadline Bolão 2'],
+    [20,'Sáb',  4,  3,  5, 'weekend', ''],
+    [21,'Dom',  1,  1,  1, 'weekend', ''],
+    [22,'Seg', 16, 14, 18, 'work',    'Bolão 3 abre'],
+    [23,'Ter', 18, 15, 21, 'work',    ''],
+    [24,'Qua', 15, 12, 18, 'copa',    '⚽ BR × Escócia 19h · São João'],
+    [25,'Qui', 17, 14, 20, 'work',    ''],
+    [26,'Sex', 17, 14, 20, 'work',    ''],
+    [27,'Sáb',  4,  3,  5, 'weekend', ''],
+    [28,'Dom',  1,  1,  1, 'weekend', ''],
+    [29,'Seg', 20, 14, 26, 'sprint',  '🚀 Pré-fechamento · BR nas oitavas (prov.)'],
+    [30,'Ter', 28, 20, 36, 'sprint',  '🏁 Fechamento CONSOLIGA · Sprint final'],
+  ],
+
+  // ─── SUGESTÕES: blocos de texto gerados pela IA ───────────────────────────
+  // A IA do workflow deve preencher titulo, descricao_html e tags
+  // descricao_html aceita apenas <strong> e <em> como tags HTML
+  sugestoes: [
+    {
+      n: "01",
+      titulo: "🔁 Compensar a Semana 1 na Semana 2",
+      descricao_html: "Os feriados de 04 e 05/06 deixaram a semana 1 com ~67 vendas (vs potencial de ~75 no cenário otimista). <strong>Segunda 08/06 é o dia mais crítico do mês</strong>: retorno com follow-ups prontos + urgência Bolão 1. Sugestão: kick-off de manhã com meta de 20 vendas no dia para ativar o time.",
+      tags: ["08/06", "retorno", "follow-up"]
+    },
+    {
+      n: "02",
+      titulo: "🏆 Usar as Deadlines do Bolão como Sprints",
+      descricao_html: "Cada Bolão cria um mini-sprint natural (13/06, 19/06, 24/06). <strong>Publique ranking de apostas acumuladas antes de cada jogo</strong> para aumentar a competição interna. O Bolão 3 é o mais difícil (3 dias) — crie alerta especial para que ninguém perca o threshold de 5 vendas nos dias 22–24/06.",
+      tags: ["copa", "gamificação", "bolão"]
+    },
+    {
+      n: "03",
+      titulo: "⚠️ Reativar Vendedores Zerados (Dias 1–4)",
+      descricao_html: "Guilherme Lopes (18/maio), Josilea (16), Adriérre (14), Iara (14) e Lana (8) estão com <strong>0 vendas nos primeiros dias</strong>. Check-in individual até 09/06. Ver leads em \"sem 1º contato\" na base de cada um — a taxa de atendimento de alguns está abaixo de 50%.",
+      tags: ["pipeline", "lisdaisy", "stella"]
+    },
+    {
+      n: "04",
+      titulo: "🚀 Sprint 29–30/06: Maior Margem do Mês",
+      descricao_html: "A semana 4 tem a maior incerteza (±28%) mas também o <strong>maior teto otimista (26+36 = 62 vendas em 2 dias)</strong>. Para maximizar: publique ranking CONSOLIGA em 22/06 para acirrar disputa; crie meta de equipe para o dia 30.",
+      tags: ["consoliga", "29-30/06", "classificação"]
+    },
+    {
+      n: "05",
+      titulo: "📊 Reduzir Tempo de 1º Contato",
+      descricao_html: "Com pipeline de 5.118 leads e 7,17% de conversão MQL→Ganho, existe potencial de ~367 fechamentos do pipe atual. <strong>Reduzir o tempo médio de 1º contato de 4h30 para menos de 2h</strong> pode elevar a conversão em 15–20%.",
+      tags: ["pipeline", "1º contato", "conversão"]
+    },
+    {
+      n: "06",
+      titulo: "📅 Proteger Manhãs nos Dias de Copa",
+      descricao_html: "65–67% dos movimentos ocorrem de manhã. Nos dias de Copa (11, 13, 19, 24/06), <strong>concentrar todas as ligações e pitchs antes das 13h</strong>. Isso protege a meta mesmo que a tarde seja impactada pelo evento.",
+      tags: ["gestão de tempo", "produtividade", "dias copa"]
+    }
+  ]
+};
+
+// ── CONFIGURAÇÕES DE ESTILO ──────────────────────────────────────────────────
+const typeColor = {
+  real:    '#22c55e',
+  partial: '#f59e0b',
+  work:    '#3b82f6',
+  weekend: 'rgba(100,116,139,0.3)',
+  holiday: '#ef4444',
+  copa:    '#818cf8',
+  sprint:  '#f97316'
+};
+// Cores semitransparentes para as barras de PREVISÃO (fundo largo)
+const typeColorFg = {
+  real:    'rgba(34,197,94,0.32)',
+  partial: 'rgba(245,158,11,0.32)',
+  work:    'rgba(59,130,246,0.32)',
+  weekend: 'rgba(100,116,139,0.18)',
+  holiday: 'rgba(239,68,68,0.32)',
+  copa:    'rgba(129,140,248,0.32)',
+  sprint:  'rgba(249,115,22,0.32)'
+};
+// Bordas para as barras de PREVISÃO
+const typeColorBd = {
+  real:    'rgba(34,197,94,0.65)',
+  partial: 'rgba(245,158,11,0.65)',
+  work:    'rgba(59,130,246,0.65)',
+  weekend: 'rgba(100,116,139,0.35)',
+  holiday: 'rgba(239,68,68,0.65)',
+  copa:    'rgba(129,140,248,0.65)',
+  sprint:  'rgba(249,115,22,0.65)'
+};
+const typePill = {
+  real:'pill-real', partial:'pill-part', work:'pill-fore',
+  weekend:'pill-wknd', holiday:'pill-hol', copa:'pill-copa', sprint:'pill-spr'
+};
+const typeTxt = {
+  real:'REAL', partial:'PARCIAL', work:'PREV.',
+  weekend:'FDS', holiday:'FERIADO', copa:'COPA', sprint:'SPRINT'
+};
+
+// ── UTILITÁRIOS ──────────────────────────────────────────────────────────────
+function setText(id, val) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = val;
+}
+function setHtml(id, html) {
+  const el = document.getElementById(id);
+  if (el) el.innerHTML = html;
+}
+function counter(id, target, dur = 1200) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  let s = 0, step = target / 60;
+  const iv = setInterval(() => {
+    s = Math.min(s + step, target);
+    el.textContent = Math.round(s);
+    if (s >= target) clearInterval(iv);
+  }, dur / 60);
+}
+
+// ── APLICAR META (KPIs e cabeçalho) ─────────────────────────────────────────
+function applyMeta(meta) {
+  // Cabeçalho
+  setText('hdr-sub',
+    `Atualizado em ${meta.atualizado_em} · ${meta.status_dias}`);
+
+  // KPI 1 — Total previsto
+  setText('kpi-total-pess', meta.kpi_total_pess);
+  setText('kpi-total-otim', meta.kpi_total_otim);
+  setText('kpi-total-delta', meta.kpi_total_delta);
+
+  // KPI 2 — Média/dia útil
+  setText('kpi-media-val',  meta.kpi_media_central);
+  setText('kpi-media-min',  meta.kpi_media_min);
+  setText('kpi-media-max',  meta.kpi_media_max);
+
+  // KPI 3 — Realizado
+  setText('kpi-realizado-sub',   meta.kpi_realizado_sub);
+  setText('kpi-realizado-delta', meta.kpi_realizado_delta);
+
+  // KPI 4 — vs Junho 2025
+  setText('kpi-yoy-pct',  meta.kpi_yoy_pct);
+  setText('kpi-yoy-pess', meta.kpi_yoy_pess);
+  setText('kpi-yoy-otim', meta.kpi_yoy_otim);
+  setText('kpi-yoy-sub',  meta.kpi_yoy_sub);
+
+  // KPI 5 — Vendedores ativos
+  setText('kpi-ativos',         meta.kpi_ativos);
+  setText('kpi-ativos-sub',     meta.kpi_ativos_sub);
+  setText('kpi-inativos-delta', meta.kpi_inativos_delta);
+
+  // Footer
+  setText('footer-txt',
+    `Consolide · Forecast Junho 2026 com Intervalo de Confiança · Gerado em ${meta.atualizado_em}\n` +
+    `Método: Pipeline Ponderado + Rolling WMA · Cenário pessimista: ~${meta.kpi_total_pess} · Central: ~${meta.kpi_total_central} · Otimista: ~${meta.kpi_total_otim}`);
+
+  // Contadores animados (após pequeno delay para DOM estar pronto)
+  setTimeout(() => {
+    counter('kpi1', meta.kpi_total_central);
+    counter('kpi3', meta.kpi_realizado);
+  }, 400);
+}
+
+// ── APLICAR SEMANAS ───────────────────────────────────────────────────────────
+function applyWeeks(semanas) {
+  semanas.forEach((s, i) => {
+    const n = i + 1;
+    setText(`week${n}-num`, s.central);
+    setText(`week${n}-min`, s.min);
+    setText(`week${n}-max`, s.max);
+    setText(`week${n}-avg`, s.avg_txt);
+  });
+}
+
+// ── APLICAR SUGESTÕES ESTRATÉGICAS ───────────────────────────────────────────
+function applySugestoes(sugestoes) {
+  sugestoes.forEach(s => {
+    setText(`strat-title-${s.n}`, s.titulo);
+    setHtml(`strat-desc-${s.n}`,  s.descricao_html);
+    // Regenera as tags
+    const tagsEl = document.getElementById(`strat-tags-${s.n}`);
+    if (tagsEl && s.tags) {
+      tagsEl.innerHTML = s.tags.map(t => `<span class="stag">${t}</span>`).join('');
+    }
+  });
+}
+
+// ── RENDERIZAR GRÁFICO DE BARRAS ─────────────────────────────────────────────
+// ⬇ O gráfico é reconstruído a partir do array dias[] — atualiza automaticamente!
+let chartInstance = null;
+
+function renderChart(dias) {
+  // Previsão central: todos os dias (barras largas por trás)
+  const forecastVals = dias.map(d => d[2]);
+
+  // Realizado: usa índice 7 do array (campo opcional do JSON),
+  // senão infere pelo tipo. null para dias ainda não confirmados.
+  const realizadoVals = dias.map(d => {
+    if (d.length > 7 && d[7] != null) return d[7];
+    if (d[5] === 'real' || d[5] === 'partial') return d[2];
+    return null;
+  });
+
+  const minVals  = dias.map(d => d[3]);
+  const maxVals  = dias.map(d => d[4]);
+
+  // Acumulado: usa realizado onde confirmado, previsão para dias futuros
+  const cumulBase = dias.map((d, i) => realizadoVals[i] != null ? realizadoVals[i] : forecastVals[i]);
+  const cumul     = cumulBase.reduce((a, v, i) => { a.push((a[i-1]||0)+v); return a; }, []);
+
+  const refLine      = dias.map(d => (['weekend','holiday'].includes(d[5])) ? null : 17);
+  const forecastBg   = dias.map(d => typeColorFg[d[5]]);
+  const forecastBd   = dias.map(d => typeColorBd[d[5]]);
+  const realizadoBg  = dias.map(d => d[5] === 'partial' ? '#f59e0b' : '#22c55e');
+
+  // Destrói gráfico anterior se existir (necessário ao recarregar dados)
+  if (chartInstance) {
+    chartInstance.destroy();
+    chartInstance = null;
+  }
+
+  const ctx = document.getElementById('mainChart').getContext('2d');
+  chartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: dias.map(d => `${d[0]}\n${d[1]}`),
+      datasets: [
+        // 0 — Mínimo (line, preenche até Máximo = faixa de confiança)
+        {
+          type:'line', label:'Mínimo',
+          data: minVals,
+          fill:'+1',
+          backgroundColor:'rgba(59,130,246,0.10)',
+          borderColor:'rgba(100,160,255,0.35)',
+          borderWidth:1, borderDash:[3,3],
+          pointRadius:0, tension:0.4,
+          yAxisID:'y', order:5
+        },
+        // 1 — Máximo (line, topo da faixa)
+        {
+          type:'line', label:'Máximo',
+          data: maxVals,
+          fill:false,
+          borderColor:'rgba(100,160,255,0.35)',
+          borderWidth:1, borderDash:[3,3],
+          pointRadius:0, tension:0.4,
+          yAxisID:'y', order:5
+        },
+        // 2 — PREVISÃO: barra LARGA e semitransparente por trás
+        //     grouped:false → não agrupa com outro dataset bar, permitindo sobreposição
+        {
+          type:'bar', label:'Previsão',
+          data: forecastVals,
+          backgroundColor: forecastBg,
+          borderColor: forecastBd,
+          borderWidth: 1,
+          borderRadius:4, borderSkipped:false,
+          grouped: false,
+          barPercentage: 0.85,
+          categoryPercentage: 0.75,
+          yAxisID:'y', order:3
+        },
+        // 3 — REALIZADO: barra ESTREITA e sólida na frente (null para dias futuros)
+        {
+          type:'bar', label:'Realizado',
+          data: realizadoVals,
+          backgroundColor: realizadoBg,
+          borderRadius:4, borderSkipped:false,
+          grouped: false,
+          barPercentage: 0.40,
+          categoryPercentage: 0.75,
+          yAxisID:'y', order:2
+        },
+        // 4 — Acumulado (eixo direito)
+        {
+          type:'line', label:'Acumulado',
+          data: cumul,
+          borderColor:'rgba(248,168,56,0.75)',
+          backgroundColor:'rgba(248,168,56,0.05)',
+          fill:true, borderWidth:2, pointRadius:0,
+          yAxisID:'y2', order:1, tension:0.3
+        },
+        // 5 — Ritmo alvo (linha de referência)
+        {
+          type:'line', label:'Ritmo alvo (17)',
+          data: refLine,
+          borderColor:'rgba(255,255,255,0.16)',
+          borderWidth:1.5, borderDash:[5,4],
+          pointRadius:0, fill:false,
+          yAxisID:'y', order:4, spanGaps:true
+        }
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      interaction:{ mode:'index', intersect:false },
+      plugins:{
+        legend:{ display:false },
+        tooltip:{
+          backgroundColor:'rgba(9,18,37,0.97)',
+          borderColor:'rgba(255,255,255,0.1)', borderWidth:1,
+          titleFont:{ family:'JetBrains Mono', size:11 },
+          bodyFont:{ family:'JetBrains Mono', size:11 },
+          filter: item => item.datasetIndex !== 1, // oculta linha Máximo
+          callbacks:{
+            title: ctx => `${ctx[0].dataIndex+1}/06 · ${dias[ctx[0].dataIndex][1]}`,
+            label: ctx => {
+              const i = ctx.dataIndex;
+              if (ctx.datasetIndex===0) return ` Intervalo: ${minVals[i]} — ${maxVals[i]}`;
+              if (ctx.datasetIndex===2) return ` Previsão: ${ctx.raw}`;
+              if (ctx.datasetIndex===3 && ctx.raw != null) return ` Realizado: ${ctx.raw}`;
+              if (ctx.datasetIndex===4) return ` Acumulado: ${ctx.raw}`;
+              if (ctx.datasetIndex===5 && ctx.raw) return ` Ritmo alvo: 17`;
+              return null;
+            },
+            afterLabel: ctx => {
+              if (ctx.datasetIndex===2) {
+                const ev = dias[ctx.dataIndex][6];
+                return ev ? ` ${ev}` : null;
+              }
+              return null;
+            }
+          }
+        }
+      },
+      scales:{
+        x:{
+          grid:{ color:'rgba(255,255,255,0.04)' },
+          ticks:{ font:{ family:'JetBrains Mono', size:9 }, color:'rgba(126,155,190,0.7)', maxRotation:0 }
+        },
+        y:{
+          position:'left',
+          grid:{ color:'rgba(255,255,255,0.05)' },
+          ticks:{ font:{ family:'JetBrains Mono', size:10 }, color:'rgba(126,155,190,0.7)' },
+          title:{ display:true, text:'vendas/dia', font:{ family:'JetBrains Mono', size:9 }, color:'rgba(126,155,190,0.4)' }
+        },
+        y2:{
+          position:'right',
+          grid:{ drawOnChartArea:false },
+          ticks:{ font:{ family:'JetBrains Mono', size:10 }, color:'rgba(248,168,56,0.5)' },
+          title:{ display:true, text:'acumulado', font:{ family:'JetBrains Mono', size:9 }, color:'rgba(248,168,56,0.35)' }
+        }
+      },
+      animation:{ duration:1000, easing:'easeOutQuart' }
+    }
+  });
+}
+
+// ── RENDERIZAR TABELA DIÁRIA ─────────────────────────────────────────────────
+function renderTable(dias) {
+  const tbody = document.getElementById('tbl-rows');
+  tbody.innerHTML = '';
+  const maxV = Math.max(...dias.map(d => d[2]));
+  dias.forEach(([num, dow, val, lo, hi, type, event]) => {
+    const pct = (val / maxV * 100).toFixed(0);
+    const col = typeColor[type];
+    const loTxt = (lo === val)
+      ? `<span style="color:var(--muted);font-size:10px">—</span>`
+      : `<span class="r-lo">${lo}</span>`;
+    const hiTxt = (hi === val)
+      ? `<span style="color:var(--muted);font-size:10px">—</span>`
+      : `<span class="r-hi">${hi}</span>`;
+    tbody.innerHTML += `
+      <tr>
+        <td class="td-day">${String(num).padStart(2,'0')}</td>
+        <td class="td-dow">${dow}</td>
+        <td class="td-range" style="text-align:right;min-width:36px">${loTxt}</td>
+        <td class="td-range" style="text-align:center;min-width:50px"><span class="r-c" style="color:${col}">${val}</span></td>
+        <td class="td-range" style="text-align:left;min-width:36px">${hiTxt}</td>
+        <td class="td-bar"><div class="bar-bg"><div class="bar-fill" style="width:${pct}%;background:${col}"></div></div></td>
+        <td><span class="pill ${typePill[type]}">${typeTxt[type]}</span></td>
+        <td class="td-event">${event || '—'}</td>
+      </tr>`;
+  });
+}
+
+// ── TABELA TOGGLE ─────────────────────────────────────────────────────────────
+function toggleTable() {
+  const b = document.getElementById('tbl-body');
+  const a = document.getElementById('tbl-arr');
+  b.classList.toggle('open');
+  a.style.transform = b.classList.contains('open') ? 'rotate(180deg)' : '';
+}
+
+// ── TEAM PERFORMERS (estático — não atualizado pelo workflow) ────────────────
+const teams = {
+  isr:{ color:'#3b82f6', sellers:[
+    ['Estevam S. Tavares',31,3],['Tiago Melo da Silva',21,5],
+    ['Israel Riella',16,2],['Patrícia L. Custódio',13,2],
+    ['Bruno Ramos Martins',6,6],['Camily Buratto Arruda',4,0],
+    ['Camila Viana Alves',5,1],['Elisângela Arias',3,2],
+    ['Noemi Penafort Costa',1,0],['Tales Viana Matos',2,0],
+  ]},
+  lis:{ color:'#f59e0b', sellers:[
+    ['Maria Aline S. Ferreira',40,3],['Rafael R. Pedroso',21,2],
+    ['Larissa P. Niehues',22,1],['Lisdaisy Vieira Costa',17,2],
+    ['Makele de Souza Smania',16,11],['Iara da Silva Linhares',14,0],
+    ['Adriérre Marcon',14,0],['Lana M. Morais Leite',8,0],
+    ['Aline Cristina da Silva',5,0],['Danilo Tenfen',4,1],
+  ]},
+  stl:{ color:'#10b981', sellers:[
+    ['Marcela M. do Rosário',19,4],['Guilherme Lopes Machado',18,0],
+    ['Josilea de Melo Rocha',16,0],['Stella Nieheus',11,6],
+    ['Bruna L. Corrêa Barbosa',10,2],['Guilherme C. Rodrigues',8,0],
+    ['Yasmin Santos Zonatto',8,0],['Ketlin Madeira Colombo',6,4],
+  ]}
+};
+
+Object.entries(teams).forEach(([key, team]) => {
+  const cont = document.getElementById(`perf-${key}`);
+  const maxM = Math.max(...team.sellers.map(s => s[1]));
+  team.sellers.forEach(([name, may, jun]) => {
+    const pct = (may / maxM * 100).toFixed(0);
+    const jc = jun > 0 ? 'jun-hot' : 'jun-0';
+    cont.innerHTML += `
+      <div class="perf-row">
+        <div class="perf-name" title="${name}">${name}</div>
+        <div class="perf-bar-bg"><div class="perf-bar" style="width:${pct}%;background:${team.color}"></div></div>
+        <div class="perf-num">${may}</div>
+        <div class="perf-jun ${jc}">${jun > 0 ? '+'+jun : '–'}</div>
+      </div>`;
+  });
+});
+
+// ── INICIALIZAR DASHBOARD COM DATA OBJECT ────────────────────────────────────
+function initDashboard(data) {
+  applyMeta(data.meta);
+  applyWeeks(data.semanas);
+  applySugestoes(data.sugestoes);
+  renderChart(data.dias);
+  renderTable(data.dias);
+}
+
+// ── BOOT: tenta buscar forecast_data.json, fallback para DEFAULT_DATA ─────────
+// O Pentaho deve gerar e commitar "forecast_data.json" na raiz do repositório
+async function boot() {
+  const loader = document.getElementById('loading-indicator');
+  loader.style.display = 'block';
+  let data = DEFAULT_DATA;
+  try {
+    const res = await fetch('./forecast_data.json?t=' + Date.now());
+    if (res.ok) {
+      const ext = await res.json();
+      // Validação mínima: precisa ter dias[] e meta{}
+      if (ext && ext.dias && ext.meta) {
+        data = ext;
+        console.log('[CONSOLIDA] forecast_data.json carregado com sucesso:', ext.meta.atualizado_em);
+      }
+    }
+  } catch (e) {
+    // Arquivo não existe ou erro de rede — usa default silenciosamente
+    console.log('[CONSOLIDA] forecast_data.json não encontrado — usando dados default.');
+  }
+  loader.style.display = 'none';
+  initDashboard(data);
+}
+
+boot();
+</script>
+</body>
+</html>
