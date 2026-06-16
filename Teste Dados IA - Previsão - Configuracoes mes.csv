@@ -1,0 +1,7 @@
+chave,valor
+status_dias,Dias 1–16 confirmados · Dia 16 parcial · Dias 17–30 com intervalo de confiança
+kpi_realizado,175
+kpi_realizado_sub,Vendas Confirmadas (dias 1- 15 + est. dia 16)
+kpi_realizado_delta,"▲ 45,2% do total previsto"
+kpi_ativos,29
+kpi_inativos_delta,7
