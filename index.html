@@ -441,6 +441,7 @@ tr:hover td{background:var(--card2)}
         <tr>
           <th>#</th><th>Dia</th>
           <th class="th-range" colspan="3">Mín — Central — Máx</th>
+          <th class="th-range">Realizado</th>
           <th style="width:110px">Barra (central)</th>
           <th>Tipo</th><th>Observação</th>
         </tr>
@@ -1070,23 +1071,50 @@ function renderTable(dias) {
   const tbody = document.getElementById('tbl-rows');
   tbody.innerHTML = '';
   const maxV = Math.max(...dias.map(d => d[2]));
-  dias.forEach(([num, dow, val, lo, hi, type, event]) => {
-    const pct = (val / maxV * 100).toFixed(0);
-    const col = typeColor[type];
+
+  dias.forEach((d) => {
+    const [num, dow, val, lo, hi, type, event] = d;
+
+    // Realizado: usa d[7] se o ETL preencheu; senão infere pelo tipo
+    // (mesma lógica do renderChart — ambos ficam sincronizados)
+    let realizado = null;
+    if (d.length > 7 && d[7] != null) realizado = d[7];
+    else if (type === 'real' || type === 'partial') realizado = val;
+
+    const pct  = (val / maxV * 100).toFixed(0);
+    const col  = typeColor[type];
+
     const loTxt = (lo === val)
       ? `<span style="color:var(--muted);font-size:10px">—</span>`
       : `<span class="r-lo">${lo}</span>`;
     const hiTxt = (hi === val)
       ? `<span style="color:var(--muted);font-size:10px">—</span>`
       : `<span class="r-hi">${hi}</span>`;
+
+    // Coluna realizado: verde (confirmado), âmbar (parcial), — (futuro)
+    let realTxt;
+    if (realizado != null) {
+      const realCol = type === 'partial' ? '#f59e0b' : '#22c55e';
+      realTxt = `<span class="r-c" style="color:${realCol}">${realizado}</span>`;
+    } else {
+      realTxt = `<span style="color:var(--muted);font-size:10px">—</span>`;
+    }
+
     tbody.innerHTML += `
       <tr>
         <td class="td-day">${String(num).padStart(2,'0')}</td>
         <td class="td-dow">${dow}</td>
         <td class="td-range" style="text-align:right;min-width:36px">${loTxt}</td>
-        <td class="td-range" style="text-align:center;min-width:50px"><span class="r-c" style="color:${col}">${val}</span></td>
+        <td class="td-range" style="text-align:center;min-width:50px">
+          <span class="r-c" style="color:${col}">${val}</span>
+        </td>
         <td class="td-range" style="text-align:left;min-width:36px">${hiTxt}</td>
-        <td class="td-bar"><div class="bar-bg"><div class="bar-fill" style="width:${pct}%;background:${col}"></div></div></td>
+        <td class="td-range" style="text-align:center;min-width:50px">${realTxt}</td>
+        <td class="td-bar">
+          <div class="bar-bg">
+            <div class="bar-fill" style="width:${pct}%;background:${col}"></div>
+          </div>
+        </td>
         <td><span class="pill ${typePill[type]}">${typeTxt[type]}</span></td>
         <td class="td-event">${event || '—'}</td>
       </tr>`;
