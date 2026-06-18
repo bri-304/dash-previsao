@@ -49,115 +49,18 @@
     }
   ],
   "dias": [
-    [
-      1,
-      "Seg",
-      15,
-      17,
-      10,
-      "real",
-      ""
-    ],
-    [
-      2,
-      "Ter",
-      15,
-      15,
-      15,
-      "real",
-      ""
-    ],
-    [
-      3,
-      "Qua",
-      24,
-      24,
-      24,
-      "real",
-      "Surto pré-feriado"
-    ],
-    [
-      4,
-      "Qui",
-      6,
-      6,
-      6,
-      "real",
-      "Corpus Christi (feriado)"
-    ],
-    [
-      5,
-      "Sex",
-      11,
-      11,
-      11,
-      "real",
-      "Ponto Facultativo"
-    ],
-    [
-      6,
-      "Sáb",
-      1,
-      1,
-      1,
-      "real",
-      ""
-    ],
-    [
-      7,
-      "Dom",
-      1,
-      1,
-      1,
-      "weekend",
-      "",
-      0
-    ],
-    [
-      8,
-      "Seg",
-      14,
-      14,
-      14,
-      "real",
-      "Retorno forte pós-feriado"
-    ],
-    [
-      9,
-      "Ter",
-      17,
-      17,
-      17,
-      "real",
-      ""
-    ],
-    [
-      10,
-      "Qua",
-      18,
-      18,
-      18,
-      "real",
-      "Dia normal"
-    ],
-    [
-      11,
-      "Qui",
-      14,
-      14,
-      14,
-      "real",
-      "⚽ Copa: abertura (MEX×RSA) 16h"
-    ],
-    [
-      12,
-      "Sex",
-      23,
-      23,
-      23,
-      "real",
-      "💝 Dia dos Namorados"
-    ],
+    [1,  "Seg", 10, 10, 10, "real",    ""],
+    [2,  "Ter", 15, 15, 15, "real",    ""],
+    [3,  "Qua", 26, 26, 26, "real",    "Surto pré-feriado"],
+    [4,  "Qui",  6,  6,  6, "holiday", "Corpus Christi (feriado)"],
+    [5,  "Sex",  5,  5,  5, "real",    "Ponto Facultativo", 11],
+    [6,  "Sáb",  4,  3,  5, "real",    "", 1],
+    [7,  "Dom",  1,  1,  1, "weekend", "", 0],
+    [8,  "Seg", 17, 14, 20, "real",    "Retorno forte pós-feriado", 14],
+    [9,  "Ter", 19, 16, 22, "real",    "", 17],
+    [10, "Qua", 18, 15, 21, "real", "Dia normal", 17],
+    [11, "Qui", 16, 12, 20, "real",    "⚽ Copa: abertura (MEX×RSA) 16h", 14],
+    [12, "Sex", 16, 14, 18, "partial",    "💝 Dia dos Namorados", 17],
     [
       13,
       "Sáb",
