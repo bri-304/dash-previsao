@@ -2,7 +2,7 @@
   "_comentario": "Arquivo gerado automaticamente pelo workflow Pentaho. Não editar manualmente.",
   "_versao": "1.0",
   "meta": {
-    "atualizado_em": "18/06/2026 16:34",
+    "atualizado_em": "18/06/2026 16:50",
     "status_dias": "Dias 1–18 confirmados · Dia 18 parcial · Dias 19–30 com intervalo de confiança",
     "kpi_total_pess": 318,
     "kpi_total_central": 387,
@@ -11,9 +11,9 @@
     "kpi_media_central": "17,0",
     "kpi_media_min": "15,2 mín",
     "kpi_media_max": "21,3 máx",
-    "kpi_realizado": 175,
+    "kpi_realizado": 206,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 17 + est. dia 18)",
-    "kpi_realizado_delta": "▲ 45,2% do total previsto",
+    "kpi_realizado_delta": "▲ 53,2% do total previsto",
     "kpi_yoy_pct": "+30%",
     "kpi_yoy_pess": "+7% pess.",
     "kpi_yoy_otim": "+51% otim.",
@@ -227,7 +227,7 @@
       20,
       "partial",
       "",
-      7
+      8
     ],
     [
       19,
