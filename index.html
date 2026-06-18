@@ -147,6 +147,14 @@ tr:hover td{background:var(--card2)}
 .perf-num{font-family:var(--fm);font-size:10px;color:var(--dim);min-width:22px;text-align:right}
 .perf-jun{font-family:var(--fm);font-size:10px;padding:1px 5px;border-radius:2px;min-width:22px;text-align:center}
 .jun-hot{background:var(--green-d);color:var(--green)}.jun-0{color:var(--muted)}
+/* Dual-bar seller row */
+.perf-side{flex:1;min-width:0;overflow:hidden}
+.perf-side-may .perf-bar-bg{display:flex;justify-content:flex-end}
+.perf-divider-line{width:1px;height:14px;background:var(--border2);flex-shrink:0;border-radius:1px}
+/* Bivalores no bloco Maio vs Jun */
+.tn-bivals{display:flex;align-items:baseline;gap:4px;margin-top:1px}
+.tn-sep{font-family:var(--fm);font-size:12px;color:var(--muted)}
+.tn-val-dim{opacity:.6}
 .team-alert{margin:0 16px 12px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:5px;padding:8px 10px;font-size:11px;color:#f87171;line-height:1.5}
 .team-ok{margin:0 16px 12px;background:var(--green-d);border:1px solid rgba(16,185,129,.2);border-radius:5px;padding:8px 10px;font-size:11px;color:#34d399;line-height:1.5}
 
@@ -452,9 +460,10 @@ tr:hover td{background:var(--card2)}
 </div>
 
 <!-- TEAMS -->
-<div class="sec-title fade-in d4">desempenho por time — maio real vs junho previsto</div>
+<!--<div class="sec-title fade-in d4">desempenho por time — maio real vs junho previsto</div> -->
+<div class="sec-title fade-in d4">desempenho por time — <span id="times-meses">maio real vs junho previsto</span></div>
 <div class="teams-grid fade-in d4">
-  <div class="team-card">
+  <!-- <div class="team-card">
     <div class="team-hdr isr">
       <div>
         <div class="team-name isr">🔵 Israel Riella</div>
@@ -471,8 +480,39 @@ tr:hover td{background:var(--card2)}
       <div id="perf-isr"></div>
     </div>
     <div class="team-ok">⚡ Bruno Ramos lidera junho com 6 em 4 dias. Estevam e Tiago devem sustentar ritmo forte.</div>
-  </div>
+  </div> -->
   <div class="team-card">
+  <div class="team-hdr isr">
+    <div>
+      <div class="team-name isr">🔵 Israel Riella</div>
+      <div class="team-ldr" id="team-ldr-isr">10 ativos</div>
+    </div>
+  </div>
+  <div class="team-nums">
+    <div class="tn">
+      <div class="tn-lbl"><span class="tn-lbl-mai">Maio</span> vs <span class="tn-lbl-jun">Jun</span> real</div>
+      <div class="tn-bivals">
+        <span class="tn-val isr" id="tn-maio-val-isr">102</span>
+        <span class="tn-sep">·</span>
+        <span class="tn-val isr tn-val-dim" id="tn-jun-val-isr">21</span>
+      </div>
+    </div>
+    <div class="tn">
+      <div class="tn-lbl" id="tn-dias-lbl-isr">Dias 1–4</div>
+      <div class="tn-val isr" id="tn-dias-val-isr">21</div>
+    </div>
+    <div class="tn">
+      <div class="tn-lbl">Prev. <span class="tn-lbl-jun-prev">Jun</span></div>
+      <div class="tn-val isr" id="tn-prev-val-isr">~125</div>
+    </div>
+  </div>
+  <div class="perf-list">
+    <div class="perf-lbl" id="perf-lbl-isr">Maio vs Jun 1–4 · por vendedor</div>
+    <div id="perf-isr"></div>
+  </div>
+  <div class="team-ok" id="team-alert-isr">⚡ Bruno Ramos lidera junho com 6 em 4 dias. Estevam e Tiago devem sustentar ritmo forte.</div>
+</div>
+  <!-- <div class="team-card">
     <div class="team-hdr lis">
       <div>
         <div class="team-name lis">🟡 Lisdaisy Vieira Costa</div>
@@ -489,8 +529,39 @@ tr:hover td{background:var(--card2)}
       <div id="perf-lis"></div>
     </div>
     <div class="team-alert">⚠️ Makele forte (11), mas Maria Aline (40 em maio) com apenas 3. Adriérre, Iara e Lana zeradas — atenção urgente.</div>
-  </div>
+  </div> -->
   <div class="team-card">
+  <div class="team-hdr lis">
+    <div>
+      <div class="team-name lis">🟡 Lisdaisy Vieira Costa</div>
+      <div class="team-ldr" id="team-ldr-lis">10 ativos</div>
+    </div>
+  </div>
+  <div class="team-nums">
+    <div class="tn">
+      <div class="tn-lbl"><span class="tn-lbl-mai">Maio</span> vs <span class="tn-lbl-jun">Jun</span> real</div>
+      <div class="tn-bivals">
+        <span class="tn-val lis" id="tn-maio-val-lis">161</span>
+        <span class="tn-sep">·</span>
+        <span class="tn-val lis tn-val-dim" id="tn-jun-val-lis">20</span>
+      </div>
+    </div>
+    <div class="tn">
+      <div class="tn-lbl" id="tn-dias-lbl-lis">Dias 1–4</div>
+      <div class="tn-val lis" id="tn-dias-val-lis">20</div>
+    </div>
+    <div class="tn">
+      <div class="tn-lbl">Prev. <span class="tn-lbl-jun-prev">Jun</span></div>
+      <div class="tn-val lis" id="tn-prev-val-lis">~152</div>
+    </div>
+  </div>
+  <div class="perf-list">
+    <div class="perf-lbl" id="perf-lbl-lis">Maio vs Jun 1–4 · por vendedor</div>
+    <div id="perf-lis"></div>
+  </div>
+  <div class="team-alert" id="team-alert-lis">⚠️ Makele forte (11), mas Maria Aline (40 em maio) com apenas 3. Adriérre, Iara e Lana zeradas — atenção urgente.</div>
+</div>
+  <!-- <div class="team-card">
     <div class="team-hdr stl">
       <div>
         <div class="team-name stl">🟢 Stella Nieheus</div>
@@ -508,6 +579,37 @@ tr:hover td{background:var(--card2)}
     </div>
     <div class="team-alert">⚠️ Guilherme Lopes e Josilea (top performers) ainda zerados. CONSOLIGA deve impulsionar reação esta semana.</div>
   </div>
+</div> -->
+<div class="team-card">
+  <div class="team-hdr stl">
+    <div>
+      <div class="team-name stl">🟢 Stella Nieheus</div>
+      <div class="team-ldr" id="team-ldr-stl">8 ativos</div>
+    </div>
+  </div>
+  <div class="team-nums">
+    <div class="tn">
+      <div class="tn-lbl"><span class="tn-lbl-mai">Maio</span> vs <span class="tn-lbl-jun">Jun</span> real</div>
+      <div class="tn-bivals">
+        <span class="tn-val stl" id="tn-maio-val-stl">96</span>
+        <span class="tn-sep">·</span>
+        <span class="tn-val stl tn-val-dim" id="tn-jun-val-stl">16</span>
+      </div>
+    </div>
+    <div class="tn">
+      <div class="tn-lbl" id="tn-dias-lbl-stl">Dias 1–4</div>
+      <div class="tn-val stl" id="tn-dias-val-stl">16</div>
+    </div>
+    <div class="tn">
+      <div class="tn-lbl">Prev. <span class="tn-lbl-jun-prev">Jun</span></div>
+      <div class="tn-val stl" id="tn-prev-val-stl">~107</div>
+    </div>
+  </div>
+  <div class="perf-list">
+    <div class="perf-lbl" id="perf-lbl-stl">Maio vs Jun 1–4 · por vendedor</div>
+    <div id="perf-stl"></div>
+  </div>
+  <div class="team-alert" id="team-alert-stl">⚠️ Guilherme Lopes e Josilea (top performers) ainda zerados. CONSOLIGA deve impulsionar reação esta semana.</div>
 </div>
 
 <!-- BOTTLENECKS -->
@@ -777,6 +879,78 @@ const DEFAULT_DATA = {
       tags: ["gestão de tempo", "produtividade", "dias copa"]
     }
   ]
+  // ─── TIMES: performers por equipe ─────────────────────────────────────────
+  // mes_anterior_lbl / mes_atual_lbl: rótulos dinâmicos dos meses
+  // vendedores: [nome, vendas_mes_anterior, vendas_mes_atual]
+  // alerta_tipo: "ok" | "alert"
+  ,times: {
+    mes_anterior_lbl: "Maio",
+    mes_atual_lbl:    "Jun",
+    isr: {
+      lider:              "Israel Riella",
+      ativos:             10,
+      mes_anterior_total: 102,
+      mes_atual_total:    21,
+      dias_atual_lbl:     "Dias 1–4",
+      prev_mes_atual:     "~125",
+      alerta_tipo:        "ok",
+      alerta_txt:         "⚡ Bruno Ramos lidera junho com 6 em 4 dias. Estevam e Tiago devem sustentar ritmo forte.",
+      vendedores: [
+        ["Estevam S. Tavares",   31, 3],
+        ["Tiago Melo da Silva",  21, 5],
+        ["Israel Riella",        16, 2],
+        ["Patrícia L. Custódio", 13, 2],
+        ["Bruno Ramos Martins",   6, 6],
+        ["Camily Buratto Arruda", 4, 0],
+        ["Camila Viana Alves",    5, 1],
+        ["Elisângela Arias",      3, 2],
+        ["Noemi Penafort Costa",  1, 0],
+        ["Tales Viana Matos",     2, 0]
+      ]
+    },
+    lis: {
+      lider:              "Lisdaisy Vieira Costa",
+      ativos:             10,
+      mes_anterior_total: 161,
+      mes_atual_total:    20,
+      dias_atual_lbl:     "Dias 1–4",
+      prev_mes_atual:     "~152",
+      alerta_tipo:        "alert",
+      alerta_txt:         "⚠️ Makele forte (11), mas Maria Aline (40 em maio) com apenas 3. Adriérre, Iara e Lana zeradas — atenção urgente.",
+      vendedores: [
+        ["Maria Aline S. Ferreira",40, 3],
+        ["Rafael R. Pedroso",     21, 2],
+        ["Larissa P. Niehues",    22, 1],
+        ["Lisdaisy Vieira Costa", 17, 2],
+        ["Makele de Souza Smania",16,11],
+        ["Iara da Silva Linhares",14, 0],
+        ["Adriérre Marcon",       14, 0],
+        ["Lana M. Morais Leite",   8, 0],
+        ["Aline Cristina da Silva",5, 0],
+        ["Danilo Tenfen",          4, 1]
+      ]
+    },
+    stl: {
+      lider:              "Stella Nieheus",
+      ativos:             8,
+      mes_anterior_total: 96,
+      mes_atual_total:    16,
+      dias_atual_lbl:     "Dias 1–4",
+      prev_mes_atual:     "~107",
+      alerta_tipo:        "alert",
+      alerta_txt:         "⚠️ Guilherme Lopes e Josilea (top performers) ainda zerados. CONSOLIGA deve impulsionar reação esta semana.",
+      vendedores: [
+        ["Marcela M. do Rosário",    19, 4],
+        ["Guilherme Lopes Machado",  18, 0],
+        ["Josilea de Melo Rocha",    16, 0],
+        ["Stella Nieheus",           11, 6],
+        ["Bruna L. Corrêa Barbosa",  10, 2],
+        ["Guilherme C. Rodrigues",    8, 0],
+        ["Yasmin Santos Zonatto",     8, 0],
+        ["Ketlin Madeira Colombo",    6, 4]
+      ]
+    }
+  }
 };
 
 // ── CONFIGURAÇÕES DE ESTILO ──────────────────────────────────────────────────
@@ -1129,45 +1303,79 @@ function toggleTable() {
   a.style.transform = b.classList.contains('open') ? 'rotate(180deg)' : '';
 }
 
-// ── TEAM PERFORMERS (estático — não atualizado pelo workflow) ────────────────
-const teams = {
-  isr:{ color:'#3b82f6', sellers:[
-    ['Estevam S. Tavares',31,3],['Tiago Melo da Silva',21,5],
-    ['Israel Riella',16,2],['Patrícia L. Custódio',13,2],
-    ['Bruno Ramos Martins',6,6],['Camily Buratto Arruda',4,0],
-    ['Camila Viana Alves',5,1],['Elisângela Arias',3,2],
-    ['Noemi Penafort Costa',1,0],['Tales Viana Matos',2,0],
-  ]},
-  lis:{ color:'#f59e0b', sellers:[
-    ['Maria Aline S. Ferreira',40,3],['Rafael R. Pedroso',21,2],
-    ['Larissa P. Niehues',22,1],['Lisdaisy Vieira Costa',17,2],
-    ['Makele de Souza Smania',16,11],['Iara da Silva Linhares',14,0],
-    ['Adriérre Marcon',14,0],['Lana M. Morais Leite',8,0],
-    ['Aline Cristina da Silva',5,0],['Danilo Tenfen',4,1],
-  ]},
-  stl:{ color:'#10b981', sellers:[
-    ['Marcela M. do Rosário',19,4],['Guilherme Lopes Machado',18,0],
-    ['Josilea de Melo Rocha',16,0],['Stella Nieheus',11,6],
-    ['Bruna L. Corrêa Barbosa',10,2],['Guilherme C. Rodrigues',8,0],
-    ['Yasmin Santos Zonatto',8,0],['Ketlin Madeira Colombo',6,4],
-  ]}
+// ── TEAM PERFORMERS (dinâmico — alimentado por times{} do JSON) ──────────────
+const TEAM_COLORS = {
+  isr: { full:'#3b82f6', dim:'rgba(59,130,246,0.40)' },
+  lis: { full:'#f59e0b', dim:'rgba(245,158,11,0.40)' },
+  stl: { full:'#10b981', dim:'rgba(16,185,129,0.40)' }
 };
 
-Object.entries(teams).forEach(([key, team]) => {
-  const cont = document.getElementById(`perf-${key}`);
-  const maxM = Math.max(...team.sellers.map(s => s[1]));
-  team.sellers.forEach(([name, may, jun]) => {
-    const pct = (may / maxM * 100).toFixed(0);
-    const jc = jun > 0 ? 'jun-hot' : 'jun-0';
-    cont.innerHTML += `
-      <div class="perf-row">
-        <div class="perf-name" title="${name}">${name}</div>
-        <div class="perf-bar-bg"><div class="perf-bar" style="width:${pct}%;background:${team.color}"></div></div>
-        <div class="perf-num">${may}</div>
-        <div class="perf-jun ${jc}">${jun > 0 ? '+'+jun : '–'}</div>
-      </div>`;
+function applyTeams(times) {
+  if (!times) return;
+
+  // Rótulos de mês: atualiza todos os spans de label simultâneamente
+  document.querySelectorAll('.tn-lbl-mai').forEach(el => el.textContent = times.mes_anterior_lbl);
+  document.querySelectorAll('.tn-lbl-jun').forEach(el => el.textContent = times.mes_atual_lbl);
+  document.querySelectorAll('.tn-lbl-jun-prev').forEach(el => el.textContent = times.mes_atual_lbl);
+  setText('times-meses', `${times.mes_anterior_lbl} real vs ${times.mes_atual_lbl} previsto`);
+
+  ['isr','lis','stl'].forEach(key => {
+    const t = times[key];
+    if (!t) return;
+    const col = TEAM_COLORS[key];
+
+    // Cabeçalho: ativos
+    setText(`team-ldr-${key}`, `${t.ativos} ativos`);
+
+    // Bloco 1: totais Maio e Jun
+    setText(`tn-maio-val-${key}`, t.mes_anterior_total);
+    setText(`tn-jun-val-${key}`,  t.mes_atual_total);
+
+    // Bloco 2: label período + valor Jun
+    setText(`tn-dias-lbl-${key}`, t.dias_atual_lbl);
+    setText(`tn-dias-val-${key}`, t.mes_atual_total);
+
+    // Bloco 3: previsão do mês atual
+    setText(`tn-prev-val-${key}`, t.prev_mes_atual);
+
+    // Label da lista
+    setText(`perf-lbl-${key}`, `${times.mes_anterior_lbl} vs ${t.dias_atual_lbl} · por vendedor`);
+
+    // Alerta / destaque
+    const alertEl = document.getElementById(`team-alert-${key}`);
+    if (alertEl) {
+      alertEl.className = t.alerta_tipo === 'ok' ? 'team-ok' : 'team-alert';
+      alertEl.textContent = t.alerta_txt;
+    }
+
+    // Barras duplas por vendedor
+    const cont = document.getElementById(`perf-${key}`);
+    if (!cont) return;
+    cont.innerHTML = '';
+    const maxMai = Math.max(...t.vendedores.map(s => s[1]), 1);
+    const maxJun = Math.max(...t.vendedores.map(s => s[2]), 1);
+
+    t.vendedores.forEach(([name, mai, jun]) => {
+      const pMai = (mai / maxMai * 100).toFixed(0);
+      const pJun = (jun / maxJun * 100).toFixed(0);
+      cont.innerHTML += `
+        <div class="perf-row">
+          <div class="perf-name" title="${name}">${name}</div>
+          <div class="perf-side perf-side-may">
+            <div class="perf-bar-bg">
+              <div class="perf-bar" style="width:${pMai}%;background:${col.dim}"></div>
+            </div>
+          </div>
+          <div class="perf-divider-line"></div>
+          <div class="perf-side perf-side-jun">
+            <div class="perf-bar-bg">
+              <div class="perf-bar" style="width:${pJun}%;background:${col.full}"></div>
+            </div>
+          </div>
+        </div>`;
+    });
   });
-});
+}
 
 // ── INICIALIZAR DASHBOARD COM DATA OBJECT ────────────────────────────────────
 function initDashboard(data) {
@@ -1176,6 +1384,7 @@ function initDashboard(data) {
   applySugestoes(data.sugestoes);
   renderChart(data.dias);
   renderTable(data.dias);
+  applyTeams(data.times);
 }
 
 // ── BOOT: tenta buscar forecast_data.json, fallback para DEFAULT_DATA ─────────
