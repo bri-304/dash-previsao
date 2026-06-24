@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "24/06/2026 16:30",
+    "atualizado_em": "24/06/2026 17:39",
     "status_dias": "Dias 1–24 confirmados · Dia 24 parcial · Dias 25–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -10,9 +10,9 @@
     "kpi_media_central": "17,2",
     "kpi_media_min": "15,5 mín",
     "kpi_media_max": "21,6 máx",
-    "kpi_realizado": 261,
+    "kpi_realizado": 264,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 23 + est. dia 24)",
-    "kpi_realizado_delta": "▲ 67,4% do total previsto",
+    "kpi_realizado_delta": "▲ 68,2% do total previsto",
     "kpi_yoy_pct": "+31%",
     "kpi_yoy_pess": "+9% pess.",
     "kpi_yoy_otim": "+53% otim.",
@@ -23,42 +23,36 @@
   },
   "times": {
     "isr": {
-      "ativos": 10,
-      "maio_total": 102,
-      "jun_total": 87,
-      "dias_confirmados_lbl": "Dias 1–19",
-      "dias_confirmados_val": 87,
-      "prev_jun": "~125",
+      "ativos": 13,
+      "maio_total": 107,
+      "jun_total": 85,
+      "dias_confirmados_lbl": "Dias 1–24 confirmados · Dia 24 parcial · Dias 25–30 com intervalo de confiança",
+      "dias_confirmados_val": 85,
       "sellers": [
         [
-          "Estevam S. Tavares",
+          "Estevam Silverio Tavares",
           31,
-          12
+          19
         ],
         [
           "Tiago Melo da Silva",
           21,
-          18
+          15
         ],
         [
           "Israel Riella",
           16,
-          8
+          13
         ],
         [
-          "Patrícia L. Custódio",
-          13,
-          9
+          "Elisângela Arias",
+          3,
+          10
         ],
         [
           "Bruno Ramos Martins",
           6,
-          19
-        ],
-        [
-          "Camily Buratto Arruda",
-          4,
-          5
+          9
         ],
         [
           "Camila Viana Alves",
@@ -66,129 +60,152 @@
           7
         ],
         [
-          "Elisângela Arias",
-          3,
+          "Andressa Cristina de Paula",
+          1,
           4
         ],
         [
-          "Noemi Penafort Costa",
-          1,
+          "Patrícia Lúcio Custódio",
+          13,
+          3
+        ],
+        [
+          "Camily Buratto Arruda",
+          4,
           2
         ],
         [
           "Tales Viana Matos",
           2,
-          3
-        ]
-      ]
-    },
-    "lis": {
-      "ativos": 10,
-      "maio_total": 161,
-      "jun_total": 98,
-      "dias_confirmados_lbl": "Dias 1–19",
-      "dias_confirmados_val": 98,
-      "prev_jun": "~152",
-      "sellers": [
-        [
-          "Maria Aline S. Ferreira",
-          40,
-          22
+          1
         ],
         [
-          "Rafael R. Pedroso",
-          21,
-          14
+          "Noemi da Silva Penafort da Costa",
+          1,
+          1
         ],
         [
-          "Larissa P. Niehues",
-          22,
-          18
-        ],
-        [
-          "Lisdaisy Vieira Costa",
-          17,
-          11
-        ],
-        [
-          "Makele de Souza Smania",
-          16,
-          15
-        ],
-        [
-          "Iara da Silva Linhares",
-          14,
-          5
-        ],
-        [
-          "Adriérre Marcon",
-          14,
-          6
-        ],
-        [
-          "Lana M. Morais Leite",
-          8,
-          4
-        ],
-        [
-          "Aline Cristina da Silva",
-          5,
-          2
-        ],
-        [
-          "Danilo Tenfen",
+          "Dhulia Mendes Martins",
           4,
           1
         ]
       ]
     },
-    "stl": {
-      "ativos": 8,
-      "maio_total": 96,
-      "jun_total": 74,
-      "dias_confirmados_lbl": "Dias 1–19",
-      "dias_confirmados_val": 74,
-      "prev_jun": "~107",
+    "lis": {
+      "ativos": 13,
+      "maio_total": 161,
+      "jun_total": 98,
+      "dias_confirmados_lbl": "Dias 1–24 confirmados · Dia 24 parcial · Dias 25–30 com intervalo de confiança",
+      "dias_confirmados_val": 98,
       "sellers": [
         [
-          "Marcela M. do Rosário",
-          19,
-          16
+          "Makele de Souza Smania",
+          16,
+          24
         ],
         [
-          "Guilherme Lopes Machado",
-          18,
+          "Maria Aline da Silva Ferreira",
+          40,
+          19
+        ],
+        [
+          "Larissa Pereira Niehues",
+          22,
+          13
+        ],
+        [
+          "Adriérre Marcon",
+          14,
+          13
+        ],
+        [
+          "Danilo Tenfen",
+          4,
+          9
+        ],
+        [
+          "Lisdaisy Vieira Costa",
+          17,
+          8
+        ],
+        [
+          "Rafael Rodrigues Pedroso",
+          21,
+          7
+        ],
+        [
+          "Iara da Silva Linhares",
+          14,
+          3
+        ],
+        [
+          "Lana Mara de Morais Leite",
+          8,
+          1
+        ],
+        [
+          "Aline Cristina da Silva",
+          5,
+          1
+        ]
+      ]
+    },
+    "stl": {
+      "ativos": 10,
+      "maio_total": 106,
+      "jun_total": 79,
+      "dias_confirmados_lbl": "Dias 1–24 confirmados · Dia 24 parcial · Dias 25–30 com intervalo de confiança",
+      "dias_confirmados_val": 79,
+      "sellers": [
+        [
+          "Stella Nieheus",
+          11,
+          22
+        ],
+        [
+          "Marcela Machado do Rosário",
+          19,
           12
         ],
         [
           "Josilea de Melo Rocha",
-          16,
+          15,
           11
         ],
         [
-          "Stella Nieheus",
-          11,
-          14
+          "Ketlin Madeira Colombo",
+          6,
+          10
         ],
         [
-          "Bruna L. Corrêa Barbosa",
-          10,
+          "Guilherme Lopes Machado",
+          18,
           9
         ],
         [
-          "Guilherme C. Rodrigues",
-          8,
+          "Bruna Letícia Corrêa Barbosa",
+          10,
+          6
+        ],
+        [
+          "Mirian Daiane Braga Felix",
+          11,
           5
         ],
         [
           "Yasmin Santos Zonatto",
           8,
-          4
+          2
         ],
         [
-          "Ketlin Madeira Colombo",
-          6,
-          3
+          "Guilherme Carvalho Rodrigues",
+          8,
+          1
+        ],
+        [
+          "Elison da Silva Elias",
+          0,
+          1
         ]
       ]
     }
@@ -457,7 +474,7 @@
       18,
       "partial",
       "⚽ BR × Escócia 19h · São João",
-      11
+      14
     ],
     [
       25,
