@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "24/06/2026 15:32",
+    "atualizado_em": "24/06/2026 16:06",
     "status_dias": "Dias 1–24 confirmados · Dia 24 parcial · Dias 25–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -10,9 +10,9 @@
     "kpi_media_central": "17,2",
     "kpi_media_min": "15,5 mín",
     "kpi_media_max": "21,6 máx",
-    "kpi_realizado": 258,
+    "kpi_realizado": 261,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 23 + est. dia 24)",
-    "kpi_realizado_delta": "▲ 66,7% do total previsto",
+    "kpi_realizado_delta": "▲ 67,4% do total previsto",
     "kpi_yoy_pct": "+31%",
     "kpi_yoy_pess": "+9% pess.",
     "kpi_yoy_otim": "+53% otim.",
@@ -457,7 +457,7 @@
       18,
       "partial",
       "⚽ BR × Escócia 19h · São João",
-      10
+      11
     ],
     [
       25,
