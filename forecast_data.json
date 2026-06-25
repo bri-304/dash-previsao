@@ -1,8 +1,8 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "25/06/2026 08:42",
-    "status_dias": "Dias 1–24 confirmados · Dia 24 parcial · Dias 25–30 com intervalo de confiança",
+    "atualizado_em": "25/06/2026 08:59",
+    "status_dias": "Dias 1–25 confirmados · Dia 25 parcial · Dias 26–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
     "kpi_total_otim": 455,
@@ -10,9 +10,9 @@
     "kpi_media_central": "17,2",
     "kpi_media_min": "15,5 mín",
     "kpi_media_max": "21,6 máx",
-    "kpi_realizado": 264,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 23 + est. dia 24)",
-    "kpi_realizado_delta": "▲ 68,2% do total previsto",
+    "kpi_realizado": 266,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 24 + est. dia 25)",
+    "kpi_realizado_delta": "▲ 68,7% do total previsto",
     "kpi_yoy_pct": "+31%",
     "kpi_yoy_pess": "+9% pess.",
     "kpi_yoy_otim": "+53% otim.",
@@ -75,6 +75,11 @@
           2
         ],
         [
+          "Tayna Inácia de Melo",
+          1,
+          1
+        ],
+        [
           "Tales Viana Matos",
           2,
           1
@@ -106,7 +111,7 @@
         [
           "Maria Aline da Silva Ferreira",
           40,
-          19
+          20
         ],
         [
           "Larissa Pereira Niehues",
@@ -472,9 +477,9 @@
       15,
       12,
       18,
-      "partial",
+      "real",
       "⚽ BR × Escócia 19h · São João",
-      14
+      15
     ],
     [
       25,
@@ -482,8 +487,9 @@
       17,
       14,
       20,
-      "work",
-      ""
+      "partial",
+      "",
+      1
     ],
     [
       26,
