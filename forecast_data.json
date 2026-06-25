@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "25/06/2026 08:59",
+    "atualizado_em": "25/06/2026 11:40",
     "status_dias": "Dias 1–25 confirmados · Dia 25 parcial · Dias 26–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -23,11 +23,11 @@
   },
   "times": {
     "isr": {
-      "ativos": 13,
-      "maio_total": 107,
-      "jun_total": 85,
-      "dias_confirmados_lbl": "dias 1- 24",
-      "dias_confirmados_val": 85,
+      "ativos": 14,
+      "maio_total": 108,
+      "jun_total": 86,
+      "dias_confirmados_lbl": "dias 1- 25",
+      "dias_confirmados_val": 86,
       "sellers": [
         [
           "Estevam Silverio Tavares",
@@ -99,9 +99,9 @@
     "lis": {
       "ativos": 13,
       "maio_total": 161,
-      "jun_total": 98,
-      "dias_confirmados_lbl": "dias 1- 24",
-      "dias_confirmados_val": 98,
+      "jun_total": 99,
+      "dias_confirmados_lbl": "dias 1- 25",
+      "dias_confirmados_val": 99,
       "sellers": [
         [
           "Makele de Souza Smania",
@@ -159,7 +159,7 @@
       "ativos": 10,
       "maio_total": 106,
       "jun_total": 79,
-      "dias_confirmados_lbl": "dias 1- 24",
+      "dias_confirmados_lbl": "dias 1- 25",
       "dias_confirmados_val": 79,
       "sellers": [
         [
