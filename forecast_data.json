@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "25/06/2026 11:40",
+    "atualizado_em": "25/06/2026 11:43",
     "status_dias": "Dias 1–25 confirmados · Dia 25 parcial · Dias 26–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -10,9 +10,9 @@
     "kpi_media_central": "17,2",
     "kpi_media_min": "15,5 mín",
     "kpi_media_max": "21,6 máx",
-    "kpi_realizado": 266,
+    "kpi_realizado": 269,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 24 + est. dia 25)",
-    "kpi_realizado_delta": "▲ 68,7% do total previsto",
+    "kpi_realizado_delta": "▲ 69,5% do total previsto",
     "kpi_yoy_pct": "+31%",
     "kpi_yoy_pess": "+9% pess.",
     "kpi_yoy_otim": "+53% otim.",
@@ -28,6 +28,7 @@
       "jun_total": 86,
       "dias_confirmados_lbl": "dias 1- 25",
       "dias_confirmados_val": 86,
+      "prev_jun": "",
       "sellers": [
         [
           "Estevam Silverio Tavares",
@@ -102,6 +103,7 @@
       "jun_total": 99,
       "dias_confirmados_lbl": "dias 1- 25",
       "dias_confirmados_val": 99,
+      "prev_jun": "",
       "sellers": [
         [
           "Makele de Souza Smania",
@@ -111,16 +113,16 @@
         [
           "Maria Aline da Silva Ferreira",
           40,
-          20
-        ],
-        [
-          "Larissa Pereira Niehues",
-          22,
-          13
+          21
         ],
         [
           "Adriérre Marcon",
           14,
+          14
+        ],
+        [
+          "Larissa Pereira Niehues",
+          22,
           13
         ],
         [
@@ -161,6 +163,7 @@
       "jun_total": 79,
       "dias_confirmados_lbl": "dias 1- 25",
       "dias_confirmados_val": 79,
+      "prev_jun": "",
       "sellers": [
         [
           "Stella Nieheus",
@@ -185,7 +188,7 @@
         [
           "Guilherme Lopes Machado",
           18,
-          9
+          10
         ],
         [
           "Bruna Letícia Corrêa Barbosa",
@@ -489,7 +492,7 @@
       20,
       "partial",
       "",
-      1
+      4
     ],
     [
       26,
