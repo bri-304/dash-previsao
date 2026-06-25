@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "25/06/2026 17:15",
+    "atualizado_em": "25/06/2026 17:33",
     "status_dias": "Dias 1–25 confirmados · Dia 25 parcial · Dias 26–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -10,9 +10,9 @@
     "kpi_media_central": "17,2",
     "kpi_media_min": "15,5 mín",
     "kpi_media_max": "21,6 máx",
-    "kpi_realizado": 274,
+    "kpi_realizado": 275,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 24 + est. dia 25)",
-    "kpi_realizado_delta": "▲ 70,8% do total previsto",
+    "kpi_realizado_delta": "▲ 71,1% do total previsto",
     "kpi_yoy_pct": "+31%",
     "kpi_yoy_pess": "+9% pess.",
     "kpi_yoy_otim": "+53% otim.",
@@ -495,7 +495,7 @@
       20,
       "partial",
       "",
-      9
+      10
     ],
     [
       26,
