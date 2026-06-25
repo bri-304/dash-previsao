@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "25/06/2026 12:02",
+    "atualizado_em": "25/06/2026 14:15",
     "status_dias": "Dias 1–25 confirmados · Dia 25 parcial · Dias 26–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -10,9 +10,9 @@
     "kpi_media_central": "17,2",
     "kpi_media_min": "15,5 mín",
     "kpi_media_max": "21,6 máx",
-    "kpi_realizado": 269,
+    "kpi_realizado": 271,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 24 + est. dia 25)",
-    "kpi_realizado_delta": "▲ 69,5% do total previsto",
+    "kpi_realizado_delta": "▲ 70% do total previsto",
     "kpi_yoy_pct": "+31%",
     "kpi_yoy_pess": "+9% pess.",
     "kpi_yoy_otim": "+53% otim.",
@@ -25,6 +25,7 @@
     "isr": {
       "ativos": 14,
       "maio_total": 108,
+      "maio": 0,
       "jun_total": 86,
       "dias_confirmados_lbl": "dias 1- 25",
       "dias_confirmados_val": 86,
@@ -61,14 +62,14 @@
           7
         ],
         [
-          "Andressa Cristina de Paula",
-          1,
+          "Patrícia Lúcio Custódio",
+          13,
           4
         ],
         [
-          "Patrícia Lúcio Custódio",
-          13,
-          3
+          "Andressa Cristina de Paula",
+          1,
+          4
         ],
         [
           "Camily Buratto Arruda",
@@ -100,6 +101,7 @@
     "lis": {
       "ativos": 13,
       "maio_total": 161,
+      "maio": 121,
       "jun_total": 101,
       "dias_confirmados_lbl": "dias 1- 25",
       "dias_confirmados_val": 101,
@@ -113,7 +115,7 @@
         [
           "Maria Aline da Silva Ferreira",
           40,
-          21
+          22
         ],
         [
           "Adriérre Marcon",
@@ -160,6 +162,7 @@
     "stl": {
       "ativos": 10,
       "maio_total": 106,
+      "maio": 75,
       "jun_total": 80,
       "dias_confirmados_lbl": "dias 1- 25",
       "dias_confirmados_val": 80,
@@ -492,7 +495,7 @@
       20,
       "partial",
       "",
-      4
+      6
     ],
     [
       26,
