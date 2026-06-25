@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "25/06/2026 14:15",
+    "atualizado_em": "25/06/2026 14:36",
     "status_dias": "Dias 1–25 confirmados · Dia 25 parcial · Dias 26–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -10,9 +10,9 @@
     "kpi_media_central": "17,2",
     "kpi_media_min": "15,5 mín",
     "kpi_media_max": "21,6 máx",
-    "kpi_realizado": 271,
+    "kpi_realizado": 274,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 24 + est. dia 25)",
-    "kpi_realizado_delta": "▲ 70% do total previsto",
+    "kpi_realizado_delta": "▲ 70,8% do total previsto",
     "kpi_yoy_pct": "+31%",
     "kpi_yoy_pess": "+9% pess.",
     "kpi_yoy_otim": "+53% otim.",
@@ -26,15 +26,15 @@
       "ativos": 14,
       "maio_total": 108,
       "maio": 0,
-      "jun_total": 86,
+      "jun_total": 87,
       "dias_confirmados_lbl": "dias 1- 25",
-      "dias_confirmados_val": 86,
-      "prev_jun": "~125",
+      "dias_confirmados_val": 87,
+      "prev_jun": "",
       "sellers": [
         [
           "Estevam Silverio Tavares",
           31,
-          19
+          21
         ],
         [
           "Tiago Melo da Silva",
@@ -102,10 +102,10 @@
       "ativos": 13,
       "maio_total": 161,
       "maio": 121,
-      "jun_total": 101,
+      "jun_total": 102,
       "dias_confirmados_lbl": "dias 1- 25",
-      "dias_confirmados_val": 101,
-      "prev_jun": "~152",
+      "dias_confirmados_val": 102,
+      "prev_jun": "",
       "sellers": [
         [
           "Makele de Souza Smania",
@@ -166,7 +166,7 @@
       "jun_total": 80,
       "dias_confirmados_lbl": "dias 1- 25",
       "dias_confirmados_val": 80,
-      "prev_jun": "~107",
+      "prev_jun": "",
       "sellers": [
         [
           "Stella Nieheus",
@@ -179,14 +179,14 @@
           12
         ],
         [
-          "Josilea de Melo Rocha",
-          15,
+          "Ketlin Madeira Colombo",
+          6,
           11
         ],
         [
-          "Ketlin Madeira Colombo",
-          6,
-          10
+          "Josilea de Melo Rocha",
+          15,
+          11
         ],
         [
           "Guilherme Lopes Machado",
@@ -495,7 +495,7 @@
       20,
       "partial",
       "",
-      6
+      9
     ],
     [
       26,
