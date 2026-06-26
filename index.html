@@ -1308,6 +1308,51 @@ async function boot() {
 }
 
 boot();
+
+// Bloco teste para autorefresh quando recebe dados novos:
+boot();
+
+// ── Auto-refresh: detecta mudança no forecast_data.json e rerenderiza ──────
+(function autoRefresh() {
+  const JSON_URL = './forecast_data.json';
+  const INTERVAL = 60_000; // checa a cada 60 segundos
+  let lastRaw = null;
+
+  async function checkAndUpdate() {
+    try {
+      const res = await fetch(`${JSON_URL}?t=${Date.now()}`, { cache: 'no-store' });
+      if (!res.ok) return;
+
+      const rawText = await res.text();
+
+      // Primeira checagem: só guarda o valor atual, não faz nada
+      if (lastRaw === null) { lastRaw = rawText; return; }
+
+      // Nenhuma mudança → sai sem fazer nada
+      if (rawText === lastRaw) return;
+
+      // Mudança detectada → rerenderiza só os dados, sem reload
+      console.log('[AutoRefresh] Dados novos detectados, atualizando dashboard...');
+      lastRaw = rawText;
+      const newData = JSON.parse(rawText);
+      if (newData && newData.dias && newData.meta) {
+        const loader = document.getElementById('loading-indicator');
+        loader.style.display = 'block';
+        initDashboard(newData); // ← reutiliza sua função já existente!
+        loader.style.display = 'none';
+      }
+    } catch (err) {
+      console.warn('[AutoRefresh] Erro ao checar:', err);
+    }
+  }
+
+  // Aguarda 10s após o boot para iniciar as checagens
+  setTimeout(() => {
+    checkAndUpdate();
+    setInterval(checkAndUpdate, INTERVAL);
+  }, 10_000);
+})();
+  
 </script>
 </body>
 </html>
