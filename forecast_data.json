@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "26/06/2026 11:51",
+    "atualizado_em": "26/06/2026 13:43",
     "status_dias": "Dias 1–26 confirmados · Dia 26 parcial · Dias 27–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -25,11 +25,11 @@
     "isr": {
       "ativos": 14,
       "maio_total": 108,
-      "maio": 9333,
-      "jun_total": 89,
-      "dias_confirmados_lbl": "dias 1- 25",
-      "dias_confirmados_val": 89,
-      "prev_jun": "~125",
+      "maio": 93,
+      "jun_total": 90,
+      "dias_confirmados_lbl": "dias 1- 26",
+      "dias_confirmados_val": 90,
+      "prev_jun": "",
       "sellers": [
         [
           "Estevam Silverio Tavares",
@@ -54,7 +54,7 @@
         [
           "Bruno Ramos Martins",
           6,
-          9
+          10
         ],
         [
           "Camila Viana Alves",
@@ -101,21 +101,21 @@
     "lis": {
       "ativos": 13,
       "maio_total": 161,
-      "maio": 121,
-      "jun_total": 102,
-      "dias_confirmados_lbl": "dias 1- 25",
-      "dias_confirmados_val": 102,
-      "prev_jun": "~152",
+      "maio": 125,
+      "jun_total": 108,
+      "dias_confirmados_lbl": "dias 1- 26",
+      "dias_confirmados_val": 108,
+      "prev_jun": "",
       "sellers": [
         [
           "Makele de Souza Smania",
           16,
-          24
+          25
         ],
         [
           "Maria Aline da Silva Ferreira",
           40,
-          22
+          23
         ],
         [
           "Adriérre Marcon",
@@ -130,7 +130,7 @@
         [
           "Danilo Tenfen",
           4,
-          9
+          11
         ],
         [
           "Lisdaisy Vieira Costa",
@@ -145,7 +145,7 @@
         [
           "Iara da Silva Linhares",
           14,
-          3
+          5
         ],
         [
           "Lana Mara de Morais Leite",
@@ -162,11 +162,11 @@
     "stl": {
       "ativos": 10,
       "maio_total": 106,
-      "maio": 75,
-      "jun_total": 81,
-      "dias_confirmados_lbl": "dias 1- 25",
-      "dias_confirmados_val": 81,
-      "prev_jun": "~107",
+      "maio": 84,
+      "jun_total": 87,
+      "dias_confirmados_lbl": "dias 1- 26",
+      "dias_confirmados_val": 87,
+      "prev_jun": "",
       "sellers": [
         [
           "Stella Nieheus",
@@ -196,17 +196,17 @@
         [
           "Bruna Letícia Corrêa Barbosa",
           10,
-          6
+          8
         ],
         [
           "Mirian Daiane Braga Felix",
           11,
-          5
+          7
         ],
         [
           "Yasmin Santos Zonatto",
           8,
-          2
+          4
         ],
         [
           "Guilherme Carvalho Rodrigues",
