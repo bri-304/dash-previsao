@@ -464,13 +464,13 @@ tr:hover td{background:var(--card2)}
     <div class="team-nums">
   <div class="tn">
     <div class="tn-lbl">Maio real vs Jun real referênte aos  <span id="tn-diaslbl-isr" style="font-weight:700">dias 1–4</span></div>
-    <div class="tn-val isr" id="tn-maio-isr">102</div>
-    <div class="tn-sub" id="tn-jun-isr" style="font-family:var(--fm);font-size:13px;color:var(--blue-l);margin-top:2px">21</div>
+    <div class="tn-val isr" id="tn-mes-passado-isr">102</div>
+    <div class="tn-sub" id="tn-mes-atual-isr" style="font-family:var(--fm);font-size:13px;color:var(--blue-l);margin-top:2px">21</div>
   </div>
   <div class="tn" style="border-right:none">
     <div class="tn-lbl">Prev. Jun · Realizado Maio</div>
-    <div class="tn-val isr" id="tn-prevjun-isr">~125</div>
-    <div class="tn-sub" id="tn-maio-total-isr" style="font-family:var(--fm);font-size:13px;color:var(--muted);margin-top:2px">102</div>
+    <div class="tn-val isr" id="tn-prev-atual-isr">~125</div>
+    <div class="tn-sub" id="tn-mes-passado-total-isr" style="font-family:var(--fm);font-size:13px;color:var(--muted);margin-top:2px">102</div>
   </div>
 </div>
     <div class="perf-list">
@@ -495,13 +495,13 @@ tr:hover td{background:var(--card2)}
     <div class="team-nums">
   <div class="tn">
     <div class="tn-lbl">Maio real vs Jun real referênte aos <span id="tn-diaslbl-lis" style="font-weight:700">dias 1–4</span></div>
-    <div class="tn-val lis" id="tn-maio-lis">161</div>
-    <div class="tn-sub" id="tn-jun-lis" style="font-family:var(--fm);font-size:13px;color:var(--gold);margin-top:2px">20</div>
+    <div class="tn-val lis" id="tn-mes-passado-lis">161</div>
+    <div class="tn-sub" id="tn-mes-atual-lis" style="font-family:var(--fm);font-size:13px;color:var(--gold);margin-top:2px">20</div>
   </div>
   <div class="tn" style="border-right:none">
     <div class="tn-lbl">Prev. Jun · Realizado Maio</div>
-    <div class="tn-val lis" id="tn-prevjun-lis">~152</div>
-    <div class="tn-sub" id="tn-maio-total-lis" style="font-family:var(--fm);font-size:13px;color:var(--muted);margin-top:2px">161</div>
+    <div class="tn-val lis" id="tn-prev-atual-lis">~152</div>
+    <div class="tn-sub" id="tn-mes-passado-total-lis" style="font-family:var(--fm);font-size:13px;color:var(--muted);margin-top:2px">161</div>
   </div>
 </div>
     <div class="perf-list">
@@ -526,13 +526,13 @@ tr:hover td{background:var(--card2)}
     <div class="team-nums">
   <div class="tn">
     <div class="tn-lbl">Maio real vs Jun real referênte aos <span id="tn-diaslbl-stl" style="font-weight:700">dias 1–4</span></div>
-    <div class="tn-val stl" id="tn-maio-stl">96</div>
+    <div class="tn-val stl" id="tn-mes-passado-stl">96</div>
     <div class="tn-sub" id="tn-jun-stl" style="font-family:var(--fm);font-size:13px;color:var(--green);margin-top:2px">16</div>
   </div>
   <div class="tn" style="border-right:none">
     <div class="tn-lbl">Prev. Jun · Realizado Maio</div>
-    <div class="tn-val stl" id="tn-prevjun-stl">~107</div>
-    <div class="tn-sub" id="tn-maio-total-stl" style="font-family:var(--fm);font-size:13px;color:var(--muted);margin-top:2px">96</div>
+    <div class="tn-val stl" id="tn-prev-atual-stl">~107</div>
+    <div class="tn-sub" id="tn-mes-passado-total-stl" style="font-family:var(--fm);font-size:13px;color:var(--muted);margin-top:2px">96</div>
   </div>
 </div>
     <div class="perf-list">
@@ -1213,12 +1213,12 @@ function renderTeams(data) {
     const ldr = document.getElementById(`team-ldr-${key}`);
     if (ldr) ldr.textContent = `${t.ativos} ativos`;
 
-    // ── KPIs numéricos: Maio total / Jun total / Dias confirmados / Prev Jun
-    const elMaio = document.getElementById(`tn-maio-${key}`);
-    if (elMaio) elMaio.textContent = t.maio;
+    // ── KPIs numéricos: Mês passado total / Mês atual total / Dias confirmados / Prev Mês atual
+    const elMePassado  = document.getElementById(`tn-mes-passado-${key}`);
+    if (elMePassado) elMePassado.textContent = t.mes_passado;
 
-    const elJun = document.getElementById(`tn-jun-${key}`);
-    if (elJun) elJun.textContent = t.jun_total;
+    const elMesAtual  = document.getElementById(`tn-mes-atual-${key}`);
+    if (elMesAtual ) elMesAtual .textContent = t.mes_atual_total;
 
     const elDiasLbl = document.getElementById(`tn-diaslbl-${key}`);
     if (elDiasLbl) elDiasLbl.textContent = t.dias_confirmados_lbl;
@@ -1226,13 +1226,13 @@ function renderTeams(data) {
     const elDias = document.getElementById(`tn-dias-${key}`);
     if (elDias) elDias.textContent = t.dias_confirmados_val;
 
-    const elPrevJun = document.getElementById(`tn-prevjun-${key}`);
-    if (elPrevJun) elPrevJun.textContent = t.prev_jun;
+    const elPrevAtual  = document.getElementById(`tn-prev-atual-${key}`);
+    if (elPrevAtual ) elPrevAtual .textContent = t.prev_atual;
 
-    const elMaioTotal = document.getElementById(`tn-maio-total-${key}`);
-    if (elMaioTotal) elMaioTotal.textContent = t.maio_total;
+    const elMesPassadoTotal  = document.getElementById(`tn-mes-passado-total-${key}`);
+    if (elMesPassadoTotal ) elMesPassadoTotal .textContent = t.mes_passado_total;
 
-    // ── Tabela de vendedores: 2 barras por pessoa (Maio e Junho)
+    // ── Tabela de vendedores: 2 barras por pessoa (Mês anterior e mês atual)
     const cont = document.getElementById(`perf-${key}`);
     if (!cont) return;
     cont.innerHTML = '';
