@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "29/06/2026 16:52",
+    "atualizado_em": "29/06/2026 17:01",
     "status_dias": "Dias 1–29 confirmados · Dia 29 parcial · Dias 30–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -10,9 +10,9 @@
     "kpi_media_central": "17,2",
     "kpi_media_min": "15,5 mín",
     "kpi_media_max": "21,6 máx",
-    "kpi_realizado": 299,
+    "kpi_realizado": 304,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 28 + est. dia 29)",
-    "kpi_realizado_delta": "▲ 77,3% do total previsto",
+    "kpi_realizado_delta": "▲ 78,6% do total previsto",
     "kpi_yoy_pct": "+31%",
     "kpi_yoy_pess": "+9% pess.",
     "kpi_yoy_otim": "+53% otim.",
@@ -44,7 +44,7 @@
         [
           "Israel Riella",
           16,
-          13
+          14
         ],
         [
           "Bruno Ramos Martins",
@@ -102,9 +102,9 @@
       "ativos": 13,
       "mes_passado_total": 161,
       "mes_passado": 153,
-      "mes_atual_total": 115,
+      "mes_atual_total": 116,
       "dias_confirmados_lbl": "dias 1- 29",
-      "dias_confirmados_val": 115,
+      "dias_confirmados_val": 116,
       "prev_atual": "152",
       "sellers": [
         [
@@ -133,6 +133,11 @@
           13
         ],
         [
+          "Iara da Silva Linhares",
+          14,
+          10
+        ],
+        [
           "Lisdaisy Vieira Costa",
           17,
           8
@@ -141,11 +146,6 @@
           "Rafael Rodrigues Pedroso",
           21,
           7
-        ],
-        [
-          "Iara da Silva Linhares",
-          14,
-          6
         ],
         [
           "Lana Mara de Morais Leite",
@@ -534,7 +534,7 @@
       26,
       "partial",
       "🚀 Pré-fechamento · BR nas oitavas (prov.)",
-      1
+      6
     ],
     [
       30,
