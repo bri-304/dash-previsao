@@ -1,8 +1,8 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "29/06/2026 08:43",
-    "status_dias": "Dias 1–26 confirmados · Dia 26 parcial · Dias 27–30 com intervalo de confiança",
+    "atualizado_em": "29/06/2026 08:50",
+    "status_dias": "Dias 1–29 confirmados · Dia 29 parcial · Dias 30–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
     "kpi_total_otim": 455,
@@ -10,9 +10,9 @@
     "kpi_media_central": "17,2",
     "kpi_media_min": "15,5 mín",
     "kpi_media_max": "21,6 máx",
-    "kpi_realizado": 295,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 25 + est. dia 26)",
-    "kpi_realizado_delta": "▲ 76,2% do total previsto",
+    "kpi_realizado": 298,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 28 + est. dia 29)",
+    "kpi_realizado_delta": "▲ 77% do total previsto",
     "kpi_yoy_pct": "+31%",
     "kpi_yoy_pess": "+9% pess.",
     "kpi_yoy_otim": "+53% otim.",
@@ -110,7 +110,7 @@
         [
           "Makele de Souza Smania",
           16,
-          26
+          27
         ],
         [
           "Maria Aline da Silva Ferreira",
@@ -125,7 +125,7 @@
         [
           "Larissa Pereira Niehues",
           22,
-          13
+          14
         ],
         [
           "Danilo Tenfen",
@@ -140,7 +140,7 @@
         [
           "Rafael Rodrigues Pedroso",
           21,
-          7
+          6
         ],
         [
           "Iara da Silva Linhares",
@@ -171,7 +171,7 @@
         [
           "Stella Nieheus",
           11,
-          21
+          22
         ],
         [
           "Marcela Machado do Rosário",
@@ -194,14 +194,14 @@
           10
         ],
         [
-          "Bruna Letícia Corrêa Barbosa",
-          10,
+          "Mirian Daiane Braga Felix",
+          11,
           8
         ],
         [
-          "Mirian Daiane Braga Felix",
-          11,
-          7
+          "Bruna Letícia Corrêa Barbosa",
+          10,
+          8
         ],
         [
           "Yasmin Santos Zonatto",
@@ -266,7 +266,7 @@
       15,
       "real",
       "",
-      15
+      14
     ],
     [
       3,
@@ -503,9 +503,9 @@
       17,
       14,
       20,
-      "partial",
+      "real",
       "",
-      19
+      20
     ],
     [
       27,
@@ -513,8 +513,9 @@
       4,
       3,
       5,
-      "weekend",
-      ""
+      "real",
+      "",
+      2
     ],
     [
       28,
@@ -531,8 +532,9 @@
       20,
       14,
       26,
-      "sprint",
-      "🚀 Pré-fechamento · BR nas oitavas (prov.)"
+      "partial",
+      "🚀 Pré-fechamento · BR nas oitavas (prov.)",
+      1
     ],
     [
       30,
