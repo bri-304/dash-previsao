@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "29/06/2026 17:01",
+    "atualizado_em": "29/06/2026 17:03",
     "status_dias": "Dias 1–29 confirmados · Dia 29 parcial · Dias 30–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -26,9 +26,9 @@
       "ativos": 14,
       "mes_passado_total": 108,
       "mes_passado": 107,
-      "mes_atual_total": 93,
+      "mes_atual_total": 94,
       "dias_confirmados_lbl": "dias 1- 29",
-      "dias_confirmados_val": 93,
+      "dias_confirmados_val": 94,
       "prev_atual": "125",
       "sellers": [
         [
@@ -102,9 +102,9 @@
       "ativos": 13,
       "mes_passado_total": 161,
       "mes_passado": 153,
-      "mes_atual_total": 116,
+      "mes_atual_total": 120,
       "dias_confirmados_lbl": "dias 1- 29",
-      "dias_confirmados_val": 116,
+      "dias_confirmados_val": 120,
       "prev_atual": "152",
       "sellers": [
         [
