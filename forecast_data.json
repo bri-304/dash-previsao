@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "29/06/2026 09:41",
+    "atualizado_em": "29/06/2026 16:52",
     "status_dias": "Dias 1–29 confirmados · Dia 29 parcial · Dias 30–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -10,9 +10,9 @@
     "kpi_media_central": "17,2",
     "kpi_media_min": "15,5 mín",
     "kpi_media_max": "21,6 máx",
-    "kpi_realizado": 298,
+    "kpi_realizado": 299,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1- 28 + est. dia 29)",
-    "kpi_realizado_delta": "▲ 77% do total previsto",
+    "kpi_realizado_delta": "▲ 77,3% do total previsto",
     "kpi_yoy_pct": "+31%",
     "kpi_yoy_pess": "+9% pess.",
     "kpi_yoy_otim": "+53% otim.",
@@ -140,7 +140,7 @@
         [
           "Rafael Rodrigues Pedroso",
           21,
-          6
+          7
         ],
         [
           "Iara da Silva Linhares",
@@ -266,7 +266,7 @@
       15,
       "real",
       "",
-      14
+      15
     ],
     [
       3,
