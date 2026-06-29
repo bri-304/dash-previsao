@@ -1,7 +1,7 @@
 {
   "meta": {
     "titulo_mes": "Junho 2026",
-    "atualizado_em": "29/06/2026 08:50",
+    "atualizado_em": "29/06/2026 09:41",
     "status_dias": "Dias 1–29 confirmados · Dia 29 parcial · Dias 30–30 com intervalo de confiança",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
@@ -25,9 +25,9 @@
     "isr": {
       "ativos": 14,
       "mes_passado_total": 108,
-      "mes_passado": 93,
+      "mes_passado": 107,
       "mes_atual_total": 93,
-      "dias_confirmados_lbl": "dias 1- 26",
+      "dias_confirmados_lbl": "dias 1- 29",
       "dias_confirmados_val": 93,
       "prev_atual": "125",
       "sellers": [
@@ -101,10 +101,10 @@
     "lis": {
       "ativos": 13,
       "mes_passado_total": 161,
-      "mes_passado": 125,
-      "mes_atual_total": 114,
-      "dias_confirmados_lbl": "dias 1- 26",
-      "dias_confirmados_val": 114,
+      "mes_passado": 153,
+      "mes_atual_total": 115,
+      "dias_confirmados_lbl": "dias 1- 29",
+      "dias_confirmados_val": 115,
       "prev_atual": "152",
       "sellers": [
         [
@@ -162,10 +162,10 @@
     "stl": {
       "ativos": 10,
       "mes_passado_total": 106,
-      "mes_passado": 84,
-      "mes_atual_total": 86,
-      "dias_confirmados_lbl": "dias 1- 26",
-      "dias_confirmados_val": 86,
+      "mes_passado": 100,
+      "mes_atual_total": 88,
+      "dias_confirmados_lbl": "dias 1- 29",
+      "dias_confirmados_val": 88,
       "prev_atual": "107",
       "sellers": [
         [
