@@ -1110,8 +1110,11 @@ function renderChart(dias) {
   // Realizado: usa índice 7 do array (campo opcional do JSON),
   // senão infere pelo tipo. null para dias ainda não confirmados.
   const realizadoVals = dias.map(d => {
-    if (d.length > 7 && d[7] != null) return d[7];
-    if (d[5] === 'real' || d[5] === 'partial') return d[2];
+    // trata "", null e undefined como "sem dado ainda" (evita concatenação de string no acumulado)
+    if (d.length > 7 && d[7] !== null && d[7] !== undefined && d[7] !== '' && !Number.isNaN(Number(d[7]))) {
+      return Number(d[7]);
+    }
+    if (d[5] === 'real') return d[2];
     return null;
   });
 
@@ -1272,8 +1275,10 @@ function renderTable(dias) {
     // Realizado: usa d[7] se o ETL preencheu; senão infere pelo tipo
     // (mesma lógica do renderChart — ambos ficam sincronizados)
     let realizado = null;
-    if (d.length > 7 && d[7] != null) realizado = d[7];
-    else if (type === 'real' || type === 'partial') realizado = val;
+    if (d.length > 7 && d[7] !== null && d[7] !== undefined && d[7] !== '' && !Number.isNaN(Number(d[7]))) {
+      realizado = Number(d[7]);
+    }
+    else if (type === 'real') realizado = val;
 
     const pct  = (val / maxV * 100).toFixed(0);
     const col  = typeColor[type];
