@@ -234,7 +234,7 @@ tr:hover td{background:var(--card2)}
       <span class="range-hi" id="kpi-total-otim">455</span>
     </div>
     <div class="range-lbls"><span>pessimista</span><span>central</span><span>otimista</span></div>
-    <div class="kpi-sub">vendas · junho/2026</div>
+    <div class="kpi-sub" id="kpi-total-sub">vendas · junho/2026</div>
     <!-- ▼ PLACEHOLDER: delta vs mês anterior -->
     <div class="delta up" id="kpi-total-delta">▲ +0,5% vs maio (central)</div>
   </div>
@@ -249,7 +249,7 @@ tr:hover td{background:var(--card2)}
       <span style="color:#34d399" id="kpi-media-max">21,6 máx</span>
     </div>
     <div class="kpi-sub">vendas por dia útil estimado</div>
-    <div class="delta up">▲ vs 14,0 jun/2025</div>
+    <div class="delta up" id="kpi-media-delta">▲ vs 14,0 jun/2025</div>
   </div>
 
   <div class="kpi c-green">
@@ -263,7 +263,7 @@ tr:hover td{background:var(--card2)}
   </div>
 
   <div class="kpi c-amber">
-    <div class="kpi-lbl">vs Junho 2025</div>
+    <div class="kpi-lbl" id="kpi-yoy-lbl">vs Junho 2025</div>
     <!-- ▼ PLACEHOLDER: variação YoY central -->
     <div class="kpi-val amber" id="kpi-yoy-pct">+31%</div>
     <div class="range-lbls" style="justify-content:flex-start;gap:6px">
@@ -273,7 +273,7 @@ tr:hover td{background:var(--card2)}
     </div>
     <!-- ▼ PLACEHOLDER: comparativo absoluto central vs ano anterior -->
     <div class="kpi-sub" id="kpi-yoy-sub">390 central vs 298 ano anterior</div>
-    <div class="delta up">▲ crescimento YoY</div>
+    <div class="delta up" id="kpi-yoy-delta">▲ crescimento YoY</div>
   </div>
 
   <div class="kpi c-purple">
@@ -289,28 +289,28 @@ tr:hover td{background:var(--card2)}
 </div>
 
 <!-- CHART -->
-<div class="sec-title fade-in d2">previsão diária com intervalo de confiança — junho 2026</div>
+<div class="sec-title fade-in d2" id="sec-title-previsao">previsão diária com intervalo de confiança — junho 2026</div>
 
 <div class="method-box fade-in d2">
   <div class="method-item">
-    <div class="method-type">Dias úteis normais</div>
-    <div class="method-val">± 15%</div>
-    <div class="method-desc">Variância histórica estável por dia da semana</div>
+    <div class="method-type" id="method-tipo-0">Dias úteis normais</div>
+    <div class="method-val" id="method-val-0">± 15%</div>
+    <div class="method-desc" id="method-desc-0">Variância histórica estável por dia da semana</div>
   </div>
   <div class="method-item">
-    <div class="method-type">Dias de Copa</div>
-    <div class="method-val">± 22%</div>
-    <div class="method-desc">Incerteza de comportamento em dias de jogo do Brasil</div>
+    <div class="method-type" id="method-tipo-1">Dias de Copa</div>
+    <div class="method-val" id="method-val-1">± 22%</div>
+    <div class="method-desc" id="method-desc-1">Incerteza de comportamento em dias de jogo do Brasil</div>
   </div>
   <div class="method-item">
-    <div class="method-type">Sprint final (29–30)</div>
-    <div class="method-val">± 28%</div>
-    <div class="method-desc">Alta pressão CONSOLIGA: teto maior, risco de queima também</div>
+    <div class="method-type" id="method-tipo-2">Sprint final (29–30)</div>
+    <div class="method-val" id="method-val-2">± 28%</div>
+    <div class="method-desc" id="method-desc-2">Alta pressão CONSOLIGA: teto maior, risco de queima também</div>
   </div>
   <div class="method-item">
-    <div class="method-type">Finais de semana</div>
-    <div class="method-val">± 30%</div>
-    <div class="method-desc">Volume baixo com variação proporcional mais alta</div>
+    <div class="method-type" id="method-tipo-3">Finais de semana</div>
+    <div class="method-val" id="method-val-3">± 30%</div>
+    <div class="method-desc" id="method-desc-3">Volume baixo com variação proporcional mais alta</div>
   </div>
 </div>
 
@@ -318,7 +318,7 @@ tr:hover td{background:var(--card2)}
 <div class="chart-box fade-in d2">
   <div class="chart-hdr">
     <div>
-      <div class="chart-title">Vendas por Dia · Junho 2026</div>
+      <div class="chart-title" id="chart-title-main">Vendas por Dia · Junho 2026</div>
     </div>
     <div class="legend">
       <!-- Indicadores de realizado: barra estreita sólida -->
@@ -360,14 +360,14 @@ tr:hover td{background:var(--card2)}
   <!-- ▼ SEMANA 1: números atualizados via applyWeeks() -->
   <div class="week-card">
     <div class="week-lbl">Semana 1</div>
-    <div class="week-dates">01 a 07/06</div>
+    <div class="week-dates" id="week1-dates">01 a 07/06</div>
     <div class="week-num" id="week1-num" style="color:var(--green)">67</div>
     <div class="week-range" style="color:var(--muted)">intervalo:
       <span style="color:#f87171" id="week1-min">61</span> —
       <span style="color:#34d399" id="week1-max">75</span>
     </div>
     <div class="week-avg" id="week1-avg">~12,4/dia útil · impacto feriado</div>
-    <div class="week-tags">
+    <div class="week-tags" id="week1-tags">
       <span class="wtag warn">⛔ Corpus Christi 04/06</span>
       <span class="wtag warn">⛔ Pto. Fac. 05/06</span>
       <span class="wtag ok">✅ Dias 1–4 confirmados</span>
@@ -377,14 +377,14 @@ tr:hover td{background:var(--card2)}
   <!-- ▼ SEMANA 2: números atualizados via applyWeeks() -->
   <div class="week-card">
     <div class="week-lbl">Semana 2</div>
-    <div class="week-dates">08 a 14/06</div>
+    <div class="week-dates" id="week2-dates">08 a 14/06</div>
     <div class="week-num" id="week2-num" style="color:var(--blue-l)">94</div>
     <div class="week-range" style="color:var(--muted)">intervalo:
       <span style="color:#f87171" id="week2-min">78</span> —
       <span style="color:#34d399" id="week2-max">111</span>
     </div>
     <div class="week-avg" id="week2-avg">~17,2/dia útil · retorno forte</div>
-    <div class="week-tags">
+    <div class="week-tags" id="week2-tags">
       <span class="wtag ok">↩ Retorno pós-4 dias de feriado</span>
       <span class="wtag copa">⚽ Copa abre 11/06 (16h)</span>
       <span class="wtag copa">⚽ BR × Marrocos 13/06 (19h)</span>
@@ -394,14 +394,14 @@ tr:hover td{background:var(--card2)}
   <!-- ▼ SEMANA 3: números atualizados via applyWeeks() -->
   <div class="week-card">
     <div class="week-lbl">Semana 3</div>
-    <div class="week-dates">15 a 21/06</div>
+    <div class="week-dates" id="week3-dates">15 a 21/06</div>
     <div class="week-num" id="week3-num" style="color:var(--blue-l)">93</div>
     <div class="week-range" style="color:var(--muted)">intervalo:
       <span style="color:#f87171" id="week3-min">77</span> —
       <span style="color:#34d399" id="week3-max">109</span>
     </div>
     <div class="week-avg" id="week3-avg">~17,6/dia útil · semana cheia</div>
-    <div class="week-tags">
+    <div class="week-tags" id="week3-tags">
       <span class="wtag ok">Semana completa de trabalho</span>
       <span class="wtag copa">⚽ BR × Haiti 19/06 (21h30)</span>
       <span class="wtag hot">🎯 Deadline Bolão 2 · 19/06</span>
@@ -411,14 +411,14 @@ tr:hover td{background:var(--card2)}
   <!-- ▼ SEMANA 4: números atualizados via applyWeeks() -->
   <div class="week-card">
     <div class="week-lbl">Semana 4</div>
-    <div class="week-dates">22 a 30/06</div>
+    <div class="week-dates" id="week4-dates">22 a 30/06</div>
     <div class="week-num" id="week4-num" style="color:var(--amber)">136</div>
     <div class="week-range" style="color:var(--muted)">intervalo:
       <span style="color:#f87171" id="week4-min">109</span> —
       <span style="color:#34d399" id="week4-max">160</span>
     </div>
     <div class="week-avg" id="week4-avg">~18,7/dia útil · sprint final!</div>
-    <div class="week-tags">
+    <div class="week-tags" id="week4-tags">
       <span class="wtag copa">⚽ BR × Escócia 24/06 (19h)</span>
       <span class="wtag hot">🏁 Fechamento CONSOLIGA</span>
       <span class="wtag hot">📈 29–30/06: pico do mês</span>
@@ -486,7 +486,7 @@ tr:hover td{background:var(--card2)}
         </div>
       <div id="perf-isr"></div>
     </div>
-    <div class="team-ok">⚡ Bruno Ramos lidera junho com 6 em 4 dias. Estevam e Tiago devem sustentar ritmo forte.</div>
+    <div class="team-ok" id="team-obs-isr">⚡ Bruno Ramos lidera junho com 6 em 4 dias. Estevam e Tiago devem sustentar ritmo forte.</div>
   </div>
   <div class="team-card">
     <div class="team-hdr lis">
@@ -520,7 +520,7 @@ tr:hover td{background:var(--card2)}
         </div>
       <div id="perf-lis"></div>
     </div>
-    <div class="team-alert">⚠️ Makele forte (11), mas Maria Aline (40 em maio) com apenas 3. Adriérre, Iara e Lana zeradas — atenção urgente.</div>
+    <div class="team-alert" id="team-obs-lis">⚠️ Makele forte (11), mas Maria Aline (40 em maio) com apenas 3. Adriérre, Iara e Lana zeradas — atenção urgente.</div>
   </div>
   <div class="team-card">
     <div class="team-hdr stl">
@@ -554,13 +554,14 @@ tr:hover td{background:var(--card2)}
         </div>
       <div id="perf-stl"></div>
     </div>
-    <div class="team-alert">⚠️ Guilherme Lopes e Josilea (top performers) ainda zerados. CONSOLIGA deve impulsionar reação esta semana.</div>
+    <div class="team-alert" id="team-obs-stl">⚠️ Guilherme Lopes e Josilea (top performers) ainda zerados. CONSOLIGA deve impulsionar reação esta semana.</div>
   </div>
 </div>
 
 <!-- BOTTLENECKS -->
 <div class="sec-title fade-in d5">gargalos e dias críticos</div>
-<div class="risk-grid fade-in d5">
+<!-- ▼ PLACEHOLDER: cards gerados automaticamente via applyGargalos() a partir de gargalos[] no JSON -->
+<div class="risk-grid fade-in d5" id="risk-grid">
   <div class="risk-card risk">
     <div class="risk-date">05/06 (Sex) — HOJE</div>
     <div class="risk-title">Ponto Facultativo Oficial</div>
@@ -601,7 +602,8 @@ tr:hover td{background:var(--card2)}
 
 <!-- COPA -->
 <div class="sec-title fade-in d5">copa do mundo 2026 — bolão consolide</div>
-<div class="copa-grid fade-in d5">
+<!-- ▼ PLACEHOLDER: cards gerados automaticamente via applyBolao() a partir de bolao[] no JSON -->
+<div class="copa-grid fade-in d5" id="copa-grid">
   <div class="copa-card">
     <div class="copa-num">BOLÃO 1 · FASE DE GRUPOS</div>
     <div class="copa-match">🇧🇷 BR × MAR 🇲🇦</div>
@@ -694,9 +696,10 @@ tr:hover td{background:var(--card2)}
 </div>
 
 <div class="footer" id="footer-txt">
-  Consolide · Forecast Junho 2026 com Intervalo de Confiança · Gerado em 05/06/2026<br>
-  Método: Pipeline Ponderado + Rolling WMA (peso 2 últimos 6m) + Cohort por Time · Margens: CV histórico por tipo de dia (±15% úteis · ±22% Copa · ±28% sprint · ±30% FDS)<br>
-  Cenário pessimista: ~325 · Central: ~390 · Cenário otimista: ~455
+  <!-- ▼ PLACEHOLDER: linhas do rodapé atualizadas via applyMeta() -->
+  <span id="footer-linha1">Consolide · Forecast Junho 2026 com Intervalo de Confiança · Gerado em 05/06/2026</span><br>
+  <span id="footer-linha2">Método: Pipeline Ponderado + Rolling WMA (peso 2 últimos 6m) + Cohort por Time · Margens: CV histórico por tipo de dia (±15% úteis · ±22% Copa · ±28% sprint · ±30% FDS)</span><br>
+  <span id="footer-linha3">Cenário pessimista: ~325 · Central: ~390 · Cenário otimista: ~455</span>
 </div>
 
 </div><!-- /wrap -->
@@ -724,28 +727,42 @@ const DEFAULT_DATA = {
     kpi_total_central:    390,
     kpi_total_otim:       455,
     kpi_total_delta:      "▲ +0,5% vs maio (central)",
+    kpi_total_sub:        "vendas · junho/2026",
     kpi_media_central:    "17,2",
     kpi_media_min:        "15,5 mín",
     kpi_media_max:        "21,6 máx",
+    kpi_media_delta:      "▲ vs 14,0 jun/2025",
     kpi_realizado:        62,
     kpi_realizado_sub:    "vendas confirmadas (dias 1–4 + est. dia 5)",
     kpi_realizado_delta:  "▲ 15,9% do total previsto",
+    kpi_yoy_lbl:          "vs Junho 2025",
     kpi_yoy_pct:          "+31%",
     kpi_yoy_pess:         "+9% pess.",
     kpi_yoy_otim:         "+53% otim.",
     kpi_yoy_sub:          "390 central vs 298 ano anterior",
+    kpi_yoy_delta:        "▲ crescimento YoY",
     kpi_ativos:           28,
     kpi_ativos_sub:       "em 3 times competindo",
-    kpi_inativos_delta:   "▼ 8 inativos / férias"
+    kpi_inativos_delta:   "▼ 8 inativos / férias",
+    sec_title_previsao:   "previsão diária com intervalo de confiança — junho 2026",
+    chart_title_main:     "Vendas por Dia · Junho 2026",
+    footer_linha1:        "Consolide · Forecast Junho 2026 com Intervalo de Confiança · Gerado em 05/06/2026",
+    footer_linha2:        "Método: Pipeline Ponderado + Rolling WMA (peso 2 últimos 6m) + Cohort por Time · Margens: CV histórico por tipo de dia (±15% úteis · ±22% Copa · ±28% sprint · ±30% FDS)",
+    footer_linha3:        "Cenário pessimista: ~325 · Central: ~390 · Cenário otimista: ~455"
   },
 
   // ─── SEMANAS: resumo semanal (apenas os números mudam) ────────────────────
   // Índice 0 = Semana 1, índice 1 = Semana 2, etc.
+  // tags_html aceita spans com classes .wtag .warn .ok .copa .hot
   semanas: [
-    { central: 67,  min: 61,  max: 75,  avg_txt: "~12,4/dia útil · impacto feriado" },
-    { central: 94,  min: 78,  max: 111, avg_txt: "~17,2/dia útil · retorno forte"   },
-    { central: 93,  min: 77,  max: 109, avg_txt: "~17,6/dia útil · semana cheia"    },
-    { central: 136, min: 109, max: 160, avg_txt: "~18,7/dia útil · sprint final!"   }
+    { central: 67,  min: 61,  max: 75,  avg_txt: "~12,4/dia útil · impacto feriado", dates: "01 a 07/06",
+      tags_html: "<span class=\"wtag warn\">⛔ Corpus Christi 04/06</span><span class=\"wtag warn\">⛔ Pto. Fac. 05/06</span><span class=\"wtag ok\">✅ Dias 1–4 confirmados</span>" },
+    { central: 94,  min: 78,  max: 111, avg_txt: "~17,2/dia útil · retorno forte",   dates: "08 a 14/06",
+      tags_html: "<span class=\"wtag ok\">↩ Retorno pós-4 dias de feriado</span><span class=\"wtag copa\">⚽ Copa abre 11/06 (16h)</span><span class=\"wtag copa\">⚽ BR × Marrocos 13/06 (19h)</span>" },
+    { central: 93,  min: 77,  max: 109, avg_txt: "~17,6/dia útil · semana cheia",    dates: "15 a 21/06",
+      tags_html: "<span class=\"wtag ok\">Semana completa de trabalho</span><span class=\"wtag copa\">⚽ BR × Haiti 19/06 (21h30)</span><span class=\"wtag hot\">🎯 Deadline Bolão 2 · 19/06</span>" },
+    { central: 136, min: 109, max: 160, avg_txt: "~18,7/dia útil · sprint final!",   dates: "22 a 30/06",
+      tags_html: "<span class=\"wtag copa\">⚽ BR × Escócia 24/06 (19h)</span><span class=\"wtag hot\">🏁 Fechamento CONSOLIGA</span><span class=\"wtag hot\">📈 29–30/06: pico do mês</span>" }
   ],
 
   // ─── DIAS: array principal — alimenta gráfico de barras + tabela ──────────
@@ -824,6 +841,42 @@ const DEFAULT_DATA = {
       descricao_html: "65–67% dos movimentos ocorrem de manhã. Nos dias de Copa (11, 13, 19, 24/06), <strong>concentrar todas as ligações e pitchs antes das 13h</strong>. Isso protege a meta mesmo que a tarde seja impactada pelo evento.",
       tags: ["gestão de tempo", "produtividade", "dias copa"]
     }
+  ],
+
+  // ─── METODOS: caixas da metodologia de intervalo de confiança ─────────────
+  // Alimenta applyMetodos() → atualiza method-tipo-N, method-val-N, method-desc-N
+  metodos: [
+    { tipo: "Dias úteis normais",   val: "± 15%", desc: "Variância histórica estável por dia da semana" },
+    { tipo: "Dias de Copa",         val: "± 22%", desc: "Incerteza de comportamento em dias de jogo do Brasil" },
+    { tipo: "Sprint final (29–30)", val: "± 28%", desc: "Alta pressão CONSOLIGA: teto maior, risco de queima também" },
+    { tipo: "Finais de semana",     val: "± 30%", desc: "Volume baixo com variação proporcional mais alta" }
+  ],
+
+  // ─── GARGALOS: cards de risco/oportunidade ────────────────────────────────
+  // tipo: "risk" | "warn" | "info" | "oppt"
+  // Alimenta applyGargalos() → regenera innerHTML de #risk-grid
+  gargalos: [
+    { tipo: "risk", data: "05/06 (Sex) — HOJE",              titulo: "Ponto Facultativo Oficial",       desc: "Portaria MGI nº 11.460/2025. Clientes e leads também fora. Margem ampla: pessimista 3 — central 5 — otimista 7. Feriadão 4 dias comprime toda a semana 1.",                                                          pill: "📉 Previsão: 3 — 5 — 7 vendas" },
+    { tipo: "warn", data: "11–12/06 (Qui–Sex)",              titulo: "Copa começa + Dia dos Namorados",  desc: "Copa abre na quinta (16h). Véspera do Brasil na sexta reduz engajamento de tarde. Ambos os dias com margem ±22% pela incerteza do evento.",                                                                           pill: "⚠️ Previsão: 12–20 (Qui) · 14–18 (Sex)" },
+    { tipo: "info", data: "13/06 (Sáb) — 1º Jogo Brasil",   titulo: "BR × Marrocos 19h",               desc: "Sábado de Copa: mais incerto que sábado comum. Margem ampla ±22%. Pode surpreender para cima se empolgação + Bolão motivarem vendas até o início da tarde.",                                                          pill: "⚽ Previsão: 5 — 6 — 7 vendas" },
+    { tipo: "warn", data: "24/06 (Qua) — Jogo 3 do Brasil", titulo: "BR × Escócia 19h + São João",      desc: "Jogo às 19h pode encerrar o dia antes. São João tem impacto no NE. Margem copa ±22% gera intervalo 12–18. Quarta é historicamente forte, mas evento pressiona para baixo.",                                          pill: "⚽ Previsão: 12 — 15 — 18 vendas" },
+    { tipo: "oppt", data: "08/06 (Seg) — Retorno pós-feriado", titulo: "Retorno + urgência Bolão 1",    desc: "Após 4 dias fora, leads acumuladas reiniciam. Urgência de 5 vendas antes de 13/06. Margem otimista chega a 20 — se o time arrancar forte, pode compensar semana 1.",                                                  pill: "📈 Previsão: 14 — 17 — 20 vendas" },
+    { tipo: "oppt", data: "29–30/06 — Sprint Final",         titulo: "Fechamento CONSOLIGA Mês 2",      desc: "Maior janela de incerteza do mês (±28%), mas para cima! Cenário otimista: 26+36=62 vendas. Cenário pessimista: 14+20=34. Brasil nas oitavas no dia 29 pode elevar euforia e vendas.",                                pill: "🚀 Previsão: 34–62 nos dois dias" }
+  ],
+
+  // ─── BOLAO: cards dos jogos do Brasil e regras do bolão ───────────────────
+  // extra_style: CSS inline aplicado ao copa-row-val do campo extra (ex: "color:var(--green)")
+  // Alimenta applyBolao() → regenera innerHTML de #copa-grid
+  bolao: [
+    { num: "BOLÃO 1 · FASE DE GRUPOS", jogo: "🇧🇷 BR × MAR 🇲🇦",    data_jogo: "13/06/2026 (Sáb) · 19h · Houston",
+      periodo: "01–13/06",        aposta_threshold: "5 vendas", extra_lbl: "Status da equipe",        extra_val: "62+ vendas ✓",    extra_style: "color:var(--green)",
+      tip: "Bruno (6), Tiago (5) e Stella (6) já cruzaram o 1º threshold. Vendedores com urgência de acumular mais apostas antes de sábado." },
+    { num: "BOLÃO 2 · FASE DE GRUPOS", jogo: "🇧🇷 BR × HAI 🇭🇹",    data_jogo: "19/06/2026 (Sex) · 21h30",
+      periodo: "14–19/06 (até 20h)", aposta_threshold: "5 vendas", extra_lbl: "Dias úteis disponíveis", extra_val: "5 dias",          extra_style: "",
+      tip: "Deadline às 20h do dia do jogo cria urgência na sexta. Projeção central de ~88 vendas no período → ~17 apostas coletivas possíveis." },
+    { num: "BOLÃO 3 · FASE DE GRUPOS", jogo: "🇧🇷 BR × ESC 🏴󠁧󠁢󠁳󠁣󠁴󠁿", data_jogo: "24/06/2026 (Qua) · 19h",
+      periodo: "20–24/06",        aposta_threshold: "5 vendas", extra_lbl: "Dias úteis disponíveis", extra_val: "3 dias (⚠️ curto!)", extra_style: "",
+      tip: "Janela mais curta: só 22, 23 e 24/06. Apenas 3 dias para atingir 5 vendas por aposta. Alta pressão especialmente na segunda e terça." }
   ]
 };
 
@@ -893,34 +946,42 @@ function applyMeta(meta) {
     `Atualizado em ${meta.atualizado_em} · ${meta.status_dias}`);
 
   // KPI 1 — Total previsto
-  setText('kpi-total-pess', meta.kpi_total_pess);
-  setText('kpi-total-otim', meta.kpi_total_otim);
+  setText('kpi-total-pess',  meta.kpi_total_pess);
+  setText('kpi-total-otim',  meta.kpi_total_otim);
   setText('kpi-total-delta', meta.kpi_total_delta);
+  if (meta.kpi_total_sub)  setText('kpi-total-sub', meta.kpi_total_sub);
 
   // KPI 2 — Média/dia útil
-  setText('kpi-media-val',  meta.kpi_media_central);
-  setText('kpi-media-min',  meta.kpi_media_min);
-  setText('kpi-media-max',  meta.kpi_media_max);
+  setText('kpi-media-val',   meta.kpi_media_central);
+  setText('kpi-media-min',   meta.kpi_media_min);
+  setText('kpi-media-max',   meta.kpi_media_max);
+  if (meta.kpi_media_delta) setText('kpi-media-delta', meta.kpi_media_delta);
 
   // KPI 3 — Realizado
   setText('kpi-realizado-sub',   meta.kpi_realizado_sub);
   setText('kpi-realizado-delta', meta.kpi_realizado_delta);
 
   // KPI 4 — vs Junho 2025
+  if (meta.kpi_yoy_lbl)  setText('kpi-yoy-lbl',  meta.kpi_yoy_lbl);
   setText('kpi-yoy-pct',  meta.kpi_yoy_pct);
   setText('kpi-yoy-pess', meta.kpi_yoy_pess);
   setText('kpi-yoy-otim', meta.kpi_yoy_otim);
   setText('kpi-yoy-sub',  meta.kpi_yoy_sub);
+  if (meta.kpi_yoy_delta) setText('kpi-yoy-delta', meta.kpi_yoy_delta);
 
   // KPI 5 — Vendedores ativos
   setText('kpi-ativos',         meta.kpi_ativos);
   setText('kpi-ativos-sub',     meta.kpi_ativos_sub);
   setText('kpi-inativos-delta', meta.kpi_inativos_delta);
 
-  // Footer
-  setText('footer-txt',
-    `Consolide · Forecast Junho 2026 com Intervalo de Confiança · Gerado em ${meta.atualizado_em}\n` +
-    `Método: Pipeline Ponderado + Rolling WMA · Cenário pessimista: ~${meta.kpi_total_pess} · Central: ~${meta.kpi_total_central} · Otimista: ~${meta.kpi_total_otim}`);
+  // Títulos de seção e gráfico
+  if (meta.sec_title_previsao) setText('sec-title-previsao', meta.sec_title_previsao);
+  if (meta.chart_title_main)   setText('chart-title-main',   meta.chart_title_main);
+
+  // Footer — linhas individuais
+  if (meta.footer_linha1) setText('footer-linha1', meta.footer_linha1);
+  if (meta.footer_linha2) setText('footer-linha2', meta.footer_linha2);
+  if (meta.footer_linha3) setText('footer-linha3', meta.footer_linha3);
 
   // Contadores animados (após pequeno delay para DOM estar pronto)
   setTimeout(() => {
@@ -933,10 +994,12 @@ function applyMeta(meta) {
 function applyWeeks(semanas) {
   semanas.forEach((s, i) => {
     const n = i + 1;
-    setText(`week${n}-num`, s.central);
-    setText(`week${n}-min`, s.min);
-    setText(`week${n}-max`, s.max);
-    setText(`week${n}-avg`, s.avg_txt);
+    setText(`week${n}-num`,   s.central);
+    setText(`week${n}-min`,   s.min);
+    setText(`week${n}-max`,   s.max);
+    setText(`week${n}-avg`,   s.avg_txt);
+    if (s.dates)     setText(`week${n}-dates`,  s.dates);
+    if (s.tags_html) setHtml(`week${n}-tags`,   s.tags_html);
   });
 }
 
@@ -951,6 +1014,48 @@ function applySugestoes(sugestoes) {
       tagsEl.innerHTML = s.tags.map(t => `<span class="stag">${t}</span>`).join('');
     }
   });
+}
+
+// ── APLICAR METODOLOGIA (caixas de intervalo de confiança) ───────────────────
+// Atualiza method-tipo-N / method-val-N / method-desc-N (N = 0..3)
+function applyMetodos(metodos) {
+  if (!metodos) return;
+  metodos.forEach((m, i) => {
+    setText(`method-tipo-${i}`, m.tipo);
+    setText(`method-val-${i}`,  m.val);
+    setText(`method-desc-${i}`, m.desc);
+  });
+}
+
+// ── APLICAR GARGALOS (cards de risco/oportunidade) ───────────────────────────
+// Regenera o innerHTML de #risk-grid a partir do array gargalos[]
+function applyGargalos(gargalos) {
+  const grid = document.getElementById('risk-grid');
+  if (!grid || !gargalos) return;
+  grid.innerHTML = gargalos.map(g => `
+    <div class="risk-card ${g.tipo}">
+      <div class="risk-date">${g.data}</div>
+      <div class="risk-title">${g.titulo}</div>
+      <div class="risk-desc">${g.desc}</div>
+      <div class="risk-pill">${g.pill}</div>
+    </div>`).join('');
+}
+
+// ── APLICAR BOLÃO (cards dos jogos do Brasil) ─────────────────────────────────
+// Regenera o innerHTML de #copa-grid a partir do array bolao[]
+function applyBolao(bolao) {
+  const grid = document.getElementById('copa-grid');
+  if (!grid || !bolao) return;
+  grid.innerHTML = bolao.map(b => `
+    <div class="copa-card">
+      <div class="copa-num">${b.num}</div>
+      <div class="copa-match">${b.jogo}</div>
+      <div class="copa-dt">${b.data_jogo}</div>
+      <div class="copa-row"><span class="copa-row-lbl">Período válido</span><span class="copa-row-val">${b.periodo}</span></div>
+      <div class="copa-row"><span class="copa-row-lbl">1 aposta a cada</span><span class="copa-row-val">${b.aposta_threshold}</span></div>
+      <div class="copa-row"><span class="copa-row-lbl">${b.extra_lbl}</span><span class="copa-row-val"${b.extra_style ? ` style="${b.extra_style}"` : ''}>${b.extra_val}</span></div>
+      <div class="copa-tip">${b.tip}</div>
+    </div>`).join('');
 }
 
 // ── RENDERIZAR GRÁFICO DE BARRAS ─────────────────────────────────────────────
@@ -1200,14 +1305,20 @@ function renderTeams(data) {
   // Fallback: se não houver data.times, usa os dados estáticos anteriores
   const fallbackTimes = {
     isr:{ ativos:10, maio_total:102, jun_total:21, dias_confirmados_lbl:'Dias 1–4', dias_confirmados_val:21, prev_jun:'~125',
+      obs_class: 'team-ok',
+      obs_txt: '⚡ Bruno Ramos lidera junho com 6 em 4 dias. Estevam e Tiago devem sustentar ritmo forte.',
       sellers:[['Estevam S. Tavares',31,3],['Tiago Melo da Silva',21,5],['Israel Riella',16,2],['Patrícia L. Custódio',13,2],
                ['Bruno Ramos Martins',6,6],['Camily Buratto Arruda',4,0],['Camila Viana Alves',5,1],['Elisângela Arias',3,2],
                ['Noemi Penafort Costa',1,0],['Tales Viana Matos',2,0]]},
     lis:{ ativos:10, maio_total:161, jun_total:20, dias_confirmados_lbl:'Dias 1–4', dias_confirmados_val:20, prev_jun:'~152',
+      obs_class: 'team-alert',
+      obs_txt: '⚠️ Makele forte (11), mas Maria Aline (40 em maio) com apenas 3. Adriérre, Iara e Lana zeradas — atenção urgente.',
       sellers:[['Maria Aline S. Ferreira',40,3],['Rafael R. Pedroso',21,2],['Larissa P. Niehues',22,1],['Lisdaisy Vieira Costa',17,2],
                ['Makele de Souza Smania',16,11],['Iara da Silva Linhares',14,0],['Adriérre Marcon',14,0],['Lana M. Morais Leite',8,0],
                ['Aline Cristina da Silva',5,0],['Danilo Tenfen',4,1]]},
     stl:{ ativos:8, maio_total:96, jun_total:16, dias_confirmados_lbl:'Dias 1–4', dias_confirmados_val:16, prev_jun:'~107',
+      obs_class: 'team-alert',
+      obs_txt: '⚠️ Guilherme Lopes e Josilea (top performers) ainda zerados. CONSOLIGA deve impulsionar reação esta semana.',
       sellers:[['Marcela M. do Rosário',19,4],['Guilherme Lopes Machado',18,0],['Josilea de Melo Rocha',16,0],['Stella Nieheus',11,6],
                ['Bruna L. Corrêa Barbosa',10,2],['Guilherme C. Rodrigues',8,0],['Yasmin Santos Zonatto',8,0],['Ketlin Madeira Colombo',6,4]]},
   };
@@ -1270,6 +1381,16 @@ function renderTeams(data) {
           </div>
         </div>`;
     });
+
+    // ── Observação do time (team-ok / team-alert) via id="team-obs-{key}"
+    const elObs = document.getElementById(`team-obs-${key}`);
+    if (elObs && t.obs_txt) {
+      elObs.textContent = t.obs_txt;
+      // Atualiza a classe se o JSON informar obs_class
+      if (t.obs_class) {
+        elObs.className = t.obs_class;
+      }
+    }
   });
 }
 
@@ -1278,6 +1399,9 @@ function initDashboard(data) {
   applyMeta(data.meta);
   applyWeeks(data.semanas);
   applySugestoes(data.sugestoes);
+  applyMetodos(data.metodos);
+  applyGargalos(data.gargalos);
+  applyBolao(data.bolao);
   renderChart(data.dias);
   renderTable(data.dias);
   renderTeams(data);
