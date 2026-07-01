@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "01/07/2026 11:49",
-    "status_dias": "Dia 1 em andamento (parcial) · Dias 2 a 31 com previsão e intervalo de confiança",
+    "atualizado_em": "01/07/2026 17:18",
+    "status_dias": "Dia 1 confirmado · Dia 1 parcial · Dias 2 à31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -10,15 +10,15 @@
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
     "kpi_realizado": 0,
-    "kpi_realizado_sub": "Vendas Confirmadas (dia 1, em andamento)",
-    "kpi_realizado_delta": "▪ mês recém-iniciado",
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
+    "kpi_realizado_delta": "▲ 0% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
     "kpi_yoy_sub": "369 central vs 342 ano anterior",
     "kpi_ativos": 29,
     "kpi_ativos_sub": "em 3 times competindo",
-    "kpi_inativos_delta": "▼ 9 inativos / férias",
+    "kpi_inativos_delta": "▼ 8 inativos / férias",
     "page_title": "Forecast Julho 2026 — Consolide",
     "hdr_title_html": "Forecast de Vendas — <em>Julho 2026</em>",
     "badge_consoliga": "⚡ CONSOLIGA T1 · Mês 3/3 (Classificatória)",
@@ -37,238 +37,202 @@
   },
   "times": {
     "isr": {
-      "ativos": 10,
-      "mes_passado_total": 101,
-      "mes_passado": 101,
-      "mes_atual_total": 0,
-      "dias_confirmados_lbl": "dia 1",
-      "dias_confirmados_val": 0,
-      "prev_atual": "124",
+      "ativos": 14,
+      "mes_passado_total": 108,
+      "mes_passado": 107,
+      "mes_atual_total": 94,
+      "dias_confirmados_lbl": "dias 1- 29",
+      "dias_confirmados_val": 94,
+      "prev_atual": "125",
       "sellers": [
         [
+          "Estevam Silverio Tavares",
+          31,
+          23
+        ],
+        [
+          "Tiago Melo da Silva",
+          21,
+          17
+        ],
+        [
           "Israel Riella",
-          14,
-          0
-        ],
-        [
-          "Andressa Cristina de Paula",
-          4,
-          0
-        ],
-        [
-          "Angélica Freire Bueno",
-          0,
-          0
+          16,
+          14
         ],
         [
           "Bruno Ramos Martins",
-          11,
-          0
-        ],
-        [
-          "Camila Viana Alves",
-          7,
-          0
-        ],
-        [
-          "Camily Buratto Arruda",
-          2,
-          0
-        ],
-        [
-          "Dhulia Mendes Martins",
-          1,
-          0
+          6,
+          11
         ],
         [
           "Elisângela Arias",
-          10,
-          0
+          3,
+          10
         ],
         [
-          "Estevam Silverio Tavares",
-          25,
-          0
-        ],
-        [
-          "Noemi da Silva Penafort da Costa",
-          2,
-          0
+          "Camila Viana Alves",
+          5,
+          7
         ],
         [
           "Patrícia Lúcio Custódio",
+          13,
+          4
+        ],
+        [
+          "Andressa Cristina de Paula",
+          1,
+          4
+        ],
+        [
+          "Camily Buratto Arruda",
           4,
-          0
+          2
         ],
         [
           "Tayna Inácia de Melo",
           1,
-          0
+          1
         ],
         [
-          "Tiago Melo da Silva",
-          20,
-          0
+          "Tales Viana Matos",
+          2,
+          1
+        ],
+        [
+          "Noemi da Silva Penafort da Costa",
+          1,
+          1
+        ],
+        [
+          "Dhulia Mendes Martins",
+          4,
+          1
         ]
-      ],
-      "lbl_comp": "Junho real vs Jul projetado referênte aos",
-      "lbl_prevjun": "Prev. Jul · Realizado Junho",
-      "lbl_vendedor": "Junho vs Julho — por vendedor",
-      "leg_maio": "junho",
-      "leg_jun": "jul",
-      "obs_txt": "⚡ Estevam (25) e Tiago (20) lideraram junho — ritmo forte a sustentar em julho.",
-      "obs_class": "team-ok"
+      ]
     },
     "lis": {
-      "ativos": 10,
-      "mes_passado_total": 140,
-      "mes_passado": 140,
-      "mes_atual_total": 0,
-      "dias_confirmados_lbl": "dia 1",
-      "dias_confirmados_val": 0,
-      "prev_atual": "149",
+      "ativos": 13,
+      "mes_passado_total": 161,
+      "mes_passado": 153,
+      "mes_atual_total": 121,
+      "dias_confirmados_lbl": "dias 1- 29",
+      "dias_confirmados_val": 121,
+      "prev_atual": "152",
       "sellers": [
         [
-          "Lisdaisy Vieira Costa",
-          14,
-          0
-        ],
-        [
-          "Adriérre Marcon",
-          16,
-          0
-        ],
-        [
-          "Aline Cristina da Silva",
-          1,
-          0
-        ],
-        [
-          "Danilo Tenfen",
-          14,
-          0
-        ],
-        [
-          "Diego Dias de Medeiros",
-          0,
-          0
-        ],
-        [
-          "Fabio Renato Rodrigues Ribeiro",
-          0,
-          0
-        ],
-        [
-          "Felipe Santos Leite",
-          0,
-          0
-        ],
-        [
-          "Iara da Silva Linhares",
-          12,
-          0
-        ],
-        [
-          "Lana Mara de Morais Leite",
-          1,
-          0
-        ],
-        [
-          "Larissa Pereira Niehues",
-          16,
-          0
-        ],
-        [
           "Makele de Souza Smania",
-          30,
-          0
+          16,
+          28
         ],
         [
           "Maria Aline da Silva Ferreira",
-          29,
-          0
+          40,
+          24
+        ],
+        [
+          "Adriérre Marcon",
+          14,
+          15
+        ],
+        [
+          "Larissa Pereira Niehues",
+          22,
+          14
+        ],
+        [
+          "Danilo Tenfen",
+          4,
+          13
+        ],
+        [
+          "Iara da Silva Linhares",
+          14,
+          10
+        ],
+        [
+          "Lisdaisy Vieira Costa",
+          17,
+          9
         ],
         [
           "Rafael Rodrigues Pedroso",
-          7,
-          0
+          21,
+          7
+        ],
+        [
+          "Lana Mara de Morais Leite",
+          8,
+          1
+        ],
+        [
+          "Aline Cristina da Silva",
+          5,
+          1
         ]
-      ],
-      "lbl_comp": "Junho real vs Jul projetado referênte aos",
-      "lbl_prevjun": "Prev. Jul · Realizado Junho",
-      "lbl_vendedor": "Junho vs Julho — por vendedor",
-      "leg_maio": "junho",
-      "leg_jun": "jul",
-      "obs_txt": "⚠️ Makele (30) e Maria Aline (29) puxaram o time; Diego, Fabio e Felipe seguem zerados — reativar em julho.",
-      "obs_class": "team-alert"
+      ]
     },
     "stl": {
-      "ativos": 9,
-      "mes_passado_total": 86,
-      "mes_passado": 86,
-      "mes_atual_total": 0,
-      "dias_confirmados_lbl": "dia 1",
-      "dias_confirmados_val": 0,
-      "prev_atual": "103",
+      "ativos": 10,
+      "mes_passado_total": 106,
+      "mes_passado": 100,
+      "mes_atual_total": 88,
+      "dias_confirmados_lbl": "dias 1- 29",
+      "dias_confirmados_val": 88,
+      "prev_atual": "107",
       "sellers": [
         [
           "Stella Nieheus",
-          23,
-          0
+          11,
+          22
         ],
         [
-          "Bruna Letícia Corrêa Barbosa",
-          13,
-          0
-        ],
-        [
-          "Carla Cristina Ferreira Siqueira",
-          0,
-          0
-        ],
-        [
-          "Elison da Silva Elias",
-          2,
-          0
-        ],
-        [
-          "Guilherme Carvalho Rodrigues",
-          2,
-          0
-        ],
-        [
-          "Guilherme Lopes Machado",
-          10,
-          0
-        ],
-        [
-          "Josilea de Melo Rocha",
-          12,
-          0
+          "Marcela Machado do Rosário",
+          19,
+          12
         ],
         [
           "Ketlin Madeira Colombo",
-          11,
-          0
+          6,
+          11
+        ],
+        [
+          "Josilea de Melo Rocha",
+          15,
+          11
+        ],
+        [
+          "Guilherme Lopes Machado",
+          18,
+          10
         ],
         [
           "Mirian Daiane Braga Felix",
-          9,
-          0
+          11,
+          8
+        ],
+        [
+          "Bruna Letícia Corrêa Barbosa",
+          10,
+          8
         ],
         [
           "Yasmin Santos Zonatto",
-          4,
-          0
+          8,
+          4
+        ],
+        [
+          "Guilherme Carvalho Rodrigues",
+          8,
+          1
+        ],
+        [
+          "Elison da Silva Elias",
+          0,
+          1
         ]
-      ],
-      "lbl_comp": "Junho real vs Jul projetado referênte aos",
-      "lbl_prevjun": "Prev. Jul · Realizado Junho",
-      "lbl_vendedor": "Junho vs Julho — por vendedor",
-      "leg_maio": "junho",
-      "leg_jun": "jul",
-      "obs_txt": "⚠️ Stella (23) lidera individualmente; Carla ainda sem vendas — reforçar ativação em julho.",
-      "obs_class": "team-alert"
+      ]
     }
   },
   "semanas": [
@@ -348,9 +312,9 @@
       14,
       12,
       17,
-      "partial",
+      "real",
       "",
-      0
+      10
     ],
     [
       2,
@@ -358,9 +322,9 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
-      null
+      15
     ],
     [
       3,
@@ -368,9 +332,9 @@
       17,
       14,
       20,
-      "work",
+      "real",
       "",
-      null
+      24
     ],
     [
       4,
@@ -378,9 +342,9 @@
       4,
       2,
       6,
-      "weekend",
+      "real",
       "",
-      null
+      6
     ],
     [
       5,
@@ -388,9 +352,9 @@
       1,
       0,
       3,
-      "copa",
+      "real",
       "🇧🇷 Oitavas de Final: Brasil x Noruega 17h",
-      null
+      11
     ],
     [
       6,
@@ -398,9 +362,9 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
-      null
+      1
     ],
     [
       7,
@@ -418,9 +382,9 @@
       18,
       15,
       21,
-      "work",
+      "real",
       "",
-      null
+      14
     ],
     [
       9,
@@ -428,9 +392,9 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
-      null
+      17
     ],
     [
       10,
@@ -438,9 +402,9 @@
       17,
       14,
       20,
-      "work",
+      "real",
       "",
-      null
+      18
     ],
     [
       11,
@@ -448,9 +412,9 @@
       4,
       2,
       7,
-      "copa",
+      "real",
       "🇧🇷 Quartas de Final: Brasil x Inglaterra (prov.) 18h",
-      null
+      14
     ],
     [
       12,
@@ -458,9 +422,9 @@
       1,
       0,
       3,
-      "weekend",
+      "real",
       "",
-      null
+      23
     ],
     [
       13,
@@ -468,9 +432,9 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
-      null
+      6
     ],
     [
       14,
@@ -478,9 +442,9 @@
       17,
       14,
       20,
-      "work",
+      "real",
       "",
-      null
+      1
     ],
     [
       15,
@@ -488,9 +452,9 @@
       7,
       4,
       12,
-      "copa",
+      "real",
       "⚠️ Semifinal: Brasil x adversário 16h — jogo à tarde, repete padrão de 29/06",
-      null
+      13
     ],
     [
       16,
@@ -498,9 +462,9 @@
       15,
       12,
       19,
-      "work",
+      "real",
       "Rebote pós-jogo (efeito euforia/recuperação)",
-      null
+      8
     ],
     [
       17,
@@ -508,9 +472,9 @@
       17,
       14,
       20,
-      "work",
+      "real",
       "",
-      null
+      18
     ],
     [
       18,
@@ -518,9 +482,9 @@
       4,
       2,
       6,
-      "weekend",
+      "real",
       "",
-      null
+      8
     ],
     [
       19,
@@ -528,9 +492,9 @@
       1,
       0,
       3,
-      "copa",
+      "real",
       "🏆 Final da Copa do Mundo 16h, se Brasil classificado",
-      null
+      16
     ],
     [
       20,
@@ -538,9 +502,9 @@
       13,
       10,
       17,
-      "work",
+      "real",
       "Possível efeito pós-Copa (euforia ou luto)",
-      null
+      5
     ],
     [
       21,
@@ -548,9 +512,9 @@
       17,
       14,
       20,
-      "work",
+      "real",
       "",
-      null
+      2
     ],
     [
       22,
@@ -558,9 +522,9 @@
       18,
       15,
       21,
-      "work",
+      "real",
       "",
-      null
+      5
     ],
     [
       23,
@@ -568,9 +532,9 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
-      null
+      12
     ],
     [
       24,
@@ -578,9 +542,9 @@
       17,
       14,
       20,
-      "work",
+      "real",
       "",
-      null
+      15
     ],
     [
       25,
@@ -588,9 +552,9 @@
       4,
       2,
       6,
-      "weekend",
+      "real",
       "",
-      null
+      12
     ],
     [
       26,
@@ -598,9 +562,9 @@
       1,
       0,
       3,
-      "weekend",
+      "real",
       "",
-      null
+      20
     ],
     [
       27,
@@ -608,9 +572,9 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
-      null
+      2
     ],
     [
       28,
@@ -628,9 +592,9 @@
       18,
       15,
       21,
-      "work",
+      "partial",
       "",
-      null
+      10
     ],
     [
       30,
