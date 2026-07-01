@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "01/07/2026 18:02",
-    "status_dias": "Dia 1 confirmado · Dia 1 parcial · Dias 2 à31 com intervalo de confiança",
+    "atualizado_em": "01/07/2026 18:06",
+    "status_dias": "Dia 1 confirmado · Dia 1 parcial · Dias 2 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,0",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 4,
+    "kpi_realizado": 6,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
-    "kpi_realizado_delta": "▲ 1% do total previsto",
+    "kpi_realizado_delta": "▲ 1,5% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -46,9 +46,64 @@
       "prev_atual": "125",
       "sellers": [
         [
-          "Estevam Silverio Tavares",
-          25,
-          1
+          "Tiago Melo da Silva",
+          20,
+          0
+        ],
+        [
+          "Israel Riella",
+          14,
+          0
+        ],
+        [
+          "Bruno Ramos Martins",
+          11,
+          0
+        ],
+        [
+          "Elisângela Arias",
+          10,
+          0
+        ],
+        [
+          "Camila Viana Alves",
+          7,
+          0
+        ],
+        [
+          "Patrícia Lúcio Custódio",
+          4,
+          0
+        ],
+        [
+          "Andressa Cristina de Paula",
+          4,
+          0
+        ],
+        [
+          "Noemi da Silva Penafort da Costa",
+          2,
+          0
+        ],
+        [
+          "Camily Buratto Arruda",
+          2,
+          0
+        ],
+        [
+          "Tayna Inácia de Melo",
+          1,
+          0
+        ],
+        [
+          "Tales Viana Matos",
+          1,
+          0
+        ],
+        [
+          "Dhulia Mendes Martins",
+          1,
+          0
         ]
       ]
     },
@@ -62,19 +117,90 @@
       "prev_atual": "152",
       "sellers": [
         [
-          "Maria Aline da Silva Ferreira",
-          29,
-          1
+          "Makele de Souza Smania",
+          30,
+          0
         ],
         [
-          "Larissa Pereira Niehues",
-          16,
-          1
+          "Lisdaisy Vieira Costa",
+          14,
+          0
         ],
         [
-          "Adriérre Marcon",
-          16,
-          1
+          "Danilo Tenfen",
+          14,
+          0
+        ],
+        [
+          "Iara da Silva Linhares",
+          12,
+          0
+        ],
+        [
+          "Rafael Rodrigues Pedroso",
+          7,
+          0
+        ],
+        [
+          "Lana Mara de Morais Leite",
+          1,
+          0
+        ],
+        [
+          "Aline Cristina da Silva",
+          1,
+          0
+        ]
+      ]
+    },
+    "stl": {
+      "ativos": 0,
+      "mes_passado_total": 0,
+      "mes_passado": 7,
+      "mes_atual_total": 0,
+      "dias_confirmados_lbl": "dias 1- 1",
+      "dias_confirmados_val": 0,
+      "prev_atual": "107",
+      "sellers": [
+        [
+          "Bruna Letícia Corrêa Barbosa",
+          13,
+          0
+        ],
+        [
+          "Marcela Machado do Rosário",
+          12,
+          0
+        ],
+        [
+          "Josilea de Melo Rocha",
+          12,
+          0
+        ],
+        [
+          "Ketlin Madeira Colombo",
+          11,
+          0
+        ],
+        [
+          "Mirian Daiane Braga Felix",
+          9,
+          0
+        ],
+        [
+          "Yasmin Santos Zonatto",
+          4,
+          0
+        ],
+        [
+          "Guilherme Carvalho Rodrigues",
+          2,
+          0
+        ],
+        [
+          "Elison da Silva Elias",
+          2,
+          0
         ]
       ]
     }
@@ -158,7 +284,7 @@
       17,
       "partial",
       "",
-      4
+      6
     ],
     [
       2,
