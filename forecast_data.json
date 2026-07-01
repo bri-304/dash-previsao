@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "01/07/2026 17:18",
+    "atualizado_em": "01/07/2026 17:24",
     "status_dias": "Dia 1 confirmado · Dia 1 parcial · Dias 2 à31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,0",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 0,
+    "kpi_realizado": 4,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
-    "kpi_realizado_delta": "▲ 0% do total previsto",
+    "kpi_realizado_delta": "▲ 1% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -37,199 +37,43 @@
   },
   "times": {
     "isr": {
-      "ativos": 14,
-      "mes_passado_total": 108,
-      "mes_passado": 107,
-      "mes_atual_total": 94,
-      "dias_confirmados_lbl": "dias 1- 29",
-      "dias_confirmados_val": 94,
+      "ativos": 0,
+      "mes_passado_total": 0,
+      "mes_passado": 1,
+      "mes_atual_total": 0,
+      "dias_confirmados_lbl": "dias 1- 1",
+      "dias_confirmados_val": 0,
       "prev_atual": "125",
       "sellers": [
         [
           "Estevam Silverio Tavares",
-          31,
-          23
-        ],
-        [
-          "Tiago Melo da Silva",
-          21,
-          17
-        ],
-        [
-          "Israel Riella",
-          16,
-          14
-        ],
-        [
-          "Bruno Ramos Martins",
-          6,
-          11
-        ],
-        [
-          "Elisângela Arias",
-          3,
-          10
-        ],
-        [
-          "Camila Viana Alves",
-          5,
-          7
-        ],
-        [
-          "Patrícia Lúcio Custódio",
-          13,
-          4
-        ],
-        [
-          "Andressa Cristina de Paula",
-          1,
-          4
-        ],
-        [
-          "Camily Buratto Arruda",
-          4,
-          2
-        ],
-        [
-          "Tayna Inácia de Melo",
-          1,
-          1
-        ],
-        [
-          "Tales Viana Matos",
-          2,
-          1
-        ],
-        [
-          "Noemi da Silva Penafort da Costa",
-          1,
-          1
-        ],
-        [
-          "Dhulia Mendes Martins",
-          4,
+          25,
           1
         ]
       ]
     },
     "lis": {
-      "ativos": 13,
-      "mes_passado_total": 161,
-      "mes_passado": 153,
-      "mes_atual_total": 121,
-      "dias_confirmados_lbl": "dias 1- 29",
-      "dias_confirmados_val": 121,
+      "ativos": 0,
+      "mes_passado_total": 0,
+      "mes_passado": 2,
+      "mes_atual_total": 0,
+      "dias_confirmados_lbl": "dias 1- 1",
+      "dias_confirmados_val": 0,
       "prev_atual": "152",
       "sellers": [
         [
-          "Makele de Souza Smania",
-          16,
-          28
-        ],
-        [
           "Maria Aline da Silva Ferreira",
-          40,
-          24
-        ],
-        [
-          "Adriérre Marcon",
-          14,
-          15
+          29,
+          1
         ],
         [
           "Larissa Pereira Niehues",
-          22,
-          14
-        ],
-        [
-          "Danilo Tenfen",
-          4,
-          13
-        ],
-        [
-          "Iara da Silva Linhares",
-          14,
-          10
-        ],
-        [
-          "Lisdaisy Vieira Costa",
-          17,
-          9
-        ],
-        [
-          "Rafael Rodrigues Pedroso",
-          21,
-          7
-        ],
-        [
-          "Lana Mara de Morais Leite",
-          8,
+          16,
           1
         ],
         [
-          "Aline Cristina da Silva",
-          5,
-          1
-        ]
-      ]
-    },
-    "stl": {
-      "ativos": 10,
-      "mes_passado_total": 106,
-      "mes_passado": 100,
-      "mes_atual_total": 88,
-      "dias_confirmados_lbl": "dias 1- 29",
-      "dias_confirmados_val": 88,
-      "prev_atual": "107",
-      "sellers": [
-        [
-          "Stella Nieheus",
-          11,
-          22
-        ],
-        [
-          "Marcela Machado do Rosário",
-          19,
-          12
-        ],
-        [
-          "Ketlin Madeira Colombo",
-          6,
-          11
-        ],
-        [
-          "Josilea de Melo Rocha",
-          15,
-          11
-        ],
-        [
-          "Guilherme Lopes Machado",
-          18,
-          10
-        ],
-        [
-          "Mirian Daiane Braga Felix",
-          11,
-          8
-        ],
-        [
-          "Bruna Letícia Corrêa Barbosa",
-          10,
-          8
-        ],
-        [
-          "Yasmin Santos Zonatto",
-          8,
-          4
-        ],
-        [
-          "Guilherme Carvalho Rodrigues",
-          8,
-          1
-        ],
-        [
-          "Elison da Silva Elias",
-          0,
+          "Adriérre Marcon",
+          16,
           1
         ]
       ]
@@ -312,9 +156,9 @@
       14,
       12,
       17,
-      "real",
+      "partial",
       "",
-      10
+      4
     ],
     [
       2,
