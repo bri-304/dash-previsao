@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "02/07/2026 08:47",
+    "atualizado_em": "02/07/2026 09:21",
     "status_dias": "Dias 1 à 2 confirmados · Dia 2 parcial · Dias 3 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -39,10 +39,10 @@
     "isr": {
       "ativos": 14,
       "mes_passado_total": 102,
-      "mes_passado": 1,
-      "mes_atual_total": 1,
-      "dias_confirmados_lbl": "dias 1- 1",
-      "dias_confirmados_val": 1,
+      "mes_passado": 4,
+      "mes_atual_total": 6,
+      "dias_confirmados_lbl": "dias 1- 2",
+      "dias_confirmados_val": 6,
       "prev_atual": "125",
       "sellers": [
         [
@@ -105,9 +105,9 @@
     "lis": {
       "ativos": 13,
       "mes_passado_total": 140,
-      "mes_passado": 2,
+      "mes_passado": 7,
       "mes_atual_total": 3,
-      "dias_confirmados_lbl": "dias 1- 1",
+      "dias_confirmados_lbl": "dias 1- 2",
       "dias_confirmados_val": 3,
       "prev_atual": "152",
       "sellers": [
@@ -151,9 +151,9 @@
     "stl": {
       "ativos": 10,
       "mes_passado_total": 98,
-      "mes_passado": 7,
+      "mes_passado": 14,
       "mes_atual_total": 2,
-      "dias_confirmados_lbl": "dias 1- 1",
+      "dias_confirmados_lbl": "dias 1- 2",
       "dias_confirmados_val": 2,
       "prev_atual": "107",
       "sellers": [
