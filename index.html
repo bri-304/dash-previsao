@@ -1417,11 +1417,11 @@ function renderTeams(data) {
     if (elMesPassadoTotal ) elMesPassadoTotal .textContent = t.mes_passado_total;
 
     // ── Labels e legendas do card (textos estáticos, agora tagueados)
-    if (t.lbl_comp)     setText(`tn-lbl-comp-${key}`,     t.lbl_comp);
-    if (t.lbl_prevjun)  setText(`tn-lbl-prevjun-${key}`,  t.lbl_prevjun);
+    if (t.lbl_titulo_comp)     setText(`tn-lbl-titulo-comp-${key}`,     t.lbl_titulo_comp);
+    if (t.lbl_titulo_mes_passado_prev)  setText(`tn-lbl-titulo-mes-passado-prev-${key}`,  t.lbl_titulo_mes_passado_prev);
     if (t.lbl_vendedor) setText(`perf-lbl-${key}`,        t.lbl_vendedor);
-    if (t.leg_maio)     setText(`leg-maio-${key}`,        t.leg_maio);
-    if (t.leg_jun)      setText(`leg-jun-${key}`,         t.leg_jun);
+    if (t.leg_mes_passado)     setText(`leg-mes-passado-${key}`,        t.leg_mes_passado);
+    if (t.leg_mes_atual)      setText(`leg-mes-atual-${key}`,         t.leg_mes_atual);
 
     // ── Tabela de vendedores: 2 barras por pessoa (Mês anterior e mês atual)
     const cont = document.getElementById(`perf-${key}`);
