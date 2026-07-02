@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "02/07/2026 10:11",
+    "atualizado_em": "02/07/2026 10:20",
     "status_dias": "Dias 1 à 2 confirmados · Dia 2 parcial · Dias 3 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -45,6 +45,16 @@
       "dias_confirmados_val": 6,
       "prev_atual": "125",
       "sellers": [
+        [
+          "Estevam Silverio Tavares",
+          25,
+          5
+        ],
+        [
+          "Patrícia Lúcio Custódio",
+          4,
+          1
+        ],
         [
           "Tiago Melo da Silva",
           20,
@@ -112,6 +122,21 @@
       "prev_atual": "152",
       "sellers": [
         [
+          "Maria Aline da Silva Ferreira",
+          29,
+          1
+        ],
+        [
+          "Larissa Pereira Niehues",
+          16,
+          1
+        ],
+        [
+          "Adriérre Marcon",
+          16,
+          1
+        ],
+        [
           "Makele de Souza Smania",
           30,
           0
@@ -157,6 +182,16 @@
       "dias_confirmados_val": 2,
       "prev_atual": "107",
       "sellers": [
+        [
+          "Stella Nieheus",
+          23,
+          1
+        ],
+        [
+          "Guilherme Lopes Machado",
+          10,
+          1
+        ],
         [
           "Bruna Letícia Corrêa Barbosa",
           13,
