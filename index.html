@@ -289,7 +289,7 @@ tr:hover td{background:var(--card2)}
 </div>
   
 <!-- CHART -->
-<div class="sec-title fade-in d2" id="sec-title-previsao">previsão diária com intervalo de confiança — junho 2026</div>
+<!--<div class="sec-title fade-in d2" id="sec-title-previsao">previsão diária com intervalo de confiança — junho 2026</div>
 
 <div class="method-box fade-in d2">
   <div class="method-item">
@@ -312,7 +312,7 @@ tr:hover td{background:var(--card2)}
     <div class="method-val" id="method-val-3">± 30%</div>
     <div class="method-desc" id="method-desc-3">Volume baixo com variação proporcional mais alta</div>
   </div>
-</div> 
+</div> -->
 <!-- ▼ GRÁFICO: atualizado automaticamente via array dias[] — ver script -->
 <div class="chart-box fade-in d2">
   <div class="chart-hdr">
@@ -600,9 +600,9 @@ tr:hover td{background:var(--card2)}
 </div>
 
 <!-- COPA - Não tem mais bolão-->
-<div class="sec-title fade-in d5">copa do mundo 2026 — bolão consolide</div>
+<!-- <div class="sec-title fade-in d5">copa do mundo 2026 — bolão consolide</div> -->
 <!-- ▼ PLACEHOLDER: cards gerados automaticamente via applyBolao() a partir de bolao[] no JSON -->
-<div class="copa-grid fade-in d5" id="copa-grid">
+<!-- <div class="copa-grid fade-in d5" id="copa-grid">
   <div class="copa-card" id="copa-card-0">
     <div class="copa-num" id="copa-num-0">BOLÃO 1 · FASE DE GRUPOS</div>
     <div class="copa-match" id="copa-match-0">🇧🇷 BR × MAR 🇲🇦</div>
@@ -630,7 +630,7 @@ tr:hover td{background:var(--card2)}
     <div class="copa-row"><span class="copa-row-lbl" id="copa-extra-lbl-2">Dias úteis disponíveis</span><span class="copa-row-val" id="copa-extra-val-2">3 dias (⚠️ curto!)</span></div>
     <div class="copa-tip" id="copa-tip-2">Janela mais curta: só 22, 23 e 24/06. Apenas 3 dias para atingir 5 vendas por aposta. Alta pressão especialmente na segunda e terça.</div>
   </div>
-</div>
+</div> -->
 
 <!-- STRATEGIES -->
 <!-- ▼ SUGESTÕES: títulos e descrições atualizados via applySugestoes() -->
@@ -1055,14 +1055,14 @@ function applySugestoes(sugestoes) {
 
 // ── APLICAR METODOLOGIA (caixas de intervalo de confiança) ───────────────────
 // Atualiza method-tipo-N / method-val-N / method-desc-N (N = 0..3)
- function applyMetodos(metodos) {
-  if (!metodos) return;
-  metodos.forEach((m, i) => {
-    setText(`method-tipo-${i}`, m.tipo);
-    setText(`method-val-${i}`,  m.val);
-    setText(`method-desc-${i}`, m.desc);
-  });
-}
+//  function applyMetodos(metodos) {
+  // if (!metodos) return;
+  // metodos.forEach((m, i) => {
+    // setText(`method-tipo-${i}`, m.tipo);
+    // setText(`method-val-${i}`,  m.val);
+    // setText(`method-desc-${i}`, m.desc);
+  // });
+// }
 
 // ── APLICAR GARGALOS (cards de risco/oportunidade) ───────────────────────────
 // Regenera o innerHTML de #risk-grid a partir do array gargalos[], mantendo
@@ -1083,20 +1083,20 @@ function applyGargalos(gargalos) {
 // Regenera o innerHTML de #copa-grid a partir do array bolao[], mantendo
 // ids individuais (copa-card-N, copa-num-N, copa-match-N, copa-dt-N,
 // copa-periodo-N, copa-threshold-N, copa-extra-lbl-N, copa-extra-val-N, copa-tip-N)
-function applyBolao(bolao) {
-  const grid = document.getElementById('copa-grid');
-  if (!grid || !bolao) return;
-  grid.innerHTML = bolao.map((b, i) => `
-    <div class="copa-card" id="copa-card-${i}">
-      <div class="copa-num" id="copa-num-${i}">${b.num}</div>
-      <div class="copa-match" id="copa-match-${i}">${b.jogo}</div>
-      <div class="copa-dt" id="copa-dt-${i}">${b.data_jogo}</div>
-      <div class="copa-row"><span class="copa-row-lbl">Período válido</span><span class="copa-row-val" id="copa-periodo-${i}">${b.periodo}</span></div>
-      <div class="copa-row"><span class="copa-row-lbl">1 aposta a cada</span><span class="copa-row-val" id="copa-threshold-${i}">${b.aposta_threshold}</span></div>
-      <div class="copa-row"><span class="copa-row-lbl" id="copa-extra-lbl-${i}">${b.extra_lbl}</span><span class="copa-row-val" id="copa-extra-val-${i}"${b.extra_style ? ` style="${b.extra_style}"` : ''}>${b.extra_val}</span></div>
-      <div class="copa-tip" id="copa-tip-${i}">${b.tip}</div>
-    </div>`).join('');
-}
+// function applyBolao(bolao) {
+  // const grid = document.getElementById('copa-grid');
+  // if (!grid || !bolao) return;
+ //  grid.innerHTML = bolao.map((b, i) => `
+//     <div class="copa-card" id="copa-card-${i}">
+   //   <div class="copa-num" id="copa-num-${i}">${b.num}</div>
+     // <div class="copa-match" id="copa-match-${i}">${b.jogo}</div>
+      // <div class="copa-dt" id="copa-dt-${i}">${b.data_jogo}</div>
+      // <div class="copa-row"><span class="copa-row-lbl">Período válido</span><span class="copa-row-val" id="copa-periodo-${i}">${b.periodo}</span></div>
+      // <div class="copa-row"><span class="copa-row-lbl">1 aposta a cada</span><span class="copa-row-val" id="copa-threshold-${i}">${b.aposta_threshold}</span></div>
+      // <div class="copa-row"><span class="copa-row-lbl" id="copa-extra-lbl-${i}">${b.extra_lbl}</span><span class="copa-row-val" id="copa-extra-val-${i}"${b.extra_style ? ` style="${b.extra_style}"` : ''}>${b.extra_val}</span></div>
+      // <div class="copa-tip" id="copa-tip-${i}">${b.tip}</div>
+    // </div>`).join('');
+// }
 
 // ── RENDERIZAR GRÁFICO DE BARRAS ─────────────────────────────────────────────
 // ⬇ O gráfico é reconstruído a partir do array dias[] — atualiza automaticamente!
@@ -1467,9 +1467,9 @@ function initDashboard(data) {
   applyMeta(data.meta);
   applyWeeks(data.semanas);
   applySugestoes(data.sugestoes);
-  applyMetodos(data.metodos);
+ // applyMetodos(data.metodos);
   applyGargalos(data.gargalos);
-  applyBolao(data.bolao);
+  // applyBolao(data.bolao);
   renderChart(data.dias);
   renderTable(data.dias);
   renderTeams(data);
