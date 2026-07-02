@@ -485,7 +485,8 @@ tr:hover td{background:var(--card2)}
         </div>
       <div id="perf-isr"></div>
     </div>
-    <div class="team-ok" id="team-obs-isr">⚡ Bruno Ramos lidera junho com 6 em 4 dias. Estevam e Tiago devem sustentar ritmo forte.</div>
+    <div class="team-ok" id="team-highlight-isr">⚡ Bruno Ramos lidera junho com 6 em 4 dias. Estevam e Tiago devem sustentar ritmo forte.</div>
+    <div class="team-alert" id="team-obs-isr">⚠️ Atenção: dados ainda não carregados.</div>
   </div>
   <div class="team-card">
     <div class="team-hdr lis">
@@ -519,6 +520,7 @@ tr:hover td{background:var(--card2)}
         </div>
       <div id="perf-lis"></div>
     </div>
+    <div class="team-ok" id="team-highlight-lis">⚡ Destaque carregando...</div>
     <div class="team-alert" id="team-obs-lis">⚠️ Makele forte (11), mas Maria Aline (40 em maio) com apenas 3. Adriérre, Iara e Lana zeradas — atenção urgente.</div>
   </div>
   <div class="team-card">
@@ -553,6 +555,7 @@ tr:hover td{background:var(--card2)}
         </div>
       <div id="perf-stl"></div>
     </div>
+    <div class="team-ok" id="team-highlight-stl">⚡ Destaque carregando...</div>
     <div class="team-alert" id="team-obs-stl">⚠️ Guilherme Lopes e Josilea (top performers) ainda zerados. CONSOLIGA deve impulsionar reação esta semana.</div>
   </div>
 </div>
@@ -1450,11 +1453,19 @@ function renderTeams(data) {
         </div>`;
     });
 
-    // ── Observação do time (team-ok / team-alert) via id="team-obs-{key}"
+    // ── Destaque do time (sempre team-ok) via id="team-highlight-{key}"
+    const elHighlight = document.getElementById(`team-highlight-${key}`);
+    if (elHighlight && t.destaque_txt) {
+      elHighlight.textContent = t.destaque_txt;
+    }
+
+    // ── Atenção do time (sempre team-alert) via id="team-obs-{key}"
     const elObs = document.getElementById(`team-obs-${key}`);
-    if (elObs && t.obs_txt) {
+    if (elObs && t.atencao_txt) {
+      elObs.textContent = t.atencao_txt;
+    } else if (elObs && t.obs_txt) {
+      // Compatibilidade com meses antigos que só tinham obs_txt/obs_class
       elObs.textContent = t.obs_txt;
-      // Atualiza a classe se o JSON informar obs_class
       if (t.obs_class) {
         elObs.className = t.obs_class;
       }
