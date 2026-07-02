@@ -240,7 +240,7 @@ tr:hover td{background:var(--card2)}
   </div>
 
   <div class="kpi c-gold">
-    <div class="kpi-lbl">Média / Dia Útil</div>
+    <div class="kpi-lbl">Média / Dia Útil (previsto) </div>
     <!-- ▼ PLACEHOLDER: média central por dia útil -->
     <div class="kpi-val gold" id="kpi-media-val">17,2</div>
     <div class="range-lbls" style="justify-content:flex-start;gap:6px">
@@ -263,7 +263,7 @@ tr:hover td{background:var(--card2)}
   </div>
 
   <div class="kpi c-amber">
-    <div class="kpi-lbl" id="kpi-yoy-lbl">vs Junho 2025</div>
+    <div class="kpi-lbl" id="kpi-yoy-lbl">diferença percentual do previsto vs Junho 2025</div>
     <!-- ▼ PLACEHOLDER: variação YoY central -->
     <div class="kpi-val amber" id="kpi-yoy-pct">+31%</div>
     <div class="range-lbls" style="justify-content:flex-start;gap:6px">
@@ -287,9 +287,9 @@ tr:hover td{background:var(--card2)}
   </div>
 
 </div>
-
+  
 <!-- CHART -->
-<div class="sec-title fade-in d2" id="sec-title-previsao">previsão diária com intervalo de confiança — junho 2026</div>
+<!-- <div class="sec-title fade-in d2" id="sec-title-previsao">previsão diária com intervalo de confiança — junho 2026</div>
 
 <div class="method-box fade-in d2">
   <div class="method-item">
@@ -312,8 +312,7 @@ tr:hover td{background:var(--card2)}
     <div class="method-val" id="method-val-3">± 30%</div>
     <div class="method-desc" id="method-desc-3">Volume baixo com variação proporcional mais alta</div>
   </div>
-</div>
-
+</div> -->
 <!-- ▼ GRÁFICO: atualizado automaticamente via array dias[] — ver script -->
 <div class="chart-box fade-in d2">
   <div class="chart-hdr">
@@ -327,14 +326,14 @@ tr:hover td{background:var(--card2)}
           <div style="width:10px;height:14px;background:rgba(34,197,94,0.32);border:1px solid rgba(34,197,94,0.6);border-radius:2px"></div>
           <div style="width:5px;height:14px;background:#22c55e;border-radius:2px;margin-left:-7px"></div>
         </div>
-        Real confirmado
+        Previsto/confirmado
       </div>
       <div class="leg">
         <div style="display:flex;align-items:flex-end;gap:1px;height:14px">
           <div style="width:10px;height:14px;background:rgba(245,158,11,0.32);border:1px solid rgba(245,158,11,0.6);border-radius:2px"></div>
           <div style="width:5px;height:14px;background:#f59e0b;border-radius:2px;margin-left:-7px"></div>
         </div>
-        Parcial (hoje)
+        Previsto/Realizado hoje
       </div>
       <!-- Previsão por tipo: barra larga semitransparente -->
       <div class="leg"><div class="leg-dot" style="background:rgba(59,130,246,0.45);border:1px solid rgba(59,130,246,0.7)"></div>Prev. dia útil</div>
@@ -354,7 +353,7 @@ tr:hover td{background:var(--card2)}
 </div>
 
 <!-- WEEKLY -->
-<div class="sec-title fade-in d3">resumo por semana</div>
+<div class="sec-title fade-in d3">resumo do previsto por semana</div>
 <div class="week-grid fade-in d3">
 
   <!-- ▼ SEMANA 1: números atualizados via applyWeeks() -->
@@ -463,7 +462,7 @@ tr:hover td{background:var(--card2)}
     </div>
     <div class="team-nums">
   <div class="tn">
-  <div class="tn-lbl"><span id="tn-lbl-comp-isr">Maio real vs Jun real referênte aos</span> <span id="tn-diaslbl-isr" style="font-weight:700">dias 1–4</span></div>
+  <div class="tn-lbl"><span id="tn-lbl-comp-isr">Maio real vs Jun real referente aos</span> <span id="tn-diaslbl-isr" style="font-weight:700">dias 1–4</span></div>
   <div style="display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;">
     <span class="tn-val isr" id="tn-mes-passado-isr">161</span>
     <span style="font-family:var(--fm); font-size:18px; color:var(--muted);">×</span>
@@ -497,7 +496,7 @@ tr:hover td{background:var(--card2)}
     </div>
     <div class="team-nums">
   <div class="tn">
-  <div class="tn-lbl"><span id="tn-lbl-comp-lis">Maio real vs Jun real referênte aos</span> <span id="tn-diaslbl-lis" style="font-weight:700">dias 1–4</span></div>
+  <div class="tn-lbl"><span id="tn-lbl-comp-lis">Maio real vs Jun real referente aos</span> <span id="tn-diaslbl-lis" style="font-weight:700">dias 1–4</span></div>
   <div style="display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;">
     <span class="tn-val lis" id="tn-mes-passado-lis">161</span>
     <span style="font-family:var(--fm); font-size:18px; color:var(--muted);">×</span>
@@ -531,7 +530,7 @@ tr:hover td{background:var(--card2)}
     </div>
     <div class="team-nums">
   <div class="tn">
-  <div class="tn-lbl"><span id="tn-lbl-comp-stl">Maio real vs Jun real referênte aos</span> <span id="tn-diaslbl-stl" style="font-weight:700">dias 1–4</span></div>
+  <div class="tn-lbl"><span id="tn-lbl-comp-stl">Maio real vs Jun real referente aos</span> <span id="tn-diaslbl-stl" style="font-weight:700">dias 1–4</span></div>
   <div style="display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;">
     <span class="tn-val stl" id="tn-mes-passado-stl">161</span>
     <span style="font-family:var(--fm); font-size:18px; color:var(--muted);">×</span>
@@ -600,10 +599,10 @@ tr:hover td{background:var(--card2)}
   </div>
 </div>
 
-<!-- COPA -->
-<div class="sec-title fade-in d5">copa do mundo 2026 — bolão consolide</div>
+<!-- COPA - Não tem mais bolão-->
+<!-- <div class="sec-title fade-in d5">copa do mundo 2026 — bolão consolide</div> -->
 <!-- ▼ PLACEHOLDER: cards gerados automaticamente via applyBolao() a partir de bolao[] no JSON -->
-<div class="copa-grid fade-in d5" id="copa-grid">
+<!-- <div class="copa-grid fade-in d5" id="copa-grid">
   <div class="copa-card" id="copa-card-0">
     <div class="copa-num" id="copa-num-0">BOLÃO 1 · FASE DE GRUPOS</div>
     <div class="copa-match" id="copa-match-0">🇧🇷 BR × MAR 🇲🇦</div>
@@ -631,7 +630,7 @@ tr:hover td{background:var(--card2)}
     <div class="copa-row"><span class="copa-row-lbl" id="copa-extra-lbl-2">Dias úteis disponíveis</span><span class="copa-row-val" id="copa-extra-val-2">3 dias (⚠️ curto!)</span></div>
     <div class="copa-tip" id="copa-tip-2">Janela mais curta: só 22, 23 e 24/06. Apenas 3 dias para atingir 5 vendas por aposta. Alta pressão especialmente na segunda e terça.</div>
   </div>
-</div>
+</div> -->
 
 <!-- STRATEGIES -->
 <!-- ▼ SUGESTÕES: títulos e descrições atualizados via applySugestoes() -->
@@ -1056,14 +1055,14 @@ function applySugestoes(sugestoes) {
 
 // ── APLICAR METODOLOGIA (caixas de intervalo de confiança) ───────────────────
 // Atualiza method-tipo-N / method-val-N / method-desc-N (N = 0..3)
-function applyMetodos(metodos) {
-  if (!metodos) return;
-  metodos.forEach((m, i) => {
-    setText(`method-tipo-${i}`, m.tipo);
-    setText(`method-val-${i}`,  m.val);
-    setText(`method-desc-${i}`, m.desc);
-  });
-}
+// function applyMetodos(metodos) {
+  // if (!metodos) return;
+  // metodos.forEach((m, i) => {
+    // setText(`method-tipo-${i}`, m.tipo);
+    // setText(`method-val-${i}`,  m.val);
+    // setText(`method-desc-${i}`, m.desc);
+  // });
+// }
 
 // ── APLICAR GARGALOS (cards de risco/oportunidade) ───────────────────────────
 // Regenera o innerHTML de #risk-grid a partir do array gargalos[], mantendo
