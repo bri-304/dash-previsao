@@ -1055,14 +1055,14 @@ function applySugestoes(sugestoes) {
 
 // ── APLICAR METODOLOGIA (caixas de intervalo de confiança) ───────────────────
 // Atualiza method-tipo-N / method-val-N / method-desc-N (N = 0..3)
-// function applyMetodos(metodos) {
-  // if (!metodos) return;
-  // metodos.forEach((m, i) => {
-    // setText(`method-tipo-${i}`, m.tipo);
-    // setText(`method-val-${i}`,  m.val);
-    // setText(`method-desc-${i}`, m.desc);
-  // });
-// }
+ function applyMetodos(metodos) {
+  if (!metodos) return;
+  metodos.forEach((m, i) => {
+    setText(`method-tipo-${i}`, m.tipo);
+    setText(`method-val-${i}`,  m.val);
+    setText(`method-desc-${i}`, m.desc);
+  });
+}
 
 // ── APLICAR GARGALOS (cards de risco/oportunidade) ───────────────────────────
 // Regenera o innerHTML de #risk-grid a partir do array gargalos[], mantendo
