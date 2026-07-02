@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "02/07/2026 08:45",
-    "status_dias": "Dia 1 confirmado · Dia 1 parcial · Dias 2 à 31 com intervalo de confiança",
+    "atualizado_em": "02/07/2026 08:47",
+    "status_dias": "Dias 1 à 2 confirmados · Dia 2 parcial · Dias 3 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,0",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 6,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
-    "kpi_realizado_delta": "▲ 1,5% do total previsto",
+    "kpi_realizado": 11,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 1)",
+    "kpi_realizado_delta": "▲ 2,8% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -68,11 +68,6 @@
         [
           "Camila Viana Alves",
           7,
-          0
-        ],
-        [
-          "Patrícia Lúcio Custódio",
-          4,
           0
         ],
         [
@@ -282,9 +277,9 @@
       14,
       12,
       17,
-      "partial",
+      "real",
       "",
-      6
+      10
     ],
     [
       2,
@@ -292,9 +287,9 @@
       12,
       10,
       14,
-      "work",
+      "partial",
       "",
-      null
+      1
     ],
     [
       3,
