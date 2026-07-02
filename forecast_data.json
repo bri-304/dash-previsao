@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "02/07/2026 10:20",
+    "atualizado_em": "02/07/2026 15:04",
     "status_dias": "Dias 1 à 2 confirmados · Dia 2 parcial · Dias 3 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,0",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 11,
+    "kpi_realizado": 14,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 1)",
-    "kpi_realizado_delta": "▲ 2,8% do total previsto",
+    "kpi_realizado_delta": "▲ 3,6% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -56,13 +56,18 @@
           1
         ],
         [
-          "Tiago Melo da Silva",
-          20,
-          0
-        ],
-        [
           "Israel Riella",
           14,
+          1
+        ],
+        [
+          "Camila Viana Alves",
+          7,
+          1
+        ],
+        [
+          "Tiago Melo da Silva",
+          20,
           0
         ],
         [
@@ -73,11 +78,6 @@
         [
           "Elisângela Arias",
           10,
-          0
-        ],
-        [
-          "Camila Viana Alves",
-          7,
           0
         ],
         [
@@ -110,14 +110,7 @@
           1,
           0
         ]
-      ],
-      "lbl_comp": "Junho real vs Jul projetado referênte aos",
-      "lbl_prevjun": "Prev. Jul · Realizado Junho",
-      "lbl_vendedor": "Junho vs Julho — por vendedor",
-      "leg_maio": "junho",
-      "leg_jun": "jul",
-      "destaque_txt": "⚡ Bruno Ramos Martins e Elisângela Arias quase triplicaram o ritmo de maio (6→11 e 3→10) — melhor evolução do time.",
-      "atencao_txt": "⚠️ Patrícia Lúcio Custódio caiu de 13 para 4 vendas — maior queda do time; Angélica Freire Bueno segue zerada."
+      ]
     },
     "lis": {
       "ativos": 13,
@@ -178,14 +171,7 @@
           1,
           0
         ]
-      ],
-      "lbl_comp": "Junho real vs Jul projetado referênte aos",
-      "lbl_prevjun": "Prev. Jul · Realizado Junho",
-      "lbl_vendedor": "Junho vs Julho — por vendedor",
-      "leg_maio": "junho",
-      "leg_jun": "jul",
-      "destaque_txt": "⚡ Makele de Souza Smania quase dobrou (16→30) e Danilo Tenfen mais que triplicou (4→14) — maiores saltos do time.",
-      "atencao_txt": "⚠️ Diego, Fabio e Felipe seguem zerados; Lana Mara (8→1) e Rafael Rodrigues Pedroso (21→7) tiveram quedas fortes."
+      ]
     },
     "stl": {
       "ativos": 10,
@@ -197,13 +183,13 @@
       "prev_atual": "107",
       "sellers": [
         [
-          "Stella Nieheus",
-          23,
-          1
-        ],
-        [
           "Guilherme Lopes Machado",
           10,
+          2
+        ],
+        [
+          "Stella Nieheus",
+          23,
           1
         ],
         [
@@ -246,14 +232,7 @@
           2,
           0
         ]
-      ],
-      "lbl_comp": "Junho real vs Jul projetado referênte aos",
-      "lbl_prevjun": "Prev. Jul · Realizado Junho",
-      "lbl_vendedor": "Junho vs Julho — por vendedor",
-      "leg_maio": "junho",
-      "leg_jun": "jul",
-      "destaque_txt": "⚡ Stella Nieheus mais que dobrou o próprio ritmo (11→23), liderando o time pela primeira vez.",
-      "atencao_txt": "⚠️ Carla Cristina Ferreira Siqueira segue zerada; Guilherme Carvalho Rodrigues (8→2) e Yasmin Santos Zonatto (8→4) caíram bastante."
+      ]
     }
   },
   "semanas": [
@@ -345,7 +324,7 @@
       14,
       "partial",
       "",
-      1
+      4
     ],
     [
       3,
