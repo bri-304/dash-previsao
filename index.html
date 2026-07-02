@@ -1428,7 +1428,7 @@ function renderTeams(data) {
     const maxGlobal = Math.max(...t.sellers.flatMap(s => [s[1], s[2]]), 1);
     const sellersOrdenados = [...t.sellers].sort((a, b) => b[2] - a[2] || b[1] - a[1])   
     
-    t.sellersOrdenados.forEach(([name, may, jun]) => {
+    sellersOrdenados.forEach(([name, may, jun]) => {
       const pctM = (may / maxGlobal * 100).toFixed(0);
       const pctJ = (jun / maxGlobal * 100).toFixed(0);
       cont.innerHTML += `
