@@ -110,7 +110,14 @@
           1,
           0
         ]
-      ]
+      ],
+      "lbl_comp": "Junho real vs Jul projetado referênte aos",
+      "lbl_prevjun": "Prev. Jul · Realizado Junho",
+      "lbl_vendedor": "Junho vs Julho — por vendedor",
+      "leg_maio": "junho",
+      "leg_jun": "jul",
+      "destaque_txt": "⚡ Bruno Ramos Martins e Elisângela Arias quase triplicaram o ritmo de maio (6→11 e 3→10) — melhor evolução do time.",
+      "atencao_txt": "⚠️ Patrícia Lúcio Custódio caiu de 13 para 4 vendas — maior queda do time; Angélica Freire Bueno segue zerada."
     },
     "lis": {
       "ativos": 13,
@@ -171,7 +178,14 @@
           1,
           0
         ]
-      ]
+      ],
+      "lbl_comp": "Junho real vs Jul projetado referênte aos",
+      "lbl_prevjun": "Prev. Jul · Realizado Junho",
+      "lbl_vendedor": "Junho vs Julho — por vendedor",
+      "leg_maio": "junho",
+      "leg_jun": "jul",
+      "destaque_txt": "⚡ Makele de Souza Smania quase dobrou (16→30) e Danilo Tenfen mais que triplicou (4→14) — maiores saltos do time.",
+      "atencao_txt": "⚠️ Diego, Fabio e Felipe seguem zerados; Lana Mara (8→1) e Rafael Rodrigues Pedroso (21→7) tiveram quedas fortes."
     },
     "stl": {
       "ativos": 10,
@@ -232,7 +246,14 @@
           2,
           0
         ]
-      ]
+      ],
+      "lbl_comp": "Junho real vs Jul projetado referênte aos",
+      "lbl_prevjun": "Prev. Jul · Realizado Junho",
+      "lbl_vendedor": "Junho vs Julho — por vendedor",
+      "leg_maio": "junho",
+      "leg_jun": "jul",
+      "destaque_txt": "⚡ Stella Nieheus mais que dobrou o próprio ritmo (11→23), liderando o time pela primeira vez.",
+      "atencao_txt": "⚠️ Carla Cristina Ferreira Siqueira segue zerada; Guilherme Carvalho Rodrigues (8→2) e Yasmin Santos Zonatto (8→4) caíram bastante."
     }
   },
   "semanas": [
@@ -679,28 +700,7 @@
       ]
     }
   ],
-  "metodos": [
-    {
-      "tipo": "Dias úteis normais",
-      "val": "± 15%",
-      "desc": "Variância histórica estável por dia da semana"
-    },
-    {
-      "tipo": "Dias de Copa",
-      "val": "± 22%",
-      "desc": "Incerteza de comportamento em dias de jogo do Brasil (mata-mata)"
-    },
-    {
-      "tipo": "Sprint final (30–31)",
-      "val": "± 28%",
-      "desc": "Alta pressão CONSOLIGA: teto maior, risco de queima também"
-    },
-    {
-      "tipo": "Finais de semana",
-      "val": "± 30%",
-      "desc": "Volume baixo com variação proporcional mais alta"
-    }
-  ],
+  "metodos": [],
   "gargalos": [
     {
       "tipo": "info",
