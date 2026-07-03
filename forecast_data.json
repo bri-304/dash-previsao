@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "03/07/2026 11:14",
+    "atualizado_em": "03/07/2026 11:35",
     "status_dias": "Dias 1 à 3 confirmados · Dia 3 parcial · Dias 4 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,0",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 20,
+    "kpi_realizado": 24,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 2)",
-    "kpi_realizado_delta": "▲ 5,1% do total previsto",
+    "kpi_realizado_delta": "▲ 6,2% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -332,9 +332,9 @@
       17,
       14,
       20,
-      "work",
+      "partial",
       "",
-      null
+      4
     ],
     [
       4,
