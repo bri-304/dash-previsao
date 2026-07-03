@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "03/07/2026 17:09",
-    "status_dias": "",
+    "atualizado_em": "03/07/2026 17:22",
+    "status_dias": "Dias 1 à 3 confirmados · Dia 3 parcial · Dias 4 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -9,16 +9,16 @@
     "kpi_media_central": "16,0",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 0,
-    "kpi_realizado_sub": "",
-    "kpi_realizado_delta": "",
+    "kpi_realizado": 28,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 2)",
+    "kpi_realizado_delta": "▲ 7,2% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
     "kpi_yoy_sub": "369 central vs 342 ano anterior",
-    "kpi_ativos": 0,
-    "kpi_ativos_sub": "",
-    "kpi_inativos_delta": "",
+    "kpi_ativos": 29,
+    "kpi_ativos_sub": "em 3 times competindo",
+    "kpi_inativos_delta": "▼ 8 inativos / férias",
     "page_title": "Forecast Julho 2026 — Consolide",
     "hdr_title_html": "Forecast de Vendas — <em>Julho 2026</em>",
     "badge_consoliga": "⚡ CONSOLIGA T1 · Mês 3/3 (Classificatória)",
@@ -35,7 +35,227 @@
     "footer_linha2": "Método: Pipeline Ponderado + Rolling WMA (peso 2 últimos 6m) + Cohort por Time · Margens: CV histórico por tipo de dia (±15% úteis · ±22% Copa · ±28% sprint · ±30% FDS)",
     "footer_linha3": "Cenário pessimista: ~291 · Central: ~369 · Cenário otimista: ~465"
   },
-  "times": {},
+  "times": {
+    "isr": {
+      "ativos": 0,
+      "mes_passado_total": 0,
+      "mes_passado": 0,
+      "mes_atual_total": 0,
+      "dias_confirmados_lbl": "",
+      "dias_confirmados_val": 0,
+      "prev_atual": "",
+      "lbl_titulo_comp": "",
+      "lbl_titulo_mes_passado_prev": "",
+      "lbl_vendedor": "",
+      "leg_mes_passado": "",
+      "leg_mes_atual": "",
+      "destaque_txt": "",
+      "atencao_txt": "",
+      "sellers": [
+        [
+          "Estevam Silverio Tavares",
+          25,
+          6
+        ],
+        [
+          "Tiago Melo da Silva",
+          20,
+          3
+        ],
+        [
+          "Patrícia Lúcio Custódio",
+          4,
+          1
+        ],
+        [
+          "Israel Riella",
+          14,
+          1
+        ],
+        [
+          "Camila Viana Alves",
+          7,
+          1
+        ],
+        [
+          "Bruno Ramos Martins",
+          11,
+          0
+        ],
+        [
+          "Elisângela Arias",
+          10,
+          0
+        ],
+        [
+          "Andressa Cristina de Paula",
+          4,
+          0
+        ],
+        [
+          "Noemi da Silva Penafort da Costa",
+          2,
+          0
+        ],
+        [
+          "Camily Buratto Arruda",
+          2,
+          0
+        ],
+        [
+          "Tayna Inácia de Melo",
+          1,
+          0
+        ],
+        [
+          "Tales Viana Matos",
+          1,
+          0
+        ],
+        [
+          "Dhulia Mendes Martins",
+          1,
+          0
+        ]
+      ]
+    },
+    "lis": {
+      "ativos": 0,
+      "mes_passado_total": 0,
+      "mes_passado": 0,
+      "mes_atual_total": 0,
+      "dias_confirmados_lbl": "",
+      "dias_confirmados_val": 0,
+      "prev_atual": "",
+      "lbl_titulo_comp": "",
+      "lbl_titulo_mes_passado_prev": "",
+      "lbl_vendedor": "",
+      "leg_mes_passado": "",
+      "leg_mes_atual": "",
+      "destaque_txt": "",
+      "atencao_txt": "",
+      "sellers": [
+        [
+          "Lisdaisy Vieira Costa",
+          14,
+          5
+        ],
+        [
+          "Makele de Souza Smania",
+          30,
+          2
+        ],
+        [
+          "Maria Aline da Silva Ferreira",
+          29,
+          1
+        ],
+        [
+          "Larissa Pereira Niehues",
+          16,
+          1
+        ],
+        [
+          "Lana Mara de Morais Leite",
+          1,
+          1
+        ],
+        [
+          "Adriérre Marcon",
+          16,
+          1
+        ],
+        [
+          "Danilo Tenfen",
+          14,
+          0
+        ],
+        [
+          "Iara da Silva Linhares",
+          12,
+          0
+        ],
+        [
+          "Rafael Rodrigues Pedroso",
+          7,
+          0
+        ],
+        [
+          "Aline Cristina da Silva",
+          1,
+          0
+        ]
+      ]
+    },
+    "stl": {
+      "ativos": 0,
+      "mes_passado_total": 0,
+      "mes_passado": 0,
+      "mes_atual_total": 0,
+      "dias_confirmados_lbl": "",
+      "dias_confirmados_val": 0,
+      "prev_atual": "",
+      "lbl_titulo_comp": "",
+      "lbl_titulo_mes_passado_prev": "",
+      "lbl_vendedor": "",
+      "leg_mes_passado": "",
+      "leg_mes_atual": "",
+      "destaque_txt": "",
+      "atencao_txt": "",
+      "sellers": [
+        [
+          "Guilherme Lopes Machado",
+          10,
+          2
+        ],
+        [
+          "Elison da Silva Elias",
+          2,
+          2
+        ],
+        [
+          "Stella Nieheus",
+          23,
+          1
+        ],
+        [
+          "Bruna Letícia Corrêa Barbosa",
+          13,
+          0
+        ],
+        [
+          "Marcela Machado do Rosário",
+          12,
+          0
+        ],
+        [
+          "Josilea de Melo Rocha",
+          12,
+          0
+        ],
+        [
+          "Ketlin Madeira Colombo",
+          11,
+          0
+        ],
+        [
+          "Mirian Daiane Braga Felix",
+          9,
+          0
+        ],
+        [
+          "Yasmin Santos Zonatto",
+          4,
+          0
+        ],
+        [
+          "Guilherme Carvalho Rodrigues",
+          2,
+          0
+        ]
+      ]
+    }
+  },
   "semanas": [
     {
       "central": 48,
@@ -157,7 +377,7 @@
       20,
       "partial",
       "",
-      4
+      8
     ],
     [
       4,
