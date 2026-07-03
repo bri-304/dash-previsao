@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "02/07/2026 15:04",
-    "status_dias": "Dias 1 à 2 confirmados · Dia 2 parcial · Dias 3 à 31 com intervalo de confiança",
+    "atualizado_em": "03/07/2026 11:14",
+    "status_dias": "Dias 1 à 3 confirmados · Dia 3 parcial · Dias 4 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,0",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 14,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 1)",
-    "kpi_realizado_delta": "▲ 3,6% do total previsto",
+    "kpi_realizado": 20,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 2)",
+    "kpi_realizado_delta": "▲ 5,1% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -40,15 +40,20 @@
       "ativos": 14,
       "mes_passado_total": 102,
       "mes_passado": 4,
-      "mes_atual_total": 6,
+      "mes_atual_total": 8,
       "dias_confirmados_lbl": "dias 1- 2",
-      "dias_confirmados_val": 6,
+      "dias_confirmados_val": 8,
       "prev_atual": "125",
       "sellers": [
         [
           "Estevam Silverio Tavares",
           25,
           5
+        ],
+        [
+          "Tiago Melo da Silva",
+          20,
+          1
         ],
         [
           "Patrícia Lúcio Custódio",
@@ -64,11 +69,6 @@
           "Camila Viana Alves",
           7,
           1
-        ],
-        [
-          "Tiago Melo da Silva",
-          20,
-          0
         ],
         [
           "Bruno Ramos Martins",
@@ -177,9 +177,9 @@
       "ativos": 10,
       "mes_passado_total": 98,
       "mes_passado": 14,
-      "mes_atual_total": 2,
+      "mes_atual_total": 3,
       "dias_confirmados_lbl": "dias 1- 2",
-      "dias_confirmados_val": 2,
+      "dias_confirmados_val": 3,
       "prev_atual": "107",
       "sellers": [
         [
@@ -322,9 +322,9 @@
       12,
       10,
       14,
-      "partial",
+      "real",
       "",
-      4
+      10
     ],
     [
       3,
