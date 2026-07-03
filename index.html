@@ -116,8 +116,10 @@ tr:hover td{background:var(--card2)}
 .r-c{font-size:18px;font-weight:700;font-family:var(--fh)}
 .r-sep{color:var(--muted);font-size:10px;padding:0 3px}
 .td-bar{padding:7px 14px 7px 0}
-.bar-bg{height:6px;background:var(--border);border-radius:3px;overflow:hidden;width:100px}
-.bar-fill{height:100%;border-radius:3px}
+.bar-bg{height:6px;background:var(--border);border-radius:3px;overflow:hidden;width:100px;position:relative}
+.bar-fill{height:100%;border-radius:3px;position:absolute;top:0;left:0}
+.bar-fill.prev{opacity:.35}
+.bar-fill.real{opacity:1}
 .pill{display:inline-flex;font-family:var(--fm);font-size:9px;padding:2px 6px;border-radius:3px;font-weight:600;letter-spacing:.5px}
 .pill-real{background:var(--green-d);color:var(--green)}.pill-part{background:rgba(245,158,11,.2);color:var(--gold)}
 .pill-fore{background:var(--blue-d);color:var(--blue-l)}.pill-hol{background:var(--red-d);color:var(--red)}
@@ -1289,7 +1291,7 @@ function renderTable(dias) {
     }
     else if (type === 'real') realizado = val;
 
-    const pct  = (val / maxV * 100).toFixed(0);
+    const pctPrev = (val / maxV * 100).toFixed(0);
     const col  = typeColor[type];
 
     const loTxt = (lo === val)
@@ -1301,12 +1303,18 @@ function renderTable(dias) {
 
     // Coluna realizado: verde (confirmado), âmbar (parcial), — (futuro)
     let realTxt;
+    let realCol = null;
     if (realizado != null) {
-      const realCol = type === 'partial' ? '#f59e0b' : '#22c55e';
+      realCol = type === 'partial' ? '#f59e0b' : '#22c55e';
       realTxt = `<span class="r-c" style="color:${realCol}">${realizado}</span>`;
     } else {
       realTxt = `<span style="color:var(--muted);font-size:10px">—</span>`;
     }
+
+    const pctReal = realizado != null ? (realizado / maxV * 100).toFixed(0) : 0;
+    const realBarHtml = realizado != null
+      ? `<div class="bar-fill real" style="width:${pctReal}%;background:${realCol}"></div>`
+      : '';
 
     tbody.innerHTML += `
       <tr>
@@ -1320,7 +1328,8 @@ function renderTable(dias) {
         <td class="td-range" style="text-align:center;min-width:50px">${realTxt}</td>
         <td class="td-bar">
           <div class="bar-bg">
-            <div class="bar-fill" style="width:${pct}%;background:${col}"></div>
+            <div class="bar-fill prev" style="width:${pctPrev}%;background:${col}"></div>
+            ${realBarHtml}
           </div>
         </td>
         <td><span class="pill ${typePill[type]}">${typeTxt[type]}</span></td>
