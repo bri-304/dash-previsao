@@ -84,7 +84,7 @@ body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse
 .method-desc{font-family:var(--fb);font-size:11px;color:var(--muted)}
 
 /* WEEKS */
-.week-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:22px}
+.week-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:22px}
 .week-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px}
 .week-lbl{font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 .week-dates{font-family:var(--fm);font-size:10px;color:var(--muted);margin-bottom:10px}
@@ -354,10 +354,10 @@ tr:hover td{background:var(--card2)}
 
 <!-- WEEKLY -->
 <div class="sec-title fade-in d3">resumo do previsto por semana</div>
-<div class="week-grid fade-in d3">
+<div class="week-grid fade-in d3" id="week-grid"></div>
 
   <!-- ▼ SEMANA 1: números atualizados via applyWeeks() -->
-  <div class="week-card">
+  <!-- <div class="week-card">
     <div class="week-lbl">Semana 1</div>
     <div class="week-dates" id="week1-dates">01 a 07/06</div>
     <div class="week-num" id="week1-num" style="color:var(--green)">67</div>
@@ -371,10 +371,10 @@ tr:hover td{background:var(--card2)}
       <span class="wtag warn" id="week1-tag-1">⛔ Pto. Fac. 05/06</span>
       <span class="wtag ok" id="week1-tag-2">✅ Dias 1–4 confirmados</span>
     </div>
-  </div>
+  </div> --> 
 
   <!-- ▼ SEMANA 2: números atualizados via applyWeeks() -->
-  <div class="week-card">
+  <!-- <div class="week-card">
     <div class="week-lbl">Semana 2</div>
     <div class="week-dates" id="week2-dates">08 a 14/06</div>
     <div class="week-num" id="week2-num" style="color:var(--blue-l)">94</div>
@@ -388,10 +388,10 @@ tr:hover td{background:var(--card2)}
       <span class="wtag copa" id="week2-tag-1">⚽ Copa abre 11/06 (16h)</span>
       <span class="wtag copa" id="week2-tag-2">⚽ BR × Marrocos 13/06 (19h)</span>
     </div>
-  </div>
+  </div> --> 
 
   <!-- ▼ SEMANA 3: números atualizados via applyWeeks() -->
-  <div class="week-card">
+  <!-- <div class="week-card">
     <div class="week-lbl">Semana 3</div>
     <div class="week-dates" id="week3-dates">15 a 21/06</div>
     <div class="week-num" id="week3-num" style="color:var(--blue-l)">93</div>
@@ -405,10 +405,10 @@ tr:hover td{background:var(--card2)}
       <span class="wtag copa" id="week3-tag-1">⚽ BR × Haiti 19/06 (21h30)</span>
       <span class="wtag hot" id="week3-tag-2">🎯 Deadline Bolão 2 · 19/06</span>
     </div>
-  </div>
+  </div>-->
 
   <!-- ▼ SEMANA 4: números atualizados via applyWeeks() -->
-  <div class="week-card">
+  <!-- <div class="week-card">
     <div class="week-lbl">Semana 4</div>
     <div class="week-dates" id="week4-dates">22 a 30/06</div>
     <div class="week-num" id="week4-num" style="color:var(--amber)">136</div>
@@ -424,7 +424,7 @@ tr:hover td{background:var(--card2)}
     </div>
   </div>
 
-</div>
+</div> -->
 
 <!-- DAILY TABLE -->
 <div class="sec-title fade-in d3">tabela diária — mínimo · central · máximo</div>
@@ -1026,24 +1026,28 @@ function applyMeta(meta) {
 }
 
 // ── APLICAR SEMANAS ───────────────────────────────────────────────────────────
+function weekCardHtml(s, n) {
+  const tagsHtml = (s.tags || []).map((t, ti) =>
+    `<span class="wtag ${t.cls}" id="week${n}-tag-${ti}">${t.txt}</span>`
+  ).join('');
+  return `
+    <div class="week-card">
+      <div class="week-lbl">Semana ${n}</div>
+      <div class="week-dates" id="week${n}-dates">${s.dates || ''}</div>
+      <div class="week-num" id="week${n}-num" style="color:${s.color || 'var(--blue-l)'}">${s.central}</div>
+      <div class="week-range" style="color:var(--muted)">intervalo:
+        <span style="color:#f87171" id="week${n}-min">${s.min}</span> —
+        <span style="color:#34d399" id="week${n}-max">${s.max}</span>
+      </div>
+      <div class="week-avg" id="week${n}-avg">${s.avg_txt}</div>
+      <div class="week-tags" id="week${n}-tags">${tagsHtml}</div>
+    </div>`;
+}
+
 function applyWeeks(semanas) {
-  semanas.forEach((s, i) => {
-    const n = i + 1;
-    setText(`week${n}-num`,   s.central);
-    setText(`week${n}-min`,   s.min);
-    setText(`week${n}-max`,   s.max);
-    setText(`week${n}-avg`,   s.avg_txt);
-    if (s.dates) setText(`week${n}-dates`, s.dates);
-    if (s.tags) {
-      s.tags.forEach((t, ti) => {
-        const el = document.getElementById(`week${n}-tag-${ti}`);
-        if (el) {
-          el.textContent = t.txt;
-          el.className = `wtag ${t.cls}`;
-        }
-      });
-    }
-  });
+  const grid = document.getElementById('week-grid');
+  if (!grid) return;
+  grid.innerHTML = semanas.map((s, i) => weekCardHtml(s, i + 1)).join('');
 }
 
 // ── APLICAR SUGESTÕES ESTRATÉGICAS ───────────────────────────────────────────
