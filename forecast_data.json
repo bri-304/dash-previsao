@@ -263,6 +263,7 @@
       "max": 60,
       "avg_txt": "~14,3/dia útil · início de mês",
       "dates": "01 a 05/07",
+      "color": "var(--green)",
       "tags": [
         {
           "cls": "copa",
@@ -280,6 +281,7 @@
       "max": 99,
       "avg_txt": "~15,2/dia útil · semana cheia",
       "dates": "06 a 12/07",
+      "color": "var(--blue-l)",
       "tags": [
         {
           "cls": "ok",
@@ -297,6 +299,7 @@
       "max": 94,
       "avg_txt": "~14,0/dia útil · semana da Semifinal",
       "dates": "13 a 19/07",
+      "color": "var(--blue-l)",
       "tags": [
         {
           "cls": "warn",
@@ -309,11 +312,30 @@
       ]
     },
     {
-      "central": 167,
-      "min": 132,
-      "max": 212,
-      "avg_txt": "~16,3/dia útil · fechamento do mês",
-      "dates": "20 a 31/07",
+      "central": 82,
+      "min": 65,
+      "max": 101,
+      "avg_txt": "~16,4/dia útil · semana antes do fechamento",
+      "dates": "20 a 26/07",
+      "color": "var(--amber)",
+      "tags": [
+        {
+          "cls": "hot",
+          "txt": "🏁 Penúltima semana CONSOLIGA"
+        },
+        {
+          "cls": "ok",
+          "txt": "✅ Semana cheia"
+        }
+      ]
+    },
+    {
+      "central": 85,
+      "min": 67,
+      "max": 111,
+      "avg_txt": "~17/dia útil · fechamento do mês",
+      "dates": "27 a 31/07",
+      "color": "var(--amber)",
       "tags": [
         {
           "cls": "hot",
