@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "06/07/2026 16:01",
-    "status_dias": "Dias 1 à 3 confirmados · Dia 3 parcial · Dias 4 à 31 com intervalo de confiança",
+    "atualizado_em": "06/07/2026 16:20",
+    "status_dias": "Dias 1 à 6 confirmados · Dia 6 parcial · Dias 7 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,0",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 28,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 2)",
-    "kpi_realizado_delta": "▲ 7,2% do total previsto",
+    "kpi_realizado": 43,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 5)",
+    "kpi_realizado_delta": "▲ 11% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -136,9 +136,14 @@
       "atencao_txt": "⚠️ Tem a maior meta per capita entre os 3 times (12 vendas/ativo) — precisa de contribuição mais distribuída além dos 2 líderes para sustentar o ritmo o mês todo.",
       "sellers": [
         [
+          "Adriérre Marcon",
+          16,
+          12
+        ],
+        [
           "Lisdaisy Vieira Costa",
           14,
-          5
+          6
         ],
         [
           "Makele de Souza Smania",
@@ -158,11 +163,6 @@
         [
           "Lana Mara de Morais Leite",
           1,
-          1
-        ],
-        [
-          "Adriérre Marcon",
-          16,
           1
         ],
         [
@@ -206,7 +206,7 @@
         [
           "Guilherme Lopes Machado",
           10,
-          2
+          5
         ],
         [
           "Elison da Silva Elias",
@@ -375,9 +375,9 @@
       17,
       14,
       20,
-      "partial",
+      "real",
       "",
-      8
+      19
     ],
     [
       4,
@@ -385,9 +385,9 @@
       4,
       2,
       6,
-      "weekend",
+      "real",
       "",
-      null
+      3
     ],
     [
       5,
@@ -395,9 +395,9 @@
       1,
       0,
       3,
-      "copa",
+      "real",
       "🇧🇷 Oitavas de Final: Brasil x Noruega 17h",
-      null
+      1
     ],
     [
       6,
