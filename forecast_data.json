@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "06/07/2026 17:45",
+    "atualizado_em": "06/07/2026 17:47",
     "status_dias": "Dias 1 à 6 confirmados · Dia 6 parcial · Dias 7 à 31 com intervalo de confiança",
     "kpi_total_pess": 300,
     "kpi_total_central": 376,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,3",
     "kpi_media_min": "13,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 43,
+    "kpi_realizado": 45,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 5)",
-    "kpi_realizado_delta": "▲ 11% do total previsto",
+    "kpi_realizado_delta": "▲ 11,5% do total previsto",
     "kpi_yoy_pct": "+10%",
     "kpi_yoy_pess": "-12% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -55,7 +55,7 @@
         [
           "Estevam Silverio Tavares",
           25,
-          6
+          8
         ],
         [
           "Tiago Melo da Silva",
@@ -401,9 +401,9 @@
       12,
       10,
       14,
-      "work",
+      "partial",
       "",
-      null
+      2
     ],
     [
       7,
