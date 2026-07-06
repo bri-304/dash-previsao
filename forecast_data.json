@@ -2,27 +2,27 @@
   "meta": {
     "atualizado_em": "06/07/2026 16:20",
     "status_dias": "Dias 1 à 6 confirmados · Dia 6 parcial · Dias 7 à 31 com intervalo de confiança",
-    "kpi_total_pess": 291,
-    "kpi_total_central": 369,
+    "kpi_total_pess": 300,
+    "kpi_total_central": 376,
     "kpi_total_otim": 465,
-    "kpi_total_delta": "▲ +7% vs junho (central)",
-    "kpi_media_central": "16,0",
-    "kpi_media_min": "12,7 mín",
+    "kpi_total_delta": "▲ +9% vs junho (central)",
+    "kpi_media_central": "16,3",
+    "kpi_media_min": "13,0 mín",
     "kpi_media_max": "20,2 máx",
     "kpi_realizado": 43,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 5)",
     "kpi_realizado_delta": "▲ 11% do total previsto",
-    "kpi_yoy_pct": "+8%",
-    "kpi_yoy_pess": "-15% pess.",
+    "kpi_yoy_pct": "+10%",
+    "kpi_yoy_pess": "-12% pess.",
     "kpi_yoy_otim": "+36% otim.",
-    "kpi_yoy_sub": "369 central vs 342 ano anterior",
+    "kpi_yoy_sub": "376 central vs 342 ano anterior",
     "kpi_ativos": 29,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 8 inativos / férias",
     "page_title": "Forecast Julho 2026 — Consolide",
     "hdr_title_html": "Forecast de Vendas — <em>Julho 2026</em>",
     "badge_consoliga": "⚡ CONSOLIGA T1 · Mês 3/3 (Classificatória)",
-    "badge_copa": "⚽ Copa do Mundo 2026 · Mata-mata",
+    "badge_copa": "⚽ Copa do Mundo 2026 · Brasil eliminado (oitavas)",
     "kpi_total_sub": "vendas · julho/2026",
     "kpi_media_delta": "▲ vs 15,0 jul/2025",
     "kpi_yoy_lbl": "Percentual Previsto vs Julho 2025",
@@ -33,7 +33,7 @@
     "sec_title_sugestoes": "sugestões estratégicas para julho",
     "footer_linha1": "Consolide · Forecast Julho 2026 com Intervalo de Confiança · Gerado em 01/07/2026",
     "footer_linha2": "Método: Pipeline Ponderado + Rolling WMA (peso 2 últimos 6m) + Cohort por Time · Margens: CV histórico por tipo de dia (±15% úteis · ±22% Copa · ±28% sprint · ±30% FDS)",
-    "footer_linha3": "Cenário pessimista: ~291 · Central: ~369 · Cenário otimista: ~465"
+    "footer_linha3": "Cenário pessimista: ~300 · Central: ~376 · Cenário otimista: ~465"
   },
   "times": {
     "isr": {
@@ -266,8 +266,8 @@
       "color": "var(--green)",
       "tags": [
         {
-          "cls": "copa",
-          "txt": "⚽ Oitavas: BR x Noruega 05/07 (17h)"
+          "cls": "warn",
+          "txt": "❌ Brasil eliminado: 1x2 vs Noruega (05/07)"
         },
         {
           "cls": "warn",
@@ -278,7 +278,7 @@
     {
       "central": 81,
       "min": 65,
-      "max": 99,
+      "max": 98,
       "avg_txt": "~15,2/dia útil · semana cheia",
       "dates": "06 a 12/07",
       "color": "var(--blue-l)",
@@ -288,33 +288,29 @@
           "txt": "✅ Semana completa de trabalho"
         },
         {
-          "cls": "copa",
-          "txt": "⚽ Quartas: BR x Inglaterra (prov.) 11/07 (18h)"
+          "cls": "ok",
+          "txt": "✅ Sem jogo do Brasil nas Quartas (eliminado)"
         }
       ]
     },
     {
-      "central": 73,
-      "min": 56,
-      "max": 94,
-      "avg_txt": "~14,0/dia útil · semana da Semifinal",
+      "central": 81,
+      "min": 65,
+      "max": 98,
+      "avg_txt": "~15,2/dia útil · semana normalizada",
       "dates": "13 a 19/07",
       "color": "var(--blue-l)",
       "tags": [
         {
-          "cls": "warn",
-          "txt": "⚠️ Semifinal 15/07 (16h) — risco de repetir queda de 29/06"
-        },
-        {
-          "cls": "copa",
-          "txt": "🏆 Final 19/07 (16h), se Brasil classificado"
+          "cls": "ok",
+          "txt": "✅ Sem risco de jogo do Brasil (eliminado nas oitavas)"
         }
       ]
     },
     {
-      "central": 82,
+      "central": 81,
       "min": 65,
-      "max": 101,
+      "max": 98,
       "avg_txt": "~16,4/dia útil · semana antes do fechamento",
       "dates": "20 a 26/07",
       "color": "var(--amber)",
@@ -396,7 +392,7 @@
       0,
       3,
       "real",
-      "🇧🇷 Oitavas de Final: Brasil x Noruega 17h",
+      "🇧🇷 Oitavas de Final: Brasil 1 x 2 Noruega — eliminado",
       1
     ],
     [
@@ -454,9 +450,9 @@
       "Sáb",
       4,
       2,
-      7,
-      "copa",
-      "🇧🇷 Quartas de Final: Brasil x Inglaterra (prov.) 18h",
+      6,
+      "weekend",
+      "",
       null
     ],
     [
@@ -492,21 +488,21 @@
     [
       15,
       "Qua",
-      7,
-      4,
-      12,
-      "copa",
-      "⚠️ Semifinal: Brasil x adversário 16h — jogo à tarde, repete padrão de 29/06",
+      18,
+      15,
+      21,
+      "work",
+      "",
       null
     ],
     [
       16,
       "Qui",
-      15,
       12,
-      19,
+      10,
+      14,
       "work",
-      "Rebote pós-jogo (efeito euforia/recuperação)",
+      "",
       null
     ],
     [
@@ -535,18 +531,18 @@
       1,
       0,
       3,
-      "copa",
-      "🏆 Final da Copa do Mundo 16h, se Brasil classificado",
+      "weekend",
+      "",
       null
     ],
     [
       20,
       "Seg",
-      13,
+      12,
       10,
-      17,
+      14,
       "work",
-      "Possível efeito pós-Copa (euforia ou luto)",
+      "",
       null
     ],
     [
@@ -663,12 +659,12 @@
   "sugestoes": [
     {
       "n": "01",
-      "titulo": "⚠️ Proteger o dia 15/07 (Semifinal às 16h)",
-      "descricao_html": "O jogo do Brasil em 29/06 (14h, dia de semana) derrubou as vendas <strong>abaixo até do piso pessimista</strong>. A Semifinal em 15/07 tem o mesmo risco: <strong>concentrar ligações e fechamentos até 13h</strong> pode proteger boa parte da meta do dia.",
+      "titulo": "📈 Sem mais 'dias de risco' da Copa em julho",
+      "descricao_html": "Com a eliminação do Brasil nas oitavas (1x2 vs Noruega), os dias <strong>11, 15 e 19/07 voltam ao padrão normal</strong> de vendas — o restante do mês fica mais previsível, sem o risco de queda que jogos do Brasil costumavam trazer (como em 29/06).",
       "tags": [
-        "15/07",
         "copa",
-        "risco"
+        "eliminação",
+        "previsibilidade"
       ]
     },
     {
@@ -713,12 +709,12 @@
     },
     {
       "n": "06",
-      "titulo": "🏆 Aproveitar o efeito pós-jogo",
-      "descricao_html": "Dias seguintes a vitórias do Brasil (06, 12, 16 e 20/07) tendem a ter <strong>pipeline mais aquecido pela empolgação</strong> — reforçar follow-up de leads paradas nesses dias.",
+      "titulo": "🎯 Redirecionar o foco que iria para a Copa",
+      "descricao_html": "Sem mais jogos do Brasil disputando a atenção do time, as semanas de 11 a 19/07 podem virar uma <strong>janela extra de produtividade</strong> — sem o risco de dispersão que os jogos causavam.",
       "tags": [
+        "produtividade",
         "copa",
-        "follow-up",
-        "pós-jogo"
+        "foco"
       ]
     }
   ],
@@ -732,32 +728,11 @@
       "pill": "📉 Previsão: 12 — 14 — 17 vendas"
     },
     {
-      "tipo": "warn",
+      "tipo": "ok",
       "data": "05/07 (Dom)",
-      "titulo": "Oitavas de Final: Brasil x Noruega (17h)",
-      "desc": "Jogo em domingo — dia já naturalmente baixo. Sem o Bolão ativo neste mês (baixa adesão nas últimas edições), não há gatilho extra de urgência; margem ±22% reflete só a incerteza do evento.",
-      "pill": "⚽ Previsão: 0 — 1 — 3 vendas"
-    },
-    {
-      "tipo": "warn",
-      "data": "11/07 (Sáb)",
-      "titulo": "Quartas de Final: Brasil x Inglaterra (prov.) (18h)",
-      "desc": "Sábado de Copa — mais incerto que sábado comum. Sem gamificação de apostas ativa neste mês, o efeito fica restrito à disrupção normal do dia de jogo.",
-      "pill": "⚽ Previsão: 2 — 4 — 7 vendas"
-    },
-    {
-      "tipo": "risk",
-      "data": "15/07 (Qua)",
-      "titulo": "Semifinal às 16h — repete padrão de 29/06",
-      "desc": "Jogo de quarta-feira à tarde reduz drasticamente a janela útil do dia, assim como ocorreu em 29/06 (BR x Japão, 14h), quando o resultado ficou abaixo até do piso pessimista.",
-      "pill": "🚨 Previsão: 4 — 7 — 12 vendas"
-    },
-    {
-      "tipo": "oppt",
-      "data": "19/07 (Dom)",
-      "titulo": "Final da Copa do Mundo (16h) — se Brasil classificado",
-      "desc": "Evento de maior audiência do ano, mas sem Bolão ativo para gerar urgência de vendas. Baixo impacto direto no dia (domingo); efeito nos dias seguintes tende a ser mais moderado do que em edições anteriores com gamificação.",
-      "pill": "🏆 Previsão: 0 — 1 — 3 vendas"
+      "titulo": "Brasil eliminado nas Oitavas (1x2 vs Noruega)",
+      "desc": "Fim da participação do Brasil na Copa. O dia registrou 1 venda confirmada, dentro do previsto (0–1–3). Dias 11, 15 e 19/07 voltam ao comportamento normal — sem mais risco de jogos do Brasil neste mês.",
+      "pill": "✅ Realizado: 1 venda (dentro do previsto)"
     },
     {
       "tipo": "oppt",
