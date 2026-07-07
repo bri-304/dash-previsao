@@ -1,21 +1,21 @@
 {
   "meta": {
-    "atualizado_em": "07/07/2026 13:12",
-    "status_dias": "Dias 1 à 7 confirmados · Dia 7 parcial · Dias 8 à 31 com intervalo de confiança",
-    "kpi_total_pess": 300,
-    "kpi_total_central": 376,
+    "atualizado_em": "06/07/2026 16:20",
+    "status_dias": "Dias 1 à 6 confirmados · Dia 7 parcial · Dias 8 à 31 com intervalo de confiança",
+    "kpi_total_pess": 290,
+    "kpi_total_central": 370,
     "kpi_total_otim": 465,
-    "kpi_total_delta": "▲ +9% vs junho (central)",
-    "kpi_media_central": "16,3",
-    "kpi_media_min": "13,0 mín",
+    "kpi_total_delta": "▲ +7% vs junho (central)",
+    "kpi_media_central": "16,1",
+    "kpi_media_min": "12,6 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 47,
+    "kpi_realizado": 46,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 6)",
-    "kpi_realizado_delta": "▲ 12,1% do total previsto",
-    "kpi_yoy_pct": "+10%",
-    "kpi_yoy_pess": "-12% pess.",
+    "kpi_realizado_delta": "▲ 12% do total previsto",
+    "kpi_yoy_pct": "+8%",
+    "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
-    "kpi_yoy_sub": "376 central vs 342 ano anterior",
+    "kpi_yoy_sub": "370 central vs 342 ano anterior",
     "kpi_ativos": 29,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 8 inativos / férias",
@@ -33,16 +33,16 @@
     "sec_title_sugestoes": "sugestões estratégicas para julho",
     "footer_linha1": "Consolide · Forecast Julho 2026 com Intervalo de Confiança · Gerado em 01/07/2026",
     "footer_linha2": "Método: Pipeline Ponderado + Rolling WMA (peso 2 últimos 6m) + Cohort por Time · Margens: CV histórico por tipo de dia (±15% úteis · ±22% Copa · ±28% sprint · ±30% FDS)",
-    "footer_linha3": "Cenário pessimista: ~300 · Central: ~376 · Cenário otimista: ~465"
+    "footer_linha3": "Cenário pessimista: ~290 · Central: ~370 · Cenário otimista: ~465"
   },
   "times": {
     "isr": {
       "ativos": 14,
       "mes_passado_total": 102,
-      "mes_passado": 24,
-      "mes_atual_total": 14,
-      "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 14,
+      "mes_passado": 14,
+      "mes_atual_total": 12,
+      "dias_confirmados_lbl": "dias 1 - 3",
+      "dias_confirmados_val": 12,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -55,7 +55,7 @@
         [
           "Estevam Silverio Tavares",
           25,
-          8
+          6
         ],
         [
           "Tiago Melo da Silva",
@@ -122,10 +122,10 @@
     "lis": {
       "ativos": 13,
       "mes_passado_total": 140,
-      "mes_passado": 23,
-      "mes_atual_total": 23,
-      "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 23,
+      "mes_passado": 19,
+      "mes_atual_total": 11,
+      "dias_confirmados_lbl": "dias 1 - 3",
+      "dias_confirmados_val": 11,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -146,14 +146,14 @@
           6
         ],
         [
-          "Maria Aline da Silva Ferreira",
-          29,
-          2
-        ],
-        [
           "Makele de Souza Smania",
           30,
           2
+        ],
+        [
+          "Maria Aline da Silva Ferreira",
+          29,
+          1
         ],
         [
           "Larissa Pereira Niehues",
@@ -190,10 +190,10 @@
     "stl": {
       "ativos": 10,
       "mes_passado_total": 98,
-      "mes_passado": 20,
-      "mes_atual_total": 8,
-      "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 8,
+      "mes_passado": 16,
+      "mes_atual_total": 5,
+      "dias_confirmados_lbl": "dias 1 - 3",
+      "dias_confirmados_val": 5,
       "prev_atual": "107",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -219,17 +219,17 @@
           1
         ],
         [
-          "Josilea de Melo Rocha",
-          12,
-          1
-        ],
-        [
           "Bruna Letícia Corrêa Barbosa",
           13,
           0
         ],
         [
           "Marcela Machado do Rosário",
+          12,
+          0
+        ],
+        [
+          "Josilea de Melo Rocha",
           12,
           0
         ],
@@ -276,8 +276,8 @@
       ]
     },
     {
-      "central": 81,
-      "min": 65,
+      "central": 75,
+      "min": 55,
       "max": 98,
       "avg_txt": "~15,2/dia útil · semana cheia",
       "dates": "06 a 12/07",
@@ -418,8 +418,8 @@
     [
       8,
       "Qua",
-      18,
-      15,
+      14,
+      9,
       21,
       "work",
       "",
@@ -428,8 +428,8 @@
     [
       9,
       "Qui",
-      12,
       10,
+      6,
       14,
       "work",
       "",
@@ -716,6 +716,16 @@
         "copa",
         "foco"
       ]
+    },
+    {
+      "n": "07",
+      "titulo": "🚨 Investigar a queda real de 06-07/07",
+      "descricao_html": "As vendas dos dias 6 e 7 vieram muito abaixo do previsto logo após a eliminação do Brasil (75% abaixo do central na segunda). Vale um <strong>check-in rápido com os times ainda hoje</strong> para entender se é reação pontual — que deve normalizar até quinta — ou algo mais estrutural.",
+      "tags": [
+        "alerta",
+        "real",
+        "06-07/07"
+      ]
     }
   ],
   "metodos": [],
@@ -740,6 +750,13 @@
       "titulo": "Fechamento CONSOLIGA Mês 3",
       "desc": "Maior janela de incerteza do mês (±28%), mas para cima. Cenário otimista: 24+32=56 vendas nos 2 dias.",
       "pill": "🚀 Previsão: 28 — 38 — 56 nos dois dias"
+    },
+    {
+      "tipo": "risk",
+      "data": "06-07/07 (Seg-Ter)",
+      "titulo": "Queda real pós-eliminação — abaixo do previsto",
+      "desc": "Segunda (06/07) fechou com apenas 3 vendas (previsto: 10–12–14, ou seja, 75% abaixo do central). Terça (07/07) registrava só 1 venda até 14h. Com isso foram ajustados os dias 8 e 9/07 para baixo como precaução; se o padrão não normalizar até quinta, pode ser algo mais estrutural do que reação pontual à eliminação.",
+      "pill": "🔻 Real: 3 (seg) + 1 até 14h (ter) vs previsto 12+17"
     }
   ],
   "bolao": []
