@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "06/07/2026 16:20",
-    "status_dias": "Dias 1 à 6 confirmados · Dia 7 parcial · Dias 8 à 31 com intervalo de confiança",
+    "atualizado_em": "07/07/2026 15:24",
+    "status_dias": "Dias 1 à 7 confirmados · Dia 7 parcial · Dias 8 à 31 com intervalo de confiança",
     "kpi_total_pess": 290,
     "kpi_total_central": 370,
     "kpi_total_otim": 465,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,1",
     "kpi_media_min": "12,6 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 46,
+    "kpi_realizado": 47,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 6)",
-    "kpi_realizado_delta": "▲ 12% do total previsto",
+    "kpi_realizado_delta": "▲ 12,1% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -39,10 +39,10 @@
     "isr": {
       "ativos": 14,
       "mes_passado_total": 102,
-      "mes_passado": 14,
-      "mes_atual_total": 12,
-      "dias_confirmados_lbl": "dias 1 - 3",
-      "dias_confirmados_val": 12,
+      "mes_passado": 24,
+      "mes_atual_total": 14,
+      "dias_confirmados_lbl": "dias 1 - 7",
+      "dias_confirmados_val": 14,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -55,7 +55,7 @@
         [
           "Estevam Silverio Tavares",
           25,
-          6
+          8
         ],
         [
           "Tiago Melo da Silva",
@@ -122,10 +122,10 @@
     "lis": {
       "ativos": 13,
       "mes_passado_total": 140,
-      "mes_passado": 19,
-      "mes_atual_total": 11,
-      "dias_confirmados_lbl": "dias 1 - 3",
-      "dias_confirmados_val": 11,
+      "mes_passado": 23,
+      "mes_atual_total": 24,
+      "dias_confirmados_lbl": "dias 1 - 7",
+      "dias_confirmados_val": 24,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -146,14 +146,14 @@
           6
         ],
         [
-          "Makele de Souza Smania",
-          30,
+          "Maria Aline da Silva Ferreira",
+          29,
           2
         ],
         [
-          "Maria Aline da Silva Ferreira",
-          29,
-          1
+          "Makele de Souza Smania",
+          30,
+          2
         ],
         [
           "Larissa Pereira Niehues",
@@ -190,10 +190,10 @@
     "stl": {
       "ativos": 10,
       "mes_passado_total": 98,
-      "mes_passado": 16,
-      "mes_atual_total": 5,
-      "dias_confirmados_lbl": "dias 1 - 3",
-      "dias_confirmados_val": 5,
+      "mes_passado": 20,
+      "mes_atual_total": 9,
+      "dias_confirmados_lbl": "dias 1 - 7",
+      "dias_confirmados_val": 9,
       "prev_atual": "107",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -219,17 +219,17 @@
           1
         ],
         [
+          "Josilea de Melo Rocha",
+          12,
+          1
+        ],
+        [
           "Bruna Letícia Corrêa Barbosa",
           13,
           0
         ],
         [
           "Marcela Machado do Rosário",
-          12,
-          0
-        ],
-        [
-          "Josilea de Melo Rocha",
           12,
           0
         ],
