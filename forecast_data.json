@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "07/07/2026 15:24",
+    "atualizado_em": "07/07/2026 15:59",
     "status_dias": "Dias 1 à 7 confirmados · Dia 7 parcial · Dias 8 à 31 com intervalo de confiança",
     "kpi_total_pess": 290,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,1",
     "kpi_media_min": "12,6 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 47,
+    "kpi_realizado": 49,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 6)",
-    "kpi_realizado_delta": "▲ 12,1% do total previsto",
+    "kpi_realizado_delta": "▲ 12,6% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -80,7 +80,7 @@
         [
           "Bruno Ramos Martins",
           11,
-          0
+          1
         ],
         [
           "Elisângela Arias",
@@ -209,14 +209,14 @@
           5
         ],
         [
-          "Elison da Silva Elias",
-          2,
+          "Stella Nieheus",
+          23,
           2
         ],
         [
-          "Stella Nieheus",
-          23,
-          1
+          "Elison da Silva Elias",
+          2,
+          2
         ],
         [
           "Josilea de Melo Rocha",
@@ -413,7 +413,7 @@
       20,
       "partial",
       "",
-      1
+      3
     ],
     [
       8,
