@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "06/07/2026 17:47",
+    "atualizado_em": "07/07/2026 13:11",
     "status_dias": "Dias 1 à 6 confirmados · Dia 6 parcial · Dias 7 à 31 com intervalo de confiança",
     "kpi_total_pess": 300,
     "kpi_total_central": 376,
@@ -40,9 +40,9 @@
       "ativos": 14,
       "mes_passado_total": 102,
       "mes_passado": 24,
-      "mes_atual_total": 12,
+      "mes_atual_total": 14,
       "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 12,
+      "dias_confirmados_val": 14,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
