@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "09/07/2026 15:08",
-    "status_dias": "Dias 1 à 8 confirmados · Dia 8 parcial · Dias 9 à 31 com intervalo de confiança",
+    "atualizado_em": "09/07/2026 15:12",
+    "status_dias": "Dias 1 à 9 confirmados · Dia 9 parcial · Dias 10 à 31 com intervalo de confiança",
     "kpi_total_pess": 290,
     "kpi_total_central": 370,
     "kpi_total_otim": 465,
@@ -9,14 +9,14 @@
     "kpi_media_central": "16,1",
     "kpi_media_min": "12,6 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 64,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 7)",
-    "kpi_realizado_delta": "▲ 16,4% do total previsto",
+    "kpi_realizado": 71,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 8)",
+    "kpi_realizado_delta": "▲ 18,2% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
     "kpi_yoy_sub": "370 central vs 342 ano anterior",
-    "kpi_ativos": 29,
+    "kpi_ativos": 28,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 8 inativos / férias",
     "page_title": "Forecast Julho 2026 — Consolide",
@@ -58,6 +58,11 @@
           8
         ],
         [
+          "Israel Riella",
+          14,
+          4
+        ],
+        [
           "Tiago Melo da Silva",
           20,
           3
@@ -65,11 +70,6 @@
         [
           "Patrícia Lúcio Custódio",
           4,
-          2
-        ],
-        [
-          "Israel Riella",
-          14,
           2
         ],
         [
@@ -148,6 +148,11 @@
         [
           "Makele de Souza Smania",
           30,
+          4
+        ],
+        [
+          "Maria Aline da Silva Ferreira",
+          29,
           3
         ],
         [
@@ -156,13 +161,13 @@
           3
         ],
         [
-          "Maria Aline da Silva Ferreira",
-          29,
+          "Iara da Silva Linhares",
+          12,
           2
         ],
         [
-          "Iara da Silva Linhares",
-          12,
+          "Felipe Santos Leite",
+          0,
           2
         ],
         [
@@ -214,6 +219,11 @@
           3
         ],
         [
+          "Elison da Silva Elias",
+          2,
+          3
+        ],
+        [
           "Stella Nieheus",
           23,
           2
@@ -225,11 +235,6 @@
         ],
         [
           "Guilherme Carvalho Rodrigues",
-          2,
-          2
-        ],
-        [
-          "Elison da Silva Elias",
           2,
           2
         ],
@@ -250,7 +255,7 @@
         ],
         [
           "Yasmin Santos Zonatto",
-          4,
+          3,
           0
         ]
       ]
@@ -421,9 +426,9 @@
       14,
       9,
       21,
-      "partial",
+      "real",
       "",
-      13
+      16
     ],
     [
       9,
@@ -431,9 +436,9 @@
       10,
       6,
       14,
-      "work",
+      "partial",
       "",
-      null
+      4
     ],
     [
       10,
