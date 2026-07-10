@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "10/07/2026 08:48",
-    "status_dias": "Dias 1 à 9 confirmados · Dia 9 parcial · Dias 10 à 31 com intervalo de confiança",
+    "atualizado_em": "10/07/2026 08:56",
+    "status_dias": "Dias 1 à 10 confirmados · Dia 10 parcial · Dias 11 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 77,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 8)",
-    "kpi_realizado_delta": "▲ 19,7% do total previsto",
+    "kpi_realizado": 85,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 9)",
+    "kpi_realizado_delta": "▲ 21,8% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -40,9 +40,9 @@
       "ativos": 14,
       "mes_passado_total": 102,
       "mes_passado": 33,
-      "mes_atual_total": 19,
+      "mes_atual_total": 20,
       "dias_confirmados_lbl": "dias 1 - 9",
-      "dias_confirmados_val": 19,
+      "dias_confirmados_val": 20,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -58,6 +58,11 @@
           8
         ],
         [
+          "Patrícia Lúcio Custódio",
+          4,
+          5
+        ],
+        [
           "Tiago Melo da Silva",
           20,
           4
@@ -68,14 +73,9 @@
           4
         ],
         [
-          "Patrícia Lúcio Custódio",
-          4,
-          2
-        ],
-        [
           "Camila Viana Alves",
           7,
-          1
+          2
         ],
         [
           "Bruno Ramos Martins",
@@ -123,9 +123,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 35,
-      "mes_atual_total": 34,
+      "mes_atual_total": 39,
       "dias_confirmados_lbl": "dias 1 - 9",
-      "dias_confirmados_val": 34,
+      "dias_confirmados_val": 39,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -148,7 +148,7 @@
         [
           "Lisdaisy Vieira Costa",
           14,
-          6
+          7
         ],
         [
           "Makele de Souza Smania",
@@ -163,7 +163,7 @@
         [
           "Iara da Silva Linhares",
           12,
-          2
+          3
         ],
         [
           "Felipe Santos Leite",
@@ -211,7 +211,12 @@
         [
           "Guilherme Lopes Machado",
           10,
-          5
+          6
+        ],
+        [
+          "Stella Nieheus",
+          23,
+          3
         ],
         [
           "Ketlin Madeira Colombo",
@@ -222,11 +227,6 @@
           "Elison da Silva Elias",
           2,
           3
-        ],
-        [
-          "Stella Nieheus",
-          23,
-          2
         ],
         [
           "Josilea de Melo Rocha",
@@ -436,9 +436,9 @@
       10,
       6,
       14,
-      "partial",
+      "real",
       "",
-      10
+      18
     ],
     [
       10,
