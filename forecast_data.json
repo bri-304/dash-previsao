@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "13/07/2026 08:47",
-    "status_dias": "Dias 1 à 10 confirmados · Dia 10 parcial · Dias 11 à 31 com intervalo de confiança",
+    "atualizado_em": "13/07/2026 08:57",
+    "status_dias": "Dias 1 à 13 confirmados · Dia 13 parcial · Dias 14 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 91,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 9)",
-    "kpi_realizado_delta": "▲ 23,3% do total previsto",
+    "kpi_realizado": 105,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 12)",
+    "kpi_realizado_delta": "▲ 26,9% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -58,6 +58,11 @@
           8
         ],
         [
+          "Tiago Melo da Silva",
+          20,
+          7
+        ],
+        [
           "Patrícia Lúcio Custódio",
           4,
           5
@@ -66,11 +71,6 @@
           "Israel Riella",
           14,
           5
-        ],
-        [
-          "Tiago Melo da Silva",
-          20,
-          4
         ],
         [
           "Camila Viana Alves",
@@ -138,12 +138,12 @@
         [
           "Adriérre Marcon",
           16,
-          12
+          16
         ],
         [
           "Maria Aline da Silva Ferreira",
           29,
-          9
+          12
         ],
         [
           "Lisdaisy Vieira Costa",
@@ -211,7 +211,7 @@
         [
           "Guilherme Lopes Machado",
           10,
-          6
+          8
         ],
         [
           "Stella Nieheus",
@@ -221,6 +221,11 @@
         [
           "Ketlin Madeira Colombo",
           11,
+          3
+        ],
+        [
+          "Guilherme Carvalho Rodrigues",
+          2,
           3
         ],
         [
@@ -234,11 +239,6 @@
           2
         ],
         [
-          "Guilherme Carvalho Rodrigues",
-          2,
-          2
-        ],
-        [
           "Mirian Daiane Braga Felix",
           9,
           1
@@ -246,7 +246,7 @@
         [
           "Bruna Letícia Corrêa Barbosa",
           13,
-          0
+          1
         ],
         [
           "Marcela Machado do Rosário",
@@ -446,9 +446,9 @@
       17,
       14,
       20,
-      "partial",
+      "real",
       "",
-      6
+      11
     ],
     [
       11,
@@ -456,9 +456,9 @@
       4,
       2,
       6,
-      "weekend",
+      "real",
       "",
-      null
+      9
     ],
     [
       12,
