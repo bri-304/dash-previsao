@@ -738,7 +738,6 @@
       ]
     }
   ],
-  "metodos": [],
   "gargalos": [
     {
       "tipo": "info",
@@ -768,6 +767,5 @@
       "desc": "Segunda (06/07) fechou com apenas 3 vendas (previsto: 10–12–14, ou seja, 75% abaixo do central). Terça (07/07) registrava só 1 venda até 14h. Com isso foram ajustados os dias 8 e 9/07 para baixo como precaução; se o padrão não normalizar até quinta, pode ser algo mais estrutural do que reação pontual à eliminação.",
       "pill": "🔻 Real: 3 (seg) + 1 até 14h (ter) vs previsto 12+17"
     }
-  ],
-  "bolao": []
+  ]
 }
