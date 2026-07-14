@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "14/07/2026 09:31",
-    "status_dias": "Dias 1 à 13 confirmados · Dia 13 parcial · Dias 14 à 31 com intervalo de confiança",
+    "atualizado_em": "14/07/2026 09:34",
+    "status_dias": "Dias 1 à 14 confirmados · Dia 14 parcial · Dias 15 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -9,14 +9,14 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 105,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 12)",
-    "kpi_realizado_delta": "▲ 26,9% do total previsto",
+    "kpi_realizado": 121,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 13)",
+    "kpi_realizado_delta": "▲ 31% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
     "kpi_yoy_sub": "369 central vs 342 ano anterior",
-    "kpi_ativos": 28,
+    "kpi_ativos": 27,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 8 inativos / férias",
     "page_title": "Forecast Julho 2026 - Consolide",
@@ -55,7 +55,7 @@
         [
           "Estevam Silverio Tavares",
           25,
-          8
+          9
         ],
         [
           "Tiago Melo da Silva",
@@ -138,22 +138,22 @@
         [
           "Adriérre Marcon",
           16,
-          16
+          18
         ],
         [
           "Maria Aline da Silva Ferreira",
           29,
-          12
+          16
         ],
         [
           "Lisdaisy Vieira Costa",
           14,
-          7
+          10
         ],
         [
           "Makele de Souza Smania",
           30,
-          5
+          7
         ],
         [
           "Iara da Silva Linhares",
@@ -163,12 +163,12 @@
         [
           "Larissa Pereira Niehues",
           16,
-          3
+          4
         ],
         [
           "Felipe Santos Leite",
           0,
-          2
+          3
         ],
         [
           "Lana Mara de Morais Leite",
@@ -181,13 +181,13 @@
           1
         ],
         [
-          "Rafael Rodrigues Pedroso",
-          7,
-          0
-        ],
-        [
           "Aline Cristina da Silva",
           1,
+          1
+        ],
+        [
+          "Rafael Rodrigues Pedroso",
+          7,
           0
         ]
       ]
@@ -216,7 +216,7 @@
         [
           "Stella Nieheus",
           23,
-          3
+          4
         ],
         [
           "Ketlin Madeira Colombo",
@@ -476,9 +476,9 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
-      null
+      15
     ],
     [
       14,
@@ -486,9 +486,9 @@
       17,
       14,
       20,
-      "work",
+      "partial",
       "",
-      null
+      1
     ],
     [
       15,
