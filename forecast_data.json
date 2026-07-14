@@ -22,7 +22,7 @@
     "page_title": "Forecast Julho 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Julho 2026",
     "badge_consoliga": "⚡ CONSOLIGA T1 · Mês 3/3 (Classificatória)",
-    "badge_copa": "⚽ Copa do Mundo 2026 · Brasil eliminado (oitavas)",
+    "badge_copa": "⚽ Copa do Mundo 2026 · Mata-mata",
     "kpi_total_sub": "vendas · Julho/2026",
     "kpi_media_delta": "▲ vs 15,0 jul/2025",
     "kpi_yoy_lbl": "Percentual Previsto vs Julho 2025",
@@ -31,7 +31,7 @@
     "chart_title_main": "Vendas por Dia · Julho 2026",
     "sec_title_teams": "desempenho por time — Junho real vs Julho projetado",
     "sec_title_sugestoes": "sugestões estratégicas para Julho",
-    "footer_linha1": "Consolide · Forecast Julho 2026 com Intervalo de Confiança · Gerado em 01/07/2026",
+    "footer_linha1": "Consolide · Forecast Julho 2026com Intervalo de Confiança · Gerado em 01/07/2026",
     "footer_linha2": "Método: Pipeline Ponderado + Rolling WMA (peso 2 últimos 6m) + Cohort por Time · Margens: CV histórico por tipo de dia (±15% úteis · ±22% Copa · ±28% sprint · ±30% FDS)",
     "footer_linha3": "Cenário pessimista: ~291 · Central: ~369 · Cenário otimista: ~465"
   },
@@ -263,11 +263,12 @@
   },
   "semanas": [
     {
+      "n": 1,
+      "dates": "01 a 05/07",
       "central": 48,
       "min": 38,
       "max": 60,
       "avg_txt": "~14,3/dia útil · início de mês",
-      "dates": "01 a 05/07",
       "color": "var(--green)",
       "tags": [
         {
@@ -281,11 +282,12 @@
       ]
     },
     {
+      "n": 2,
+      "dates": "06 a 12/07",
       "central": 75,
       "min": 55,
       "max": 98,
       "avg_txt": "~15,2/dia útil · semana cheia",
-      "dates": "06 a 12/07",
       "color": "var(--blue-l)",
       "tags": [
         {
@@ -299,11 +301,12 @@
       ]
     },
     {
+      "n": 3,
+      "dates": "13 a 19/07",
       "central": 81,
       "min": 65,
       "max": 98,
       "avg_txt": "~15,2/dia útil · semana normalizada",
-      "dates": "13 a 19/07",
       "color": "var(--blue-l)",
       "tags": [
         {
@@ -313,11 +316,12 @@
       ]
     },
     {
+      "n": 4,
+      "dates": "20 a 26/07",
       "central": 81,
       "min": 65,
       "max": 98,
       "avg_txt": "~16,4/dia útil · semana antes do fechamento",
-      "dates": "20 a 26/07",
       "color": "var(--amber)",
       "tags": [
         {
@@ -331,11 +335,12 @@
       ]
     },
     {
+      "n": 5,
+      "dates": "27 a 31/07",
       "central": 85,
       "min": 67,
       "max": 111,
       "avg_txt": "~17/dia útil · fechamento do mês",
-      "dates": "27 a 31/07",
       "color": "var(--amber)",
       "tags": [
         {
@@ -737,7 +742,7 @@
   "gargalos": [
     {
       "tipo": "info",
-      "data": "01/07 (Qua) — HOJE",
+      "data": "01/07 (Qua)",
       "titulo": "Mês recém-iniciado",
       "desc": "Pipeline reiniciando após o fechamento de junho. Sem vendas confirmadas ainda hoje — previsão baseada em pipeline ponderado e histórico.",
       "pill": "📉 Previsão: 12 — 14 — 17 vendas"
