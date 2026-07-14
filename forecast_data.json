@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "14/07/2026 17:09",
+    "atualizado_em": "14/07/2026 17:55",
     "status_dias": "Dias 1 à 14 confirmados · Dia 14 parcial · Dias 15 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 121,
+    "kpi_realizado": 132,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 13)",
-    "kpi_realizado_delta": "▲ 31% do total previsto",
+    "kpi_realizado_delta": "▲ 33,8% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -40,9 +40,9 @@
       "ativos": 14,
       "mes_passado_total": 102,
       "mes_passado": 58,
-      "mes_atual_total": 30,
+      "mes_atual_total": 35,
       "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 30,
+      "dias_confirmados_val": 35,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -55,12 +55,12 @@
         [
           "Estevam Silverio Tavares",
           25,
-          9
+          13
         ],
         [
           "Tiago Melo da Silva",
           20,
-          7
+          8
         ],
         [
           "Patrícia Lúcio Custódio",
@@ -123,9 +123,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 50,
-      "mes_atual_total": 66,
+      "mes_atual_total": 70,
       "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 66,
+      "dias_confirmados_val": 70,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -136,14 +136,14 @@
       "atencao_txt": "⚠️ Tem a maior meta per capita entre os 3 times (12 vendas/ativo) — precisa de contribuição mais distribuída além dos 2 líderes para sustentar o ritmo o mês todo.",
       "sellers": [
         [
+          "Maria Aline da Silva Ferreira",
+          29,
+          19
+        ],
+        [
           "Adriérre Marcon",
           16,
           18
-        ],
-        [
-          "Maria Aline da Silva Ferreira",
-          29,
-          16
         ],
         [
           "Lisdaisy Vieira Costa",
@@ -153,7 +153,7 @@
         [
           "Makele de Souza Smania",
           30,
-          7
+          8
         ],
         [
           "Iara da Silva Linhares",
@@ -196,9 +196,9 @@
       "ativos": 10,
       "mes_passado_total": 97,
       "mes_passado": 52,
-      "mes_atual_total": 25,
+      "mes_atual_total": 27,
       "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 25,
+      "dias_confirmados_val": 27,
       "prev_atual": "107",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -216,16 +216,16 @@
         [
           "Stella Nieheus",
           23,
+          5
+        ],
+        [
+          "Guilherme Carvalho Rodrigues",
+          2,
           4
         ],
         [
           "Ketlin Madeira Colombo",
           11,
-          3
-        ],
-        [
-          "Guilherme Carvalho Rodrigues",
-          2,
           3
         ],
         [
@@ -493,7 +493,7 @@
       20,
       "partial",
       "",
-      1
+      12
     ],
     [
       15,
