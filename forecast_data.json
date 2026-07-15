@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "15/07/2026 15:08",
+    "atualizado_em": "15/07/2026 18:08",
     "status_dias": "Dias 1 à 15 confirmados · Dia 15 parcial · Dias 16 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 146,
+    "kpi_realizado": 148,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 14)",
-    "kpi_realizado_delta": "▲ 37,4% do total previsto",
+    "kpi_realizado_delta": "▲ 37,9% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -40,9 +40,9 @@
       "ativos": 14,
       "mes_passado_total": 102,
       "mes_passado": 64,
-      "mes_atual_total": 40,
+      "mes_atual_total": 41,
       "dias_confirmados_lbl": "dias 1 - 15",
-      "dias_confirmados_val": 40,
+      "dias_confirmados_val": 41,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -88,13 +88,13 @@
           1
         ],
         [
-          "Elisângela Arias",
-          10,
-          0
-        ],
-        [
           "Andressa Cristina de Paula",
           4,
+          1
+        ],
+        [
+          "Elisângela Arias",
+          10,
           0
         ],
         [
@@ -123,9 +123,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 56,
-      "mes_atual_total": 78,
+      "mes_atual_total": 79,
       "dias_confirmados_lbl": "dias 1 - 15",
-      "dias_confirmados_val": 78,
+      "dias_confirmados_val": 79,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -153,7 +153,7 @@
         [
           "Makele de Souza Smania",
           30,
-          8
+          9
         ],
         [
           "Larissa Pereira Niehues",
@@ -503,7 +503,7 @@
       21,
       "partial",
       "",
-      9
+      11
     ],
     [
       16,
