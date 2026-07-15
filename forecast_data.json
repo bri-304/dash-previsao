@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "14/07/2026 17:55",
-    "status_dias": "Dias 1 à 14 confirmados · Dia 14 parcial · Dias 15 à 31 com intervalo de confiança",
+    "atualizado_em": "15/07/2026 10:53",
+    "status_dias": "Dias 1 à 15 confirmados · Dia 15 parcial · Dias 16 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 132,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 13)",
-    "kpi_realizado_delta": "▲ 33,8% do total previsto",
+    "kpi_realizado": 139,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 14)",
+    "kpi_realizado_delta": "▲ 35,6% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -39,10 +39,10 @@
     "isr": {
       "ativos": 14,
       "mes_passado_total": 102,
-      "mes_passado": 58,
-      "mes_atual_total": 35,
-      "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 35,
+      "mes_passado": 64,
+      "mes_atual_total": 38,
+      "dias_confirmados_lbl": "dias 1 - 15",
+      "dias_confirmados_val": 38,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -60,7 +60,7 @@
         [
           "Tiago Melo da Silva",
           20,
-          8
+          11
         ],
         [
           "Patrícia Lúcio Custódio",
@@ -122,10 +122,10 @@
     "lis": {
       "ativos": 14,
       "mes_passado_total": 140,
-      "mes_passado": 50,
-      "mes_atual_total": 70,
-      "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 70,
+      "mes_passado": 56,
+      "mes_atual_total": 73,
+      "dias_confirmados_lbl": "dias 1 - 15",
+      "dias_confirmados_val": 73,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -148,7 +148,7 @@
         [
           "Lisdaisy Vieira Costa",
           14,
-          10
+          11
         ],
         [
           "Makele de Souza Smania",
@@ -158,7 +158,7 @@
         [
           "Iara da Silva Linhares",
           12,
-          5
+          6
         ],
         [
           "Larissa Pereira Niehues",
@@ -171,6 +171,11 @@
           3
         ],
         [
+          "Aline Cristina da Silva",
+          1,
+          2
+        ],
+        [
           "Lana Mara de Morais Leite",
           1,
           1
@@ -178,11 +183,6 @@
         [
           "Danilo Tenfen",
           14,
-          1
-        ],
-        [
-          "Aline Cristina da Silva",
-          1,
           1
         ],
         [
@@ -195,10 +195,10 @@
     "stl": {
       "ativos": 10,
       "mes_passado_total": 97,
-      "mes_passado": 52,
-      "mes_atual_total": 27,
-      "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 27,
+      "mes_passado": 53,
+      "mes_atual_total": 28,
+      "dias_confirmados_lbl": "dias 1 - 15",
+      "dias_confirmados_val": 28,
       "prev_atual": "107",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -221,7 +221,7 @@
         [
           "Guilherme Carvalho Rodrigues",
           2,
-          4
+          5
         ],
         [
           "Ketlin Madeira Colombo",
@@ -491,9 +491,9 @@
       17,
       14,
       20,
-      "partial",
+      "real",
       "",
-      12
+      17
     ],
     [
       15,
@@ -501,9 +501,9 @@
       18,
       15,
       21,
-      "work",
+      "partial",
       "",
-      null
+      2
     ],
     [
       16,
