@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "16/07/2026 11:38",
+    "atualizado_em": "16/07/2026 12:08",
     "status_dias": "Dias 1 à 16 confirmados · Dia 16 parcial · Dias 17 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 151,
+    "kpi_realizado": 153,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 15)",
-    "kpi_realizado_delta": "▲ 38,7% do total previsto",
+    "kpi_realizado_delta": "▲ 39,2% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -123,9 +123,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 60,
-      "mes_atual_total": 80,
+      "mes_atual_total": 82,
       "dias_confirmados_lbl": "dias 1 - 16",
-      "dias_confirmados_val": 80,
+      "dias_confirmados_val": 82,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -158,7 +158,7 @@
         [
           "Larissa Pereira Niehues",
           16,
-          8
+          10
         ],
         [
           "Iara da Silva Linhares",
@@ -513,7 +513,7 @@
       14,
       "partial",
       "",
-      1
+      3
     ],
     [
       17,
