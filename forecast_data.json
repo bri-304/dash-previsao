@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/07/2026 08:08",
+    "atualizado_em": "17/07/2026 08:38",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 165,
+    "kpi_realizado": 166,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 16)",
-    "kpi_realizado_delta": "▲ 42,3% do total previsto",
+    "kpi_realizado_delta": "▲ 42,6% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -40,9 +40,9 @@
       "ativos": 14,
       "mes_passado_total": 102,
       "mes_passado": 70,
-      "mes_atual_total": 48,
+      "mes_atual_total": 49,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 48,
+      "dias_confirmados_val": 49,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -78,13 +78,13 @@
           5
         ],
         [
-          "Noemi da Silva Penafort da Costa",
-          2,
-          1
-        ],
-        [
           "Bruno Ramos Martins",
           11,
+          2
+        ],
+        [
+          "Noemi da Silva Penafort da Costa",
+          2,
           1
         ],
         [
@@ -521,9 +521,9 @@
       17,
       14,
       20,
-      "work",
+      "partial",
       "",
-      null
+      1
     ],
     [
       18,
