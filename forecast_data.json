@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/07/2026 14:08",
+    "atualizado_em": "17/07/2026 14:38",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,14 +9,14 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 169,
+    "kpi_realizado": 171,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 16)",
-    "kpi_realizado_delta": "▲ 43,3% do total previsto",
+    "kpi_realizado_delta": "▲ 43,8% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
     "kpi_yoy_sub": "369 central vs 342 ano anterior",
-    "kpi_ativos": 27,
+    "kpi_ativos": 10,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 8 inativos / férias",
     "page_title": "Forecast Julho 2026 - Consolide",
@@ -40,9 +40,9 @@
       "ativos": 14,
       "mes_passado_total": 102,
       "mes_passado": 70,
-      "mes_atual_total": 49,
+      "mes_atual_total": 50,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 49,
+      "dias_confirmados_val": 50,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -83,13 +83,13 @@
           2
         ],
         [
-          "Noemi da Silva Penafort da Costa",
-          2,
-          1
-        ],
-        [
           "Andressa Cristina de Paula",
           4,
+          2
+        ],
+        [
+          "Noemi da Silva Penafort da Costa",
+          2,
           1
         ],
         [
@@ -123,9 +123,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 70,
-      "mes_atual_total": 88,
+      "mes_atual_total": 89,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 88,
+      "dias_confirmados_val": 89,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -163,7 +163,7 @@
         [
           "Iara da Silva Linhares",
           12,
-          6
+          7
         ],
         [
           "Felipe Santos Leite",
@@ -503,7 +503,7 @@
       21,
       "real",
       "",
-      13
+      14
     ],
     [
       16,
@@ -523,7 +523,7 @@
       20,
       "partial",
       "",
-      4
+      5
     ],
     [
       18,
