@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/07/2026 18:38",
+    "atualizado_em": "17/07/2026 19:08",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 187,
+    "kpi_realizado": 189,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 16)",
-    "kpi_realizado_delta": "▲ 47,9% do total previsto",
+    "kpi_realizado_delta": "▲ 48,5% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -40,9 +40,9 @@
       "ativos": 15,
       "mes_passado_total": 102,
       "mes_passado": 70,
-      "mes_atual_total": 56,
+      "mes_atual_total": 57,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 56,
+      "dias_confirmados_val": 57,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -60,7 +60,7 @@
         [
           "Tiago Melo da Silva",
           20,
-          15
+          16
         ],
         [
           "Patrícia Lúcio Custódio",
@@ -128,9 +128,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 70,
-      "mes_atual_total": 97,
+      "mes_atual_total": 98,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 97,
+      "dias_confirmados_val": 98,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -141,14 +141,14 @@
       "atencao_txt": "⚠️ Tem a maior meta per capita entre os 3 times (12 vendas/ativo) — precisa de contribuição mais distribuída além dos 2 líderes para sustentar o ritmo o mês todo.",
       "sellers": [
         [
-          "Adriérre Marcon",
-          16,
+          "Maria Aline da Silva Ferreira",
+          29,
           21
         ],
         [
-          "Maria Aline da Silva Ferreira",
-          29,
-          20
+          "Adriérre Marcon",
+          16,
+          21
         ],
         [
           "Larissa Pereira Niehues",
@@ -528,7 +528,7 @@
       20,
       "partial",
       "",
-      21
+      23
     ],
     [
       18,
