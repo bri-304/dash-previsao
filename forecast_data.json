@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/07/2026 08:38",
+    "atualizado_em": "17/07/2026 09:08",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 166,
+    "kpi_realizado": 167,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 16)",
-    "kpi_realizado_delta": "▲ 42,6% do total previsto",
+    "kpi_realizado_delta": "▲ 42,8% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -196,9 +196,9 @@
       "ativos": 10,
       "mes_passado_total": 97,
       "mes_passado": 59,
-      "mes_atual_total": 31,
+      "mes_atual_total": 32,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 31,
+      "dias_confirmados_val": 32,
       "prev_atual": "107",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -229,14 +229,14 @@
           3
         ],
         [
-          "Elison da Silva Elias",
-          2,
+          "Josilea de Melo Rocha",
+          12,
           3
         ],
         [
-          "Josilea de Melo Rocha",
-          12,
-          2
+          "Elison da Silva Elias",
+          2,
+          3
         ],
         [
           "Mirian Daiane Braga Felix",
@@ -523,7 +523,7 @@
       20,
       "partial",
       "",
-      1
+      2
     ],
     [
       18,
