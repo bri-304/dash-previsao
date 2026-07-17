@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/07/2026 16:08",
+    "atualizado_em": "17/07/2026 16:38",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 176,
+    "kpi_realizado": 178,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 16)",
-    "kpi_realizado_delta": "▲ 45,1% do total previsto",
+    "kpi_realizado_delta": "▲ 45,6% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -123,9 +123,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 70,
-      "mes_atual_total": 91,
+      "mes_atual_total": 93,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 91,
+      "dias_confirmados_val": 93,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -136,14 +136,19 @@
       "atencao_txt": "⚠️ Tem a maior meta per capita entre os 3 times (12 vendas/ativo) — precisa de contribuição mais distribuída além dos 2 líderes para sustentar o ritmo o mês todo.",
       "sellers": [
         [
+          "Adriérre Marcon",
+          16,
+          21
+        ],
+        [
           "Maria Aline da Silva Ferreira",
           29,
           20
         ],
         [
-          "Adriérre Marcon",
+          "Larissa Pereira Niehues",
           16,
-          20
+          13
         ],
         [
           "Makele de Souza Smania",
@@ -153,11 +158,6 @@
         [
           "Lisdaisy Vieira Costa",
           14,
-          12
-        ],
-        [
-          "Larissa Pereira Niehues",
-          16,
           12
         ],
         [
@@ -523,7 +523,7 @@
       20,
       "partial",
       "",
-      10
+      12
     ],
     [
       18,
