@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/07/2026 15:38",
+    "atualizado_em": "17/07/2026 16:08",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -16,7 +16,7 @@
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
     "kpi_yoy_sub": "369 central vs 342 ano anterior",
-    "kpi_ativos": 10,
+    "kpi_ativos": 27,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 8 inativos / férias",
     "page_title": "Forecast Julho 2026 - Consolide",
