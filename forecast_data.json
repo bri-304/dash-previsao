@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/07/2026 16:38",
+    "atualizado_em": "17/07/2026 17:08",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 178,
+    "kpi_realizado": 181,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 16)",
-    "kpi_realizado_delta": "▲ 45,6% do total previsto",
+    "kpi_realizado_delta": "▲ 46,4% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -37,12 +37,12 @@
   },
   "times": {
     "isr": {
-      "ativos": 14,
+      "ativos": 15,
       "mes_passado_total": 102,
       "mes_passado": 70,
-      "mes_atual_total": 52,
+      "mes_atual_total": 53,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 52,
+      "dias_confirmados_val": 53,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -93,6 +93,11 @@
           2
         ],
         [
+          "Lorena Cristina Domingos  Pereira",
+          0,
+          1
+        ],
+        [
           "Elisângela Arias",
           10,
           0
@@ -123,9 +128,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 70,
-      "mes_atual_total": 93,
+      "mes_atual_total": 95,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 93,
+      "dias_confirmados_val": 95,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -148,7 +153,7 @@
         [
           "Larissa Pereira Niehues",
           16,
-          13
+          14
         ],
         [
           "Makele de Souza Smania",
@@ -176,6 +181,11 @@
           2
         ],
         [
+          "Rafael Rodrigues Pedroso",
+          7,
+          1
+        ],
+        [
           "Lana Mara de Morais Leite",
           1,
           1
@@ -184,11 +194,6 @@
           "Danilo Tenfen",
           14,
           1
-        ],
-        [
-          "Rafael Rodrigues Pedroso",
-          7,
-          0
         ]
       ]
     },
@@ -523,7 +528,7 @@
       20,
       "partial",
       "",
-      12
+      15
     ],
     [
       18,
