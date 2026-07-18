@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "18/07/2026 10:08",
+    "atualizado_em": "18/07/2026 10:38",
     "status_dias": "Dias 1 à 18 confirmados · Dia 18 parcial · Dias 19 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 190,
+    "kpi_realizado": 191,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 17)",
-    "kpi_realizado_delta": "▲ 48,7% do total previsto",
+    "kpi_realizado_delta": "▲ 49% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -201,9 +201,9 @@
       "ativos": 10,
       "mes_passado_total": 97,
       "mes_passado": 60,
-      "mes_atual_total": 34,
+      "mes_atual_total": 35,
       "dias_confirmados_lbl": "dias 1 - 18",
-      "dias_confirmados_val": 34,
+      "dias_confirmados_val": 35,
       "prev_atual": "107",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -216,7 +216,7 @@
         [
           "Stella Nieheus",
           23,
-          9
+          10
         ],
         [
           "Guilherme Lopes Machado",
@@ -536,9 +536,9 @@
       4,
       2,
       6,
-      "weekend",
+      "partial",
       "",
-      null
+      1
     ],
     [
       19,
