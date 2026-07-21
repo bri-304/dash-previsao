@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "21/07/2026 18:08",
+    "atualizado_em": "21/07/2026 18:38",
     "status_dias": "Dias 1 à 21 confirmados · Dia 21 parcial · Dias 22 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 220,
+    "kpi_realizado": 227,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 20)",
-    "kpi_realizado_delta": "▲ 56,4% do total previsto",
+    "kpi_realizado_delta": "▲ 58,2% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -40,9 +40,9 @@
       "ativos": 15,
       "mes_passado_total": 102,
       "mes_passado": 75,
-      "mes_atual_total": 67,
+      "mes_atual_total": 68,
       "dias_confirmados_lbl": "dias 1 - 21",
-      "dias_confirmados_val": 67,
+      "dias_confirmados_val": 68,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -55,7 +55,7 @@
         [
           "Estevam Silverio Tavares",
           25,
-          23
+          24
         ],
         [
           "Tiago Melo da Silva",
@@ -128,9 +128,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 84,
-      "mes_atual_total": 108,
+      "mes_atual_total": 112,
       "dias_confirmados_lbl": "dias 1 - 21",
-      "dias_confirmados_val": 108,
+      "dias_confirmados_val": 112,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -163,16 +163,21 @@
         [
           "Lisdaisy Vieira Costa",
           14,
-          12
+          13
         ],
         [
           "Iara da Silva Linhares",
           12,
-          11
+          12
         ],
         [
           "Felipe Santos Leite",
           0,
+          4
+        ],
+        [
+          "Danilo Tenfen",
+          14,
           4
         ],
         [
@@ -186,11 +191,6 @@
           2
         ],
         [
-          "Danilo Tenfen",
-          14,
-          2
-        ],
-        [
           "Aline Cristina da Silva",
           1,
           2
@@ -201,9 +201,9 @@
       "ativos": 10,
       "mes_passado_total": 97,
       "mes_passado": 70,
-      "mes_atual_total": 45,
+      "mes_atual_total": 47,
       "dias_confirmados_lbl": "dias 1 - 21",
-      "dias_confirmados_val": 45,
+      "dias_confirmados_val": 47,
       "prev_atual": "107",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -229,6 +229,11 @@
           6
         ],
         [
+          "Elison da Silva Elias",
+          2,
+          6
+        ],
+        [
           "Guilherme Carvalho Rodrigues",
           2,
           5
@@ -237,11 +242,6 @@
           "Bruna Letícia Corrêa Barbosa",
           13,
           5
-        ],
-        [
-          "Elison da Silva Elias",
-          2,
-          4
         ],
         [
           "Ketlin Madeira Colombo",
@@ -568,7 +568,7 @@
       20,
       "partial",
       "",
-      12
+      19
     ],
     [
       22,
