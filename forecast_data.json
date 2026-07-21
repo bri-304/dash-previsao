@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "21/07/2026 14:38",
+    "atualizado_em": "21/07/2026 15:08",
     "status_dias": "Dias 1 à 21 confirmados · Dia 21 parcial · Dias 22 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 215,
+    "kpi_realizado": 219,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 20)",
-    "kpi_realizado_delta": "▲ 55,1% do total previsto",
+    "kpi_realizado_delta": "▲ 56,2% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -128,9 +128,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 84,
-      "mes_atual_total": 104,
+      "mes_atual_total": 107,
       "dias_confirmados_lbl": "dias 1 - 21",
-      "dias_confirmados_val": 104,
+      "dias_confirmados_val": 107,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -168,7 +168,7 @@
         [
           "Iara da Silva Linhares",
           12,
-          9
+          10
         ],
         [
           "Felipe Santos Leite",
@@ -176,24 +176,24 @@
           4
         ],
         [
+          "Rafael Rodrigues Pedroso",
+          7,
+          2
+        ],
+        [
           "Lana Mara de Morais Leite",
           1,
+          2
+        ],
+        [
+          "Danilo Tenfen",
+          14,
           2
         ],
         [
           "Aline Cristina da Silva",
           1,
           2
-        ],
-        [
-          "Rafael Rodrigues Pedroso",
-          7,
-          1
-        ],
-        [
-          "Danilo Tenfen",
-          14,
-          1
         ]
       ]
     },
@@ -201,9 +201,9 @@
       "ativos": 10,
       "mes_passado_total": 97,
       "mes_passado": 70,
-      "mes_atual_total": 44,
+      "mes_atual_total": 45,
       "dias_confirmados_lbl": "dias 1 - 21",
-      "dias_confirmados_val": 44,
+      "dias_confirmados_val": 45,
       "prev_atual": "107",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -239,13 +239,13 @@
           5
         ],
         [
-          "Ketlin Madeira Colombo",
-          11,
-          3
-        ],
-        [
           "Elison da Silva Elias",
           2,
+          4
+        ],
+        [
+          "Ketlin Madeira Colombo",
+          11,
           3
         ],
         [
@@ -568,7 +568,7 @@
       20,
       "partial",
       "",
-      7
+      11
     ],
     [
       22,
