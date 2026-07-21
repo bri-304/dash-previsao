@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "21/07/2026 11:08",
+    "atualizado_em": "21/07/2026 11:34",
     "status_dias": "Dias 1 à 21 confirmados · Dia 21 parcial · Dias 22 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 213,
+    "kpi_realizado": 214,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 20)",
-    "kpi_realizado_delta": "▲ 54,6% do total previsto",
+    "kpi_realizado_delta": "▲ 54,9% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -128,9 +128,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 84,
-      "mes_atual_total": 103,
+      "mes_atual_total": 104,
       "dias_confirmados_lbl": "dias 1 - 21",
-      "dias_confirmados_val": 103,
+      "dias_confirmados_val": 104,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -143,7 +143,7 @@
         [
           "Maria Aline da Silva Ferreira",
           29,
-          22
+          23
         ],
         [
           "Adriérre Marcon",
@@ -366,7 +366,7 @@
       14,
       12,
       17,
-      "work",
+      "real",
       "",
       10
     ],
@@ -376,7 +376,7 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
       10
     ],
@@ -386,7 +386,7 @@
       17,
       14,
       20,
-      "work",
+      "real",
       "",
       19
     ],
@@ -396,7 +396,7 @@
       4,
       2,
       6,
-      "weekend",
+      "real",
       "",
       3
     ],
@@ -406,7 +406,7 @@
       1,
       0,
       3,
-      "weekend",
+      "real",
       "🇧🇷 Oitavas de Final: Brasil 1 x 2 Noruega — eliminado",
       1
     ],
@@ -416,7 +416,7 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
       3
     ],
@@ -426,7 +426,7 @@
       17,
       14,
       20,
-      "work",
+      "real",
       "",
       5
     ],
@@ -436,7 +436,7 @@
       14,
       9,
       21,
-      "work",
+      "real",
       "",
       16
     ],
@@ -446,7 +446,7 @@
       10,
       6,
       14,
-      "work",
+      "real",
       "",
       18
     ],
@@ -456,7 +456,7 @@
       17,
       14,
       20,
-      "work",
+      "real",
       "",
       11
     ],
@@ -466,7 +466,7 @@
       4,
       2,
       6,
-      "weekend",
+      "real",
       "",
       9
     ],
@@ -486,7 +486,7 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
       15
     ],
@@ -496,7 +496,7 @@
       17,
       14,
       20,
-      "work",
+      "real",
       "",
       17
     ],
@@ -506,7 +506,7 @@
       18,
       15,
       21,
-      "work",
+      "real",
       "",
       14
     ],
@@ -516,7 +516,7 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
       15
     ],
@@ -526,7 +526,7 @@
       17,
       14,
       20,
-      "work",
+      "real",
       "",
       24
     ],
@@ -536,7 +536,7 @@
       4,
       2,
       6,
-      "weekend",
+      "real",
       "",
       3
     ],
@@ -556,7 +556,7 @@
       12,
       10,
       14,
-      "work",
+      "real",
       "",
       15
     ],
@@ -566,9 +566,9 @@
       17,
       14,
       20,
-      "work",
+      "partial",
       "",
-      5
+      6
     ],
     [
       22,
