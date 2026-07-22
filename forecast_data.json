@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "22/07/2026 19:38",
+    "atualizado_em": "22/07/2026 20:08",
     "status_dias": "Dias 1 à 22 confirmados · Dia 22 parcial · Dias 23 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 244,
+    "kpi_realizado": 247,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 21)",
-    "kpi_realizado_delta": "▲ 62,6% do total previsto",
+    "kpi_realizado_delta": "▲ 63,3% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -40,9 +40,9 @@
       "ativos": 15,
       "mes_passado_total": 102,
       "mes_passado": 78,
-      "mes_atual_total": 75,
+      "mes_atual_total": 78,
       "dias_confirmados_lbl": "dias 1 - 22",
-      "dias_confirmados_val": 75,
+      "dias_confirmados_val": 78,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -63,14 +63,14 @@
           19
         ],
         [
+          "Israel Riella",
+          14,
+          11
+        ],
+        [
           "Patrícia Lúcio Custódio",
           4,
           9
-        ],
-        [
-          "Israel Riella",
-          14,
-          8
         ],
         [
           "Camila Viana Alves",
@@ -578,7 +578,7 @@
       21,
       "partial",
       "",
-      14
+      17
     ],
     [
       23,
