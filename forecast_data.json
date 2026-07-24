@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "24/07/2026 11:08",
+    "atualizado_em": "24/07/2026 11:38",
     "status_dias": "Dias 1 à 24 confirmados · Dia 24 parcial · Dias 25 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 258,
+    "kpi_realizado": 259,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 23)",
-    "kpi_realizado_delta": "▲ 66,2% do total previsto",
+    "kpi_realizado_delta": "▲ 66,4% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -128,9 +128,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 99,
-      "mes_atual_total": 127,
+      "mes_atual_total": 128,
       "dias_confirmados_lbl": "dias 1 - 24",
-      "dias_confirmados_val": 127,
+      "dias_confirmados_val": 128,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -168,7 +168,7 @@
         [
           "Iara da Silva Linhares",
           12,
-          12
+          13
         ],
         [
           "Felipe Santos Leite",
@@ -596,9 +596,9 @@
       17,
       14,
       20,
-      "work",
+      "partial",
       "",
-      null
+      1
     ],
     [
       25,
