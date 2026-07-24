@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "23/07/2026 23:08",
-    "status_dias": "Dias 1 à 23 confirmados · Dia 23 parcial · Dias 24 à 31 com intervalo de confiança",
+    "atualizado_em": "24/07/2026 07:08",
+    "status_dias": "Dias 1 à 24 confirmados · Dia 24 parcial · Dias 25 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -10,7 +10,7 @@
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
     "kpi_realizado": 258,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 22)",
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 23)",
     "kpi_realizado_delta": "▲ 66,2% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
@@ -39,9 +39,9 @@
     "isr": {
       "ativos": 15,
       "mes_passado_total": 102,
-      "mes_passado": 82,
+      "mes_passado": 85,
       "mes_atual_total": 81,
-      "dias_confirmados_lbl": "dias 1 - 23",
+      "dias_confirmados_lbl": "dias 1 - 24",
       "dias_confirmados_val": 81,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
@@ -127,9 +127,9 @@
     "lis": {
       "ativos": 14,
       "mes_passado_total": 140,
-      "mes_passado": 92,
+      "mes_passado": 99,
       "mes_atual_total": 127,
-      "dias_confirmados_lbl": "dias 1 - 23",
+      "dias_confirmados_lbl": "dias 1 - 24",
       "dias_confirmados_val": 127,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
@@ -200,9 +200,9 @@
     "stl": {
       "ativos": 10,
       "mes_passado_total": 97,
-      "mes_passado": 72,
+      "mes_passado": 77,
       "mes_atual_total": 50,
-      "dias_confirmados_lbl": "dias 1 - 23",
+      "dias_confirmados_lbl": "dias 1 - 24",
       "dias_confirmados_val": 50,
       "prev_atual": "107",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
@@ -586,7 +586,7 @@
       12,
       10,
       14,
-      "partial",
+      "real",
       "",
       11
     ],
