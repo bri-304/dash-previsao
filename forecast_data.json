@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "25/07/2026 11:38",
+    "atualizado_em": "25/07/2026 12:08",
     "status_dias": "Dias 1 à 25 confirmados · Dia 25 parcial · Dias 26 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 265,
+    "kpi_realizado": 267,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 24)",
-    "kpi_realizado_delta": "▲ 67,9% do total previsto",
+    "kpi_realizado_delta": "▲ 68,5% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -128,9 +128,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 102,
-      "mes_atual_total": 131,
+      "mes_atual_total": 133,
       "dias_confirmados_lbl": "dias 1 - 25",
-      "dias_confirmados_val": 131,
+      "dias_confirmados_val": 133,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -161,13 +161,13 @@
           19
         ],
         [
-          "Lisdaisy Vieira Costa",
-          14,
-          13
-        ],
-        [
           "Iara da Silva Linhares",
           12,
+          15
+        ],
+        [
+          "Lisdaisy Vieira Costa",
+          14,
           13
         ],
         [
@@ -608,7 +608,7 @@
       6,
       "partial",
       "",
-      1
+      3
     ],
     [
       26,
