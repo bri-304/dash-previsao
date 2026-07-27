@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "27/07/2026 18:08",
+    "atualizado_em": "27/07/2026 18:38",
     "status_dias": "Dias 1 à 27 confirmados · Dia 27 parcial · Dias 28 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -613,7 +613,7 @@
       6,
       "real",
       "",
-      4
+      5
     ],
     [
       26,
@@ -633,7 +633,7 @@
       14,
       "partial",
       "",
-      17
+      16
     ],
     [
       28,
