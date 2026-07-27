@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "27/07/2026 17:08",
+    "atualizado_em": "27/07/2026 17:38",
     "status_dias": "Dias 1 à 27 confirmados · Dia 27 parcial · Dias 28 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 284,
+    "kpi_realizado": 285,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 26)",
-    "kpi_realizado_delta": "▲ 72,8% do total previsto",
+    "kpi_realizado_delta": "▲ 73,1% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -37,12 +37,12 @@
   },
   "times": {
     "isr": {
-      "ativos": 15,
+      "ativos": 16,
       "mes_passado_total": 102,
       "mes_passado": 93,
-      "mes_atual_total": 86,
+      "mes_atual_total": 87,
       "dias_confirmados_lbl": "dias 1 - 27",
-      "dias_confirmados_val": 86,
+      "dias_confirmados_val": 87,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -94,6 +94,11 @@
         ],
         [
           "Lorena Cristina Domingos Pereira",
+          0,
+          1
+        ],
+        [
+          "Gabriel Antonio Bittencourt",
           0,
           1
         ],
@@ -628,7 +633,7 @@
       14,
       "partial",
       "",
-      16
+      17
     ],
     [
       28,
