@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "27/07/2026 16:38",
+    "atualizado_em": "27/07/2026 17:08",
     "status_dias": "Dias 1 à 27 confirmados · Dia 27 parcial · Dias 28 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 283,
+    "kpi_realizado": 284,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 26)",
-    "kpi_realizado_delta": "▲ 72,6% do total previsto",
+    "kpi_realizado_delta": "▲ 72,8% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -128,9 +128,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 115,
-      "mes_atual_total": 141,
+      "mes_atual_total": 142,
       "dias_confirmados_lbl": "dias 1 - 27",
-      "dias_confirmados_val": 141,
+      "dias_confirmados_val": 142,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -141,14 +141,14 @@
       "atencao_txt": "⚠️ Tem a maior meta per capita entre os 3 times (12 vendas/ativo) — precisa de contribuição mais distribuída além dos 2 líderes para sustentar o ritmo o mês todo.",
       "sellers": [
         [
-          "Adriérre Marcon",
-          16,
+          "Maria Aline da Silva Ferreira",
+          29,
           26
         ],
         [
-          "Maria Aline da Silva Ferreira",
-          29,
-          25
+          "Adriérre Marcon",
+          16,
+          26
         ],
         [
           "Larissa Pereira Niehues",
@@ -628,7 +628,7 @@
       14,
       "partial",
       "",
-      15
+      16
     ],
     [
       28,
