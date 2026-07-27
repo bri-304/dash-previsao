@@ -36,6 +36,11 @@ body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse
 .badge{font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 10px;border-radius:4px;text-transform:uppercase}
 .badge-gold{background:var(--gold-d);border:1px solid rgba(245,158,11,.4);color:var(--gold)}
 .badge-purple{background:var(--purple-d);border:1px solid rgba(129,140,248,.4);color:var(--purple)}
+.periodo-sel{background:var(--card2);border:1px solid var(--border2);color:var(--text);font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:.5px;padding:5px 10px;border-radius:4px;cursor:pointer;outline:none}
+.periodo-sel:hover{border-color:var(--blue)}
+.periodo-sel option{background:var(--card);color:var(--text)}
+.hist-banner{background:var(--gold-d);border:1px solid rgba(245,158,11,.4);border-radius:var(--r);padding:10px 16px;margin-bottom:18px;font-family:var(--fm);font-size:11px;color:var(--gold);display:none}
+.hist-banner.on{display:block}
 
 /* LAYOUT */
 .wrap{max-width:1440px;margin:0 auto;padding:24px 28px;position:relative;z-index:1}
@@ -212,12 +217,24 @@ tr:hover td{background:var(--card2)}
     </div>
   </div>
   <div class="hdr-r">
+    <select id="periodo-sel" class="periodo-sel">
+      <option value="atual">📊 Mês atual</option>
+    </select>
     <span class="badge badge-gold" id="badge-consoliga">⚡ CONSOLIGA T1 · Mês 2/3</span>
     <span class="badge badge-purple" id="badge-copa">⚽ Copa do Mundo 2026</span>
   </div>
-</header>
+</header> 
+  <!--
+  <div class="hdr-r">
+    <span class="badge badge-gold" id="badge-consoliga">⚡ CONSOLIGA T1 · Mês 2/3</span>
+    <span class="badge badge-purple" id="badge-copa">⚽ Copa do Mundo 2026</span>
+  </div> -->
 
 <div class="wrap">
+
+<div class="hist-banner" id="hist-banner">
+  📁 Visualizando dados históricos de <strong id="hist-banner-mes"></strong> — mês fechado, valores não são mais atualizados.
+</div>
 
 <!-- KPI STRIP -->
 <div class="sec-title fade-in d1">indicadores-chave do mês</div>
@@ -1501,9 +1518,10 @@ function initDashboard(data) {
   renderTable(data.dias);
   renderTeams(data);
 }
-
+ 
 // ── BOOT: tenta buscar forecast_data.json, fallback para DEFAULT_DATA ─────────
 // O Pentaho deve gerar e commitar "forecast_data.json" na raiz do repositório
+/* 
 async function boot() {
   const loader = document.getElementById('loading-indicator');
   loader.style.display = 'block';
@@ -1567,7 +1585,147 @@ boot();
     checkAndUpdate();
     setInterval(checkAndUpdate, INTERVAL);
   }, 10_000);
-})();
+})(); 
+*/
+// ══════════════════════════════════════════════════════════════════════
+//  SISTEMA DE PERÍODOS: mês atual + histórico versionado
+//  - Mês atual  → ./forecast_data.json (gerado pelo Pentaho)
+//  - Históricos → ./historico/AAAA-MM.json (congelados no fechamento)
+//  - Manifesto  → ./historico/index.json
+// ══════════════════════════════════════════════════════════════════════
+
+const JSON_ATUAL = './forecast_data.json';
+const HIST_INDEX = './historico/index.json';
+
+let periodoAtivo = 'atual';   // 'atual' ou caminho do arquivo histórico
+let autoRefreshTimer = null;
+let lastRaw = null;
+
+// ── Busca genérica de JSON com cache-buster ──────────────────────────
+async function fetchJson(url) {
+  const res = await fetch(`${url}?t=${Date.now()}`, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`HTTP ${res.status} em ${url}`);
+  return res.json();
+}
+
+// ── Popula o <select> com os meses do manifesto ──────────────────────
+async function carregarSeletorHistorico() {
+  const sel = document.getElementById('periodo-sel');
+  if (!sel) return;
+  try {
+    const idx = await fetchJson(HIST_INDEX);
+    (idx.meses || []).forEach(m => {
+      const opt = document.createElement('option');
+      opt.value = `./historico/${m.arquivo}`;
+      opt.textContent = `📁 ${m.label}`;
+      sel.appendChild(opt);
+    });
+  } catch (e) {
+    console.log('[HISTÓRICO] index.json indisponível — só mês atual.');
+  }
+}
+
+// ── Ajusta a UI conforme o período (banner + esconde previsões) ──────
+function aplicarModoHistorico(ehHistorico, label) {
+  const banner = document.getElementById('hist-banner');
+  if (banner) {
+    banner.classList.toggle('on', ehHistorico);
+    if (ehHistorico) setText('hist-banner-mes', label || '');
+  }
+  // Mês fechado não tem "previsão restante": esconde gargalos e sugestões
+  document.querySelectorAll('.risk-grid, .strat-grid').forEach(el => {
+    el.style.display = ehHistorico ? 'none' : '';
+  });
+  document.querySelectorAll('.sec-title').forEach(el => {
+    const t = el.textContent.toLowerCase();
+    if (t.includes('gargalo') || t.includes('sugest')) {
+      el.style.display = ehHistorico ? 'none' : '';
+    }
+  });
+}
+
+// ── Carrega e renderiza um período qualquer ──────────────────────────
+async function carregarPeriodo(valor, label) {
+  const loader = document.getElementById('loading-indicator');
+  loader.style.display = 'block';
+  const ehHistorico = (valor !== 'atual');
+  const url = ehHistorico ? valor : JSON_ATUAL;
+
+  let data = DEFAULT_DATA;
+  try {
+    const ext = await fetchJson(url);
+    if (ext && ext.dias && ext.meta) {
+      data = ext;
+    } else {
+      console.warn('[PERÍODO] JSON sem dias[]/meta{} — usando default.');
+    }
+  } catch (e) {
+    if (ehHistorico) {
+      alert('Não foi possível carregar este mês do histórico.');
+      loader.style.display = 'none';
+      return;
+    }
+    console.log('[CONSOLIDA] forecast_data.json não encontrado — usando default.');
+  }
+
+  periodoAtivo = valor;
+  initDashboard(data);
+  aplicarModoHistorico(ehHistorico, label);
+  loader.style.display = 'none';
+
+  // Auto-refresh só faz sentido no mês corrente
+  if (ehHistorico) pararAutoRefresh(); else iniciarAutoRefresh();
+}
+
+// ── Auto-refresh (apenas no mês atual) ───────────────────────────────
+async function checkAndUpdate() {
+  if (periodoAtivo !== 'atual') return;
+  try {
+    const res = await fetch(`${JSON_ATUAL}?t=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) return;
+    const rawText = await res.text();
+    if (lastRaw === null) { lastRaw = rawText; return; }
+    if (rawText === lastRaw) return;
+
+    console.log('[AutoRefresh] Dados novos detectados, atualizando...');
+    lastRaw = rawText;
+    const newData = JSON.parse(rawText);
+    if (newData && newData.dias && newData.meta) {
+      const loader = document.getElementById('loading-indicator');
+      loader.style.display = 'block';
+      initDashboard(newData);
+      loader.style.display = 'none';
+    }
+  } catch (err) {
+    console.warn('[AutoRefresh] Erro ao checar:', err);
+  }
+}
+
+function iniciarAutoRefresh() {
+  if (autoRefreshTimer) return;
+  autoRefreshTimer = setInterval(checkAndUpdate, 60_000);
+}
+function pararAutoRefresh() {
+  if (autoRefreshTimer) { clearInterval(autoRefreshTimer); autoRefreshTimer = null; }
+}
+
+// ── BOOT ─────────────────────────────────────────────────────────────
+async function boot() {
+  await carregarSeletorHistorico();
+
+  const sel = document.getElementById('periodo-sel');
+  if (sel) {
+    sel.addEventListener('change', e => {
+      const opt = e.target.selectedOptions[0];
+      carregarPeriodo(e.target.value, opt.textContent.replace('📁 ', ''));
+    });
+  }
+
+  await carregarPeriodo('atual');
+  setTimeout(() => { checkAndUpdate(); }, 10_000);
+}
+
+boot();
   
 </script>
 </body>
