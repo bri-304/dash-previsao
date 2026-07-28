@@ -2,7 +2,7 @@
   "meta": {
     "titulo_mes": "Junho 2026",
     "atualizado_em": "29/06/2026 18:15",
-    "status_dias": "Dias 1 à 29 confirmados · Dia 29 parcial · Dias 30 à 30 com intervalo de confiança",
+    "status_dias": "Dias 1 à 30 confirmados · Dia 30 completo",
     "kpi_total_pess": 325,
     "kpi_total_central": 390,
     "kpi_total_otim": 455,
@@ -10,9 +10,9 @@
     "kpi_media_central": "17,2",
     "kpi_media_min": "15,5 mín",
     "kpi_media_max": "21,6 máx",
-    "kpi_realizado": 303,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 28)",
-    "kpi_realizado_delta": "▲ 77,7% do total previsto",
+    "kpi_realizado": 340,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
+    "kpi_realizado_delta": "▲ 87,1% do total previsto",
     "kpi_yoy_pct": "+31%",
     "kpi_yoy_pess": "+9% pess.",
     "kpi_yoy_otim": "+53% otim.",
@@ -25,10 +25,10 @@
     "isr": {
       "ativos": 14,
       "mes_passado_total": 108,
-      "mes_passado": 107,
-      "mes_atual_total": 94,
-      "dias_confirmados_lbl": "dias 1- 29",
-      "dias_confirmados_val": 94,
+      "mes_passado": 108,
+      "mes_atual_total": 102,
+      "dias_confirmados_lbl": "dias 1- 30",
+      "dias_confirmados_val": 102,
       "prev_atual": "125",
       "lbl_titulo_comp": "Maio. real vs Jun. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jun. Realizado Maio.",
@@ -42,12 +42,12 @@
         [
           "Estevam Silverio Tavares",
           31,
-          21
+          25
         ],
         [
           "Tiago Melo da Silva",
           21,
-          17
+          20
         ],
         [
           "Israel Riella",
@@ -97,7 +97,7 @@
         [
           "Noemi da Silva Penafort da Costa",
           1,
-          1
+          2
         ],
         [
           "Dhulia Mendes Martins",
@@ -109,10 +109,10 @@
     "lis": {
       "ativos": 13,
       "mes_passado_total": 161,
-      "mes_passado": 153,
-      "mes_atual_total": 121,
-      "dias_confirmados_lbl": "dias 1- 29",
-      "dias_confirmados_val": 121,
+      "mes_passado": 161,
+      "mes_atual_total": 140,
+      "dias_confirmados_lbl": "dias 1- 30",
+      "dias_confirmados_val": 140,
       "prev_atual": "152",
       "lbl_titulo_comp": "Maio. real vs Jun. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jun. Realizado Maio.",
@@ -126,37 +126,37 @@
         [
           "Makele de Souza Smania",
           16,
-          28
+          30
         ],
         [
           "Maria Aline da Silva Ferreira",
           40,
-          24
+          29
         ],
         [
           "Adriérre Marcon",
           14,
-          15
+          16
         ],
         [
           "Larissa Pereira Niehues",
           22,
-          14
+          16
         ],
         [
           "Danilo Tenfen",
           4,
-          13
+          14
         ],
         [
           "Iara da Silva Linhares",
           14,
-          10
+          12
         ],
         [
           "Lisdaisy Vieira Costa",
           17,
-          8
+          14
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -177,11 +177,11 @@
     },
     "stl": {
       "ativos": 10,
-      "mes_passado_total": 106,
-      "mes_passado": 100,
-      "mes_atual_total": 88,
-      "dias_confirmados_lbl": "dias 1- 29",
-      "dias_confirmados_val": 88,
+      "mes_passado_total": 110,
+      "mes_passado": 110,
+      "mes_atual_total": 98,
+      "dias_confirmados_lbl": "dias 1- 30",
+      "dias_confirmados_val": 98,
       "prev_atual": "107",
       "lbl_titulo_comp": "Maio. real vs Jun. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jun. Realizado Maio.",
@@ -195,7 +195,7 @@
         [
           "Stella Nieheus",
           11,
-          22
+          23
         ],
         [
           "Marcela Machado do Rosário",
@@ -210,7 +210,7 @@
         [
           "Josilea de Melo Rocha",
           15,
-          11
+          12
         ],
         [
           "Guilherme Lopes Machado",
@@ -220,12 +220,12 @@
         [
           "Mirian Daiane Braga Felix",
           11,
-          8
+          9
         ],
         [
           "Bruna Letícia Corrêa Barbosa",
           10,
-          8
+          13
         ],
         [
           "Yasmin Santos Zonatto",
@@ -235,12 +235,12 @@
         [
           "Guilherme Carvalho Rodrigues",
           8,
-          1
+          2
         ],
         [
           "Elison da Silva Elias",
           0,
-          1
+          2
         ]
       ]
     }
