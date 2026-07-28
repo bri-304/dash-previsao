@@ -30,6 +30,14 @@
       "dias_confirmados_lbl": "dias 1- 29",
       "dias_confirmados_val": 94,
       "prev_atual": "125",
+      "lbl_titulo_comp": "Maio. real vs Jun. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Jun. Realizado Maio.",
+      "lbl_vendedor": "Maio vs Julno — por vendedor",
+      "leg_mes_passado": "Maio.",
+      "leg_mes_atual": "Jun.",
+      "destaque_txt": "",
+      "atencao_txt": "",
+
       "sellers": [
         [
           "Estevam Silverio Tavares",
@@ -106,6 +114,14 @@
       "dias_confirmados_lbl": "dias 1- 29",
       "dias_confirmados_val": 121,
       "prev_atual": "152",
+      "lbl_titulo_comp": "Maio. real vs Jun. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Jun. Realizado Maio.",
+      "lbl_vendedor": "Maio vs Julno — por vendedor",
+      "leg_mes_passado": "Maio.",
+      "leg_mes_atual": "Jun.",
+      "destaque_txt": "",
+      "atencao_txt": "",
+
       "sellers": [
         [
           "Makele de Souza Smania",
@@ -167,6 +183,14 @@
       "dias_confirmados_lbl": "dias 1- 29",
       "dias_confirmados_val": 88,
       "prev_atual": "107",
+      "lbl_titulo_comp": "Maio. real vs Jun. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Jun. Realizado Maio.",
+      "lbl_vendedor": "Maio vs Julno — por vendedor",
+      "leg_mes_passado": "Maio.",
+      "leg_mes_atual": "Jun.",
+      "destaque_txt": "",
+      "atencao_txt": "",
+
       "sellers": [
         [
           "Stella Nieheus",
