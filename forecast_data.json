@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "28/07/2026 08:38",
+    "atualizado_em": "28/07/2026 09:09",
     "status_dias": "Dias 1 à 28 confirmados · Dia 28 parcial · Dias 29 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,14 +9,14 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 286,
+    "kpi_realizado": 288,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 27)",
-    "kpi_realizado_delta": "▲ 73,3% do total previsto",
+    "kpi_realizado_delta": "▲ 73,8% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
     "kpi_yoy_sub": "369 central vs 342 ano anterior",
-    "kpi_ativos": 33,
+    "kpi_ativos": 29,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 8 inativos / férias",
     "page_title": "Forecast Julho 2026 - Consolide",
@@ -40,9 +40,9 @@
       "ativos": 16,
       "mes_passado_total": 102,
       "mes_passado": 93,
-      "mes_atual_total": 88,
+      "mes_atual_total": 90,
       "dias_confirmados_lbl": "dias 1 - 28",
-      "dias_confirmados_val": 88,
+      "dias_confirmados_val": 90,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -60,7 +60,7 @@
         [
           "Tiago Melo da Silva",
           20,
-          21
+          23
         ],
         [
           "Israel Riella",
@@ -641,9 +641,9 @@
       17,
       14,
       20,
-      "work",
+      "partial",
       "",
-      null
+      2
     ],
     [
       29,
