@@ -32,11 +32,11 @@
       "prev_atual": "125",
       "lbl_titulo_comp": "Maio. real vs Jun. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jun. Realizado Maio.",
-      "lbl_vendedor": "Maio vs Julno — por vendedor",
+      "lbl_vendedor": "Maio vs Junho — por vendedor",
       "leg_mes_passado": "Maio.",
       "leg_mes_atual": "Jun.",
-      "destaque_txt": "",
-      "atencao_txt": "",
+      "destaque_txt": "-",
+      "atencao_txt": "-",
 
       "sellers": [
         [
@@ -116,11 +116,11 @@
       "prev_atual": "152",
       "lbl_titulo_comp": "Maio. real vs Jun. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jun. Realizado Maio.",
-      "lbl_vendedor": "Maio vs Julno — por vendedor",
+      "lbl_vendedor": "Maio vs Junho — por vendedor",
       "leg_mes_passado": "Maio.",
       "leg_mes_atual": "Jun.",
-      "destaque_txt": "",
-      "atencao_txt": "",
+      "destaque_txt": "-",
+      "atencao_txt": "-",
 
       "sellers": [
         [
@@ -185,11 +185,11 @@
       "prev_atual": "107",
       "lbl_titulo_comp": "Maio. real vs Jun. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jun. Realizado Maio.",
-      "lbl_vendedor": "Maio vs Julno — por vendedor",
+      "lbl_vendedor": "Maio vs Junho — por vendedor",
       "leg_mes_passado": "Maio.",
       "leg_mes_atual": "Jun.",
-      "destaque_txt": "",
-      "atencao_txt": "",
+      "destaque_txt": "-",
+      "atencao_txt": "-",
 
       "sellers": [
         [
