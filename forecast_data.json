@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "29/07/2026 14:08",
+    "atualizado_em": "29/07/2026 14:38",
     "status_dias": "Dias 1 à 29 confirmados · Dia 29 parcial · Dias 30 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 301,
+    "kpi_realizado": 302,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 28)",
-    "kpi_realizado_delta": "▲ 77,2% do total previsto",
+    "kpi_realizado_delta": "▲ 77,4% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -40,9 +40,9 @@
       "ativos": 16,
       "mes_passado_total": 102,
       "mes_passado": 97,
-      "mes_atual_total": 94,
+      "mes_atual_total": 95,
       "dias_confirmados_lbl": "dias 1 - 29",
-      "dias_confirmados_val": 94,
+      "dias_confirmados_val": 95,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -60,7 +60,7 @@
         [
           "Tiago Melo da Silva",
           20,
-          25
+          26
         ],
         [
           "Israel Riella",
@@ -653,7 +653,7 @@
       21,
       "partial",
       "",
-      2
+      3
     ],
     [
       30,
