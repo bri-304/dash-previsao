@@ -1108,30 +1108,15 @@ function applyGargalos(gargalos) {
     </div>`).join('');
 }
 
-// ── APLICAR BOLÃO (cards dos jogos do Brasil) ─────────────────────────────────
-// Regenera o innerHTML de #copa-grid a partir do array bolao[], mantendo
-// ids individuais (copa-card-N, copa-num-N, copa-match-N, copa-dt-N,
-// copa-periodo-N, copa-threshold-N, copa-extra-lbl-N, copa-extra-val-N, copa-tip-N)
-// function applyBolao(bolao) {
-  // const grid = document.getElementById('copa-grid');
-  // if (!grid || !bolao) return;
- //  grid.innerHTML = bolao.map((b, i) => `
-//     <div class="copa-card" id="copa-card-${i}">
-   //   <div class="copa-num" id="copa-num-${i}">${b.num}</div>
-     // <div class="copa-match" id="copa-match-${i}">${b.jogo}</div>
-      // <div class="copa-dt" id="copa-dt-${i}">${b.data_jogo}</div>
-      // <div class="copa-row"><span class="copa-row-lbl">Período válido</span><span class="copa-row-val" id="copa-periodo-${i}">${b.periodo}</span></div>
-      // <div class="copa-row"><span class="copa-row-lbl">1 aposta a cada</span><span class="copa-row-val" id="copa-threshold-${i}">${b.aposta_threshold}</span></div>
-      // <div class="copa-row"><span class="copa-row-lbl" id="copa-extra-lbl-${i}">${b.extra_lbl}</span><span class="copa-row-val" id="copa-extra-val-${i}"${b.extra_style ? ` style="${b.extra_style}"` : ''}>${b.extra_val}</span></div>
-      // <div class="copa-tip" id="copa-tip-${i}">${b.tip}</div>
-    // </div>`).join('');
-// }
+
 
 // ── RENDERIZAR GRÁFICO DE BARRAS ─────────────────────────────────────────────
 // ⬇ O gráfico é reconstruído a partir do array dias[] — atualiza automaticamente!
 let chartInstance = null;
 
-function renderChart(dias) {
+// function renderChart(dias) { //antigo
+//ajustado abaixo para novo modo de calculo do valor acumulado
+function renderChart(dias, meta) {
   // Previsão central: todos os dias (barras largas por trás)
   const forecastVals = dias.map(d => d[2]);
 
@@ -1149,10 +1134,21 @@ function renderChart(dias) {
   const minVals  = dias.map(d => d[3]);
   const maxVals  = dias.map(d => d[4]);
 
-  // Acumulado: usa realizado onde confirmado, previsão para dias futuros
-  const cumulBase = dias.map((d, i) => realizadoVals[i] != null ? realizadoVals[i] : forecastVals[i]);
-  const cumul     = cumulBase.reduce((a, v, i) => { a.push((a[i-1]||0)+v); return a; }, []);
+  // const cumulBase = dias.map((d, i) => realizadoVals[i] != null ? realizadoVals[i] : forecastVals[i]);
+  // const cumul     = cumulBase.reduce((a, v, i) => { a.push((a[i-1]||0)+v); return a; }, []);
 
+  // Acumulado: realizado onde confirmado; 0 em dias passados/hoje sem venda; previsão só para dias futuros (atualizado)
+  // Até o dia atual soma as vendas realizadas, considerando dias onde não houve venda como 0, e dias no futuro soma o realizado  + previsto
+  const [ddHoje] = (meta?.atualizado_em || '').split(' ')[0].split('/');
+  const diaHoje = Number(ddHoje) || 0;
+
+  const cumulBase = dias.map((d, i) => {
+    if (realizadoVals[i] != null) return realizadoVals[i]; // dia confirmado
+    if (d[0] <= diaHoje) return 0;                          // hoje ou passado sem venda → não projeta
+    return forecastVals[i];                                 // dia futuro → usa previsão
+  });
+  const cumul = cumulBase.reduce((a, v, i) => { a.push((a[i-1]||0)+v); return a; }, []);
+  
   const refLine      = dias.map(d => (['weekend','holiday'].includes(d[5])) ? null : 17);
   const forecastBg   = dias.map(d => typeColorFg[d[5]]);
   const forecastBd   = dias.map(d => typeColorBd[d[5]]);
@@ -1514,79 +1510,13 @@ function initDashboard(data) {
  // applyMetodos(data.metodos);
   applyGargalos(data.gargalos);
   // applyBolao(data.bolao);
-  renderChart(data.dias);
+  // renderChart(data.dias);
+  renderChart(data.dias, data.meta);
   renderTable(data.dias);
   renderTeams(data);
 }
- 
-// ── BOOT: tenta buscar forecast_data.json, fallback para DEFAULT_DATA ─────────
-// O Pentaho deve gerar e commitar "forecast_data.json" na raiz do repositório
-/* 
-async function boot() {
-  const loader = document.getElementById('loading-indicator');
-  loader.style.display = 'block';
-  let data = DEFAULT_DATA;
-  try {
-    const res = await fetch('./forecast_data.json?t=' + Date.now());
-    if (res.ok) {
-      const ext = await res.json();
-      // Validação mínima: precisa ter dias[] e meta{}
-      if (ext && ext.dias && ext.meta) {
-        data = ext;
-        console.log('[CONSOLIDA] forecast_data.json carregado com sucesso:', ext.meta.atualizado_em);
-      }
-    }
-  } catch (e) {
-    // Arquivo não existe ou erro de rede — usa default silenciosamente
-    console.log('[CONSOLIDA] forecast_data.json não encontrado — usando dados default.');
-  }
-  loader.style.display = 'none';
-  initDashboard(data);
-}
 
-boot();
 
-// ── Auto-refresh: detecta mudança no forecast_data.json e rerenderiza ──────
-(function autoRefresh() {
-  const JSON_URL = './forecast_data.json';
-  const INTERVAL = 60_000; // checa a cada 60 segundos
-  let lastRaw = null;
-
-  async function checkAndUpdate() {
-    try {
-      const res = await fetch(`${JSON_URL}?t=${Date.now()}`, { cache: 'no-store' });
-      if (!res.ok) return;
-
-      const rawText = await res.text();
-
-      // Primeira checagem: só guarda o valor atual, não faz nada
-      if (lastRaw === null) { lastRaw = rawText; return; }
-
-      // Nenhuma mudança → sai sem fazer nada
-      if (rawText === lastRaw) return;
-
-      // Mudança detectada → rerenderiza só os dados, sem reload
-      console.log('[AutoRefresh] Dados novos detectados, atualizando dashboard...');
-      lastRaw = rawText;
-      const newData = JSON.parse(rawText);
-      if (newData && newData.dias && newData.meta) {
-        const loader = document.getElementById('loading-indicator');
-        loader.style.display = 'block';
-        initDashboard(newData); // ← reutiliza sua função já existente!
-        loader.style.display = 'none';
-      }
-    } catch (err) {
-      console.warn('[AutoRefresh] Erro ao checar:', err);
-    }
-  }
-
-  // Aguarda 10s após o boot para iniciar as checagens
-  setTimeout(() => {
-    checkAndUpdate();
-    setInterval(checkAndUpdate, INTERVAL);
-  }, 10_000);
-})(); 
-*/
 // ══════════════════════════════════════════════════════════════════════
 //  SISTEMA DE PERÍODOS: mês atual + histórico versionado
 //  - Mês atual  → ./forecast_data.json (gerado pelo Pentaho)
