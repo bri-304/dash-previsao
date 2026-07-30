@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "30/07/2026 14:08",
+    "atualizado_em": "30/07/2026 14:38",
     "status_dias": "Dias 1 à 30 confirmados · Dia 30 parcial · Dias 31 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,16 +9,16 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 318,
+    "kpi_realizado": 319,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 29)",
-    "kpi_realizado_delta": "▲ 81,5% do total previsto",
+    "kpi_realizado_delta": "▲ 81,8% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
     "kpi_yoy_sub": "369 central vs 342 ano anterior",
-    "kpi_ativos": 29,
+    "kpi_ativos": 27,
     "kpi_ativos_sub": "em 3 times competindo",
-    "kpi_inativos_delta": "▼ 12 inativos / férias",
+    "kpi_inativos_delta": "▼ 11 inativos / férias",
     "page_title": "Forecast Julho 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Julho 2026",
     "badge_consoliga": "⚡ CONSOLIGA T1 · Mês 3/3 (Classificatória)",
@@ -133,9 +133,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 140,
-      "mes_atual_total": 155,
+      "mes_atual_total": 156,
       "dias_confirmados_lbl": "dias 1 - 30",
-      "dias_confirmados_val": 155,
+      "dias_confirmados_val": 156,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -146,13 +146,13 @@
       "atencao_txt": "⚠️ Tem a maior meta per capita entre os 3 times (12 vendas/ativo) — precisa de contribuição mais distribuída além dos 2 líderes para sustentar o ritmo o mês todo.",
       "sellers": [
         [
-          "Maria Aline da Silva Ferreira",
-          29,
-          27
-        ],
-        [
           "Adriérre Marcon",
           16,
+          28
+        ],
+        [
+          "Maria Aline da Silva Ferreira",
+          29,
           27
         ],
         [
@@ -663,7 +663,7 @@
       24,
       "partial",
       "🏁 Sprint final CONSOLIGA",
-      4
+      5
     ],
     [
       31,
