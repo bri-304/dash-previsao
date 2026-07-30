@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "30/07/2026 16:38",
+    "atualizado_em": "30/07/2026 17:08",
     "status_dias": "Dias 1 à 30 confirmados · Dia 30 parcial · Dias 31 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 319,
+    "kpi_realizado": 322,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 29)",
-    "kpi_realizado_delta": "▲ 81,8% do total previsto",
+    "kpi_realizado_delta": "▲ 82,6% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -40,9 +40,9 @@
       "ativos": 16,
       "mes_passado_total": 102,
       "mes_passado": 102,
-      "mes_atual_total": 101,
+      "mes_atual_total": 102,
       "dias_confirmados_lbl": "dias 1 - 30",
-      "dias_confirmados_val": 101,
+      "dias_confirmados_val": 102,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -88,17 +88,17 @@
           2
         ],
         [
+          "Gabriel Antonio Bittencourt",
+          0,
+          2
+        ],
+        [
           "Andressa Cristina de Paula",
           4,
           2
         ],
         [
           "Lorena Cristina Domingos Pereira",
-          0,
-          1
-        ],
-        [
-          "Gabriel Antonio Bittencourt",
           0,
           1
         ],
@@ -133,9 +133,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 140,
-      "mes_atual_total": 156,
+      "mes_atual_total": 157,
       "dias_confirmados_lbl": "dias 1 - 30",
-      "dias_confirmados_val": 156,
+      "dias_confirmados_val": 157,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -193,7 +193,7 @@
         [
           "Aline Cristina da Silva",
           1,
-          4
+          5
         ],
         [
           "Lana Mara de Morais Leite",
@@ -206,9 +206,9 @@
       "ativos": 10,
       "mes_passado_total": 97,
       "mes_passado": 97,
-      "mes_atual_total": 62,
+      "mes_atual_total": 63,
       "dias_confirmados_lbl": "dias 1 - 30",
-      "dias_confirmados_val": 62,
+      "dias_confirmados_val": 63,
       "prev_atual": "107",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -224,13 +224,13 @@
           16
         ],
         [
-          "Josilea de Melo Rocha",
-          12,
-          10
-        ],
-        [
           "Guilherme Lopes Machado",
           10,
+          11
+        ],
+        [
+          "Josilea de Melo Rocha",
+          12,
           10
         ],
         [
@@ -663,7 +663,7 @@
       24,
       "partial",
       "🏁 Sprint final CONSOLIGA",
-      5
+      8
     ],
     [
       31,
