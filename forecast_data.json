@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "31/07/2026 10:08",
+    "atualizado_em": "31/07/2026 10:38",
     "status_dias": "Dias 1 à 31 confirmados · Dia 31 parcial · Dias 32 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 325,
+    "kpi_realizado": 326,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
-    "kpi_realizado_delta": "▲ 83,3% do total previsto",
+    "kpi_realizado_delta": "▲ 83,6% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -133,9 +133,9 @@
       "ativos": 14,
       "mes_passado_total": 140,
       "mes_passado": 143,
-      "mes_atual_total": 159,
+      "mes_atual_total": 160,
       "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 159,
+      "dias_confirmados_val": 160,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -163,7 +163,7 @@
         [
           "Makele de Souza Smania",
           30,
-          22
+          23
         ],
         [
           "Iara da Silva Linhares",
@@ -673,7 +673,7 @@
       32,
       "partial",
       "🏁 Fechamento do mês",
-      2
+      3
     ]
   ],
   "sugestoes": [
