@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "31/07/2026 17:38",
+    "atualizado_em": "31/07/2026 18:08",
     "status_dias": "Dias 1 à 31 confirmados · Dia 31 parcial · Dias 32 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 337,
+    "kpi_realizado": 339,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
-    "kpi_realizado_delta": "▲ 86,4% do total previsto",
+    "kpi_realizado_delta": "▲ 86,9% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -40,9 +40,9 @@
       "ativos": 16,
       "mes_passado_total": 102,
       "mes_passado": 107,
-      "mes_atual_total": 108,
+      "mes_atual_total": 110,
       "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 108,
+      "dias_confirmados_val": 110,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -70,7 +70,7 @@
         [
           "Patrícia Lúcio Custódio",
           4,
-          12
+          14
         ],
         [
           "Bruno Ramos Martins",
@@ -673,7 +673,7 @@
       32,
       "partial",
       "🏁 Fechamento do mês",
-      14
+      16
     ]
   ],
   "sugestoes": [
