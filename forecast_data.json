@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "30/07/2026 23:08",
-    "status_dias": "Dias 1 à 30 confirmados · Dia 30 parcial · Dias 31 à 31 com intervalo de confiança",
+    "atualizado_em": "31/07/2026 07:08",
+    "status_dias": "Dias 1 à 31 confirmados · Dia 31 parcial · Dias 32 à 31 com intervalo de confiança",
     "kpi_total_pess": 291,
     "kpi_total_central": 369,
     "kpi_total_otim": 465,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16",
     "kpi_media_min": "12,7 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 322,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 29)",
-    "kpi_realizado_delta": "▲ 82,6% do total previsto",
+    "kpi_realizado": 323,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
+    "kpi_realizado_delta": "▲ 82,8% do total previsto",
     "kpi_yoy_pct": "+8%",
     "kpi_yoy_pess": "-15% pess.",
     "kpi_yoy_otim": "+36% otim.",
@@ -39,10 +39,10 @@
     "isr": {
       "ativos": 16,
       "mes_passado_total": 102,
-      "mes_passado": 102,
-      "mes_atual_total": 104,
-      "dias_confirmados_lbl": "dias 1 - 30",
-      "dias_confirmados_val": 104,
+      "mes_passado": 107,
+      "mes_atual_total": 105,
+      "dias_confirmados_lbl": "dias 1 - 31",
+      "dias_confirmados_val": 105,
       "prev_atual": "125",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Jul. Realizado Jun.",
@@ -70,7 +70,7 @@
         [
           "Patrícia Lúcio Custódio",
           4,
-          11
+          12
         ],
         [
           "Bruno Ramos Martins",
@@ -132,9 +132,9 @@
     "lis": {
       "ativos": 14,
       "mes_passado_total": 140,
-      "mes_passado": 140,
+      "mes_passado": 143,
       "mes_atual_total": 157,
-      "dias_confirmados_lbl": "dias 1 - 30",
+      "dias_confirmados_lbl": "dias 1 - 31",
       "dias_confirmados_val": 157,
       "prev_atual": "152",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
@@ -205,9 +205,9 @@
     "stl": {
       "ativos": 10,
       "mes_passado_total": 97,
-      "mes_passado": 97,
+      "mes_passado": 99,
       "mes_atual_total": 61,
-      "dias_confirmados_lbl": "dias 1 - 30",
+      "dias_confirmados_lbl": "dias 1 - 31",
       "dias_confirmados_val": 61,
       "prev_atual": "107",
       "lbl_titulo_comp": "Jun. real vs Jul. Real",
@@ -661,9 +661,9 @@
       16,
       12,
       24,
-      "partial",
+      "real",
       "🏁 Sprint final CONSOLIGA",
-      8
+      9
     ],
     [
       31,
