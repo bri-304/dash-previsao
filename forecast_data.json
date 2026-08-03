@@ -2,38 +2,38 @@
   "meta": {
     "atualizado_em": "31/07/2026 23:08",
     "status_dias": "Dias 1 à 31 confirmados · Dia 31 parcial · Dias 32 à 31 com intervalo de confiança",
-    "kpi_total_pess": 291,
-    "kpi_total_central": 369,
-    "kpi_total_otim": 465,
-    "kpi_total_delta": "▲ +7% vs junho (central)",
-    "kpi_media_central": "16",
-    "kpi_media_min": "12,7 mín",
+    "kpi_total_pess": 315,
+    "kpi_total_central": 370,
+    "kpi_total_otim": 425,
+    "kpi_total_delta": "▲ +7,6% vs julho comercial (central)",
+    "kpi_media_central": "17,6",
+    "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
     "kpi_realizado": 344,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
     "kpi_realizado_delta": "▲ 88,2% do total previsto",
-    "kpi_yoy_pct": "+8%",
-    "kpi_yoy_pess": "-15% pess.",
-    "kpi_yoy_otim": "+36% otim.",
-    "kpi_yoy_sub": "369 central vs 342 ano anterior",
+    "kpi_yoy_pct": "-8%",
+    "kpi_yoy_pess": "-21% pess.",
+    "kpi_yoy_otim": "+6% otim.",
+    "kpi_yoy_sub": "370 central vs 401 em agosto/2025",
     "kpi_ativos": 27,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 13 inativos / férias",
     "page_title": "Forecast Julho 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Julho 2026",
-    "badge_consoliga": "⚡ CONSOLIGA T1 · Mês 3/3 (Classificatória)",
-    "badge_copa": "⚽ Copa do Mundo 2026 · Mata-mata",
+    "badge_consoliga": "🏁 CONSOLIGA T1 · Fase Final · Agosto/2026",
+    "badge_copa": "📅 Agosto/2026 · 21 dias úteis · sem feriados nacionais",
     "kpi_total_sub": "vendas · Julho/2026",
-    "kpi_media_delta": "▲ vs 15,0 jul/2025",
+    "kpi_media_delta": "▲ vs 15,0 jul/2026",
     "kpi_yoy_lbl": "Percentual Previsto vs Julho 2025",
     "kpi_yoy_delta": "▲ crescimento YoY projetado",
     "sec_title_previsao": "previsão diária com intervalo de confiança — Julho 2026",
     "chart_title_main": "Vendas por Dia · Julho 2026",
     "sec_title_teams": "desempenho por time — Junho real vs Julho projetado",
     "sec_title_sugestoes": "sugestões estratégicas para Julho",
-    "footer_linha1": "Consolide · Forecast Julho 2026com Intervalo de Confiança · Gerado em 01/07/2026",
-    "footer_linha2": "Método: Pipeline Ponderado + Rolling WMA (peso 2 últimos 6m) + Cohort por Time · Margens: CV histórico por tipo de dia (±15% úteis · ±22% Copa · ±28% sprint · ±30% FDS)",
-    "footer_linha3": "Cenário pessimista: ~291 · Central: ~369 · Cenário otimista: ~465"
+    "footer_linha1": "Consolide · Forecast Agosto 2026 com Intervalo de Confiança · Gerado em 03/08/2026",
+    "footer_linha2": "Método: Pipeline Ponderado + Rolling WMA (ênfase nos últimos 6 meses) + cohort por vendedor/time · Margens: variação histórica por dia da semana, risco operacional e sprint final.",
+    "footer_linha3": "Cenário pessimista: 315 · Central: 370 · Otimista: 425"
   },
   "times": {
     "isr": {
@@ -279,443 +279,429 @@
   "semanas": [
     {
       "n": 1,
-      "dates": "01 a 05/07",
-      "central": 48,
-      "min": 38,
-      "max": 60,
-      "avg_txt": "~14,3/dia útil · início de mês",
-      "color": "var(--green)",
+      "dates": "01 a 02/08",
+      "central": 7,
+      "min": 4,
+      "max": 9,
+      "avg_txt": "~3,5/dia · início no fim de semana",
+      "color": "var(--blue-l)",
       "tags": [
         {
           "cls": "warn",
-          "txt": "❌ Brasil eliminado: 1x2 vs Noruega (05/07)"
+          "txt": "⚠️ Mês inicia em fim de semana; primeira semana operacional começa em 03/08"
         },
         {
-          "cls": "warn",
-          "txt": "⚠️ Apenas 3 dias úteis na semana"
+          "cls": "ok",
+          "txt": "✅ 21 dias úteis e sem feriados nacionais em agosto"
         }
       ]
     },
     {
       "n": 2,
-      "dates": "06 a 12/07",
-      "central": 75,
-      "min": 55,
-      "max": 98,
-      "avg_txt": "~15,2/dia útil · semana cheia",
+      "dates": "03 a 09/08",
+      "central": 83,
+      "min": 71,
+      "max": 95,
+      "avg_txt": "~16,6/dia útil · primeira semana operacional",
       "color": "var(--blue-l)",
       "tags": [
         {
           "cls": "ok",
-          "txt": "✅ Semana completa de trabalho"
-        },
-        {
-          "cls": "ok",
-          "txt": "✅ Sem jogo do Brasil nas Quartas (eliminado)"
+          "txt": "✅ Semana completa para acelerar oportunidades e documentação"
         }
       ]
     },
     {
       "n": 3,
-      "dates": "13 a 19/07",
-      "central": 81,
-      "min": 65,
-      "max": 98,
-      "avg_txt": "~15,2/dia útil · semana normalizada",
+      "dates": "10 a 16/08",
+      "central": 84,
+      "min": 72,
+      "max": 95,
+      "avg_txt": "~16,8/dia útil · semana completa",
       "color": "var(--blue-l)",
       "tags": [
         {
           "cls": "ok",
-          "txt": "✅ Sem risco de jogo do Brasil (eliminado nas oitavas)"
+          "txt": "✅ Ciclo médio de 4,63 dias ainda permite conversões no mês"
         }
       ]
     },
     {
       "n": 4,
-      "dates": "20 a 26/07",
-      "central": 81,
-      "min": 65,
-      "max": 98,
-      "avg_txt": "~16,4/dia útil · semana antes do fechamento",
+      "dates": "17 a 23/08",
+      "central": 84,
+      "min": 72,
+      "max": 93,
+      "avg_txt": "~16,8/dia útil · conversão de pipeline",
       "color": "var(--amber)",
       "tags": [
         {
-          "cls": "hot",
-          "txt": "🏁 Penúltima semana CONSOLIGA"
+          "cls": "risk",
+          "txt": "🚨 213 MQLs com mais de um dia sem primeiro contato"
         },
         {
-          "cls": "ok",
-          "txt": "✅ Semana cheia"
+          "cls": "risk",
+          "txt": "🚨 538 leads sem movimentação há mais de cinco dias"
         }
       ]
     },
     {
       "n": 5,
-      "dates": "27 a 31/07",
-      "central": 85,
-      "min": 67,
-      "max": 111,
-      "avg_txt": "~17/dia útil · fechamento do mês",
+      "dates": "24 a 30/08",
+      "central": 89,
+      "min": 75,
+      "max": 105,
+      "avg_txt": "~17,8/dia útil · sprint final",
       "color": "var(--amber)",
       "tags": [
         {
           "cls": "hot",
-          "txt": "🏁 Sprint final CONSOLIGA 30-31/07"
+          "txt": "🏁 Sprint final da ConsoLiga: 28 a 31/08"
         },
         {
-          "cls": "ok",
-          "txt": "✅ Maior semana do mês em dias úteis"
+          "cls": "hot",
+          "txt": "🎯 Pico previsto: 50 vendas centrais entre 28 e 31/08"
         }
       ]
+    },
+    {
+      "n": 6,
+      "dates": "31/08",
+      "central": 23,
+      "min": 21,
+      "max": 28,
+      "avg_txt": "~23/dia útil · fechamento da final",
+      "color": "var(--amber)",
+      "tags": []
     }
   ],
   "dias": [
     [
       1,
-      "Qua",
-      14,
-      12,
-      17,
-      "real",
+      "Sáb",
+      5,
+      3,
+      6,
+      "weekend",
       "",
       10
     ],
     [
       2,
-      "Qui",
-      12,
-      10,
-      14,
-      "real",
+      "Dom",
+      2,
+      1,
+      3,
+      "weekend",
       "",
       10
     ],
     [
       3,
-      "Sex",
-      17,
+      "Seg",
+      13,
+      11,
       14,
-      20,
-      "real",
-      "",
+      "work",
+      "Retomada e triagem de pipeline",
       19
     ],
     [
       4,
-      "Sáb",
-      4,
-      2,
-      6,
-      "real",
+      "Ter",
+      17,
+      15,
+      19,
+      "work",
       "",
       3
     ],
     [
       5,
-      "Dom",
-      1,
-      0,
-      3,
-      "real",
-      "🇧🇷 Oitavas de Final: Brasil 1 x 2 Noruega — eliminado",
+      "Qua",
+      18,
+      16,
+      20,
+      "work",
+      "",
       1
     ],
     [
       6,
-      "Seg",
-      12,
-      10,
+      "Qui",
       14,
-      "real",
+      12,
+      16,
+      "work",
       "",
       3
     ],
     [
       7,
-      "Ter",
-      17,
+      "Sex",
+      16,
       14,
-      20,
-      "real",
+      18,
+      "work",
       "",
       5
     ],
     [
       8,
-      "Qua",
-      14,
-      9,
-      21,
-      "real",
+      "Sáb",
+      4,
+      3,
+      6,
+      "weekend",
       "",
       16
     ],
     [
       9,
-      "Qui",
-      10,
-      6,
-      14,
-      "real",
+      "Dom",
+      1,
+      0,
+      2,
+      "weekend",
       "",
       18
     ],
     [
       10,
-      "Sex",
-      17,
+      "Seg",
+      13,
+      11,
       14,
-      20,
-      "real",
-      "",
+      "work",
+      "Semana operacional completa",
       11
     ],
     [
       11,
-      "Sáb",
-      4,
-      2,
-      6,
-      "real",
+      "Ter",
+      17,
+      15,
+      19,
+      "work",
       "",
       9
     ],
     [
       12,
-      "Dom",
-      1,
-      0,
-      3,
-      "weekend",
+      "Qua",
+      18,
+      16,
+      20,
+      "work",
       "",
       null
     ],
     [
       13,
-      "Seg",
-      12,
-      10,
+      "Qui",
       14,
-      "real",
+      12,
+      15,
+      "work",
       "",
       15
     ],
     [
       14,
-      "Ter",
+      "Sex",
       17,
-      14,
-      20,
-      "real",
+      15,
+      19,
+      "work",
       "",
       17
     ],
     [
       15,
-      "Qua",
-      18,
-      15,
-      21,
-      "real",
+      "Sáb",
+      4,
+      3,
+      6,
+      "weekend",
       "",
       14
     ],
     [
       16,
-      "Qui",
-      12,
-      10,
-      14,
-      "real",
+      "Dom",
+      1,
+      0,
+      2,
+      "weekend",
       "",
       15
     ],
     [
       17,
-      "Sex",
-      17,
+      "Seg",
+      13,
+      11,
       14,
-      20,
-      "real",
-      "",
+      "work",
+      "Aceleração de oportunidades e documentação",
       24
     ],
     [
       18,
-      "Sáb",
-      4,
-      2,
-      6,
-      "real",
+      "Ter",
+      17,
+      15,
+      18,
+      "work",
       "",
       3
     ],
     [
       19,
-      "Dom",
-      1,
-      0,
-      3,
-      "weekend",
+      "Qua",
+      18,
+      16,
+      19,
+      "work",
       "",
       null
     ],
     [
       20,
-      "Seg",
-      12,
-      10,
+      "Qui",
       14,
-      "real",
+      12,
+      15,
+      "work",
       "",
       15
     ],
     [
       21,
-      "Ter",
+      "Sex",
       17,
-      14,
-      20,
-      "real",
+      15,
+      19,
+      "work",
       "",
       22
     ],
     [
       22,
-      "Qua",
-      18,
-      15,
-      21,
-      "real",
+      "Sáb",
+      4,
+      3,
+      6,
+      "weekend",
       "",
       17
     ],
     [
       23,
-      "Qui",
-      12,
-      10,
-      14,
-      "real",
+      "Dom",
+      1,
+      0,
+      2,
+      "weekend",
       "",
       11
     ],
     [
       24,
-      "Sex",
-      17,
-      14,
-      20,
-      "real",
-      "",
+      "Seg",
+      13,
+      11,
+      15,
+      "work",
+      "Prioridade em documentação → pagamento",
       6
     ],
     [
       25,
-      "Sáb",
-      4,
-      2,
-      6,
-      "real",
+      "Ter",
+      17,
+      15,
+      19,
+      "work",
       "",
       5
     ],
     [
       26,
-      "Dom",
-      1,
-      0,
-      3,
-      "weekend",
+      "Qua",
+      18,
+      16,
+      20,
+      "work",
       "",
       null
     ],
     [
       27,
-      "Seg",
-      12,
-      10,
+      "Qui",
       14,
-      "real",
-      "",
+      12,
+      16,
+      "work",
+      "Divulgação de ranking e preparação do sprint",
       17
     ],
     [
       28,
-      "Ter",
-      17,
-      14,
+      "Sex",
       20,
-      "real",
-      "",
+      18,
+      23,
+      "sprint",
+      "Início do sprint final",
       13
     ],
     [
       29,
-      "Qua",
-      18,
-      15,
-      21,
-      "real",
-      "",
+      "Sáb",
+      5,
+      3,
+      9,
+      "sprint",
+      "Sprint final ConsoLiga",
       15
     ],
     [
       30,
-      "Qui",
-      16,
-      12,
-      24,
-      "real",
-      "🏁 Sprint final CONSOLIGA",
+      "Dom",
+      2,
+      0,
+      3,
+      "sprint",
+      "Sprint final ConsoLiga",
       9
     ],
     [
       31,
-      "Sex",
-      22,
-      16,
-      32,
-      "partial",
-      "🏁 Fechamento do mês",
+      "Seg",
+      23,
+      21,
+      28,
+      "sprint",
+      "Fechamento da final da Temporada 1",
       21
     ]
   ],
   "sugestoes": [
     {
       "n": "01",
-      "titulo": "📈 Sem mais 'dias de risco' da Copa em julho",
-      "descricao_html": "Com a eliminação do Brasil nas oitavas (1x2 vs Noruega), os dias <strong>11, 15 e 19/07 voltam ao padrão normal</strong> de vendas — o restante do mês fica mais previsível, sem o risco de queda que jogos do Brasil costumavam trazer (como em 29/06).",
+      "titulo": "🏁 Orquestrar a final da ConsoLiga",
+      "descricao_html": "Os finalistas que venderam em julho somaram <strong>165 vendas</strong>, ou 48% da base comercial. Divulgar ranking e prioridades de fechamento semanalmente preserva o estímulo competitivo até 31/08.",
       "tags": [
-        "copa",
-        "eliminação",
-        "previsibilidade"
+        "consoliga",
+        "final",
+        "ranking"
       ]
     },
     {
       "n": "02",
-      "titulo": "🏁 Usar o Sprint 30–31/07 como pico do mês",
-      "descricao_html": "Os últimos 2 dias concentram a maior margem do mês. Publicar ranking CONSOLIGA em 27/07 para acirrar a disputa antes do fechamento — sem depender de bolão, o ranking em si já é o gatilho de competição.",
-      "tags": [
-        "consoliga",
-        "sprint",
-        "30-31/07"
-      ]
-    },
-    {
-      "n": "03",
-      "titulo": "📊 Reativar vendedores zerados em junho",
-      "descricao_html": "Diego, Fabio, Felipe (Lisdaisy), Angélica, Andressa, Dhulia (Israel) e Carla (Stella) fecharam junho <strong>sem nenhuma venda</strong>. Check-in individual na primeira semana de julho antes que o padrão se repita.",
-      "tags": [
-        "pipeline",
-        "reativação",
-        "julho"
-      ]
-    },
-    {
-      "n": "04",
-      "titulo": "📄 Reduzir perda entre Documentação e Pagamento",
-      "descricao_html": "A conversão de Documentação para Pagamento está em <strong>68%</strong> (ideal: 85%) — o maior desvio percentual do funil. Priorizar follow-up de contratos enviados e ainda não assinados recupera vendas sem depender de leads novas.",
+      "titulo": "📄 Recuperar Documentação → Pagamento",
+      "descricao_html": "A conversão de Documentação para Pagamento está em <strong>66,92%</strong>, abaixo do ideal de 85%. Priorizar contratos enviados, pendências de assinatura e cobranças acordadas é a alavanca mais direta para o fechamento.",
       "tags": [
         "funil",
         "documentação",
@@ -723,64 +709,91 @@
       ]
     },
     {
-      "n": "05",
-      "titulo": "📞 Reduzir tempo de 1º contato",
-      "descricao_html": "Com o pipeline reiniciando em julho, reduzir o tempo médio de 1º contato para menos de 2h pode elevar a conversão em 15–20%, empurrando o resultado do mês para o cenário otimista.",
+      "n": "03",
+      "titulo": "⚡ Atacar MQLs sem primeiro contato",
+      "descricao_html": "Há <strong>213 MQLs</strong> com mais de um dia sem primeiro contato. Criar fila diária de acionamento reduz perda por atraso antes que o lead envelheça no funil.",
+      "tags": [
+        "mql",
+        "primeiro-contato",
+        "prioridade"
+      ]
+    },
+    {
+      "n": "04",
+      "titulo": "🚨 Recuperar leads sem movimentação",
+      "descricao_html": "Existem <strong>538 leads</strong> sem movimentação há mais de cinco dias. Separar os casos por etapa e responsável permite recuperar oportunidades já qualificadas, sem depender apenas de novas entradas.",
       "tags": [
         "pipeline",
-        "1º contato",
+        "reativação",
+        "cadência"
+      ]
+    },
+    {
+      "n": "05",
+      "titulo": "📞 Reduzir o tempo de 1º contato",
+      "descricao_html": "O tempo médio atual de primeiro contato é <strong>6h28</strong>. Reduzir a janela operacional e acompanhar diariamente os casos pendentes protege conversão e diminui perdas por falta de resposta.",
+      "tags": [
+        "eficiência",
+        "primeiro-contato",
         "conversão"
       ]
     },
     {
       "n": "06",
-      "titulo": "🎯 Redirecionar o foco que iria para a Copa",
-      "descricao_html": "Sem mais jogos do Brasil disputando a atenção do time, as semanas de 11 a 19/07 podem virar uma <strong>janela extra de produtividade</strong> — sem o risco de dispersão que os jogos causavam.",
+      "titulo": "🎯 Concentrar o sprint de 28 a 31/08",
+      "descricao_html": "O modelo concentra <strong>50 vendas centrais</strong> entre 28 e 31/08. Publicar o ranking em 27/08 e acompanhar documentação e pagamento diariamente aumenta a chance de capturar esse pico.",
       "tags": [
-        "produtividade",
-        "copa",
-        "foco"
+        "sprint",
+        "fechamento",
+        "consoliga"
       ]
     },
     {
       "n": "07",
-      "titulo": "🚨 Investigar a queda real de 06-07/07",
-      "descricao_html": "As vendas dos dias 6 e 7 vieram muito abaixo do previsto logo após a eliminação do Brasil (75% abaixo do central na segunda). Vale um <strong>check-in rápido com os times ainda hoje</strong> para entender se é reação pontual — que deve normalizar até quinta — ou algo mais estrutural.",
+      "titulo": "📊 Acompanhar todos os produtores de julho",
+      "descricao_html": "A previsão usa as <strong>344 vendas comerciais</strong> de julho, inclusive de vendedores hoje desmarcados. Validar disponibilidade e plano de atuação de Tiago, Makele, Iara e Rafael evita perder capacidade histórica sem supor que todos estarão ativos.",
       "tags": [
-        "alerta",
-        "real",
-        "06-07/07"
+        "cohort",
+        "capacidade",
+        "disponibilidade"
       ]
     }
   ],
   "gargalos": [
     {
       "tipo": "info",
-      "data": "01/07 (Qua)",
-      "titulo": "Mês recém-iniciado",
-      "desc": "Pipeline reiniciando após o fechamento de junho. Sem vendas confirmadas ainda hoje — previsão baseada em pipeline ponderado e histórico.",
-      "pill": "📉 Previsão: 12 — 14 — 17 vendas"
-    },
-    {
-      "tipo": "ok",
-      "data": "05/07 (Dom)",
-      "titulo": "Brasil eliminado nas Oitavas (1x2 vs Noruega)",
-      "desc": "Fim da participação do Brasil na Copa. O dia registrou 1 venda confirmada, dentro do previsto (0–1–3). Dias 11, 15 e 19/07 voltam ao comportamento normal — sem mais risco de jogos do Brasil neste mês.",
-      "pill": "✅ Realizado: 1 venda (dentro do previsto)"
-    },
-    {
-      "tipo": "oppt",
-      "data": "30-31/07 — Sprint Final",
-      "titulo": "Fechamento CONSOLIGA Mês 3",
-      "desc": "Maior janela de incerteza do mês (±28%), mas para cima. Cenário otimista: 24+32=56 vendas nos 2 dias.",
-      "pill": "🚀 Previsão: 28 — 38 — 56 nos dois dias"
+      "data": "01-02/08",
+      "titulo": "Mês inicia em fim de semana",
+      "desc": "Agosto não possui feriado nacional. A primeira janela operacional relevante começa na segunda-feira, 03/08.",
+      "pill": "📅 21 dias úteis"
     },
     {
       "tipo": "risk",
-      "data": "06-07/07 (Seg-Ter)",
-      "titulo": "Queda real pós-eliminação — abaixo do previsto",
-      "desc": "Segunda (06/07) fechou com apenas 3 vendas (previsto: 10–12–14, ou seja, 75% abaixo do central). Terça (07/07) registrava só 1 venda até 14h. Com isso foram ajustados os dias 8 e 9/07 para baixo como precaução; se o padrão não normalizar até quinta, pode ser algo mais estrutural do que reação pontual à eliminação.",
-      "pill": "🔻 Real: 3 (seg) + 1 até 14h (ter) vs previsto 12+17"
+      "data": "03-07/08",
+      "titulo": "Velocidade de primeiro contato",
+      "desc": "Há 213 MQLs com mais de um dia sem primeiro contato. A ação imediata reduz o risco de envelhecimento e perda por falta de resposta.",
+      "pill": "🚨 213 MQLs pendentes"
+    },
+    {
+      "tipo": "oppt",
+      "data": "10-21/08",
+      "titulo": "Converter documentação em pagamento",
+      "desc": "A passagem de Documentação para Pagamento está em 66,92%, abaixo do ideal de 85%. Follow-up de assinatura e cobrança pode recuperar vendas sem novos leads.",
+      "pill": "📄 Maior alavanca do funil"
+    },
+    {
+      "tipo": "risk",
+      "data": "Durante o mês",
+      "titulo": "Recuperar leads parados",
+      "desc": "Há 538 leads sem movimentação há mais de cinco dias. Priorizar por etapa e probabilidade evita que oportunidades qualificadas se percam por inércia.",
+      "pill": "⚠️ 538 leads parados"
+    },
+    {
+      "tipo": "oppt",
+      "data": "28-31/08",
+      "titulo": "Sprint final da ConsoLiga",
+      "desc": "A fase final e o encerramento de 31/08 concentram o pico do modelo. Ranking em 27/08 e gestão diária de pagamento são os principais gatilhos.",
+      "pill": "🚀 Previsão: 50 vendas"
     }
   ]
 }
