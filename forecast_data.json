@@ -370,7 +370,7 @@
       5,
       3,
       6,
-      "real",
+      "weekend",
       "",
       0
     ],
@@ -380,7 +380,7 @@
       2,
       1,
       3,
-      "real",
+      "weekend",
       "",
       0
     ],
@@ -390,7 +390,7 @@
       13,
       11,
       14,
-      "partial",
+      "work",
       "Retomada e triagem de pipeline",
       7
     ],
@@ -400,7 +400,7 @@
       17,
       15,
       19,
-      "",
+      "work",
       "",
       null
     ],
@@ -410,7 +410,7 @@
       18,
       16,
       20,
-      "",
+      "work",
       "",
       null
     ],
@@ -420,7 +420,7 @@
       14,
       12,
       16,
-      "",
+      "work",
       "",
       null
     ],
@@ -430,7 +430,7 @@
       16,
       14,
       18,
-      "",
+      "work",
       "",
       null
     ],
@@ -440,7 +440,7 @@
       4,
       3,
       6,
-      "",
+      "weekend",
       "",
       null
     ],
@@ -450,7 +450,7 @@
       1,
       0,
       2,
-      "",
+      "weekend",
       "",
       null
     ],
@@ -460,7 +460,7 @@
       13,
       11,
       14,
-      "",
+      "work",
       "Semana operacional completa",
       null
     ],
@@ -470,7 +470,7 @@
       17,
       15,
       19,
-      "",
+      "work",
       "",
       null
     ],
@@ -480,7 +480,7 @@
       18,
       16,
       20,
-      "",
+      "work",
       "",
       null
     ],
@@ -490,7 +490,7 @@
       14,
       12,
       15,
-      "",
+      "work",
       "",
       null
     ],
@@ -500,7 +500,7 @@
       17,
       15,
       19,
-      "",
+      "work",
       "",
       null
     ],
@@ -510,7 +510,7 @@
       4,
       3,
       6,
-      "",
+      "weekend",
       "",
       null
     ],
@@ -520,7 +520,7 @@
       1,
       0,
       2,
-      "",
+      "weekend",
       "",
       null
     ],
@@ -530,7 +530,7 @@
       13,
       11,
       14,
-      "",
+      "work",
       "Aceleração de oportunidades e documentação",
       null
     ],
@@ -540,7 +540,7 @@
       17,
       15,
       18,
-      "",
+      "work",
       "",
       null
     ],
@@ -550,7 +550,7 @@
       18,
       16,
       19,
-      "",
+      "work",
       "",
       null
     ],
@@ -560,7 +560,7 @@
       14,
       12,
       15,
-      "",
+      "work",
       "",
       null
     ],
@@ -570,7 +570,7 @@
       17,
       15,
       19,
-      "",
+      "work",
       "",
       null
     ],
@@ -580,7 +580,7 @@
       4,
       3,
       6,
-      "",
+      "weekend",
       "",
       null
     ],
@@ -590,7 +590,7 @@
       1,
       0,
       2,
-      "",
+      "weekend",
       "",
       null
     ],
@@ -600,7 +600,7 @@
       13,
       11,
       15,
-      "",
+      "work",
       "Prioridade em documentação → pagamento",
       null
     ],
@@ -610,7 +610,7 @@
       17,
       15,
       19,
-      "",
+      "work",
       "",
       null
     ],
@@ -620,7 +620,7 @@
       18,
       16,
       20,
-      "",
+      "work",
       "",
       null
     ],
@@ -630,7 +630,7 @@
       14,
       12,
       16,
-      "",
+      "work",
       "Divulgação de ranking e preparação do sprint",
       null
     ],
@@ -640,7 +640,7 @@
       20,
       18,
       23,
-      "",
+      "sprint",
       "Início do sprint final",
       null
     ],
@@ -650,7 +650,7 @@
       5,
       3,
       9,
-      "",
+      "sprint",
       "Sprint final ConsoLiga",
       null
     ],
@@ -660,7 +660,7 @@
       2,
       0,
       3,
-      "",
+      "sprint",
       "Sprint final ConsoLiga",
       null
     ],
@@ -670,7 +670,7 @@
       23,
       21,
       28,
-      "",
+      "sprint",
       "Fechamento da final da Temporada 1",
       null
     ]
