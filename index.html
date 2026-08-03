@@ -133,18 +133,18 @@ tr:hover td{background:var(--card2)}
 .td-event{font-size:11px;color:var(--muted);font-style:italic;max-width:200px}
 
 /* TEAMS */
-.teams-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}
+.teams-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:22px}
 .team-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden}
 .team-hdr{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.team-hdr.isr{background:rgba(37,99,235,.1)}.team-hdr.lis{background:rgba(245,158,11,.1)}.team-hdr.stl{background:rgba(16,185,129,.1)}
+.team-hdr.isr{background:rgba(37,99,235,.1)}.team-hdr.lis{background:rgba(245,158,11,.1)}.team-hdr.stl{background:rgba(16,185,129,.1)}.team-hdr.gui{background:rgba(129,140,248,.12)}
 .team-name{font-family:var(--fh);font-weight:900;font-size:15px;letter-spacing:.3px}
-.team-name.isr{color:var(--blue-l)}.team-name.lis{color:var(--gold)}.team-name.stl{color:var(--green)}
+.team-name.isr{color:var(--blue-l)}.team-name.lis{color:var(--gold)}.team-name.stl{color:var(--green)}.team-name.gui{color:var(--purple)}
 .team-ldr{font-family:var(--fm);font-size:9px;color:var(--muted)}
 .team-nums{display:grid;grid-template-columns:repeat(2,1fr);border-bottom:1px solid var(--border)}
 .tn{padding:12px 14px;border-right:1px solid var(--border)}.tn:last-child{border-right:none}
 .tn-lbl{font-family:var(--fm);font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:3px}
 .tn-val{font-family:var(--fh);font-size:24px;font-weight:900;line-height:1}
-.tn-val.isr{color:var(--blue-l)}.tn-val.lis{color:var(--gold)}.tn-val.stl{color:var(--green)}
+.tn-val.isr{color:var(--blue-l)}.tn-val.lis{color:var(--gold)}.tn-val.stl{color:var(--green)}.tn-val.gui{color:var(--purple)}
 .perf-list{padding:12px 16px}
 .perf-lbl{font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
 .perf-row{display:flex;align-items:center;gap:7px;margin-bottom:6px}
@@ -579,6 +579,42 @@ tr:hover td{background:var(--card2)}
     </div>
     <div class="team-ok" id="team-highlight-stl">⚡ Destaque carregando...</div>
     <div class="team-alert" id="team-obs-stl">⚠️ Guilherme Lopes e Josilea (top performers) ainda zerados. CONSOLIGA deve impulsionar reação esta semana.</div>
+  </div>
+  <div class="team-card">
+    <div class="team-hdr gui">
+      <div>
+        <div class="team-name gui">🟣 Guilherme Lopes Machado</div>
+        <div class="team-ldr" id="team-ldr-gui">0 ativos</div>
+      </div>
+    </div>
+    <div class="team-nums">
+  <div class="tn">
+  <div class="tn-lbl"><span id="tn-lbl-titulo-comp-gui">Mês passado real vs Mês atual real</span></div>
+  <div style="display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;">
+    <span class="tn-val gui" id="tn-mes-passado-gui">0</span>
+    <span style="font-family:var(--fm); font-size:18px; color:var(--muted);">×</span>
+    <span class="tn-val gui" id="tn-mes-atual-gui" style="font-size:24px;">0</span>
+  </div>
+  <div class="tn-lbl" style="margin-top:4px">referênte aos <span id="tn-diaslbl-gui" style="font-weight:700">dias 1–1</span></div>
+</div>
+  <div class="tn" style="border-right:none">
+    <div class="tn-lbl" id="tn-lbl-titulo-mes-passado-prev-gui">Prev. Mês atual · Realizado mês passado</div>
+    <div class="tn-val gui">~<span id="tn-prev-atual-gui">0</span></div>
+    <div class="tn-sub" id="tn-mes-passado-total-gui" style="font-family:var(--fm);font-size:13px;color:var(--muted);margin-top:2px">0</div>
+  </div>
+</div>
+    <div class="perf-list">
+      <div class="perf-lbl" style="display:flex;justify-content:space-between;align-items:center">
+          <span id="perf-lbl-gui">Mês passado vs Mês atual — por vendedor</span>
+          <span style="display:flex;gap:8px;font-family:var(--fm);font-size:9px;color:var(--muted)">
+  <span><span style="color:var(--purple);opacity:.3">■</span> <span id="leg-mes-passado-gui">ant.</span></span>
+  <span><span style="color:var(--purple);filter:brightness(1.25) saturate(1.1)">■</span> <span id="leg-mes-atual-gui">atual</span></span>
+</span>
+        </div>
+      <div id="perf-gui"></div>
+    </div>
+    <div class="team-ok" id="team-highlight-gui">⚡ Destaque carregando...</div>
+    <div class="team-alert" id="team-obs-gui">⚠️ Atenção: dados ainda não carregados.</div>
   </div>
 </div>
 
@@ -1376,8 +1412,9 @@ function renderTeams(data) {
     { key:'isr', color:'#3b82f6', colClass:'isr' },
     { key:'lis', color:'#f59e0b', colClass:'lis' },
     { key:'stl', color:'#10b981', colClass:'stl' },
+    { key:'gui', color:'#818cf8', colClass:'gui' },
   ];
-  const colorJun = { isr:'#3b82f6', lis:'#f59e0b', stl:'#10b981' };
+  const colorJun = { isr:'#3b82f6', lis:'#f59e0b', stl:'#10b981', gui:'#818cf8' };
 
   // Fallback: se não houver data.times, usa os dados estáticos anteriores
   const fallbackTimes = {
@@ -1413,6 +1450,15 @@ function renderTeams(data) {
       leg_jun: 'jun',
       sellers:[['Marcela M. do Rosário',19,4],['Guilherme Lopes Machado',18,0],['Josilea de Melo Rocha',16,0],['Stella Nieheus',11,6],
                ['Bruna L. Corrêa Barbosa',10,2],['Guilherme C. Rodrigues',8,0],['Yasmin Santos Zonatto',8,0],['Ketlin Madeira Colombo',6,4]]},
+    gui:{ ativos:0, mes_passado_total:0, mes_passado:0, mes_atual_total:0, dias_confirmados_lbl:'Dias 1–1', dias_confirmados_val:0, prev_atual:'0',
+      obs_class: 'team-alert',
+      obs_txt: '⚠️ Time novo — aguardando primeira carga de dados.',
+      lbl_titulo_comp: 'Mês passado real vs Mês atual real',
+      lbl_titulo_mes_passado_prev: 'Prev. Mês atual · Realizado mês passado',
+      lbl_vendedor: 'Mês passado vs Mês atual — por vendedor',
+      leg_mes_passado: 'ant.',
+      leg_mes_atual: 'atual',
+      sellers:[]},
   };
 
   const times = (data && data.times) ? data.times : fallbackTimes;
@@ -1456,8 +1502,9 @@ function renderTeams(data) {
     if (!cont) return;
     cont.innerHTML = '';
 
-    const maxGlobal = Math.max(...t.sellers.flatMap(s => [s[1], s[2]]), 1);
-    const sellersOrdenados = [...t.sellers].sort((a, b) => b[2] - a[2] || b[1] - a[1])   
+    const listaSellers = Array.isArray(t.sellers) ? t.sellers : [];
+    const maxGlobal = Math.max(...listaSellers.flatMap(s => [s[1], s[2]]), 1);
+    const sellersOrdenados = [...listaSellers].sort((a, b) => b[2] - a[2] || b[1] - a[1])   
     
     sellersOrdenados.forEach(([name, may, jun]) => {
       const pctM = (may / maxGlobal * 100).toFixed(0);
