@@ -1,5 +1,6 @@
 {
   "meses": [
-    {"id": "2026-06", "label": "Junho/2026", "arquivo": "2026-06.json"}
+    {"id": "2026-06", "label": "Junho/2026", "arquivo": "2026-06.json"},
+    {"id": "2026-07", "label": "Julho/2026", "arquivo": "2026-07.json"}
   ]
 }
