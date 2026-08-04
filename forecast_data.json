@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "04/08/2026 09:39",
+    "atualizado_em": "04/08/2026 10:08",
     "status_dias": "Dias 1 à 4 confirmados · Dia 4 parcial · Dias 5 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 11,
+    "kpi_realizado": 14,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 3)",
-    "kpi_realizado_delta": "▲ 2,8% do total previsto",
+    "kpi_realizado_delta": "▲ 3,6% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -78,9 +78,9 @@
       "ativos": 10,
       "mes_passado_total": 107,
       "mes_passado": 12,
-      "mes_atual_total": 2,
+      "mes_atual_total": 3,
       "dias_confirmados_lbl": "dias 1 - 4",
-      "dias_confirmados_val": 2,
+      "dias_confirmados_val": 3,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -96,6 +96,11 @@
           2
         ],
         [
+          "Patrícia Lúcio Custódio",
+          15,
+          1
+        ],
+        [
           "Estevam Silverio Tavares",
           30,
           0
@@ -103,11 +108,6 @@
         [
           "Tiago Melo da Silva",
           29,
-          0
-        ],
-        [
-          "Patrícia Lúcio Custódio",
-          15,
           0
         ],
         [
@@ -141,9 +141,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 22,
-      "mes_atual_total": 9,
+      "mes_atual_total": 11,
       "dias_confirmados_lbl": "dias 1 - 4",
-      "dias_confirmados_val": 9,
+      "dias_confirmados_val": 11,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -161,7 +161,7 @@
         [
           "Rafael Rodrigues Pedroso",
           8,
-          1
+          3
         ],
         [
           "Lisdaisy Vieira Costa",
@@ -400,9 +400,9 @@
       17,
       15,
       19,
-      "work",
+      "partial",
       "",
-      null
+      3
     ],
     [
       5,
