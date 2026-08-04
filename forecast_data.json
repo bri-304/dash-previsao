@@ -31,7 +31,7 @@
     "chart_title_main": "Vendas por Dia · Agosto 2026",
     "sec_title_teams": "desempenho por time — Julho real vs Agosto projetado",
     "sec_title_sugestoes": "sugestões estratégicas para Agosto",
-    "footer_linha1": "Consolide · Forecast Agosto 2026 com Intervalo de Confiança · Gerado em 03/08/2026",
+    "footer_linha1": "Consolide · Forecast Agosto 2026 com Intervalo de Confiança · Gerado em 04/08/2026",
     "footer_linha2": "Método: Pipeline Ponderado + Rolling WMA (ênfase nos últimos 6 meses) + cohort por vendedor/time · Margens: variação histórica por dia da semana, risco operacional e sprint final.",
     "footer_linha3": "Cenário pessimista: 315 · Central: 370 · Otimista: 425"
   },
@@ -325,11 +325,11 @@
       "tags": [
         {
           "cls": "risk",
-          "txt": "🚨 213 MQLs com mais de um dia sem primeiro contato"
+          "txt": "🚨 Manter velocidade de primeiro contato"
         },
         {
           "cls": "risk",
-          "txt": "🚨 538 leads sem movimentação há mais de cinco dias"
+          "txt": "🚨 Reforçar cadência em leads parados"
         }
       ]
     },
@@ -390,7 +390,7 @@
       13,
       11,
       14,
-      "real",
+      "work",
       "Retomada e triagem de pipeline",
       11
     ],
@@ -400,7 +400,7 @@
       17,
       15,
       19,
-      "partial",
+      "work",
       "",
       3
     ],
@@ -679,7 +679,7 @@
     {
       "n": "01",
       "titulo": "🏁 Orquestrar a final da ConsoLiga",
-      "descricao_html": "Os finalistas que venderam em julho somaram <strong>165 vendas</strong>, ou 48% da base comercial. Divulgar ranking e prioridades de fechamento semanalmente preserva o estímulo competitivo até 31/08.",
+      "descricao_html": "Os finalistas que venderam em julho somaram <strong>165 vendas</strong>, ou 48% da base comercial. Acompanhar individualmente documentação, pagamento e próximos passos ajuda a transformar o estímulo da final em fechamentos até 31/08.",
       "tags": [
         "consoliga",
         "final",
@@ -699,7 +699,7 @@
     {
       "n": "03",
       "titulo": "⚡ Atacar MQLs sem primeiro contato",
-      "descricao_html": "Há <strong>213 MQLs</strong> com mais de um dia sem primeiro contato. Criar fila diária de acionamento reduz perda por atraso antes que o lead envelheça no funil.",
+      "descricao_html": "A velocidade do primeiro contato é determinante para a conversão. Manter uma fila diária de novos MQLs e acompanhar os casos pendentes reduz perdas por atraso e envelhecimento no funil.",
       "tags": [
         "mql",
         "primeiro-contato",
@@ -709,7 +709,7 @@
     {
       "n": "04",
       "titulo": "🚨 Recuperar leads sem movimentação",
-      "descricao_html": "Existem <strong>538 leads</strong> sem movimentação há mais de cinco dias. Separar os casos por etapa e responsável permite recuperar oportunidades já qualificadas, sem depender apenas de novas entradas.",
+      "descricao_html": "Leads sem movimentação perdem potencial de conversão com o tempo. Revisar a carteira diariamente por etapa e responsável ajuda a recuperar oportunidades qualificadas antes que sejam perdidas por inércia.",
       "tags": [
         "pipeline",
         "reativação",
@@ -759,7 +759,7 @@
       "tipo": "risk",
       "data": "03-07/08",
       "titulo": "Velocidade de primeiro contato",
-      "desc": "Há 213 MQLs com mais de um dia sem primeiro contato. A ação imediata reduz o risco de envelhecimento e perda por falta de resposta.",
+      "desc": "O tempo de resposta inicial é determinante para a conversão. Manter a fila de novos MQLs sob acompanhamento diário reduz o envelhecimento do lead e as perdas por falta de resposta.",
       "pill": "🚨 213 MQLs pendentes"
     },
     {
@@ -773,14 +773,14 @@
       "tipo": "risk",
       "data": "Durante o mês",
       "titulo": "Recuperar leads parados",
-      "desc": "Há 538 leads sem movimentação há mais de cinco dias. Priorizar por etapa e probabilidade evita que oportunidades qualificadas se percam por inércia.",
+      "desc": "Leads sem movimentação tendem a perder potencial de conversão com o tempo. Revisar diariamente a carteira por etapa e responsável evita que oportunidades qualificadas fiquem sem cadência.",
       "pill": "⚠️ 538 leads parados"
     },
     {
       "tipo": "oppt",
       "data": "28-31/08",
       "titulo": "Sprint final da ConsoLiga",
-      "desc": "A fase final e o encerramento de 31/08 concentram o pico do modelo. Ranking em 27/08 e gestão diária de pagamento são os principais gatilhos.",
+      "desc": "A fase final e o encerramento de 31/08 concentram o pico do modelo. Intensificar diariamente o acompanhamento de documentação, pagamento e próximos passos ajuda a capturar esse potencial.",
       "pill": "🚀 Previsão: 50 vendas"
     }
   ]
