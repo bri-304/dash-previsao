@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "04/08/2026 10:08",
+    "atualizado_em": "04/08/2026 10:14",
     "status_dias": "Dias 1 à 4 confirmados · Dia 4 parcial · Dias 5 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -390,7 +390,7 @@
       13,
       11,
       14,
-      "work",
+      "real",
       "Retomada e triagem de pipeline",
       11
     ],
@@ -400,7 +400,7 @@
       17,
       15,
       19,
-      "work",
+      "partial",
       "",
       3
     ],
