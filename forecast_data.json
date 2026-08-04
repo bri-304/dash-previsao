@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "04/08/2026 15:08",
+    "atualizado_em": "04/08/2026 15:38",
     "status_dias": "Dias 1 à 4 confirmados · Dia 4 parcial · Dias 5 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 24,
+    "kpi_realizado": 26,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 3)",
-    "kpi_realizado_delta": "▲ 6,2% do total previsto",
+    "kpi_realizado_delta": "▲ 6,7% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -141,9 +141,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 22,
-      "mes_atual_total": 14,
+      "mes_atual_total": 16,
       "dias_confirmados_lbl": "dias 1 - 4",
-      "dias_confirmados_val": 14,
+      "dias_confirmados_val": 16,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -162,6 +162,11 @@
           "Rafael Rodrigues Pedroso",
           8,
           4
+        ],
+        [
+          "Aline Cristina da Silva",
+          6,
+          2
         ],
         [
           "Lisdaisy Vieira Costa",
@@ -191,11 +196,6 @@
         [
           "Felipe Santos Leite",
           7,
-          0
-        ],
-        [
-          "Aline Cristina da Silva",
-          6,
           0
         ],
         [
@@ -402,7 +402,7 @@
       19,
       "partial",
       "",
-      13
+      15
     ],
     [
       5,
