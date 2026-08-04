@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "04/08/2026 13:38",
+    "atualizado_em": "04/08/2026 14:08",
     "status_dias": "Dias 1 à 4 confirmados · Dia 4 parcial · Dias 5 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 20,
+    "kpi_realizado": 23,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 3)",
-    "kpi_realizado_delta": "▲ 5,1% do total previsto",
+    "kpi_realizado_delta": "▲ 5,9% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -214,9 +214,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 3,
-      "mes_atual_total": 2,
+      "mes_atual_total": 5,
       "dias_confirmados_lbl": "dias 1 - 4",
-      "dias_confirmados_val": 2,
+      "dias_confirmados_val": 5,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -229,7 +229,7 @@
         [
           "Stella Nieheus",
           17,
-          2
+          5
         ],
         [
           "Josilea de Melo Rocha",
@@ -402,7 +402,7 @@
       19,
       "partial",
       "",
-      9
+      12
     ],
     [
       5,
