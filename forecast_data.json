@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "04/08/2026 15:38",
+    "atualizado_em": "04/08/2026 16:08",
     "status_dias": "Dias 1 à 4 confirmados · Dia 4 parcial · Dias 5 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 26,
+    "kpi_realizado": 27,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 3)",
-    "kpi_realizado_delta": "▲ 6,7% do total previsto",
+    "kpi_realizado_delta": "▲ 6,9% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -141,9 +141,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 22,
-      "mes_atual_total": 16,
+      "mes_atual_total": 17,
       "dias_confirmados_lbl": "dias 1 - 4",
-      "dias_confirmados_val": 16,
+      "dias_confirmados_val": 17,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -169,6 +169,11 @@
           2
         ],
         [
+          "Makele de Souza Smania",
+          23,
+          1
+        ],
+        [
           "Lisdaisy Vieira Costa",
           13,
           1
@@ -186,11 +191,6 @@
         [
           "Adriérre Marcon",
           29,
-          0
-        ],
-        [
-          "Makele de Souza Smania",
-          23,
           0
         ],
         [
@@ -402,7 +402,7 @@
       19,
       "partial",
       "",
-      15
+      16
     ],
     [
       5,
