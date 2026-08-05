@@ -63,7 +63,9 @@ body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse
 .delta.up{background:var(--green-d);color:var(--green)}.delta.dn{background:var(--red-d);color:var(--red)}
 
 /* RANGE KPI SPECIAL */
-.range-wrap{display:flex;align-items:baseline;gap:5px;margin:4px 0}
+/*.range-wrap{display:flex;align-items:baseline;gap:5px;margin:4px 0}*/
+.range-wrap{display:grid;grid-template-columns:repeat(5,auto);justify-content:start;justify-items:center;align-items:baseline;column-gap:5px;margin:4px 0}
+.range-lbl-i{font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.3px;margin-top:2px}
 .range-lo{font-family:var(--fh);font-size:20px;font-weight:700;color:#f87171;opacity:.85}
 .range-hi{font-family:var(--fh);font-size:20px;font-weight:700;color:#34d399;opacity:.85}
 .range-sep{font-family:var(--fm);font-size:12px;color:var(--muted)}
@@ -251,8 +253,12 @@ tr:hover td{background:var(--card2)}
       <span class="range-sep">—</span>
       <!-- ▼ PLACEHOLDER: cenário otimista -->
       <span class="range-hi" id="kpi-total-otim">455</span>
+      <span class="range-lbl-i">pessimista</span>
+      <span></span>
+      <span class="range-lbl-i">central</span>
+      <span></span>
+      <span class="range-lbl-i">otimista</span>
     </div>
-    <div class="range-lbls"><span>pessimista</span><span>central</span><span>otimista</span></div>
     <div class="kpi-sub" id="kpi-total-sub">vendas · junho/2026</div>
     <!-- ▼ PLACEHOLDER: delta vs mês anterior -->
     <div class="delta up" id="kpi-total-delta">▲ +0,5% vs maio (central)</div>
