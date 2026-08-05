@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "05/08/2026 14:08",
+    "atualizado_em": "05/08/2026 14:38",
     "status_dias": "Dias 1 à 5 confirmados · Dia 5 parcial · Dias 6 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,14 +9,14 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 35,
+    "kpi_realizado": 36,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 4)",
-    "kpi_realizado_delta": "▲ 9% do total previsto",
+    "kpi_realizado_delta": "▲ 9,2% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
     "kpi_yoy_sub": "370 central vs 401 em agosto/2025",
-    "kpi_ativos": 28,
+    "kpi_ativos": 27,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 11 inativos / férias",
     "page_title": "Forecast Agosto 2026 - Consolide",
@@ -141,9 +141,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 23,
-      "mes_atual_total": 17,
+      "mes_atual_total": 18,
       "dias_confirmados_lbl": "dias 1 - 5",
-      "dias_confirmados_val": 17,
+      "dias_confirmados_val": 18,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -191,7 +191,7 @@
         [
           "Adriérre Marcon",
           29,
-          0
+          1
         ],
         [
           "Felipe Santos Leite",
@@ -412,7 +412,7 @@
       20,
       "partial",
       "",
-      4
+      5
     ],
     [
       6,
