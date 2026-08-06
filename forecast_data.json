@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "06/08/2026 14:22",
+    "atualizado_em": "06/08/2026 17:35",
     "status_dias": "Dias 1 à 6 confirmados · Dia 6 parcial · Dias 7 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,16 +9,16 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 70,
+    "kpi_realizado": 72,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 5)",
-    "kpi_realizado_delta": "▲ 17,9% do total previsto",
+    "kpi_realizado_delta": "▲ 18,5% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
     "kpi_yoy_sub": "370 central vs 401 em agosto/2025",
-    "kpi_ativos": 27,
+    "kpi_ativos": 0,
     "kpi_ativos_sub": "em 3 times competindo",
-    "kpi_inativos_delta": "▼ 11 inativos / férias",
+    "kpi_inativos_delta": "▼ 0 inativos / férias",
     "page_title": "Forecast Agosto 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Agosto 2026",
     "badge_consoliga": "🏁 CONSOLIGA T1 · Fase Final · Agosto/2026",
@@ -83,9 +83,9 @@
       "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 14,
-      "mes_atual_total": 32,
+      "mes_atual_total": 17,
       "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 32,
+      "dias_confirmados_val": 17,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -95,11 +95,6 @@
       "destaque_txt": "⚡ Estevam (30), Tiago (29), Israel (17) e Patrícia (15) responderam por 91 das 114 vendas do grupo em julho. A previsão preserva essa produção histórica, independentemente do status atual na lista de trabalho.",
       "atencao_txt": "⚠️ O resultado do grupo é concentrado: os quatro principais vendedores representaram 80% do volume de julho. Confirmar disponibilidade e distribuir oportunidades reduz o risco de dependência no mês.",
       "sellers": [
-        [
-          "Patrícia Lúcio Custódio",
-          15,
-          16
-        ],
         [
           "Israel Riella",
           17,
@@ -128,6 +123,11 @@
         [
           "Tayna Inácia de Melo",
           0,
+          1
+        ],
+        [
+          "Patrícia Lúcio Custódio",
+          15,
           1
         ],
         [
@@ -224,9 +224,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 3,
-      "mes_atual_total": 12,
+      "mes_atual_total": 27,
       "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 12,
+      "dias_confirmados_val": 27,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -239,7 +239,7 @@
         [
           "Stella Nieheus",
           17,
-          8
+          23
         ],
         [
           "Ketlin Madeira Colombo",
@@ -432,7 +432,7 @@
       16,
       "partial",
       "",
-      6
+      8
     ],
     [
       7,
