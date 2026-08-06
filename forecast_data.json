@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "06/08/2026 12:08",
+    "atualizado_em": "06/08/2026 12:38",
     "status_dias": "Dias 1 à 6 confirmados · Dia 6 parcial · Dias 7 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 70,
+    "kpi_realizado": 71,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 5)",
-    "kpi_realizado_delta": "▲ 17,9% do total previsto",
+    "kpi_realizado_delta": "▲ 18,2% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -36,6 +36,29 @@
     "footer_linha3": "Cenário pessimista: 315 · Central: 370 · Otimista: 425"
   },
   "times": {
+    "Alan Marcos": {
+      "ativos": 0,
+      "mes_passado_total": 0,
+      "mes_passado": 0,
+      "mes_atual_total": 0,
+      "dias_confirmados_lbl": "dias 1 - 6",
+      "dias_confirmados_val": 0,
+      "prev_atual": "",
+      "lbl_titulo_comp": "Jul. real vs Ago. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
+      "lbl_vendedor": "Julho vs Agosto — por vendedor",
+      "leg_mes_passado": "Jul.",
+      "leg_mes_atual": "Ago.",
+      "destaque_txt": "",
+      "atencao_txt": "",
+      "sellers": [
+        [
+          "Ivan Conti",
+          0,
+          1
+        ]
+      ]
+    },
     "gui": {
       "ativos": 1,
       "mes_passado_total": 16,
@@ -427,7 +450,7 @@
       16,
       "partial",
       "",
-      6
+      7
     ],
     [
       7,
