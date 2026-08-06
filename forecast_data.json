@@ -36,29 +36,6 @@
     "footer_linha3": "Cenário pessimista: 315 · Central: 370 · Otimista: 425"
   },
   "times": {
-    "Alan Marcos": {
-      "ativos": 0,
-      "mes_passado_total": 0,
-      "mes_passado": 0,
-      "mes_atual_total": 0,
-      "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 0,
-      "prev_atual": "",
-      "lbl_titulo_comp": "Jul. real vs Ago. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
-      "lbl_vendedor": "Julho vs Agosto — por vendedor",
-      "leg_mes_passado": "Jul.",
-      "leg_mes_atual": "Ago.",
-      "destaque_txt": "",
-      "atencao_txt": "",
-      "sellers": [
-        [
-          "Ivan Conti",
-          0,
-          1
-        ]
-      ]
-    },
     "gui": {
       "ativos": 1,
       "mes_passado_total": 16,
