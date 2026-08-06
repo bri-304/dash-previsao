@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "06/08/2026 10:38",
+    "atualizado_em": "06/08/2026 11:08",
     "status_dias": "Dias 1 à 6 confirmados · Dia 6 parcial · Dias 7 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 64,
+    "kpi_realizado": 66,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 5)",
-    "kpi_realizado_delta": "▲ 16,4% do total previsto",
+    "kpi_realizado_delta": "▲ 16,9% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -75,12 +75,12 @@
       ]
     },
     "isr": {
-      "ativos": 10,
+      "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 14,
-      "mes_atual_total": 30,
+      "mes_atual_total": 31,
       "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 30,
+      "dias_confirmados_val": 31,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -118,6 +118,11 @@
         [
           "Tiago Melo da Silva",
           29,
+          1
+        ],
+        [
+          "Tayna Inácia de Melo",
+          0,
           1
         ],
         [
@@ -214,9 +219,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 3,
-      "mes_atual_total": 10,
+      "mes_atual_total": 11,
       "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 10,
+      "dias_confirmados_val": 11,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -229,7 +234,7 @@
         [
           "Stella Nieheus",
           17,
-          8
+          9
         ],
         [
           "Ketlin Madeira Colombo",
@@ -420,9 +425,9 @@
       14,
       12,
       16,
-      "work",
+      "partial",
       "",
-      null
+      2
     ],
     [
       7,
