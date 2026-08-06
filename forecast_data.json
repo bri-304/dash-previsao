@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "06/08/2026 13:08",
+    "atualizado_em": "06/08/2026 14:08",
     "status_dias": "Dias 1 à 6 confirmados · Dia 6 parcial · Dias 7 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 71,
+    "kpi_realizado": 73,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 5)",
-    "kpi_realizado_delta": "▲ 18,2% do total previsto",
+    "kpi_realizado_delta": "▲ 18,7% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -40,9 +40,9 @@
       "ativos": 1,
       "mes_passado_total": 16,
       "mes_passado": 5,
-      "mes_atual_total": 0,
+      "mes_atual_total": 2,
       "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 0,
+      "dias_confirmados_val": 2,
       "prev_atual": "17",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -52,6 +52,11 @@
       "destaque_txt": "⚡ Mesmo em formação, o time registrou 16 vendas em julho: Guilherme Lopes (9), Gabriel (3), Lorena (3) e Natalia (1). Gabriel, Lorena e Natalia entraram em julho, o que deixa espaço para evolução gradual em agosto.",
       "atencao_txt": "⚠️ O time não participa da final da Temporada 1 e ainda está em rampagem. A previsão de 17 vendas pressupõe continuidade da cadência e acompanhamento próximo do primeiro contato, sem atribuir o mesmo impulso competitivo dos finalistas.",
       "sellers": [
+        [
+          "Carla Cristina Ferreira Siqueira",
+          0,
+          2
+        ],
         [
           "Guilherme Lopes Machado",
           9,
@@ -78,9 +83,9 @@
       "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 14,
-      "mes_atual_total": 31,
+      "mes_atual_total": 32,
       "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 31,
+      "dias_confirmados_val": 32,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -96,14 +101,14 @@
           16
         ],
         [
-          "Bruno Ramos Martins",
-          6,
+          "Israel Riella",
+          17,
           4
         ],
         [
-          "Israel Riella",
-          17,
-          3
+          "Bruno Ramos Martins",
+          6,
+          4
         ],
         [
           "Estevam Silverio Tavares",
@@ -219,9 +224,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 3,
-      "mes_atual_total": 11,
+      "mes_atual_total": 12,
       "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 11,
+      "dias_confirmados_val": 12,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -247,6 +252,11 @@
           1
         ],
         [
+          "Bruna Letícia Corrêa Barbosa",
+          7,
+          1
+        ],
+        [
           "Josilea de Melo Rocha",
           10,
           0
@@ -254,11 +264,6 @@
         [
           "Elison da Silva Elias",
           8,
-          0
-        ],
-        [
-          "Bruna Letícia Corrêa Barbosa",
-          7,
           0
         ],
         [
@@ -427,7 +432,7 @@
       16,
       "partial",
       "",
-      7
+      9
     ],
     [
       7,
