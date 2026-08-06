@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "06/08/2026 11:38",
+    "atualizado_em": "06/08/2026 12:08",
     "status_dias": "Dias 1 à 6 confirmados · Dia 6 parcial · Dias 7 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 68,
+    "kpi_realizado": 70,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 5)",
-    "kpi_realizado_delta": "▲ 17,4% do total previsto",
+    "kpi_realizado_delta": "▲ 17,9% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -146,9 +146,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 24,
-      "mes_atual_total": 24,
+      "mes_atual_total": 26,
       "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 24,
+      "dias_confirmados_val": 26,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -169,8 +169,18 @@
           4
         ],
         [
+          "Makele de Souza Smania",
+          23,
+          2
+        ],
+        [
           "Lisdaisy Vieira Costa",
           13,
+          2
+        ],
+        [
+          "Larissa Pereira Niehues",
+          25,
           2
         ],
         [
@@ -182,16 +192,6 @@
           "Adriérre Marcon",
           29,
           2
-        ],
-        [
-          "Makele de Souza Smania",
-          23,
-          1
-        ],
-        [
-          "Larissa Pereira Niehues",
-          25,
-          1
         ],
         [
           "Iara da Silva Linhares",
@@ -427,7 +427,7 @@
       16,
       "partial",
       "",
-      4
+      6
     ],
     [
       7,
