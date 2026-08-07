@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "07/08/2026 11:38",
+    "atualizado_em": "07/08/2026 12:08",
     "status_dias": "Dias 1 à 7 confirmados · Dia 7 parcial · Dias 8 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 87,
+    "kpi_realizado": 88,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 6)",
-    "kpi_realizado_delta": "▲ 22,3% do total previsto",
+    "kpi_realizado_delta": "▲ 22,6% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -83,9 +83,9 @@
       "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 16,
-      "mes_atual_total": 29,
+      "mes_atual_total": 30,
       "dias_confirmados_lbl": "dias 1 - 7",
-      "dias_confirmados_val": 29,
+      "dias_confirmados_val": 30,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -106,14 +106,14 @@
           4
         ],
         [
-          "Bruno Ramos Martins",
-          6,
+          "Estevam Silverio Tavares",
+          30,
           4
         ],
         [
-          "Estevam Silverio Tavares",
-          30,
-          3
+          "Bruno Ramos Martins",
+          6,
+          4
         ],
         [
           "Elisângela Arias",
@@ -442,7 +442,7 @@
       18,
       "partial",
       "",
-      2
+      3
     ],
     [
       8,
