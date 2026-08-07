@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "07/08/2026 13:38",
+    "atualizado_em": "07/08/2026 14:08",
     "status_dias": "Dias 1 à 7 confirmados · Dia 7 parcial · Dias 8 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 88,
+    "kpi_realizado": 89,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 6)",
-    "kpi_realizado_delta": "▲ 22,6% do total previsto",
+    "kpi_realizado_delta": "▲ 22,8% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 25,
-      "mes_atual_total": 28,
+      "mes_atual_total": 29,
       "dias_confirmados_lbl": "dias 1 - 7",
-      "dias_confirmados_val": 28,
+      "dias_confirmados_val": 29,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -194,14 +194,14 @@
           2
         ],
         [
-          "Aline Cristina da Silva",
-          6,
+          "Iara da Silva Linhares",
+          15,
           2
         ],
         [
-          "Iara da Silva Linhares",
-          15,
-          1
+          "Aline Cristina da Silva",
+          6,
+          2
         ],
         [
           "Felipe Santos Leite",
@@ -442,7 +442,7 @@
       18,
       "partial",
       "",
-      3
+      4
     ],
     [
       8,
