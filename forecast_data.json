@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "07/08/2026 09:38",
+    "atualizado_em": "07/08/2026 10:08",
     "status_dias": "Dias 1 à 7 confirmados · Dia 7 parcial · Dias 8 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 74,
+    "kpi_realizado": 75,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 6)",
-    "kpi_realizado_delta": "▲ 19% do total previsto",
+    "kpi_realizado_delta": "▲ 19,2% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 25,
-      "mes_atual_total": 27,
+      "mes_atual_total": 28,
       "dias_confirmados_lbl": "dias 1 - 7",
-      "dias_confirmados_val": 27,
+      "dias_confirmados_val": 28,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -174,6 +174,11 @@
           4
         ],
         [
+          "Larissa Pereira Niehues",
+          25,
+          3
+        ],
+        [
           "Adriérre Marcon",
           29,
           3
@@ -186,11 +191,6 @@
         [
           "Lisdaisy Vieira Costa",
           13,
-          2
-        ],
-        [
-          "Larissa Pereira Niehues",
-          25,
           2
         ],
         [
@@ -442,7 +442,7 @@
       18,
       "partial",
       "",
-      1
+      2
     ],
     [
       8,
