@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "07/08/2026 10:38",
+    "atualizado_em": "07/08/2026 11:08",
     "status_dias": "Dias 1 à 7 confirmados · Dia 7 parcial · Dias 8 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 75,
+    "kpi_realizado": 87,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 6)",
-    "kpi_realizado_delta": "▲ 19,2% do total previsto",
+    "kpi_realizado_delta": "▲ 22,3% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -83,9 +83,9 @@
       "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 16,
-      "mes_atual_total": 17,
+      "mes_atual_total": 29,
       "dias_confirmados_lbl": "dias 1 - 7",
-      "dias_confirmados_val": 17,
+      "dias_confirmados_val": 29,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -95,6 +95,11 @@
       "destaque_txt": "⚡ Estevam (30), Tiago (29), Israel (17) e Patrícia (15) responderam por 91 das 114 vendas do grupo em julho. A previsão preserva essa produção histórica, independentemente do status atual na lista de trabalho.",
       "atencao_txt": "⚠️ O resultado do grupo é concentrado: os quatro principais vendedores representaram 80% do volume de julho. Confirmar disponibilidade e distribuir oportunidades reduz o risco de dependência no mês.",
       "sellers": [
+        [
+          "Tayna Inácia de Melo",
+          0,
+          13
+        ],
         [
           "Israel Riella",
           17,
@@ -118,11 +123,6 @@
         [
           "Tiago Melo da Silva",
           29,
-          1
-        ],
-        [
-          "Tayna Inácia de Melo",
-          0,
           1
         ],
         [
@@ -432,7 +432,7 @@
       16,
       "real",
       "",
-      9
+      21
     ],
     [
       7,
