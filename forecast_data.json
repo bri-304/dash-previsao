@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "07/08/2026 12:08",
+    "atualizado_em": "07/08/2026 12:38",
     "status_dias": "Dias 1 à 7 confirmados · Dia 7 parcial · Dias 8 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -83,9 +83,9 @@
       "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 16,
-      "mes_atual_total": 30,
+      "mes_atual_total": 31,
       "dias_confirmados_lbl": "dias 1 - 7",
-      "dias_confirmados_val": 30,
+      "dias_confirmados_val": 31,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -116,6 +116,11 @@
           4
         ],
         [
+          "Patrícia Lúcio Custódio",
+          15,
+          2
+        ],
+        [
           "Elisângela Arias",
           1,
           2
@@ -123,11 +128,6 @@
         [
           "Tiago Melo da Silva",
           29,
-          1
-        ],
-        [
-          "Patrícia Lúcio Custódio",
-          15,
           1
         ],
         [
@@ -224,9 +224,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 5,
-      "mes_atual_total": 28,
+      "mes_atual_total": 27,
       "dias_confirmados_lbl": "dias 1 - 7",
-      "dias_confirmados_val": 28,
+      "dias_confirmados_val": 27,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -239,7 +239,7 @@
         [
           "Stella Nieheus",
           17,
-          24
+          23
         ],
         [
           "Ketlin Madeira Colombo",
