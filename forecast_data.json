@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "10/08/2026 18:38",
+    "atualizado_em": "10/08/2026 19:08",
     "status_dias": "Dias 1 à 10 confirmados · Dia 10 parcial · Dias 11 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 113,
+    "kpi_realizado": 119,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 9)",
-    "kpi_realizado_delta": "▲ 29% do total previsto",
+    "kpi_realizado_delta": "▲ 30,5% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -38,11 +38,11 @@
   "times": {
     "gui": {
       "ativos": 1,
-      "mes_passado_total": 16,
+      "mes_passado_total": 15,
       "mes_passado": 8,
-      "mes_atual_total": 3,
+      "mes_atual_total": 4,
       "dias_confirmados_lbl": "dias 1 - 10",
-      "dias_confirmados_val": 3,
+      "dias_confirmados_val": 4,
       "prev_atual": "17",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -58,8 +58,13 @@
           2
         ],
         [
+          "Natalia Oliveira Katrip",
+          1,
+          1
+        ],
+        [
           "Guilherme Lopes Machado",
-          9,
+          8,
           1
         ],
         [
@@ -70,11 +75,6 @@
         [
           "Gabriel Antonio Bittencourt",
           3,
-          0
-        ],
-        [
-          "Natalia Oliveira Katrip",
-          1,
           0
         ]
       ]
@@ -224,9 +224,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 15,
-      "mes_atual_total": 28,
+      "mes_atual_total": 33,
       "dias_confirmados_lbl": "dias 1 - 10",
-      "dias_confirmados_val": 28,
+      "dias_confirmados_val": 33,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -242,6 +242,11 @@
           22
         ],
         [
+          "Bruna Letícia Corrêa Barbosa",
+          7,
+          7
+        ],
+        [
           "Ketlin Madeira Colombo",
           6,
           2
@@ -249,11 +254,6 @@
         [
           "Guilherme Carvalho Rodrigues",
           6,
-          2
-        ],
-        [
-          "Bruna Letícia Corrêa Barbosa",
-          7,
           2
         ],
         [
@@ -472,7 +472,7 @@
       14,
       "partial",
       "Semana operacional completa",
-      15
+      21
     ],
     [
       11,
