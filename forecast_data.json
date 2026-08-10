@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "10/08/2026 16:08",
+    "atualizado_em": "10/08/2026 16:38",
     "status_dias": "Dias 1 à 10 confirmados · Dia 10 parcial · Dias 11 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 106,
+    "kpi_realizado": 109,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 9)",
-    "kpi_realizado_delta": "▲ 27,2% do total previsto",
+    "kpi_realizado_delta": "▲ 27,9% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -83,9 +83,9 @@
       "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 28,
-      "mes_atual_total": 41,
+      "mes_atual_total": 43,
       "dias_confirmados_lbl": "dias 1 - 10",
-      "dias_confirmados_val": 41,
+      "dias_confirmados_val": 43,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -103,17 +103,17 @@
         [
           "Patrícia Lúcio Custódio",
           15,
-          9
+          10
+        ],
+        [
+          "Israel Riella",
+          17,
+          5
         ],
         [
           "Bruno Ramos Martins",
           6,
           5
-        ],
-        [
-          "Israel Riella",
-          17,
-          4
         ],
         [
           "Estevam Silverio Tavares",
@@ -224,9 +224,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 15,
-      "mes_atual_total": 27,
+      "mes_atual_total": 28,
       "dias_confirmados_lbl": "dias 1 - 10",
-      "dias_confirmados_val": 27,
+      "dias_confirmados_val": 28,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -239,7 +239,7 @@
         [
           "Stella Nieheus",
           17,
-          21
+          22
         ],
         [
           "Ketlin Madeira Colombo",
@@ -472,7 +472,7 @@
       14,
       "partial",
       "Semana operacional completa",
-      8
+      11
     ],
     [
       11,
