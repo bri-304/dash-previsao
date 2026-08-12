@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "11/08/2026 22:08",
+    "atualizado_em": "11/08/2026 22:38",
     "status_dias": "Dias 1 à 11 confirmados · Dia 11 parcial · Dias 12 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 129,
+    "kpi_realizado": 130,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 10)",
-    "kpi_realizado_delta": "▲ 33,1% do total previsto",
+    "kpi_realizado_delta": "▲ 33,3% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -83,9 +83,9 @@
       "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 29,
-      "mes_atual_total": 48,
+      "mes_atual_total": 49,
       "dias_confirmados_lbl": "dias 1 - 11",
-      "dias_confirmados_val": 48,
+      "dias_confirmados_val": 49,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -108,7 +108,7 @@
         [
           "Bruno Ramos Martins",
           6,
-          7
+          8
         ],
         [
           "Israel Riella",
@@ -482,7 +482,7 @@
       19,
       "partial",
       "",
-      10
+      11
     ],
     [
       12,
