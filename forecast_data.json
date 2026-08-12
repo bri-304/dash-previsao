@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "12/08/2026 12:08",
+    "atualizado_em": "12/08/2026 12:38",
     "status_dias": "Dias 1 à 12 confirmados · Dia 12 parcial · Dias 13 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,16 +9,16 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 139,
+    "kpi_realizado": 140,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 11)",
-    "kpi_realizado_delta": "▲ 35,6% do total previsto",
+    "kpi_realizado_delta": "▲ 35,9% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
     "kpi_yoy_sub": "370 central vs 401 em agosto/2025",
-    "kpi_ativos": 26,
+    "kpi_ativos": 0,
     "kpi_ativos_sub": "em 3 times competindo",
-    "kpi_inativos_delta": "▼ 11 inativos / férias",
+    "kpi_inativos_delta": "▼ 0 inativos / férias",
     "page_title": "Forecast Agosto 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Agosto 2026",
     "badge_consoliga": "🏁 CONSOLIGA T1 · Fase Final · Agosto/2026",
@@ -83,9 +83,9 @@
       "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 29,
-      "mes_atual_total": 53,
+      "mes_atual_total": 54,
       "dias_confirmados_lbl": "dias 1 - 12",
-      "dias_confirmados_val": 53,
+      "dias_confirmados_val": 54,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -101,13 +101,13 @@
           13
         ],
         [
-          "Patrícia Lúcio Custódio",
-          15,
-          10
-        ],
-        [
           "Bruno Ramos Martins",
           6,
+          11
+        ],
+        [
+          "Patrícia Lúcio Custódio",
+          15,
           10
         ],
         [
@@ -492,7 +492,7 @@
       20,
       "partial",
       "",
-      9
+      10
     ],
     [
       13,
