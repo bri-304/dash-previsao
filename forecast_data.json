@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "11/08/2026 23:08",
-    "status_dias": "Dias 1 à 11 confirmados · Dia 11 parcial · Dias 12 à 31 com intervalo de confiança",
+    "atualizado_em": "12/08/2026 07:08",
+    "status_dias": "Dias 1 à 12 confirmados · Dia 12 parcial · Dias 13 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
     "kpi_total_otim": 425,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 130,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 10)",
-    "kpi_realizado_delta": "▲ 33,3% do total previsto",
+    "kpi_realizado": 131,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 11)",
+    "kpi_realizado_delta": "▲ 33,6% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -41,7 +41,7 @@
       "mes_passado_total": 15,
       "mes_passado": 8,
       "mes_atual_total": 4,
-      "dias_confirmados_lbl": "dias 1 - 11",
+      "dias_confirmados_lbl": "dias 1 - 12",
       "dias_confirmados_val": 4,
       "prev_atual": "17",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
@@ -84,7 +84,7 @@
       "mes_passado_total": 107,
       "mes_passado": 29,
       "mes_atual_total": 49,
-      "dias_confirmados_lbl": "dias 1 - 11",
+      "dias_confirmados_lbl": "dias 1 - 12",
       "dias_confirmados_val": 49,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 52,
-      "mes_atual_total": 38,
-      "dias_confirmados_lbl": "dias 1 - 11",
-      "dias_confirmados_val": 38,
+      "mes_atual_total": 39,
+      "dias_confirmados_lbl": "dias 1 - 12",
+      "dias_confirmados_val": 39,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -174,13 +174,13 @@
           5
         ],
         [
-          "Larissa Pereira Niehues",
-          25,
-          4
-        ],
-        [
           "Adriérre Marcon",
           29,
+          5
+        ],
+        [
+          "Larissa Pereira Niehues",
+          25,
           4
         ],
         [
@@ -225,7 +225,7 @@
       "mes_passado_total": 55,
       "mes_passado": 16,
       "mes_atual_total": 39,
-      "dias_confirmados_lbl": "dias 1 - 11",
+      "dias_confirmados_lbl": "dias 1 - 12",
       "dias_confirmados_val": 39,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
@@ -480,7 +480,7 @@
       17,
       15,
       19,
-      "partial",
+      "real",
       "",
       11
     ],
@@ -490,9 +490,9 @@
       18,
       16,
       20,
-      "work",
+      "partial",
       "",
-      null
+      1
     ],
     [
       13,
