@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "13/08/2026 10:08",
+    "atualizado_em": "13/08/2026 10:38",
     "status_dias": "Dias 1 à 13 confirmados · Dia 13 parcial · Dias 14 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -16,9 +16,9 @@
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
     "kpi_yoy_sub": "370 central vs 401 em agosto/2025",
-    "kpi_ativos": 26,
+    "kpi_ativos": 0,
     "kpi_ativos_sub": "em 3 times competindo",
-    "kpi_inativos_delta": "▼ 11 inativos / férias",
+    "kpi_inativos_delta": "▼ 0 inativos / férias",
     "page_title": "Forecast Agosto 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Agosto 2026",
     "badge_consoliga": "🏁 CONSOLIGA T1 · Fase Final · Agosto/2026",
