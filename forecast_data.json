@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "13/08/2026 18:38",
+    "atualizado_em": "13/08/2026 19:08",
     "status_dias": "Dias 1 à 13 confirmados · Dia 13 parcial · Dias 14 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 161,
+    "kpi_realizado": 162,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 12)",
-    "kpi_realizado_delta": "▲ 41,3% do total previsto",
+    "kpi_realizado_delta": "▲ 41,5% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 65,
-      "mes_atual_total": 48,
+      "mes_atual_total": 49,
       "dias_confirmados_lbl": "dias 1 - 13",
-      "dias_confirmados_val": 48,
+      "dias_confirmados_val": 49,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -206,7 +206,7 @@
         [
           "Felipe Santos Leite",
           7,
-          0
+          1
         ],
         [
           "Danilo Tenfen",
@@ -502,7 +502,7 @@
       15,
       "partial",
       "",
-      11
+      12
     ],
     [
       14,
