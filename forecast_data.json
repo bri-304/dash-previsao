@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "14/08/2026 10:38",
+    "atualizado_em": "14/08/2026 11:08",
     "status_dias": "Dias 1 à 14 confirmados · Dia 14 parcial · Dias 15 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 164,
+    "kpi_realizado": 170,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 13)",
-    "kpi_realizado_delta": "▲ 42,1% do total previsto",
+    "kpi_realizado_delta": "▲ 43,6% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -40,9 +40,9 @@
       "ativos": 1,
       "mes_passado_total": 15,
       "mes_passado": 8,
-      "mes_atual_total": 8,
+      "mes_atual_total": 9,
       "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 8,
+      "dias_confirmados_val": 9,
       "prev_atual": "17",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -60,7 +60,7 @@
         [
           "Natalia Oliveira Katrip",
           1,
-          1
+          2
         ],
         [
           "Lorena Cristina Domingos Pereira",
@@ -83,9 +83,9 @@
       "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 38,
-      "mes_atual_total": 62,
+      "mes_atual_total": 64,
       "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 62,
+      "dias_confirmados_val": 64,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -101,6 +101,11 @@
           13
         ],
         [
+          "Estevam Silverio Tavares",
+          30,
+          12
+        ],
+        [
           "Bruno Ramos Martins",
           6,
           11
@@ -108,11 +113,6 @@
         [
           "Patrícia Lúcio Custódio",
           15,
-          10
-        ],
-        [
-          "Estevam Silverio Tavares",
-          30,
           10
         ],
         [
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 71,
-      "mes_atual_total": 51,
+      "mes_atual_total": 54,
       "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 51,
+      "dias_confirmados_val": 54,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -179,6 +179,11 @@
           7
         ],
         [
+          "Makele de Souza Smania",
+          23,
+          6
+        ],
+        [
           "Larissa Pereira Niehues",
           25,
           6
@@ -187,11 +192,6 @@
           "Rafael Rodrigues Pedroso",
           8,
           5
-        ],
-        [
-          "Makele de Souza Smania",
-          23,
-          3
         ],
         [
           "Lisdaisy Vieira Costa",
@@ -502,7 +502,7 @@
       15,
       "real",
       "",
-      14
+      15
     ],
     [
       14,
@@ -510,9 +510,9 @@
       17,
       15,
       19,
-      "work",
+      "partial",
       "",
-      null
+      5
     ],
     [
       15,
