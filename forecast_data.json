@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "14/08/2026 17:08",
+    "atualizado_em": "14/08/2026 17:38",
     "status_dias": "Dias 1 à 14 confirmados · Dia 14 parcial · Dias 15 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,14 +9,14 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 180,
+    "kpi_realizado": 181,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 13)",
-    "kpi_realizado_delta": "▲ 46,2% do total previsto",
+    "kpi_realizado_delta": "▲ 46,4% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
     "kpi_yoy_sub": "370 central vs 401 em agosto/2025",
-    "kpi_ativos": 28,
+    "kpi_ativos": 29,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 9 inativos / férias",
     "page_title": "Forecast Agosto 2026 - Consolide",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 71,
-      "mes_atual_total": 59,
+      "mes_atual_total": 60,
       "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 59,
+      "dias_confirmados_val": 60,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -169,14 +169,14 @@
           17
         ],
         [
-          "Adriérre Marcon",
-          29,
+          "Iara da Silva Linhares",
+          15,
           9
         ],
         [
-          "Iara da Silva Linhares",
-          15,
-          8
+          "Adriérre Marcon",
+          29,
+          9
         ],
         [
           "Makele de Souza Smania",
@@ -512,7 +512,7 @@
       19,
       "partial",
       "",
-      14
+      15
     ],
     [
       15,
