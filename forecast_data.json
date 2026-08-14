@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "14/08/2026 11:08",
+    "atualizado_em": "14/08/2026 11:38",
     "status_dias": "Dias 1 à 14 confirmados · Dia 14 parcial · Dias 15 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 170,
+    "kpi_realizado": 172,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 13)",
-    "kpi_realizado_delta": "▲ 43,6% do total previsto",
+    "kpi_realizado_delta": "▲ 44,1% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -40,9 +40,9 @@
       "ativos": 1,
       "mes_passado_total": 15,
       "mes_passado": 8,
-      "mes_atual_total": 9,
+      "mes_atual_total": 10,
       "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 9,
+      "dias_confirmados_val": 10,
       "prev_atual": "17",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -60,7 +60,7 @@
         [
           "Natalia Oliveira Katrip",
           1,
-          2
+          3
         ],
         [
           "Lorena Cristina Domingos Pereira",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 71,
-      "mes_atual_total": 54,
+      "mes_atual_total": 55,
       "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 54,
+      "dias_confirmados_val": 55,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -176,7 +176,7 @@
         [
           "Adriérre Marcon",
           29,
-          7
+          8
         ],
         [
           "Makele de Souza Smania",
@@ -512,7 +512,7 @@
       19,
       "partial",
       "",
-      5
+      7
     ],
     [
       15,
