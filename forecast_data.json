@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/08/2026 16:08",
+    "atualizado_em": "17/08/2026 16:38",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 186,
+    "kpi_realizado": 189,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 16)",
-    "kpi_realizado_delta": "▲ 47,7% do total previsto",
+    "kpi_realizado_delta": "▲ 48,5% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 99,
-      "mes_atual_total": 63,
+      "mes_atual_total": 65,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 63,
+      "dias_confirmados_val": 65,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -201,7 +201,7 @@
         [
           "Felipe Santos Leite",
           7,
-          2
+          4
         ],
         [
           "Aline Cristina da Silva",
@@ -224,9 +224,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 26,
-      "mes_atual_total": 46,
+      "mes_atual_total": 47,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 46,
+      "dias_confirmados_val": 47,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -259,7 +259,7 @@
         [
           "Josilea de Melo Rocha",
           10,
-          1
+          2
         ],
         [
           "Elison da Silva Elias",
@@ -542,7 +542,7 @@
       14,
       "partial",
       "Aceleração de oportunidades e documentação",
-      3
+      6
     ],
     [
       18,
