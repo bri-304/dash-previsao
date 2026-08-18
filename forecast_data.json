@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "18/08/2026 15:38",
+    "atualizado_em": "18/08/2026 16:08",
     "status_dias": "Dias 1 à 18 confirmados · Dia 18 parcial · Dias 19 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 194,
+    "kpi_realizado": 196,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 17)",
-    "kpi_realizado_delta": "▲ 49,7% do total previsto",
+    "kpi_realizado_delta": "▲ 50,3% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -40,9 +40,9 @@
       "ativos": 1,
       "mes_passado_total": 15,
       "mes_passado": 9,
-      "mes_atual_total": 11,
+      "mes_atual_total": 12,
       "dias_confirmados_lbl": "dias 1 - 18",
-      "dias_confirmados_val": 11,
+      "dias_confirmados_val": 12,
       "prev_atual": "17",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -55,7 +55,7 @@
         [
           "Carla Cristina Ferreira Siqueira",
           0,
-          4
+          5
         ],
         [
           "Natalia Oliveira Katrip",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 99,
-      "mes_atual_total": 68,
+      "mes_atual_total": 69,
       "dias_confirmados_lbl": "dias 1 - 18",
-      "dias_confirmados_val": 68,
+      "dias_confirmados_val": 69,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -176,7 +176,7 @@
         [
           "Adriérre Marcon",
           29,
-          9
+          10
         ],
         [
           "Makele de Souza Smania",
@@ -552,7 +552,7 @@
       18,
       "partial",
       "",
-      2
+      4
     ],
     [
       19,
