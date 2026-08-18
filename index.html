@@ -200,8 +200,79 @@ tr:hover td{background:var(--card2)}
 .fade-in{opacity:0;animation:fadeUp .5s ease forwards}
 .d1{animation-delay:.05s}.d2{animation-delay:.1s}.d3{animation-delay:.15s}.d4{animation-delay:.2s}.d5{animation-delay:.25s}.d6{animation-delay:.3s}
 ::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
-@media(max-width:1100px){.kpi-strip{grid-template-columns:repeat(3,1fr)}.teams-grid{grid-template-columns:1fr}.method-box{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:720px){.wrap{padding:14px}.kpi-strip{grid-template-columns:repeat(2,1fr)}.week-grid{grid-template-columns:repeat(2,1fr)}.strat-grid,.copa-grid,.risk-grid{grid-template-columns:1fr}}
+/* ===================== RESPONSIVO ===================== */
+@media(max-width:1100px){
+  .kpi-strip{grid-template-columns:repeat(3,1fr)}
+  .teams-grid{grid-template-columns:1fr}
+  .method-box{grid-template-columns:repeat(2,1fr)}
+}
+
+/* header deixa de ser uma linha unica e passa a quebrar */
+@media(max-width:860px){
+  .hdr{flex-wrap:wrap;gap:10px;padding:12px 16px}
+  .hdr-r{width:100%;flex-wrap:wrap}
+}
+
+@media(max-width:720px){
+  .wrap{padding:14px}
+  .kpi-strip{grid-template-columns:repeat(2,1fr)}
+  .week-grid{grid-template-columns:repeat(2,1fr)}
+  .strat-grid,.copa-grid,.risk-grid{grid-template-columns:1fr}
+
+  /* tabela diaria: rola na horizontal em vez de espremer as colunas */
+  .tbl-content{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tbl-content table{min-width:680px}
+  td,th{padding-left:10px;padding-right:10px}
+  .td-event{max-width:150px}
+
+  /* grafico: so o canvas rola na horizontal, legenda e nota ficam paradas */
+  .chart-box{padding:16px}
+  .chart-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -16px;padding:0 16px}
+  .chart-canvas{min-width:660px;height:300px}
+}
+
+@media(max-width:560px){
+  /* header solto no topo (nao gruda) para nao roubar altura de tela */
+  .hdr{position:static;align-items:flex-start;padding:10px 14px}
+  .hdr-l{gap:10px;align-items:flex-start}
+  .hdr-title{font-size:16px;line-height:1.15}
+  .hdr-sub{font-size:9px;line-height:1.45;margin-top:3px}
+  .logo{font-size:12px;letter-spacing:1.5px;padding:4px 8px}
+  .badge{font-size:10px;padding:3px 7px;letter-spacing:.5px}
+  .periodo-sel{font-size:16px;padding:6px 10px} /* 16px evita o zoom automatico do iOS */
+
+  /* KPI: o card de total (com faixa min-central-max) ocupa a linha inteira */
+  .kpi-strip{gap:8px}
+  .kpi{padding:12px 13px}
+  .kpi-strip .kpi:first-child{grid-column:1 / -1}
+  .kpi-lbl{font-size:9px;letter-spacing:1px}
+  .kpi-val{font-size:30px}
+  .range-c{font-size:34px}
+  .range-lo,.range-hi{font-size:17px}
+  .range-wrap{column-gap:4px}
+
+  .method-box{grid-template-columns:1fr;padding:12px 14px}
+  .week-num{font-size:30px}
+  .tn{padding:10px 12px}
+  .tn-val{font-size:21px}
+  .perf-name{flex:0 0 88px;font-size:10px}
+  .team-hdr{padding:12px 14px}
+  .perf-list{padding:12px 14px}
+  .team-alert,.team-ok{margin-left:14px;margin-right:14px}
+  .chart-title{font-size:16px}
+  .chart-note{font-size:10px}
+  .strat-n{font-size:34px}
+  .strat-card{padding:16px}
+  .sec-title{letter-spacing:2px}
+  .tbl-toggle{font-size:12px;padding:12px 14px;gap:10px}
+  .footer{padding:20px 14px}
+}
+
+/* celulares estreitos: tudo em coluna unica */
+@media(max-width:400px){
+  .kpi-strip,.week-grid{grid-template-columns:1fr}
+  .kpi-val,.range-c{font-size:32px}
+}
 </style>
 </head>
 <body>
@@ -374,7 +445,7 @@ tr:hover td{background:var(--card2)}
     Cada dia exibe <strong>duas barras sobrepostas</strong>: a <strong>barra larga semitransparente</strong> representa a previsão central (todos os dias); a <strong>barra estreita e sólida</strong> (verde/âmbar) aparece apenas nos dias com vendas confirmadas ou parciais.
     A faixa tracejada é o intervalo de confiança (mín–máx). · Acumulado no eixo direito (laranja).
   </div>
-  <div class="chart-canvas"><canvas id="mainChart"></canvas></div>
+    <div class="chart-scroll"><div class="chart-canvas"><canvas id="mainChart"></canvas></div></div>
 </div>
 
 <!-- WEEKLY -->
