@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "19/08/2026 13:38",
+    "atualizado_em": "19/08/2026 14:08",
     "status_dias": "Dias 1 à 19 confirmados · Dia 19 parcial · Dias 20 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 206,
+    "kpi_realizado": 207,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 18)",
-    "kpi_realizado_delta": "▲ 52,8% do total previsto",
+    "kpi_realizado_delta": "▲ 53,1% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -224,9 +224,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 29,
-      "mes_atual_total": 50,
+      "mes_atual_total": 51,
       "dias_confirmados_lbl": "dias 1 - 19",
-      "dias_confirmados_val": 50,
+      "dias_confirmados_val": 51,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -244,7 +244,7 @@
         [
           "Bruna Letícia Corrêa Barbosa",
           7,
-          11
+          12
         ],
         [
           "Guilherme Carvalho Rodrigues",
@@ -562,7 +562,7 @@
       19,
       "partial",
       "",
-      6
+      7
     ],
     [
       20,
