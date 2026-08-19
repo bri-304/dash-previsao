@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "19/08/2026 10:38",
+    "atualizado_em": "19/08/2026 11:08",
     "status_dias": "Dias 1 à 19 confirmados · Dia 19 parcial · Dias 20 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 99,
-      "mes_atual_total": 69,
+      "mes_atual_total": 70,
       "dias_confirmados_lbl": "dias 1 - 19",
-      "dias_confirmados_val": 69,
+      "dias_confirmados_val": 70,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -181,7 +181,7 @@
         [
           "Makele de Souza Smania",
           23,
-          7
+          8
         ],
         [
           "Larissa Pereira Niehues",
@@ -224,9 +224,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 29,
-      "mes_atual_total": 50,
+      "mes_atual_total": 49,
       "dias_confirmados_lbl": "dias 1 - 19",
-      "dias_confirmados_val": 50,
+      "dias_confirmados_val": 49,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -249,7 +249,7 @@
         [
           "Guilherme Carvalho Rodrigues",
           6,
-          5
+          4
         ],
         [
           "Ketlin Madeira Colombo",
@@ -432,7 +432,7 @@
       16,
       "real",
       "",
-      21
+      20
     ],
     [
       7,
@@ -562,7 +562,7 @@
       19,
       "partial",
       "",
-      2
+      3
     ],
     [
       20,
