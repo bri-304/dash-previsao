@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "20/08/2026 16:38",
+    "atualizado_em": "20/08/2026 17:08",
     "status_dias": "Dias 1 à 20 confirmados · Dia 20 parcial · Dias 21 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -96,6 +96,11 @@
       "atencao_txt": "⚠️ O resultado do grupo é concentrado: os quatro principais vendedores representaram 80% do volume de julho. Confirmar disponibilidade e distribuir oportunidades reduz o risco de dependência no mês.",
       "sellers": [
         [
+          "Bruno Ramos Martins",
+          6,
+          14
+        ],
+        [
           "Tayna Inácia de Melo",
           0,
           13
@@ -106,23 +111,18 @@
           13
         ],
         [
-          "Bruno Ramos Martins",
-          6,
-          13
-        ],
-        [
           "Patrícia Lúcio Custódio",
           15,
           10
         ],
         [
-          "Israel Riella",
-          17,
-          9
-        ],
-        [
           "Tiago Melo da Silva",
           29,
+          8
+        ],
+        [
+          "Israel Riella",
+          17,
           8
         ],
         [
