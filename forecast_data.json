@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "25/08/2026 09:38",
+    "atualizado_em": "25/08/2026 10:08",
     "status_dias": "Dias 1 à 25 confirmados · Dia 25 parcial · Dias 26 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 253,
+    "kpi_realizado": 254,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 24)",
-    "kpi_realizado_delta": "▲ 64,9% do total previsto",
+    "kpi_realizado_delta": "▲ 65,1% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 133,
-      "mes_atual_total": 88,
+      "mes_atual_total": 89,
       "dias_confirmados_lbl": "dias 1 - 25",
-      "dias_confirmados_val": 88,
+      "dias_confirmados_val": 89,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -191,7 +191,7 @@
         [
           "Larissa Pereira Niehues",
           25,
-          8
+          9
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -620,9 +620,9 @@
       17,
       15,
       19,
-      "work",
+      "partial",
       "",
-      null
+      1
     ],
     [
       26,
