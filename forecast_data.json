@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "25/08/2026 17:08",
+    "atualizado_em": "25/08/2026 17:38",
     "status_dias": "Dias 1 à 25 confirmados · Dia 25 parcial · Dias 26 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 273,
+    "kpi_realizado": 275,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 24)",
-    "kpi_realizado_delta": "▲ 70% do total previsto",
+    "kpi_realizado_delta": "▲ 70,5% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 133,
-      "mes_atual_total": 98,
+      "mes_atual_total": 100,
       "dias_confirmados_lbl": "dias 1 - 25",
-      "dias_confirmados_val": 98,
+      "dias_confirmados_val": 100,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -174,14 +174,14 @@
           19
         ],
         [
+          "Makele de Souza Smania",
+          23,
+          13
+        ],
+        [
           "Iara da Silva Linhares",
           15,
           12
-        ],
-        [
-          "Makele de Souza Smania",
-          23,
-          11
         ],
         [
           "Larissa Pereira Niehues",
@@ -622,7 +622,7 @@
       19,
       "partial",
       "",
-      20
+      22
     ],
     [
       26,
