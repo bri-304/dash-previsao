@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "26/08/2026 18:38",
+    "atualizado_em": "26/08/2026 19:08",
     "status_dias": "Dias 1 à 26 confirmados · Dia 26 parcial · Dias 27 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 289,
+    "kpi_realizado": 294,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 25)",
-    "kpi_realizado_delta": "▲ 74,1% do total previsto",
+    "kpi_realizado_delta": "▲ 75,4% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -83,9 +83,9 @@
       "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 82,
-      "mes_atual_total": 92,
+      "mes_atual_total": 95,
       "dias_confirmados_lbl": "dias 1 - 26",
-      "dias_confirmados_val": 92,
+      "dias_confirmados_val": 95,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -118,7 +118,7 @@
         [
           "Patrícia Lúcio Custódio",
           15,
-          10
+          13
         ],
         [
           "Tiago Melo da Silva",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 133,
-      "mes_atual_total": 108,
+      "mes_atual_total": 109,
       "dias_confirmados_lbl": "dias 1 - 26",
-      "dias_confirmados_val": 108,
+      "dias_confirmados_val": 109,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -191,7 +191,7 @@
         [
           "Lisdaisy Vieira Costa",
           13,
-          10
+          11
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -224,9 +224,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 44,
-      "mes_atual_total": 74,
+      "mes_atual_total": 75,
       "dias_confirmados_lbl": "dias 1 - 26",
-      "dias_confirmados_val": 74,
+      "dias_confirmados_val": 75,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -239,7 +239,7 @@
         [
           "Stella Nieheus",
           17,
-          37
+          38
         ],
         [
           "Bruna Letícia Corrêa Barbosa",
@@ -632,7 +632,7 @@
       20,
       "partial",
       "",
-      11
+      16
     ],
     [
       27,
