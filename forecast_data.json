@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "27/08/2026 11:38",
+    "atualizado_em": "27/08/2026 12:08",
     "status_dias": "Dias 1 à 27 confirmados · Dia 27 parcial · Dias 28 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 298,
+    "kpi_realizado": 301,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 26)",
-    "kpi_realizado_delta": "▲ 76,4% do total previsto",
+    "kpi_realizado_delta": "▲ 77,2% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -40,9 +40,9 @@
       "ativos": 1,
       "mes_passado_total": 15,
       "mes_passado": 10,
-      "mes_atual_total": 16,
+      "mes_atual_total": 17,
       "dias_confirmados_lbl": "dias 1 - 27",
-      "dias_confirmados_val": 16,
+      "dias_confirmados_val": 17,
       "prev_atual": "17",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -68,14 +68,14 @@
           3
         ],
         [
-          "Guilherme Lopes Machado",
-          8,
+          "Lorena Cristina Domingos Pereira",
+          3,
           2
         ],
         [
-          "Lorena Cristina Domingos Pereira",
-          3,
-          1
+          "Guilherme Lopes Machado",
+          8,
+          2
         ]
       ]
     },
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 142,
-      "mes_atual_total": 111,
+      "mes_atual_total": 112,
       "dias_confirmados_lbl": "dias 1 - 27",
-      "dias_confirmados_val": 111,
+      "dias_confirmados_val": 112,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -179,6 +179,11 @@
           16
         ],
         [
+          "Lisdaisy Vieira Costa",
+          13,
+          12
+        ],
+        [
           "Larissa Pereira Niehues",
           25,
           12
@@ -187,11 +192,6 @@
           "Iara da Silva Linhares",
           15,
           12
-        ],
-        [
-          "Lisdaisy Vieira Costa",
-          13,
-          11
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -224,9 +224,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 46,
-      "mes_atual_total": 75,
+      "mes_atual_total": 76,
       "dias_confirmados_lbl": "dias 1 - 27",
-      "dias_confirmados_val": 75,
+      "dias_confirmados_val": 76,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -242,14 +242,14 @@
           38
         ],
         [
-          "Bruna Letícia Corrêa Barbosa",
-          7,
+          "Josilea de Melo Rocha",
+          10,
           13
         ],
         [
-          "Josilea de Melo Rocha",
-          10,
-          12
+          "Bruna Letícia Corrêa Barbosa",
+          7,
+          13
         ],
         [
           "Ketlin Madeira Colombo",
@@ -642,7 +642,7 @@
       16,
       "partial",
       "Divulgação de ranking e preparação do sprint",
-      2
+      5
     ],
     [
       28,
