@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "28/08/2026 09:38",
+    "atualizado_em": "28/08/2026 10:08",
     "status_dias": "Dias 1 à 28 confirmados · Dia 28 parcial · Dias 29 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 317,
+    "kpi_realizado": 319,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 27)",
-    "kpi_realizado_delta": "▲ 81,3% do total previsto",
+    "kpi_realizado_delta": "▲ 81,8% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -151,9 +151,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 146,
-      "mes_atual_total": 123,
+      "mes_atual_total": 124,
       "dias_confirmados_lbl": "dias 1 - 28",
-      "dias_confirmados_val": 123,
+      "dias_confirmados_val": 124,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -166,7 +166,7 @@
         [
           "Maria Aline da Silva Ferreira",
           33,
-          33
+          34
         ],
         [
           "Adriérre Marcon",
@@ -224,9 +224,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 49,
-      "mes_atual_total": 77,
+      "mes_atual_total": 78,
       "dias_confirmados_lbl": "dias 1 - 28",
-      "dias_confirmados_val": 77,
+      "dias_confirmados_val": 78,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -242,14 +242,14 @@
           38
         ],
         [
-          "Bruna Letícia Corrêa Barbosa",
-          7,
+          "Josilea de Melo Rocha",
+          10,
           14
         ],
         [
-          "Josilea de Melo Rocha",
-          10,
-          13
+          "Bruna Letícia Corrêa Barbosa",
+          7,
+          14
         ],
         [
           "Ketlin Madeira Colombo",
@@ -650,9 +650,9 @@
       20,
       18,
       23,
-      "sprint",
+      "partial",
       "Início do sprint final",
-      null
+      2
     ],
     [
       29,
