@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "29/08/2026 11:38",
+    "atualizado_em": "29/08/2026 12:08",
     "status_dias": "Dias 1 à 29 confirmados · Dia 29 parcial · Dias 30 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 340,
+    "kpi_realizado": 342,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 28)",
-    "kpi_realizado_delta": "▲ 87,2% do total previsto",
+    "kpi_realizado_delta": "▲ 87,7% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -229,9 +229,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 51,
-      "mes_atual_total": 84,
+      "mes_atual_total": 86,
       "dias_confirmados_lbl": "dias 1 - 29",
-      "dias_confirmados_val": 84,
+      "dias_confirmados_val": 86,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -247,13 +247,13 @@
           39
         ],
         [
-          "Josilea de Melo Rocha",
-          10,
-          14
-        ],
-        [
           "Bruna Letícia Corrêa Barbosa",
           7,
+          15
+        ],
+        [
+          "Josilea de Melo Rocha",
+          10,
           14
         ],
         [
@@ -264,7 +264,7 @@
         [
           "Elison da Silva Elias",
           8,
-          5
+          6
         ],
         [
           "Guilherme Carvalho Rodrigues",
@@ -667,7 +667,7 @@
       9,
       "partial",
       "Sprint final ConsoLiga",
-      1
+      3
     ],
     [
       30,
