@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "31/08/2026 15:08",
+    "atualizado_em": "31/08/2026 15:38",
     "status_dias": "Dias 1 à 31 confirmados · Dia 31 parcial · Dias 32 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 348,
+    "kpi_realizado": 350,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
-    "kpi_realizado_delta": "▲ 89,2% do total previsto",
+    "kpi_realizado_delta": "▲ 89,7% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -40,9 +40,9 @@
       "ativos": 1,
       "mes_passado_total": 15,
       "mes_passado": 15,
-      "mes_atual_total": 24,
+      "mes_atual_total": 25,
       "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 24,
+      "dias_confirmados_val": 25,
       "prev_atual": "17",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -58,6 +58,11 @@
           8
         ],
         [
+          "Lorena Cristina Domingos Pereira",
+          3,
+          5
+        ],
+        [
           "Gabriel Antonio Bittencourt",
           3,
           5
@@ -65,11 +70,6 @@
         [
           "Natalia Oliveira Katrip",
           1,
-          4
-        ],
-        [
-          "Lorena Cristina Domingos Pereira",
-          3,
           4
         ],
         [
@@ -229,9 +229,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 55,
-      "mes_atual_total": 86,
+      "mes_atual_total": 87,
       "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 86,
+      "dias_confirmados_val": 87,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -244,7 +244,7 @@
         [
           "Stella Nieheus",
           17,
-          39
+          40
         ],
         [
           "Bruna Letícia Corrêa Barbosa",
@@ -687,7 +687,7 @@
       28,
       "partial",
       "Fechamento da final da Temporada 1",
-      4
+      6
     ]
   ],
   "sugestoes": [
