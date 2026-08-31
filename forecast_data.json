@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "31/08/2026 19:08",
+    "atualizado_em": "31/08/2026 19:38",
     "status_dias": "Dias 1 à 31 confirmados · Dia 31 parcial · Dias 32 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 359,
+    "kpi_realizado": 363,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
-    "kpi_realizado_delta": "▲ 92,1% do total previsto",
+    "kpi_realizado_delta": "▲ 93,1% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -88,9 +88,9 @@
       "ativos": 11,
       "mes_passado_total": 107,
       "mes_passado": 107,
-      "mes_atual_total": 114,
+      "mes_atual_total": 115,
       "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 114,
+      "dias_confirmados_val": 115,
       "prev_atual": "115",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -128,7 +128,7 @@
         [
           "Tiago Melo da Silva",
           29,
-          10
+          11
         ],
         [
           "Noemi da Silva Penafort da Costa",
@@ -156,9 +156,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 166,
-      "mes_atual_total": 132,
+      "mes_atual_total": 134,
       "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 132,
+      "dias_confirmados_val": 134,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -171,7 +171,7 @@
         [
           "Maria Aline da Silva Ferreira",
           33,
-          34
+          36
         ],
         [
           "Adriérre Marcon",
@@ -229,9 +229,9 @@
       "ativos": 7,
       "mes_passado_total": 55,
       "mes_passado": 55,
-      "mes_atual_total": 88,
+      "mes_atual_total": 89,
       "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 88,
+      "dias_confirmados_val": 89,
       "prev_atual": "59",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -269,7 +269,7 @@
         [
           "Guilherme Carvalho Rodrigues",
           6,
-          4
+          5
         ],
         [
           "Mirian Daiane Braga Felix",
@@ -687,7 +687,7 @@
       28,
       "partial",
       "Fechamento da final da Temporada 1",
-      15
+      19
     ]
   ],
   "sugestoes": [
