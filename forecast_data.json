@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "31/08/2026 17:38",
+    "atualizado_em": "31/08/2026 18:08",
     "status_dias": "Dias 1 à 31 confirmados · Dia 31 parcial · Dias 32 à 31 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 355,
+    "kpi_realizado": 356,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
-    "kpi_realizado_delta": "▲ 91% do total previsto",
+    "kpi_realizado_delta": "▲ 91,3% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -156,9 +156,9 @@
       "ativos": 14,
       "mes_passado_total": 166,
       "mes_passado": 166,
-      "mes_atual_total": 130,
+      "mes_atual_total": 131,
       "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 130,
+      "dias_confirmados_val": 131,
       "prev_atual": "179",
       "lbl_titulo_comp": "Jul. real vs Ago. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
@@ -176,7 +176,7 @@
         [
           "Adriérre Marcon",
           29,
-          20
+          21
         ],
         [
           "Makele de Souza Smania",
@@ -687,7 +687,7 @@
       28,
       "partial",
       "Fechamento da final da Temporada 1",
-      11
+      12
     ]
   ],
   "sugestoes": [
