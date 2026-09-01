@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "01/09/2026 09:49",
-     "status_dias": "Dias 1 à 31 confirmados",
+    "atualizado_em": "01/09/2026 10:08",
+    "status_dias": "Dia 1 confirmado · Dia 1 parcial · Dias 2 à 30 com intervalo de confiança",
     "kpi_total_pess": 320,
     "kpi_total_central": 357,
     "kpi_total_otim": 396,
@@ -19,50 +19,27 @@
     "kpi_ativos": 31,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 10 inativos / férias",
-    "page_title": "Forecast Agosto 2026 - Consolide",
-    "hdr_title_html": "Forecast de Vendas - Agosto 2026",
+    "page_title": "Forecast Setembro 2026 - Consolide",
+    "hdr_title_html": "Forecast de Vendas - Setembro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T1 · Fase Final · Agosto/2026",
     "badge_copa": "📅 Agosto/2026 · 21 dias úteis · sem feriados nacionais",
-    "kpi_total_sub": "vendas · Agosto/2026",
+    "kpi_total_sub": "vendas · Setembro/2026",
     "kpi_media_delta": "▲ +2,0 vs 15,0 jul/2026",
-    "kpi_yoy_lbl": "Percentual Previsto vs Agosto 2025",
+    "kpi_yoy_lbl": "Percentual Previsto vs Setembro 2025",
     "kpi_yoy_delta": "▲ crescimento YoY projetado",
-    "sec_title_previsao": "previsão diária com intervalo de confiança — Agosto 2026",
-    "chart_title_main": "Vendas por Dia · Agosto 2026",
-    "sec_title_teams": "desempenho por time — Julho real vs Agosto projetado",
-    "sec_title_sugestoes": "sugestões estratégicas para Agosto",
+    "sec_title_previsao": "previsão diária com intervalo de confiança — Setembro 2026",
+    "chart_title_main": "Vendas por Dia · Setembro 2026",
+    "sec_title_teams": "desempenho por time — Agosto real vs Setembro projetado",
+    "sec_title_sugestoes": "sugestões estratégicas para Setembro",
     "footer_linha1": "Consolide · Forecast Agosto 2026 com Intervalo de Confiança · Atualizado em 01/09/2026",
     "footer_linha2": "Método: Rolling Forecast ponderado + sazonalidade de agosto/2025 + pipeline real + capacidade por coorte/time + ConsoLiga + calendário e penalidade documental.",
     "footer_linha3": "Cenário pessimista: 320 · Central: 357 · Otimista: 396"
   },
   "times": {
-    "Alan Marcos": {
-      "ativos": 0,
-      "mes_passado_total": 0,
-      "mes_passado": 0,
-      "mes_atual_total": 0,
-      "dias_confirmados_lbl": "dias 1 - 1",
-      "dias_confirmados_val": 0,
-      "prev_atual": "",
-      "lbl_titulo_comp": "Ago. real vs Set. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
-      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
-      "leg_mes_passado": "Ago.",
-      "leg_mes_atual": "Set.",
-      "destaque_txt": "",
-      "atencao_txt": "",
-      "sellers": [
-        [
-          "Ivan Conti",
-          1,
-          0
-        ]
-      ]
-    },
     "gui": {
       "ativos": 1,
-      "mes_passado_total": 25,
-      "mes_passado": 0,
+      "mes_passado_total": 15,
+      "mes_passado": 15,
       "mes_atual_total": 25,
       "dias_confirmados_lbl": "dias 1 - 1",
       "dias_confirmados_val": 25,
@@ -77,40 +54,40 @@
       "sellers": [
         [
           "Carla Cristina Ferreira Siqueira",
-          8,
+          0,
           8
         ],
         [
           "Lorena Cristina Domingos Pereira",
-          5,
+          3,
           5
         ],
         [
           "Gabriel Antonio Bittencourt",
-          5,
+          3,
           5
         ],
         [
           "Natalia Oliveira Katrip",
-          4,
+          1,
           4
         ],
         [
           "Guilherme Lopes Machado",
-          2,
+          8,
           2
         ],
         [
           "Lucas Vinicius Morato",
-          1,
+          0,
           1
         ]
       ]
     },
     "isr": {
-      "ativos": 10,
-      "mes_passado_total": 116,
-      "mes_passado": 0,
+      "ativos": 11,
+      "mes_passado_total": 107,
+      "mes_passado": 107,
       "mes_atual_total": 116,
       "dias_confirmados_lbl": "dias 1 - 1",
       "dias_confirmados_val": 116,
@@ -125,55 +102,60 @@
       "sellers": [
         [
           "Bruno Ramos Martins",
-          22,
+          6,
           22
         ],
         [
           "Israel Riella",
-          20,
+          17,
           20
         ],
         [
           "Estevam Silverio Tavares",
-          20,
+          30,
           20
         ],
         [
           "Patrícia Lúcio Custódio",
-          16,
+          15,
           16
         ],
         [
           "Tayna Inácia de Melo",
-          13,
+          0,
           13
         ],
         [
           "Tiago Melo da Silva",
-          11,
+          29,
           11
         ],
         [
           "Noemi da Silva Penafort da Costa",
-          6,
+          2,
           6
         ],
         [
           "Elisângela Arias",
-          6,
+          1,
           6
         ],
         [
           "Andressa Cristina de Paula",
           2,
           2
+        ],
+        [
+          "Camila Viana Alves",
+          5,
+          0
         ]
       ]
     },
     "lis": {
-      "ativos": 14,
-      "mes_passado_total": 136,
-      "mes_passado": 0,
+      "ativos": 15,
+      "mes_passado_total": 166,
+      "mes_passado": 166,
       "mes_atual_total": 136,
       "dias_confirmados_lbl": "dias 1 - 1",
       "dias_confirmados_val": 136,
@@ -188,32 +170,32 @@
       "sellers": [
         [
           "Maria Aline da Silva Ferreira",
-          36,
+          33,
           36
         ],
         [
           "Adriérre Marcon",
-          21,
+          29,
           21
         ],
         [
           "Makele de Souza Smania",
-          16,
+          23,
           16
         ],
         [
           "Larissa Pereira Niehues",
-          16,
+          25,
           16
         ],
         [
           "Lisdaisy Vieira Costa",
-          14,
+          13,
           14
         ],
         [
           "Iara da Silva Linhares",
-          13,
+          15,
           13
         ],
         [
@@ -223,30 +205,35 @@
         ],
         [
           "Felipe Santos Leite",
-          6,
+          7,
           6
         ],
         [
           "Aline Cristina da Silva",
-          3,
+          6,
           3
         ],
         [
           "Diego Dias de Medeiros",
-          2,
+          0,
           2
         ],
         [
           "Lana Mara de Morais Leite",
-          1,
+          2,
           1
+        ],
+        [
+          "Danilo Tenfen",
+          5,
+          0
         ]
       ]
     },
     "stl": {
-      "ativos": 6,
-      "mes_passado_total": 89,
-      "mes_passado": 0,
+      "ativos": 7,
+      "mes_passado_total": 55,
+      "mes_passado": 55,
       "mes_atual_total": 89,
       "dias_confirmados_lbl": "dias 1 - 1",
       "dias_confirmados_val": 89,
@@ -261,33 +248,38 @@
       "sellers": [
         [
           "Stella Nieheus",
-          40,
+          17,
           40
         ],
         [
           "Josilea de Melo Rocha",
-          15,
+          10,
           15
         ],
         [
           "Bruna Letícia Corrêa Barbosa",
-          15,
+          7,
           15
         ],
         [
           "Ketlin Madeira Colombo",
-          8,
+          6,
           8
         ],
         [
           "Elison da Silva Elias",
-          6,
+          8,
           6
         ],
         [
           "Guilherme Carvalho Rodrigues",
-          5,
+          6,
           5
+        ],
+        [
+          "Mirian Daiane Braga Felix",
+          1,
+          0
         ]
       ]
     }
@@ -473,7 +465,7 @@
       5,
       5,
       6,
-      "weekend",
+      "work",
       "Segunda semana historicamente forte, com efeito de sábado.",
       1
     ],
@@ -483,7 +475,7 @@
       2,
       2,
       2,
-      "weekend",
+      "work",
       "Produção residual com leve influência da competição.",
       1
     ],
@@ -543,7 +535,7 @@
       3,
       3,
       3,
-      "weekend",
+      "work",
       "Entrada na faixa historicamente mais fraca de agosto.",
       1
     ],
@@ -613,7 +605,7 @@
       6,
       5,
       7,
-      "weekend",
+      "work",
       "Início do trecho forte, mesmo com limitação de sábado.",
       3
     ],
@@ -633,7 +625,7 @@
       15,
       13,
       17,
-      "sprint",
+      "work",
       "Aceleração da competição, moderada pela documentação acumulada.",
       10
     ],
@@ -643,7 +635,7 @@
       20,
       18,
       22,
-      "sprint",
+      "work",
       "Oportunidades recompostas na terceira semana chegam ao fechamento.",
       25
     ],
@@ -653,7 +645,7 @@
       21,
       19,
       23,
-      "sprint",
+      "work",
       "Pipeline e urgência competitiva atuam simultaneamente.",
       18
     ],
@@ -663,7 +655,7 @@
       17,
       15,
       19,
-      "sprint",
+      "work",
       "Boa produção, com pequena redução após os picos.",
       22
     ],
@@ -673,7 +665,7 @@
       22,
       20,
       24,
-      "sprint",
+      "work",
       "Pico semanal sustentado pelo histórico e pela reta final.",
       21
     ],
@@ -683,7 +675,7 @@
       7,
       6,
       8,
-      "weekend",
+      "work",
       "Melhor sábado do mês devido ao encerramento próximo.",
       5
     ],
@@ -703,7 +695,7 @@
       24,
       22,
       27,
-      "sprint",
+      "work",
       "Maior dia previsto: fechamento do mês e da ConsoLiga, apesar do retrabalho.",
       22
     ]
