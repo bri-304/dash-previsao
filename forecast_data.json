@@ -395,7 +395,7 @@
       4,
       4,
       4,
-      "weekend",
+      "real",
       "Fim de semana limita o volume, apesar do início da disputa off-resort.",
       0
     ],
@@ -405,7 +405,7 @@
       1,
       1,
       1,
-      "weekend",
+      "real",
       "Domingo histórico de baixíssima produção.",
       0
     ],
@@ -415,7 +415,7 @@
       10,
       9,
       11,
-      "work",
+      "real",
       "Retomada com possível ressaca dos registros iniciados no fechamento de julho.",
       11
     ],
@@ -425,7 +425,7 @@
       13,
       12,
       14,
-      "work",
+      "real",
       "Pipeline começa a amadurecer, ainda com risco de retrabalho documental.",
       20
     ],
@@ -435,7 +435,7 @@
       17,
       15,
       19,
-      "work",
+      "real",
       "Oportunidades com ciclo médio de 4,63 dias começam a converter.",
       33
     ],
@@ -445,7 +445,7 @@
       18,
       16,
       20,
-      "work",
+      "real",
       "Pipeline maduro e aceleração inicial dos não classificados.",
       20
     ],
@@ -455,7 +455,7 @@
       18,
       16,
       20,
-      "work",
+      "real",
       "Boa sexta, parcialmente limitada pela documentação dos dias anteriores.",
       11
     ],
@@ -465,7 +465,7 @@
       5,
       5,
       6,
-      "work",
+      "real",
       "Segunda semana historicamente forte, com efeito de sábado.",
       1
     ],
@@ -475,7 +475,7 @@
       2,
       2,
       2,
-      "work",
+      "real",
       "Produção residual com leve influência da competição.",
       1
     ],
@@ -485,7 +485,7 @@
       12,
       11,
       13,
-      "work",
+      "real",
       "Consumo de pipeline após a primeira semana e retrabalho pós-fechamento.",
       21
     ],
@@ -495,7 +495,7 @@
       16,
       14,
       18,
-      "work",
+      "real",
       "Retomada do ritmo e incentivo off-resort ainda elevado.",
       11
     ],
@@ -505,7 +505,7 @@
       16,
       14,
       18,
-      "work",
+      "real",
       "Conversão de oportunidades trabalhadas desde a semana anterior.",
       20
     ],
@@ -515,7 +515,7 @@
       15,
       13,
       17,
-      "work",
+      "real",
       "Volume saudável, moderado pela documentação acumulada.",
       16
     ],
@@ -525,7 +525,7 @@
       19,
       17,
       21,
-      "work",
+      "real",
       "Fechamento da quinzena concentra oportunidades maduras.",
       16
     ],
@@ -535,7 +535,7 @@
       3,
       3,
       3,
-      "work",
+      "real",
       "Entrada na faixa historicamente mais fraca de agosto.",
       1
     ],
@@ -545,7 +545,7 @@
       3,
       3,
       3,
-      "weekend",
+      "real",
       "Baixo volume de domingo no início do vale sazonal.",
       null
     ],
@@ -555,7 +555,7 @@
       6,
       5,
       7,
-      "work",
+      "real",
       "Vale histórico agravado pela ressaca do fechamento da quinzena.",
       9
     ],
@@ -565,7 +565,7 @@
       10,
       9,
       11,
-      "work",
+      "real",
       "Pipeline perde maturidade após o consumo da primeira metade.",
       9
     ],
@@ -575,7 +575,7 @@
       10,
       9,
       11,
-      "work",
+      "real",
       "Semana de recomposição de oportunidades, com poucos fechamentos imediatos.",
       21
     ],
@@ -585,7 +585,7 @@
       7,
       6,
       8,
-      "work",
+      "real",
       "Ponto mais fraco entre os dias úteis, coerente com agosto/2025.",
       6
     ],
@@ -595,7 +595,7 @@
       11,
       10,
       12,
-      "work",
+      "real",
       "Primeiros sinais de recuperação antes da semana de maior concentração.",
       13
     ],
@@ -605,7 +605,7 @@
       6,
       5,
       7,
-      "work",
+      "real",
       "Início do trecho forte, mesmo com limitação de sábado.",
       3
     ],
@@ -615,7 +615,7 @@
       4,
       4,
       4,
-      "weekend",
+      "real",
       "Domingo acima dos anteriores pela proximidade da reta final.",
       null
     ],
@@ -625,7 +625,7 @@
       15,
       13,
       17,
-      "work",
+      "real",
       "Aceleração da competição, moderada pela documentação acumulada.",
       10
     ],
@@ -635,7 +635,7 @@
       20,
       18,
       22,
-      "work",
+      "real",
       "Oportunidades recompostas na terceira semana chegam ao fechamento.",
       25
     ],
@@ -645,7 +645,7 @@
       21,
       19,
       23,
-      "work",
+      "real",
       "Pipeline e urgência competitiva atuam simultaneamente.",
       18
     ],
@@ -655,7 +655,7 @@
       17,
       15,
       19,
-      "work",
+      "real",
       "Boa produção, com pequena redução após os picos.",
       22
     ],
@@ -665,7 +665,7 @@
       22,
       20,
       24,
-      "work",
+      "real",
       "Pico semanal sustentado pelo histórico e pela reta final.",
       21
     ],
@@ -675,7 +675,7 @@
       7,
       6,
       8,
-      "work",
+      "real",
       "Melhor sábado do mês devido ao encerramento próximo.",
       5
     ],
@@ -685,7 +685,7 @@
       5,
       4,
       6,
-      "weekend",
+      "real",
       "Produção residual elevada pela última oportunidade competitiva.",
       null
     ],
@@ -695,7 +695,7 @@
       24,
       22,
       27,
-      "work",
+      "real",
       "Maior dia previsto: fechamento do mês e da ConsoLiga, apesar do retrabalho.",
       22
     ]
