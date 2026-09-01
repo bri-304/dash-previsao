@@ -31,7 +31,7 @@
     "chart_title_main": "Vendas por Dia · Agosto 2026",
     "sec_title_teams": "desempenho por time — Julho real vs Agosto projetado",
     "sec_title_sugestoes": "sugestões estratégicas para Agosto",
-    "footer_linha1": "Consolide · Forecast Agosto 2026 com Intervalo de Confiança · Gerado em 04/08/2026",
+    "footer_linha1": "Consolide · Forecast Setembro 2026 com Intervalo de Confiança · Gerado em 01/09/2026",
     "footer_linha2": "Método: Pipeline Ponderado + Rolling WMA (ênfase nos últimos 6 meses) + cohort por vendedor/time · Margens: variação histórica por dia da semana, risco operacional e sprint final.",
     "footer_linha3": "Cenário pessimista: 315 · Central: 370 · Otimista: 425"
   },
@@ -283,19 +283,15 @@
     {
       "n": 1,
       "dates": "01 a 02/08",
-      "central": 7,
-      "min": 4,
-      "max": 9,
-      "avg_txt": "~3,5/dia · início no fim de semana",
+      "central": 5,
+      "min": 5,
+      "max": 5,
+      "avg_txt": "~2,5/dia · início no fim de semana",
       "color": "var(--blue-l)",
       "tags": [
         {
           "cls": "warn",
-          "txt": "⚠️ Mês inicia em fim de semana; primeira semana operacional começa em 03/08"
-        },
-        {
-          "cls": "ok",
-          "txt": "✅ 21 dias úteis e sem feriados nacionais em agosto"
+          "txt": "⚠️ Mês inicia em fim de semana; primeira janela operacional começa em 03/08"
         }
       ]
     },
@@ -303,14 +299,18 @@
       "n": 2,
       "dates": "03 a 09/08",
       "central": 83,
-      "min": 71,
-      "max": 95,
+      "min": 75,
+      "max": 92,
       "avg_txt": "~16,6/dia útil · primeira semana operacional",
       "color": "var(--blue-l)",
       "tags": [
         {
+          "cls": "risk",
+          "txt": "🚨 Ressaca documental possível após 97 registros iniciados entre 29 e 31/07"
+        },
+        {
           "cls": "ok",
-          "txt": "✅ Semana completa para acelerar oportunidades e documentação"
+          "txt": "✅ Ciclo médio de 4,63 dias favorece conversões do pipeline maduro"
         }
       ]
     },
@@ -318,485 +318,487 @@
       "n": 3,
       "dates": "10 a 16/08",
       "central": 84,
-      "min": 72,
-      "max": 95,
+      "min": 75,
+      "max": 93,
       "avg_txt": "~16,8/dia útil · semana completa",
       "color": "var(--blue-l)",
       "tags": [
         {
           "cls": "ok",
-          "txt": "✅ Ciclo médio de 4,63 dias ainda permite conversões no mês"
+          "txt": "✅ Semana completa para consolidar oportunidades antes do vale sazonal"
         }
       ]
     },
     {
       "n": 4,
       "dates": "17 a 23/08",
-      "central": 84,
-      "min": 72,
-      "max": 93,
-      "avg_txt": "~16,8/dia útil · conversão de pipeline",
+      "central": 54,
+      "min": 48,
+      "max": 60,
+      "avg_txt": "~10,8/dia útil · vale sazonal esperado",
       "color": "var(--amber)",
       "tags": [
         {
           "cls": "risk",
-          "txt": "🚨 Manter velocidade de primeiro contato"
+          "txt": "⚠️ Vale histórico: 15 a 21 concentrou apenas 13% de agosto/2025"
         },
         {
           "cls": "risk",
-          "txt": "🚨 Reforçar cadência em leads parados"
+          "txt": "🚨 Proteger primeiro contato e cadência para recompor o pipeline"
         }
       ]
     },
     {
       "n": 5,
       "dates": "24 a 30/08",
-      "central": 89,
-      "min": 75,
-      "max": 105,
-      "avg_txt": "~17,8/dia útil · sprint final",
+      "central": 107,
+      "min": 95,
+      "max": 119,
+      "avg_txt": "~21,4/dia útil · maior concentração do mês",
       "color": "var(--amber)",
       "tags": [
         {
           "cls": "hot",
-          "txt": "🏁 Sprint final da ConsoLiga: 28 a 31/08"
+          "txt": "🔥 Maior concentração prevista: 107 vendas centrais entre 24 e 30/08"
         },
         {
-          "cls": "hot",
-          "txt": "🎯 Pico previsto: 50 vendas centrais entre 28 e 31/08"
+          "cls": "risk",
+          "txt": "📄 Picos de fechamento podem gerar retrabalho documental nos dias seguintes"
         }
       ]
     },
     {
       "n": 6,
       "dates": "31/08",
-      "central": 23,
-      "min": 21,
-      "max": 28,
-      "avg_txt": "~23/dia útil · fechamento da final",
+      "central": 24,
+      "min": 22,
+      "max": 27,
+      "avg_txt": "~24/dia útil · fechamento da final",
       "color": "var(--amber)",
-      "tags": []
+      "tags": [
+        {
+          "cls": "hot",
+          "txt": "🏁 Fechamento da ConsoLiga: 24 vendas centrais previstas em 31/08"
+        }
+      ]
     }
   ],
   "dias": [
     [
       1,
       "Sáb",
-      5,
-      3,
-      6,
+      4,
+      4,
+      4,
       "weekend",
-      "",
+      "Fim de semana limita o volume, apesar do início da disputa off-resort.",
       0
     ],
     [
       2,
       "Dom",
-      2,
       1,
-      3,
+      1,
+      1,
       "weekend",
-      "",
+      "Domingo histórico de baixíssima produção.",
       0
     ],
     [
       3,
       "Seg",
-      13,
+      10,
+      9,
       11,
-      14,
-      "real",
-      "Retomada e triagem de pipeline",
+      "work",
+      "Retomada com possível ressaca dos registros iniciados no fechamento de julho.",
       11
     ],
     [
       4,
       "Ter",
-      17,
-      15,
-      19,
-      "real",
-      "",
+      13,
+      12,
+      14,
+      "work",
+      "Pipeline começa a amadurecer, ainda com risco de retrabalho documental.",
       20
     ],
     [
       5,
       "Qua",
-      18,
-      16,
-      20,
-      "real",
-      "",
+      17,
+      15,
+      19,
+      "work",
+      "Oportunidades com ciclo médio de 4,63 dias começam a converter.",
       33
     ],
     [
       6,
       "Qui",
-      14,
-      12,
+      18,
       16,
-      "real",
-      "",
+      20,
+      "work",
+      "Pipeline maduro e aceleração inicial dos não classificados.",
       20
     ],
     [
       7,
       "Sex",
-      16,
-      14,
       18,
-      "real",
-      "",
+      16,
+      20,
+      "work",
+      "Boa sexta, parcialmente limitada pela documentação dos dias anteriores.",
       11
     ],
     [
       8,
       "Sáb",
-      4,
-      3,
+      5,
+      5,
       6,
-      "real",
-      "",
+      "weekend",
+      "Segunda semana historicamente forte, com efeito de sábado.",
       1
     ],
     [
       9,
       "Dom",
-      1,
-      0,
       2,
-      "real",
-      "",
+      2,
+      2,
+      "weekend",
+      "Produção residual com leve influência da competição.",
       1
     ],
     [
       10,
       "Seg",
-      13,
+      12,
       11,
-      14,
-      "real",
-      "Semana operacional completa",
+      13,
+      "work",
+      "Consumo de pipeline após a primeira semana e retrabalho pós-fechamento.",
       21
     ],
     [
       11,
       "Ter",
-      17,
-      15,
-      19,
-      "real",
-      "",
+      16,
+      14,
+      18,
+      "work",
+      "Retomada do ritmo e incentivo off-resort ainda elevado.",
       11
     ],
     [
       12,
       "Qua",
-      18,
       16,
-      20,
-      "real",
-      "",
+      14,
+      18,
+      "work",
+      "Conversão de oportunidades trabalhadas desde a semana anterior.",
       20
     ],
     [
       13,
       "Qui",
-      14,
-      12,
       15,
-      "real",
-      "",
+      13,
+      17,
+      "work",
+      "Volume saudável, moderado pela documentação acumulada.",
       16
     ],
     [
       14,
       "Sex",
-      17,
-      15,
       19,
-      "real",
-      "",
+      17,
+      21,
+      "work",
+      "Fechamento da quinzena concentra oportunidades maduras.",
       16
     ],
     [
       15,
       "Sáb",
-      4,
       3,
-      6,
-      "real",
-      "",
+      3,
+      3,
+      "weekend",
+      "Entrada na faixa historicamente mais fraca de agosto.",
       1
     ],
     [
       16,
       "Dom",
-      1,
-      0,
-      2,
+      3,
+      3,
+      3,
       "weekend",
-      "",
+      "Baixo volume de domingo no início do vale sazonal.",
       null
     ],
     [
       17,
       "Seg",
-      13,
-      11,
-      14,
-      "real",
-      "Aceleração de oportunidades e documentação",
+      6,
+      5,
+      7,
+      "work",
+      "Vale histórico agravado pela ressaca do fechamento da quinzena.",
       9
     ],
     [
       18,
       "Ter",
-      17,
-      15,
-      18,
-      "real",
-      "",
+      10,
+      9,
+      11,
+      "work",
+      "Pipeline perde maturidade após o consumo da primeira metade.",
       9
     ],
     [
       19,
       "Qua",
-      18,
-      16,
-      19,
-      "real",
-      "",
+      10,
+      9,
+      11,
+      "work",
+      "Semana de recomposição de oportunidades, com poucos fechamentos imediatos.",
       21
     ],
     [
       20,
       "Qui",
-      14,
-      12,
-      15,
-      "real",
-      "",
+      7,
+      6,
+      8,
+      "work",
+      "Ponto mais fraco entre os dias úteis, coerente com agosto/2025.",
       6
     ],
     [
       21,
       "Sex",
-      17,
-      15,
-      19,
-      "real",
-      "",
+      11,
+      10,
+      12,
+      "work",
+      "Primeiros sinais de recuperação antes da semana de maior concentração.",
       13
     ],
     [
       22,
       "Sáb",
-      4,
-      3,
       6,
-      "real",
-      "",
+      5,
+      7,
+      "weekend",
+      "Início do trecho forte, mesmo com limitação de sábado.",
       3
     ],
     [
       23,
       "Dom",
-      1,
-      0,
-      2,
+      4,
+      4,
+      4,
       "weekend",
-      "",
+      "Domingo acima dos anteriores pela proximidade da reta final.",
       null
     ],
     [
       24,
       "Seg",
-      13,
-      11,
       15,
-      "real",
-      "Prioridade em documentação → pagamento",
+      13,
+      17,
+      "sprint",
+      "Aceleração da competição, moderada pela documentação acumulada.",
       10
     ],
     [
       25,
       "Ter",
-      17,
-      15,
-      19,
-      "real",
-      "",
+      20,
+      18,
+      22,
+      "sprint",
+      "Oportunidades recompostas na terceira semana chegam ao fechamento.",
       25
     ],
     [
       26,
       "Qua",
-      18,
-      16,
-      20,
-      "real",
-      "",
+      21,
+      19,
+      23,
+      "sprint",
+      "Pipeline e urgência competitiva atuam simultaneamente.",
       18
     ],
     [
       27,
       "Qui",
-      14,
-      12,
-      16,
-      "real",
-      "Divulgação de ranking e preparação do sprint",
+      17,
+      15,
+      19,
+      "sprint",
+      "Boa produção, com pequena redução após os picos.",
       22
     ],
     [
       28,
       "Sex",
+      22,
       20,
-      18,
-      23,
-      "real",
-      "Início do sprint final",
+      24,
+      "sprint",
+      "Pico semanal sustentado pelo histórico e pela reta final.",
       21
     ],
     [
       29,
       "Sáb",
-      5,
-      3,
-      9,
-      "real",
-      "Sprint final ConsoLiga",
+      7,
+      6,
+      8,
+      "weekend",
+      "Melhor sábado do mês devido ao encerramento próximo.",
       5
     ],
     [
       30,
       "Dom",
-      2,
-      0,
-      3,
-      "sprint",
-      "Sprint final ConsoLiga",
+      5,
+      4,
+      6,
+      "weekend",
+      "Produção residual elevada pela última oportunidade competitiva.",
       null
     ],
     [
       31,
       "Seg",
-      23,
-      21,
-      28,
-      "partial",
-      "Fechamento da final da Temporada 1",
+      24,
+      22,
+      27,
+      "sprint",
+      "Maior dia previsto: fechamento do mês e da ConsoLiga, apesar do retrabalho.",
       20
     ]
   ],
   "sugestoes": [
     {
       "n": "01",
-      "titulo": "🏁 Orquestrar a final da ConsoLiga",
-      "descricao_html": "Os finalistas que venderam em julho somaram <strong>165 vendas</strong>, ou 48% da base comercial. Acompanhar individualmente documentação, pagamento e próximos passos ajuda a transformar o estímulo da final em fechamentos até 31/08.",
+      "titulo": "🧾 Força-tarefa documental no início do mês",
+      "descricao_html": "Os <strong>97 registros iniciados entre 29 e 31/07</strong>, somados a 73,93% de processos com documentação incompleta, justificam uma triagem de pendências, assinaturas e documentos nos primeiros dias úteis para preservar horas de venda ativa.",
       "tags": [
-        "consoliga",
-        "final",
-        "ranking"
+        "documentação",
+        "retrabalho",
+        "início-do-mês"
       ]
     },
     {
       "n": "02",
-      "titulo": "📄 Recuperar Documentação → Pagamento",
-      "descricao_html": "A conversão de Documentação para Pagamento está em <strong>66,92%</strong>, abaixo do ideal de 85%. Priorizar contratos enviados, pendências de assinatura e cobranças acordadas é a alavanca mais direta para o fechamento.",
+      "titulo": "📆 Antecipar fechamentos antes do vale",
+      "descricao_html": "Agosto/2025 concentrou apenas <strong>13% das vendas entre 15 e 21</strong>. Antecipar reuniões, propostas, documentação e cobranças para 12 a 14/08 reduz a exposição ao vale sazonal da terceira semana.",
       "tags": [
-        "funil",
-        "documentação",
-        "pagamento"
+        "sazonalidade",
+        "antecipação",
+        "fechamento"
       ]
     },
     {
       "n": "03",
-      "titulo": "⚡ Atacar MQLs sem primeiro contato",
-      "descricao_html": "A velocidade do primeiro contato é determinante para a conversão. Manter uma fila diária de novos MQLs e acompanhar os casos pendentes reduz perdas por atraso e envelhecimento no funil.",
+      "titulo": "⚡ Proteger o primeiro contato",
+      "descricao_html": "Com tempo médio de primeiro contato de <strong>6h28</strong>, acompanhar a fila de MQLs e redistribuir rapidamente casos sem abordagem protege conversão durante todo o mês.",
       "tags": [
         "mql",
         "primeiro-contato",
-        "prioridade"
+        "redistribuição"
       ]
     },
     {
       "n": "04",
-      "titulo": "🚨 Recuperar leads sem movimentação",
-      "descricao_html": "Leads sem movimentação perdem potencial de conversão com o tempo. Revisar a carteira diariamente por etapa e responsável ajuda a recuperar oportunidades qualificadas antes que sejam perdidas por inércia.",
+      "titulo": "🗂️ Priorizar carteira por idade e etapa",
+      "descricao_html": "Revisar diariamente o pipeline por idade, etapa e probabilidade permite trabalhar primeiro oportunidades recentes e maduras, evitando que leads qualificadas envelheçam sem cadência.",
       "tags": [
         "pipeline",
-        "reativação",
-        "cadência"
+        "idade",
+        "priorização"
       ]
     },
     {
       "n": "05",
-      "titulo": "📞 Reduzir o tempo de 1º contato",
-      "descricao_html": "O tempo médio atual de primeiro contato é <strong>6h28</strong>. Reduzir a janela operacional e acompanhar diariamente os casos pendentes protege conversão e diminui perdas por falta de resposta.",
+      "titulo": "📞 Atacar perdas evitáveis do funil",
+      "descricao_html": "Sem contato, perda de contato e recusa ao pitch estão entre os principais motivos de lost. Cadências específicas por motivo, com tentativas multicanal e próximo passo definido, reduzem perdas recuperáveis.",
       "tags": [
-        "eficiência",
-        "primeiro-contato",
-        "conversão"
+        "lost",
+        "cadência",
+        "multicanal"
       ]
     },
     {
       "n": "06",
-      "titulo": "🎯 Concentrar o sprint de 28 a 31/08",
-      "descricao_html": "O modelo concentra <strong>50 vendas centrais</strong> entre 28 e 31/08. Publicar o ranking em 27/08 e acompanhar documentação e pagamento diariamente aumenta a chance de capturar esse pico.",
+      "titulo": "🎯 Distribuir capacidade na reta final",
+      "descricao_html": "A produção é concentrada e a ConsoLiga cria incentivos diferentes. Direcionar oportunidades maduras aos não classificados com boa atividade, sem sobrecarregar poucos vendedores, reduz dependência e retrabalho documental.",
       "tags": [
-        "sprint",
-        "fechamento",
-        "consoliga"
-      ]
-    },
-    {
-      "n": "07",
-      "titulo": "📊 Acompanhar todos os produtores de julho",
-      "descricao_html": "A previsão usa as <strong>344 vendas comerciais</strong> de julho, inclusive de vendedores hoje desmarcados. Validar disponibilidade e plano de atuação de Tiago, Makele, Iara e Rafael evita perder capacidade histórica sem supor que todos estarão ativos.",
-      "tags": [
-        "cohort",
         "capacidade",
-        "disponibilidade"
+        "consoliga",
+        "reta-final"
       ]
     }
   ],
   "gargalos": [
     {
-      "tipo": "info",
-      "data": "01-02/08",
-      "titulo": "Mês inicia em fim de semana",
-      "desc": "Agosto não possui feriado nacional. A primeira janela operacional relevante começa na segunda-feira, 03/08.",
-      "pill": "📅 21 dias úteis"
+      "tipo": "risk",
+      "data": "03-04/08",
+      "titulo": "Ressaca documental de julho",
+      "desc": "Os 97 registros iniciados entre 29 e 31/07 podem gerar retorno de documentos e reduzir a disponibilidade comercial nos primeiros dias úteis. A taxa de processos com documentos incompletos é 73,93%.",
+      "pill": "📄 97 registros no fechamento de julho"
+    },
+    {
+      "tipo": "risk",
+      "data": "15-21/08",
+      "titulo": "Vale sazonal de agosto",
+      "desc": "O mesmo período concentrou somente 13% das vendas de agosto/2025. Sem antecipação de reuniões e propostas, o estoque de oportunidades maduras pode ficar insuficiente.",
+      "pill": "📉 Faixa historicamente mais fraca"
     },
     {
       "tipo": "risk",
       "data": "03-07/08",
-      "titulo": "Velocidade de primeiro contato",
-      "desc": "O tempo de resposta inicial é determinante para a conversão. Manter a fila de novos MQLs sob acompanhamento diário reduz o envelhecimento do lead e as perdas por falta de resposta.",
-      "pill": "🚨 213 MQLs pendentes"
-    },
-    {
-      "tipo": "oppt",
-      "data": "10-21/08",
-      "titulo": "Converter documentação em pagamento",
-      "desc": "A passagem de Documentação para Pagamento está em 66,92%, abaixo do ideal de 85%. Follow-up de assinatura e cobrança pode recuperar vendas sem novos leads.",
-      "pill": "📄 Maior alavanca do funil"
+      "titulo": "Velocidade do primeiro contato",
+      "desc": "O tempo médio de primeiro contato está em 6h28. Atrasos na entrada do mês comprometem a conversão e reduzem o pipeline disponível para as semanas seguintes.",
+      "pill": "⚡ Tempo médio: 6h28"
     },
     {
       "tipo": "risk",
       "data": "Durante o mês",
-      "titulo": "Recuperar leads parados",
-      "desc": "Leads sem movimentação tendem a perder potencial de conversão com o tempo. Revisar diariamente a carteira por etapa e responsável evita que oportunidades qualificadas fiquem sem cadência.",
-      "pill": "⚠️ 538 leads parados"
+      "titulo": "Baixa taxa de atendimento",
+      "desc": "A taxa geral de atendimento observada foi 44,58%. O volume de tentativas precisa ser acompanhado junto com contatos efetivos, pitches e próximos passos.",
+      "pill": "📞 Atendimento: 44,58%"
     },
     {
-      "tipo": "oppt",
-      "data": "28-31/08",
-      "titulo": "Sprint final da ConsoLiga",
-      "desc": "A fase final e o encerramento de 31/08 concentram o pico do modelo. Intensificar diariamente o acompanhamento de documentação, pagamento e próximos passos ajuda a capturar esse potencial.",
-      "pill": "🚀 Previsão: 50 vendas"
+      "tipo": "risk",
+      "data": "Durante o mês",
+      "titulo": "Perdas evitáveis no início do funil",
+      "desc": "Sem contato representa 22,2% dos losts; não querer escutar o pitch, 19,9%; e perda de contato, 10,9%. Cadência inconsistente reduz o aproveitamento das leads.",
+      "pill": "⚠️ Priorizar cadência e recuperação"
+    },
+    {
+      "tipo": "risk",
+      "data": "Após dias de pico",
+      "titulo": "Concentração e retrabalho",
+      "desc": "Seis vendedores responderam por aproximadamente 49% das vendas de julho. Picos concentrados elevam a dependência de poucos produtores e a carga documental subsequente.",
+      "pill": "👥 Reduzir dependência operacional"
     }
   ]
 }
