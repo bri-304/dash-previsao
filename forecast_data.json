@@ -1,7 +1,7 @@
 {
   "meta": {
     "atualizado_em": "01/09/2026 09:49",
-     "status_dias": "Dias 1 à 31 confirmados · Dia 31 parcial · Dias 32 à 31 com intervalo de confiança",
+     "status_dias": "Dias 1 à 31 confirmados",
     "kpi_total_pess": 320,
     "kpi_total_central": 357,
     "kpi_total_otim": 396,
@@ -19,7 +19,7 @@
     "kpi_ativos": 31,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 10 inativos / férias",
-    "page_title": "Forecast Setembro 2026 - Consolide",
+    "page_title": "Forecast Agosto 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Setembro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T1 · Fase Final · Agosto/2026",
     "badge_copa": "📅 Agosto/2026 · 21 dias úteis · sem feriados nacionais",
