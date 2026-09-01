@@ -1,0 +1,809 @@
+{
+  "meta": {
+    "atualizado_em": "01/09/2026 10:21",
+    "status_dias":"Dias 1 à 31 confirmados",
+    "kpi_total_pess": 320,
+    "kpi_total_central": 357,
+    "kpi_total_otim": 396,
+    "kpi_total_delta": "▲ +2,9% vs julho/2026 (central)",
+    "kpi_media_central": "17",
+    "kpi_media_min": "15,2 mín",
+    "kpi_media_max": "18,9 máx",
+    "kpi_realizado": 373,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 31)",
+    "kpi_realizado_delta": "▲ 104,5% do total previsto",
+    "kpi_yoy_pct": "-11%",
+    "kpi_yoy_pess": "-20% pess.",
+    "kpi_yoy_otim": "-1% otim.",
+    "kpi_yoy_sub": "357 central vs 401 em agosto/2025",
+    "kpi_ativos": 31,
+    "kpi_ativos_sub": "em 3 times competindo",
+    "kpi_inativos_delta": "▼ 10 inativos / férias",
+    "page_title": "Forecast Agosto 2026 - Consolide",
+    "hdr_title_html": "Forecast de Vendas - Agosto 2026",
+    "badge_consoliga": "🏁 CONSOLIGA T1 · Fase Final · Agosto/2026",
+    "badge_copa": "📅 Agosto/2026 · 21 dias úteis · sem feriados nacionais",
+    "kpi_total_sub": "vendas · Agosto/2026",
+    "kpi_media_delta": "▲ +2,0 vs 15,0 jul/2026",
+    "kpi_yoy_lbl": "Percentual Previsto vs Agosto 2025",
+    "kpi_yoy_delta": "▲ crescimento YoY projetado",
+    "sec_title_previsao": "previsão diária com intervalo de confiança — Agosto 2026",
+    "chart_title_main": "Vendas por Dia · Agosto 2026",
+    "sec_title_teams": "desempenho por time — Julkho real vs Agosto projetado",
+    "sec_title_sugestoes": "sugestões estratégicas para Agosto",
+    "footer_linha1": "Consolide · Forecast Agosto 2026 com Intervalo de Confiança · Atualizado em 01/09/2026",
+    "footer_linha2": "Método: Rolling Forecast ponderado + sazonalidade de agosto/2025 + pipeline real + capacidade por coorte/time + ConsoLiga + calendário e penalidade documental.",
+    "footer_linha3": "Cenário pessimista: 320 · Central: 357 · Otimista: 396"
+  },
+  "times": {
+    "gui": {
+      "ativos": 6,
+      "mes_passado_total": 15,
+      "mes_passado": 15,
+      "mes_atual_total": 25,
+      "dias_confirmados_lbl": "dias 1 - 31",
+      "dias_confirmados_val": 25,
+      "prev_atual": "28",
+      "lbl_titulo_comp": "Jul. real vs Ago. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
+      "lbl_vendedor": "Julho vs Agosto — por vendedor",
+      "leg_mes_passado": "Jul.",
+      "leg_mes_atual": "Ago.",
+      "destaque_txt": "⚡ Gabriel, Lorena e Natalia disputam vagas off-resort e terão o primeiro mês completo no time. A previsão de 28 vendas combina rampagem, maior tempo de atuação e o histórico de 16 vendas do grupo em julho.",
+      "atencao_txt": "⚠️ Guilherme, como guia, não compete; seus vendedores ainda estão em rampa. A projeção exige continuidade de cadência e acompanhamento próximo, sem presumir produtividade plena ou distribuição uniforme de leads.",
+      "sellers": [
+        [
+          "Carla Cristina Ferreira Siqueira",
+          0,
+          8
+        ],
+        [
+          "Lorena Cristina Domingos Pereira",
+          3,
+          5
+        ],
+        [
+          "Gabriel Antonio Bittencourt",
+          3,
+          5
+        ],
+        [
+          "Natalia Oliveira Katrip",
+          1,
+          4
+        ],
+        [
+          "Guilherme Lopes Machado",
+          8,
+          2
+        ],
+        [
+          "Lucas Vinicius Morato",
+          0,
+          1
+        ]
+      ]
+    },
+    "isr": {
+      "ativos": 10,
+      "mes_passado_total": 107,
+      "mes_passado": 107,
+      "mes_atual_total": 116,
+      "dias_confirmados_lbl": "dias 1 - 31",
+      "dias_confirmados_val": 116,
+      "prev_atual": "95",
+      "lbl_titulo_comp": "Jul. real vs Ago. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
+      "lbl_vendedor": "Julho vs Agosto — por vendedor",
+      "leg_mes_passado": "Jul.",
+      "leg_mes_atual": "Ago.",
+      "destaque_txt": "⚡ O time combina finalistas com histórico forte e vendedores que disputam vagas off-resort. A previsão de 95 vendas considera regressão de Estevam, Tiago, Camila e Patrícia após julho, parcialmente compensada por Bruno, Elisângela, Noemi e Tayna.",
+      "atencao_txt": "⚠️ A capacidade é concentrada e vários finalistas tiveram forte produção em julho. Relaxamento após a classificação, consumo de pipeline e retrabalho documental podem reduzir o volume se as oportunidades não forem redistribuídas.",
+      "sellers": [
+        [
+          "Bruno Ramos Martins",
+          6,
+          22
+        ],
+        [
+          "Israel Riella",
+          17,
+          20
+        ],
+        [
+          "Estevam Silverio Tavares",
+          30,
+          20
+        ],
+        [
+          "Patrícia Lúcio Custódio",
+          15,
+          16
+        ],
+        [
+          "Tayna Inácia de Melo",
+          0,
+          13
+        ],
+        [
+          "Tiago Melo da Silva",
+          29,
+          11
+        ],
+        [
+          "Noemi da Silva Penafort da Costa",
+          2,
+          6
+        ],
+        [
+          "Elisângela Arias",
+          1,
+          6
+        ],
+        [
+          "Andressa Cristina de Paula",
+          2,
+          2
+        ],
+        [
+          "Camila Viana Alves",
+          5,
+          0
+        ]
+      ]
+    },
+    "lis": {
+      "ativos": 12,
+      "mes_passado_total": 166,
+      "mes_passado": 166,
+      "mes_atual_total": 136,
+      "dias_confirmados_lbl": "dias 1 - 31",
+      "dias_confirmados_val": 136,
+      "prev_atual": "168",
+      "lbl_titulo_comp": "Jul. real vs Ago. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
+      "lbl_vendedor": "Julho vs Agosto — por vendedor",
+      "leg_mes_passado": "Jul.",
+      "leg_mes_atual": "Ago.",
+      "destaque_txt": "⚡ Maria Aline e Makele chegam como finalistas, enquanto Adriérre, Aline, Danilo, Felipe, Iara, Larissa e Rafael mantêm incentivo pelas vagas off-resort. A combinação sustenta a maior previsão entre os times: 168 vendas.",
+      "atencao_txt": "⚠️ O resultado depende de equilibrar a regressão dos finalistas com a aceleração dos não classificados. A carteira deve ser acompanhada por idade, etapa e documentação para evitar concentração e leads paradas.",
+      "sellers": [
+        [
+          "Maria Aline da Silva Ferreira",
+          33,
+          36
+        ],
+        [
+          "Adriérre Marcon",
+          29,
+          21
+        ],
+        [
+          "Makele de Souza Smania",
+          23,
+          16
+        ],
+        [
+          "Larissa Pereira Niehues",
+          25,
+          16
+        ],
+        [
+          "Lisdaisy Vieira Costa",
+          13,
+          14
+        ],
+        [
+          "Iara da Silva Linhares",
+          15,
+          13
+        ],
+        [
+          "Rafael Rodrigues Pedroso",
+          8,
+          8
+        ],
+        [
+          "Felipe Santos Leite",
+          7,
+          6
+        ],
+        [
+          "Aline Cristina da Silva",
+          6,
+          3
+        ],
+        [
+          "Diego Dias de Medeiros",
+          0,
+          2
+        ],
+        [
+          "Lana Mara de Morais Leite",
+          2,
+          1
+        ],
+        [
+          "Danilo Tenfen",
+          5,
+          0
+        ]
+      ]
+    },
+    "stl": {
+      "ativos": 6,
+      "mes_passado_total": 55,
+      "mes_passado": 55,
+      "mes_atual_total": 89,
+      "dias_confirmados_lbl": "dias 1 - 31",
+      "dias_confirmados_val": 89,
+      "prev_atual": "66",
+      "lbl_titulo_comp": "Jul. real vs Ago. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
+      "lbl_vendedor": "Julho vs Agosto — por vendedor",
+      "leg_mes_passado": "Jul.",
+      "leg_mes_atual": "Ago.",
+      "destaque_txt": "⚡ O time possui ampla exposição à disputa off-resort. Stella, Josilea, Elison, Bruna, Guilherme Carvalho e Ketlin formam uma base capaz de acelerar ao longo do mês, levando a previsão a 66 vendas.",
+      "atencao_txt": "⚠️ A estrutura tem menor folga para ausências e pode ficar dependente de poucos produtores. Velocidade de primeiro contato e passagem de documentação para pagamento são os principais pontos de controle.",
+      "sellers": [
+        [
+          "Stella Nieheus",
+          17,
+          40
+        ],
+        [
+          "Josilea de Melo Rocha",
+          10,
+          15
+        ],
+        [
+          "Bruna Letícia Corrêa Barbosa",
+          7,
+          15
+        ],
+        [
+          "Ketlin Madeira Colombo",
+          6,
+          8
+        ],
+        [
+          "Elison da Silva Elias",
+          8,
+          6
+        ],
+        [
+          "Guilherme Carvalho Rodrigues",
+          6,
+          5
+        ],
+        [
+          "Mirian Daiane Braga Felix",
+          1,
+          0
+        ]
+      ]
+    }
+  },
+  "semanas": [
+    {
+      "n": 1,
+      "dates": "01 a 02/08",
+      "central": 5,
+      "min": 5,
+      "max": 5,
+      "avg_txt": "~2,5/dia · início no fim de semana",
+      "color": "var(--blue-l)",
+      "tags": [
+        {
+          "cls": "warn",
+          "txt": "⚠️ Mês inicia em fim de semana; primeira janela operacional começa em 03/08"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "dates": "03 a 09/08",
+      "central": 83,
+      "min": 75,
+      "max": 92,
+      "avg_txt": "~16,6/dia útil · primeira semana operacional",
+      "color": "var(--blue-l)",
+      "tags": [
+        {
+          "cls": "risk",
+          "txt": "🚨 Ressaca documental possível após 97 registros iniciados entre 29 e 31/07"
+        },
+        {
+          "cls": "ok",
+          "txt": "✅ Ciclo médio de 4,63 dias favorece conversões do pipeline maduro"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "dates": "10 a 16/08",
+      "central": 84,
+      "min": 75,
+      "max": 93,
+      "avg_txt": "~16,8/dia útil · semana completa",
+      "color": "var(--blue-l)",
+      "tags": [
+        {
+          "cls": "ok",
+          "txt": "✅ Semana completa para consolidar oportunidades antes do vale sazonal"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "dates": "17 a 23/08",
+      "central": 54,
+      "min": 48,
+      "max": 60,
+      "avg_txt": "~10,8/dia útil · vale sazonal esperado",
+      "color": "var(--amber)",
+      "tags": [
+        {
+          "cls": "risk",
+          "txt": "⚠️ Vale histórico: 15 a 21 concentrou apenas 13% de agosto/2025"
+        },
+        {
+          "cls": "risk",
+          "txt": "🚨 Proteger primeiro contato e cadência para recompor o pipeline"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "dates": "24 a 30/08",
+      "central": 107,
+      "min": 95,
+      "max": 119,
+      "avg_txt": "~21,4/dia útil · maior concentração do mês",
+      "color": "var(--amber)",
+      "tags": [
+        {
+          "cls": "hot",
+          "txt": "🔥 Maior concentração prevista: 107 vendas centrais entre 24 e 30/08"
+        },
+        {
+          "cls": "risk",
+          "txt": "📄 Picos de fechamento podem gerar retrabalho documental nos dias seguintes"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "dates": "31/08",
+      "central": 24,
+      "min": 22,
+      "max": 27,
+      "avg_txt": "~24/dia útil · fechamento da final",
+      "color": "var(--amber)",
+      "tags": [
+        {
+          "cls": "hot",
+          "txt": "🏁 Fechamento da ConsoLiga: 24 vendas centrais previstas em 31/08"
+        }
+      ]
+    }
+  ],
+  "dias": [
+    [
+      1,
+      "Sáb",
+      4,
+      4,
+      4,
+      "real",
+      "Fim de semana limita o volume, apesar do início da disputa off-resort.",
+      0
+    ],
+    [
+      2,
+      "Dom",
+      1,
+      1,
+      1,
+      "real",
+      "Domingo histórico de baixíssima produção.",
+      0
+    ],
+    [
+      3,
+      "Seg",
+      10,
+      9,
+      11,
+      "real",
+      "Retomada com possível ressaca dos registros iniciados no fechamento de julho.",
+      11
+    ],
+    [
+      4,
+      "Ter",
+      13,
+      12,
+      14,
+      "real",
+      "Pipeline começa a amadurecer, ainda com risco de retrabalho documental.",
+      24
+    ],
+    [
+      5,
+      "Qua",
+      17,
+      15,
+      19,
+      "real",
+      "Oportunidades com ciclo médio de 4,63 dias começam a converter.",
+      33
+    ],
+    [
+      6,
+      "Qui",
+      18,
+      16,
+      20,
+      "real",
+      "Pipeline maduro e aceleração inicial dos não classificados.",
+      21
+    ],
+    [
+      7,
+      "Sex",
+      18,
+      16,
+      20,
+      "real",
+      "Boa sexta, parcialmente limitada pela documentação dos dias anteriores.",
+      11
+    ],
+    [
+      8,
+      "Sáb",
+      5,
+      5,
+      6,
+      "real",
+      "Segunda semana historicamente forte, com efeito de sábado.",
+      3
+    ],
+    [
+      9,
+      "Dom",
+      2,
+      2,
+      2,
+      "real",
+      "Produção residual com leve influência da competição.",
+      1
+    ],
+    [
+      10,
+      "Seg",
+      12,
+      11,
+      13,
+      "real",
+      "Consumo de pipeline após a primeira semana e retrabalho pós-fechamento.",
+      21
+    ],
+    [
+      11,
+      "Ter",
+      16,
+      14,
+      18,
+      "real",
+      "Retomada do ritmo e incentivo off-resort ainda elevado.",
+      11
+    ],
+    [
+      12,
+      "Qua",
+      16,
+      14,
+      18,
+      "real",
+      "Conversão de oportunidades trabalhadas desde a semana anterior.",
+      20
+    ],
+    [
+      13,
+      "Qui",
+      15,
+      13,
+      17,
+      "real",
+      "Volume saudável, moderado pela documentação acumulada.",
+      16
+    ],
+    [
+      14,
+      "Sex",
+      19,
+      17,
+      21,
+      "real",
+      "Fechamento da quinzena concentra oportunidades maduras.",
+      16
+    ],
+    [
+      15,
+      "Sáb",
+      3,
+      3,
+      3,
+      "real",
+      "Entrada na faixa historicamente mais fraca de agosto.",
+      1
+    ],
+    [
+      16,
+      "Dom",
+      3,
+      3,
+      3,
+      "real",
+      "Baixo volume de domingo no início do vale sazonal.",
+      null
+    ],
+    [
+      17,
+      "Seg",
+      6,
+      5,
+      7,
+      "real",
+      "Vale histórico agravado pela ressaca do fechamento da quinzena.",
+      9
+    ],
+    [
+      18,
+      "Ter",
+      10,
+      9,
+      11,
+      "real",
+      "Pipeline perde maturidade após o consumo da primeira metade.",
+      9
+    ],
+    [
+      19,
+      "Qua",
+      10,
+      9,
+      11,
+      "real",
+      "Semana de recomposição de oportunidades, com poucos fechamentos imediatos.",
+      21
+    ],
+    [
+      20,
+      "Qui",
+      7,
+      6,
+      8,
+      "real",
+      "Ponto mais fraco entre os dias úteis, coerente com agosto/2025.",
+      6
+    ],
+    [
+      21,
+      "Sex",
+      11,
+      10,
+      12,
+      "real",
+      "Primeiros sinais de recuperação antes da semana de maior concentração.",
+      13
+    ],
+    [
+      22,
+      "Sáb",
+      6,
+      5,
+      7,
+      "real",
+      "Início do trecho forte, mesmo com limitação de sábado.",
+      3
+    ],
+    [
+      23,
+      "Dom",
+      4,
+      4,
+      4,
+      "real",
+      "Domingo acima dos anteriores pela proximidade da reta final.",
+      null
+    ],
+    [
+      24,
+      "Seg",
+      15,
+      13,
+      17,
+      "real",
+      "Aceleração da competição, moderada pela documentação acumulada.",
+      10
+    ],
+    [
+      25,
+      "Ter",
+      20,
+      18,
+      22,
+      "real",
+      "Oportunidades recompostas na terceira semana chegam ao fechamento.",
+      25
+    ],
+    [
+      26,
+      "Qua",
+      21,
+      19,
+      23,
+      "real",
+      "Pipeline e urgência competitiva atuam simultaneamente.",
+      18
+    ],
+    [
+      27,
+      "Qui",
+      17,
+      15,
+      19,
+      "real",
+      "Boa produção, com pequena redução após os picos.",
+      22
+    ],
+    [
+      28,
+      "Sex",
+      22,
+      20,
+      24,
+      "real",
+      "Pico semanal sustentado pelo histórico e pela reta final.",
+      21
+    ],
+    [
+      29,
+      "Sáb",
+      7,
+      6,
+      8,
+      "real",
+      "Melhor sábado do mês devido ao encerramento próximo.",
+      5
+    ],
+    [
+      30,
+      "Dom",
+      5,
+      4,
+      6,
+      "real",
+      "Produção residual elevada pela última oportunidade competitiva.",
+      null
+    ],
+    [
+      31,
+      "Seg",
+      24,
+      22,
+      27,
+      "real",
+      "Maior dia previsto: fechamento do mês e da ConsoLiga, apesar do retrabalho.",
+      22
+    ]
+  ],
+  "sugestoes": [
+    {
+      "n": "01",
+      "titulo": "🧾 Força-tarefa documental no início do mês",
+      "descricao_html": "Os <strong>97 registros iniciados entre 29 e 31/07</strong>, somados a 73,93% de processos com documentação incompleta, justificam uma triagem de pendências, assinaturas e documentos nos primeiros dias úteis para preservar horas de venda ativa.",
+      "tags": [
+        "documentação",
+        "retrabalho",
+        "início-do-mês"
+      ]
+    },
+    {
+      "n": "02",
+      "titulo": "📆 Antecipar fechamentos antes do vale",
+      "descricao_html": "Agosto/2025 concentrou apenas <strong>13% das vendas entre 15 e 21</strong>. Antecipar reuniões, propostas, documentação e cobranças para 12 a 14/08 reduz a exposição ao vale sazonal da terceira semana.",
+      "tags": [
+        "sazonalidade",
+        "antecipação",
+        "fechamento"
+      ]
+    },
+    {
+      "n": "03",
+      "titulo": "⚡ Proteger o primeiro contato",
+      "descricao_html": "Com tempo médio de primeiro contato de <strong>6h28</strong>, acompanhar a fila de MQLs e redistribuir rapidamente casos sem abordagem protege conversão durante todo o mês.",
+      "tags": [
+        "mql",
+        "primeiro-contato",
+        "redistribuição"
+      ]
+    },
+    {
+      "n": "04",
+      "titulo": "🗂️ Priorizar carteira por idade e etapa",
+      "descricao_html": "Revisar diariamente o pipeline por idade, etapa e probabilidade permite trabalhar primeiro oportunidades recentes e maduras, evitando que leads qualificadas envelheçam sem cadência.",
+      "tags": [
+        "pipeline",
+        "idade",
+        "priorização"
+      ]
+    },
+    {
+      "n": "05",
+      "titulo": "📞 Atacar perdas evitáveis do funil",
+      "descricao_html": "Sem contato, perda de contato e recusa ao pitch estão entre os principais motivos de lost. Cadências específicas por motivo, com tentativas multicanal e próximo passo definido, reduzem perdas recuperáveis.",
+      "tags": [
+        "lost",
+        "cadência",
+        "multicanal"
+      ]
+    },
+    {
+      "n": "06",
+      "titulo": "🎯 Distribuir capacidade na reta final",
+      "descricao_html": "A produção é concentrada e a ConsoLiga cria incentivos diferentes. Direcionar oportunidades maduras aos não classificados com boa atividade, sem sobrecarregar poucos vendedores, reduz dependência e retrabalho documental.",
+      "tags": [
+        "capacidade",
+        "consoliga",
+        "reta-final"
+      ]
+    }
+  ],
+  "gargalos": [
+    {
+      "tipo": "risk",
+      "data": "03-04/08",
+      "titulo": "Ressaca documental de julho",
+      "desc": "Os 97 registros iniciados entre 29 e 31/07 podem gerar retorno de documentos e reduzir a disponibilidade comercial nos primeiros dias úteis. A taxa de processos com documentos incompletos é 73,93%.",
+      "pill": "📄 97 registros no fechamento de julho"
+    },
+    {
+      "tipo": "risk",
+      "data": "15-21/08",
+      "titulo": "Vale sazonal de agosto",
+      "desc": "O mesmo período concentrou somente 13% das vendas de agosto/2025. Sem antecipação de reuniões e propostas, o estoque de oportunidades maduras pode ficar insuficiente.",
+      "pill": "📉 Faixa historicamente mais fraca"
+    },
+    {
+      "tipo": "risk",
+      "data": "03-07/08",
+      "titulo": "Velocidade do primeiro contato",
+      "desc": "O tempo médio de primeiro contato está em 6h28. Atrasos na entrada do mês comprometem a conversão e reduzem o pipeline disponível para as semanas seguintes.",
+      "pill": "⚡ Tempo médio: 6h28"
+    },
+    {
+      "tipo": "risk",
+      "data": "Durante o mês",
+      "titulo": "Baixa taxa de atendimento",
+      "desc": "A taxa geral de atendimento observada foi 44,58%. O volume de tentativas precisa ser acompanhado junto com contatos efetivos, pitches e próximos passos.",
+      "pill": "📞 Atendimento: 44,58%"
+    },
+    {
+      "tipo": "risk",
+      "data": "Durante o mês",
+      "titulo": "Perdas evitáveis no início do funil",
+      "desc": "Sem contato representa 22,2% dos losts; não querer escutar o pitch, 19,9%; e perda de contato, 10,9%. Cadência inconsistente reduz o aproveitamento das leads.",
+      "pill": "⚠️ Priorizar cadência e recuperação"
+    },
+    {
+      "tipo": "risk",
+      "data": "Após dias de pico",
+      "titulo": "Concentração e retrabalho",
+      "desc": "Seis vendedores responderam por aproximadamente 49% das vendas de julho. Picos concentrados elevam a dependência de poucos produtores e a carga documental subsequente.",
+      "pill": "👥 Reduzir dependência operacional"
+    }
+  ]
+}
