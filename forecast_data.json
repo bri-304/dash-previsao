@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "31/08/2026 23:08",
-    "status_dias": "Dias 1 à 31 confirmados · Dia 31 parcial · Dias 32 à 31 com intervalo de confiança",
+    "atualizado_em": "01/09/2026 09:49",
+    "status_dias": "Dia 1 confirmado · Dia 1 parcial · Dias 2 à 30 com intervalo de confiança",
     "kpi_total_pess": 315,
     "kpi_total_central": 370,
     "kpi_total_otim": 425,
@@ -9,9 +9,9 @@
     "kpi_media_central": "17,6",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "20,2 máx",
-    "kpi_realizado": 364,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
-    "kpi_realizado_delta": "▲ 93,3% do total previsto",
+    "kpi_realizado": 366,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 31)",
+    "kpi_realizado_delta": "▲ 93,8% do total previsto",
     "kpi_yoy_pct": "-8%",
     "kpi_yoy_pess": "-21% pess.",
     "kpi_yoy_otim": "+6% otim.",
@@ -19,183 +19,201 @@
     "kpi_ativos": 31,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 10 inativos / férias",
-    "page_title": "Forecast Agosto 2026 - Consolide",
-    "hdr_title_html": "Forecast de Vendas - Agosto 2026",
+    "page_title": "Forecast Setembro 2026 - Consolide",
+    "hdr_title_html": "Forecast de Vendas - Setembro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T1 · Fase Final · Agosto/2026",
     "badge_copa": "📅 Agosto/2026 · 21 dias úteis · sem feriados nacionais",
-    "kpi_total_sub": "vendas · Agosto/2026",
+    "kpi_total_sub": "vendas · Setembro/2026",
     "kpi_media_delta": "▲ vs 15,0 jul/2026",
-    "kpi_yoy_lbl": "Percentual Previsto vs Agosto 2025",
+    "kpi_yoy_lbl": "Percentual Previsto vs Setembro 2025",
     "kpi_yoy_delta": "▲ crescimento YoY projetado",
-    "sec_title_previsao": "previsão diária com intervalo de confiança — Agosto 2026",
-    "chart_title_main": "Vendas por Dia · Agosto 2026",
-    "sec_title_teams": "desempenho por time — Julho real vs Agosto projetado",
-    "sec_title_sugestoes": "sugestões estratégicas para Agosto",
+    "sec_title_previsao": "previsão diária com intervalo de confiança — Setembro 2026",
+    "chart_title_main": "Vendas por Dia · Setembro 2026",
+    "sec_title_teams": "desempenho por time — Agosto real vs Setembro projetado",
+    "sec_title_sugestoes": "sugestões estratégicas para Setembro",
     "footer_linha1": "Consolide · Forecast Setembro 2026 com Intervalo de Confiança · Gerado em 01/09/2026",
     "footer_linha2": "Método: Pipeline Ponderado + Rolling WMA (ênfase nos últimos 6 meses) + cohort por vendedor/time · Margens: variação histórica por dia da semana, risco operacional e sprint final.",
     "footer_linha3": "Cenário pessimista: 315 · Central: 370 · Otimista: 425"
   },
   "times": {
+    "Alan Marcos": {
+      "ativos": 0,
+      "mes_passado_total": 0,
+      "mes_passado": 0,
+      "mes_atual_total": 0,
+      "dias_confirmados_lbl": "dias 1 - 1",
+      "dias_confirmados_val": 0,
+      "prev_atual": "",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "",
+      "atencao_txt": "",
+      "sellers": [
+        [
+          "Ivan Conti",
+          1,
+          0
+        ]
+      ]
+    },
     "gui": {
       "ativos": 1,
-      "mes_passado_total": 15,
-      "mes_passado": 15,
+      "mes_passado_total": 25,
+      "mes_passado": 0,
       "mes_atual_total": 25,
-      "dias_confirmados_lbl": "dias 1 - 31",
+      "dias_confirmados_lbl": "dias 1 - 1",
       "dias_confirmados_val": 25,
-      "prev_atual": "17",
-      "lbl_titulo_comp": "Jul. real vs Ago. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
-      "lbl_vendedor": "Julho vs Agosto — por vendedor",
-      "leg_mes_passado": "Jul.",
-      "leg_mes_atual": "Ago.",
-      "destaque_txt": "⚡ Mesmo em formação, o time registrou 16 vendas em julho: Guilherme Lopes (9), Gabriel (3), Lorena (3) e Natalia (1). Gabriel, Lorena e Natalia entraram em julho, o que deixa espaço para evolução gradual em agosto.",
-      "atencao_txt": "⚠️ O time não participa da final da Temporada 1 e ainda está em rampagem. A previsão de 17 vendas pressupõe continuidade da cadência e acompanhamento próximo do primeiro contato, sem atribuir o mesmo impulso competitivo dos finalistas.",
+      "prev_atual": "28",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "⚡ Gabriel, Lorena e Natalia disputam vagas off-resort e terão o primeiro mês completo no time. A previsão de 28 vendas combina rampagem, maior tempo de atuação e o histórico de 16 vendas do grupo em julho.",
+      "atencao_txt": "⚠️ Guilherme, como guia, não compete; seus vendedores ainda estão em rampa. A projeção exige continuidade de cadência e acompanhamento próximo, sem presumir produtividade plena ou distribuição uniforme de leads.",
       "sellers": [
         [
           "Carla Cristina Ferreira Siqueira",
-          0,
+          8,
           8
         ],
         [
           "Lorena Cristina Domingos Pereira",
-          3,
+          5,
           5
         ],
         [
           "Gabriel Antonio Bittencourt",
-          3,
+          5,
           5
         ],
         [
           "Natalia Oliveira Katrip",
-          1,
+          4,
           4
         ],
         [
           "Guilherme Lopes Machado",
-          8,
+          2,
           2
         ],
         [
           "Lucas Vinicius Morato",
-          0,
+          1,
           1
         ]
       ]
     },
     "isr": {
-      "ativos": 11,
-      "mes_passado_total": 107,
-      "mes_passado": 107,
+      "ativos": 10,
+      "mes_passado_total": 116,
+      "mes_passado": 0,
       "mes_atual_total": 116,
-      "dias_confirmados_lbl": "dias 1 - 31",
+      "dias_confirmados_lbl": "dias 1 - 1",
       "dias_confirmados_val": 116,
-      "prev_atual": "115",
-      "lbl_titulo_comp": "Jul. real vs Ago. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
-      "lbl_vendedor": "Julho vs Agosto — por vendedor",
-      "leg_mes_passado": "Jul.",
-      "leg_mes_atual": "Ago.",
-      "destaque_txt": "⚡ Estevam (30), Tiago (29), Israel (17) e Patrícia (15) responderam por 91 das 114 vendas do grupo em julho. A previsão preserva essa produção histórica, independentemente do status atual na lista de trabalho.",
-      "atencao_txt": "⚠️ O resultado do grupo é concentrado: os quatro principais vendedores representaram 80% do volume de julho. Confirmar disponibilidade e distribuir oportunidades reduz o risco de dependência no mês.",
+      "prev_atual": "95",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "⚡ O time combina finalistas com histórico forte e vendedores que disputam vagas off-resort. A previsão de 95 vendas considera regressão de Estevam, Tiago, Camila e Patrícia após julho, parcialmente compensada por Bruno, Elisângela, Noemi e Tayna.",
+      "atencao_txt": "⚠️ A capacidade é concentrada e vários finalistas tiveram forte produção em julho. Relaxamento após a classificação, consumo de pipeline e retrabalho documental podem reduzir o volume se as oportunidades não forem redistribuídas.",
       "sellers": [
         [
           "Bruno Ramos Martins",
-          6,
+          22,
           22
         ],
         [
           "Israel Riella",
-          17,
+          20,
           20
         ],
         [
           "Estevam Silverio Tavares",
-          30,
+          20,
           20
         ],
         [
           "Patrícia Lúcio Custódio",
-          15,
+          16,
           16
         ],
         [
           "Tayna Inácia de Melo",
-          0,
+          13,
           13
         ],
         [
           "Tiago Melo da Silva",
-          29,
+          11,
           11
         ],
         [
           "Noemi da Silva Penafort da Costa",
-          2,
+          6,
           6
         ],
         [
           "Elisângela Arias",
-          1,
+          6,
           6
         ],
         [
           "Andressa Cristina de Paula",
           2,
           2
-        ],
-        [
-          "Camila Viana Alves",
-          5,
-          0
         ]
       ]
     },
     "lis": {
       "ativos": 14,
-      "mes_passado_total": 166,
-      "mes_passado": 166,
-      "mes_atual_total": 134,
-      "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 134,
-      "prev_atual": "179",
-      "lbl_titulo_comp": "Jul. real vs Ago. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
-      "lbl_vendedor": "Julho vs Agosto — por vendedor",
-      "leg_mes_passado": "Jul.",
-      "leg_mes_atual": "Ago.",
-      "destaque_txt": "⚡ Maria Aline (33), Adriérre (29), Larissa (25) e Makele (23) sustentaram 110 das 166 vendas do grupo em julho. A previsão incorpora todo esse histórico comercial.",
-      "atencao_txt": "⚠️ A continuidade de quem hoje está desmarcado precisa ser validada operacionalmente; sem isso, a capacidade histórica de julho pode não se materializar integralmente em agosto.",
+      "mes_passado_total": 136,
+      "mes_passado": 0,
+      "mes_atual_total": 136,
+      "dias_confirmados_lbl": "dias 1 - 1",
+      "dias_confirmados_val": 136,
+      "prev_atual": "168",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "⚡ Maria Aline e Makele chegam como finalistas, enquanto Adriérre, Aline, Danilo, Felipe, Iara, Larissa e Rafael mantêm incentivo pelas vagas off-resort. A combinação sustenta a maior previsão entre os times: 168 vendas.",
+      "atencao_txt": "⚠️ O resultado depende de equilibrar a regressão dos finalistas com a aceleração dos não classificados. A carteira deve ser acompanhada por idade, etapa e documentação para evitar concentração e leads paradas.",
       "sellers": [
         [
           "Maria Aline da Silva Ferreira",
-          33,
+          36,
           36
         ],
         [
           "Adriérre Marcon",
-          29,
+          21,
           21
         ],
         [
           "Makele de Souza Smania",
-          23,
+          16,
           16
         ],
         [
           "Larissa Pereira Niehues",
-          25,
+          16,
           16
         ],
         [
           "Lisdaisy Vieira Costa",
-          13,
+          14,
           14
         ],
         [
           "Iara da Silva Linhares",
-          15,
+          13,
           13
         ],
         [
@@ -205,76 +223,71 @@
         ],
         [
           "Felipe Santos Leite",
-          7,
+          6,
           6
         ],
         [
           "Aline Cristina da Silva",
-          6,
+          3,
           3
         ],
         [
-          "Lana Mara de Morais Leite",
+          "Diego Dias de Medeiros",
           2,
-          1
+          2
         ],
         [
-          "Danilo Tenfen",
-          5,
-          0
+          "Lana Mara de Morais Leite",
+          1,
+          1
         ]
       ]
     },
     "stl": {
-      "ativos": 7,
-      "mes_passado_total": 55,
-      "mes_passado": 55,
+      "ativos": 6,
+      "mes_passado_total": 89,
+      "mes_passado": 0,
       "mes_atual_total": 89,
-      "dias_confirmados_lbl": "dias 1 - 31",
+      "dias_confirmados_lbl": "dias 1 - 1",
       "dias_confirmados_val": 89,
-      "prev_atual": "59",
-      "lbl_titulo_comp": "Jul. real vs Ago. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
-      "lbl_vendedor": "Julho vs Agosto — por vendedor",
-      "leg_mes_passado": "Jul.",
-      "leg_mes_atual": "Ago.",
-      "destaque_txt": "⚡ Stella (17), Josilea (10), Elison (8), Guilherme Carvalho (6) e Ketlin (6) somaram 47 vendas em julho, formando uma base estável para agosto.",
-      "atencao_txt": "⚠️ É a menor estrutura entre os grupos originais e tem menor folga para ausências. Acelerar documentação e pagamento é essencial para converter volume sem depender só de novas entradas.",
+      "prev_atual": "66",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "⚡ O time possui ampla exposição à disputa off-resort. Stella, Josilea, Elison, Bruna, Guilherme Carvalho e Ketlin formam uma base capaz de acelerar ao longo do mês, levando a previsão a 66 vendas.",
+      "atencao_txt": "⚠️ A estrutura tem menor folga para ausências e pode ficar dependente de poucos produtores. Velocidade de primeiro contato e passagem de documentação para pagamento são os principais pontos de controle.",
       "sellers": [
         [
           "Stella Nieheus",
-          17,
+          40,
           40
         ],
         [
           "Josilea de Melo Rocha",
-          10,
+          15,
           15
         ],
         [
           "Bruna Letícia Corrêa Barbosa",
-          7,
+          15,
           15
         ],
         [
           "Ketlin Madeira Colombo",
-          6,
+          8,
           8
         ],
         [
           "Elison da Silva Elias",
-          8,
+          6,
           6
         ],
         [
           "Guilherme Carvalho Rodrigues",
-          6,
+          5,
           5
-        ],
-        [
-          "Mirian Daiane Braga Felix",
-          1,
-          0
         ]
       ]
     }
@@ -460,7 +473,7 @@
       5,
       5,
       6,
-      "weekend",
+      "work",
       "Segunda semana historicamente forte, com efeito de sábado.",
       1
     ],
@@ -470,7 +483,7 @@
       2,
       2,
       2,
-      "weekend",
+      "work",
       "Produção residual com leve influência da competição.",
       1
     ],
@@ -530,7 +543,7 @@
       3,
       3,
       3,
-      "weekend",
+      "work",
       "Entrada na faixa historicamente mais fraca de agosto.",
       1
     ],
@@ -600,7 +613,7 @@
       6,
       5,
       7,
-      "weekend",
+      "work",
       "Início do trecho forte, mesmo com limitação de sábado.",
       3
     ],
@@ -620,7 +633,7 @@
       15,
       13,
       17,
-      "sprint",
+      "work",
       "Aceleração da competição, moderada pela documentação acumulada.",
       10
     ],
@@ -630,7 +643,7 @@
       20,
       18,
       22,
-      "sprint",
+      "work",
       "Oportunidades recompostas na terceira semana chegam ao fechamento.",
       25
     ],
@@ -640,7 +653,7 @@
       21,
       19,
       23,
-      "sprint",
+      "work",
       "Pipeline e urgência competitiva atuam simultaneamente.",
       18
     ],
@@ -650,7 +663,7 @@
       17,
       15,
       19,
-      "sprint",
+      "work",
       "Boa produção, com pequena redução após os picos.",
       22
     ],
@@ -660,7 +673,7 @@
       22,
       20,
       24,
-      "sprint",
+      "work",
       "Pico semanal sustentado pelo histórico e pela reta final.",
       21
     ],
@@ -670,7 +683,7 @@
       7,
       6,
       8,
-      "weekend",
+      "work",
       "Melhor sábado do mês devido ao encerramento próximo.",
       5
     ],
@@ -690,9 +703,9 @@
       24,
       22,
       27,
-      "sprint",
+      "work",
       "Maior dia previsto: fechamento do mês e da ConsoLiga, apesar do retrabalho.",
-      20
+      22
     ]
   ],
   "sugestoes": [
