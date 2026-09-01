@@ -2,20 +2,20 @@
   "meta": {
     "atualizado_em": "01/09/2026 09:49",
     "status_dias": "Dia 1 confirmado · Dia 1 parcial · Dias 2 à 30 com intervalo de confiança",
-    "kpi_total_pess": 315,
-    "kpi_total_central": 370,
-    "kpi_total_otim": 425,
-    "kpi_total_delta": "▲ +7,6% vs julho comercial (central)",
-    "kpi_media_central": "17,6",
-    "kpi_media_min": "15,0 mín",
-    "kpi_media_max": "20,2 máx",
+    "kpi_total_pess": 320,
+    "kpi_total_central": 357,
+    "kpi_total_otim": 396,
+    "kpi_total_delta": "▲ +2,9% vs julho/2026 (central)",
+    "kpi_media_central": "17",
+    "kpi_media_min": "15,2 mín",
+    "kpi_media_max": "18,9 máx",
     "kpi_realizado": 366,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 31)",
     "kpi_realizado_delta": "▲ 93,8% do total previsto",
-    "kpi_yoy_pct": "-8%",
-    "kpi_yoy_pess": "-21% pess.",
-    "kpi_yoy_otim": "+6% otim.",
-    "kpi_yoy_sub": "370 central vs 401 em agosto/2025",
+    "kpi_yoy_pct": "-11%",
+    "kpi_yoy_pess": "-20% pess.",
+    "kpi_yoy_otim": "-1% otim.",
+    "kpi_yoy_sub": "357 central vs 401 em agosto/2025",
     "kpi_ativos": 31,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 10 inativos / férias",
@@ -24,16 +24,16 @@
     "badge_consoliga": "🏁 CONSOLIGA T1 · Fase Final · Agosto/2026",
     "badge_copa": "📅 Agosto/2026 · 21 dias úteis · sem feriados nacionais",
     "kpi_total_sub": "vendas · Setembro/2026",
-    "kpi_media_delta": "▲ vs 15,0 jul/2026",
+    "kpi_media_delta": "▲ +2,0 vs 15,0 jul/2026",
     "kpi_yoy_lbl": "Percentual Previsto vs Setembro 2025",
     "kpi_yoy_delta": "▲ crescimento YoY projetado",
     "sec_title_previsao": "previsão diária com intervalo de confiança — Setembro 2026",
     "chart_title_main": "Vendas por Dia · Setembro 2026",
     "sec_title_teams": "desempenho por time — Agosto real vs Setembro projetado",
     "sec_title_sugestoes": "sugestões estratégicas para Setembro",
-    "footer_linha1": "Consolide · Forecast Setembro 2026 com Intervalo de Confiança · Gerado em 01/09/2026",
-    "footer_linha2": "Método: Pipeline Ponderado + Rolling WMA (ênfase nos últimos 6 meses) + cohort por vendedor/time · Margens: variação histórica por dia da semana, risco operacional e sprint final.",
-    "footer_linha3": "Cenário pessimista: 315 · Central: 370 · Otimista: 425"
+    "footer_linha1": "Consolide · Forecast Agosto 2026 com Intervalo de Confiança · Atualizado em 01/09/2026",
+    "footer_linha2": "Método: Rolling Forecast ponderado + sazonalidade de agosto/2025 + pipeline real + capacidade por coorte/time + ConsoLiga + calendário e penalidade documental.",
+    "footer_linha3": "Cenário pessimista: 320 · Central: 357 · Otimista: 396"
   },
   "times": {
     "Alan Marcos": {
@@ -473,7 +473,7 @@
       5,
       5,
       6,
-      "work",
+      "weekend",
       "Segunda semana historicamente forte, com efeito de sábado.",
       1
     ],
@@ -483,7 +483,7 @@
       2,
       2,
       2,
-      "work",
+      "weekend",
       "Produção residual com leve influência da competição.",
       1
     ],
@@ -543,7 +543,7 @@
       3,
       3,
       3,
-      "work",
+      "weekend",
       "Entrada na faixa historicamente mais fraca de agosto.",
       1
     ],
@@ -613,7 +613,7 @@
       6,
       5,
       7,
-      "work",
+      "weekend",
       "Início do trecho forte, mesmo com limitação de sábado.",
       3
     ],
@@ -633,7 +633,7 @@
       15,
       13,
       17,
-      "work",
+      "sprint",
       "Aceleração da competição, moderada pela documentação acumulada.",
       10
     ],
@@ -643,7 +643,7 @@
       20,
       18,
       22,
-      "work",
+      "sprint",
       "Oportunidades recompostas na terceira semana chegam ao fechamento.",
       25
     ],
@@ -653,7 +653,7 @@
       21,
       19,
       23,
-      "work",
+      "sprint",
       "Pipeline e urgência competitiva atuam simultaneamente.",
       18
     ],
@@ -663,7 +663,7 @@
       17,
       15,
       19,
-      "work",
+      "sprint",
       "Boa produção, com pequena redução após os picos.",
       22
     ],
@@ -673,7 +673,7 @@
       22,
       20,
       24,
-      "work",
+      "sprint",
       "Pico semanal sustentado pelo histórico e pela reta final.",
       21
     ],
@@ -683,7 +683,7 @@
       7,
       6,
       8,
-      "work",
+      "weekend",
       "Melhor sábado do mês devido ao encerramento próximo.",
       5
     ],
@@ -703,7 +703,7 @@
       24,
       22,
       27,
-      "work",
+      "sprint",
       "Maior dia previsto: fechamento do mês e da ConsoLiga, apesar do retrabalho.",
       22
     ]
