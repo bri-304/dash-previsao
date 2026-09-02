@@ -1,39 +1,39 @@
 {
   "meta": {
     "atualizado_em": "01/09/2026 10:21",
-    "status_dias":"Dias 1 à 31 confirmados",
-    "kpi_total_pess": 320,
-    "kpi_total_central": 357,
-    "kpi_total_otim": 396,
-    "kpi_total_delta": "▲ +2,9% vs julho/2026 (central)",
-    "kpi_media_central": "17",
-    "kpi_media_min": "15,2 mín",
-    "kpi_media_max": "18,9 máx",
+    "status_dias": "Dias 1 à 31 confirmados",
+    "kpi_total_pess": 335,
+    "kpi_total_central": 373,
+    "kpi_total_otim": 411,
+    "kpi_total_delta": "● 0,0% vs agosto/2026 (central)",
+    "kpi_media_central": "16,8",
+    "kpi_media_min": "15,0 mín",
+    "kpi_media_max": "18,6 máx",
     "kpi_realizado": 373,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 31)",
     "kpi_realizado_delta": "▲ 104,5% do total previsto",
-    "kpi_yoy_pct": "-11%",
-    "kpi_yoy_pess": "-20% pess.",
-    "kpi_yoy_otim": "-1% otim.",
-    "kpi_yoy_sub": "357 central vs 401 em agosto/2025",
+    "kpi_yoy_pct": "-1%",
+    "kpi_yoy_pess": "-11% pess.",
+    "kpi_yoy_otim": "+9% otim.",
+    "kpi_yoy_sub": "373 central vs 377 em setembro/2025",
     "kpi_ativos": 31,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 10 inativos / férias",
     "page_title": "Forecast Agosto 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Agosto 2026",
-    "badge_consoliga": "🏁 CONSOLIGA T1 · Fase Final · Agosto/2026",
-    "badge_copa": "📅 Agosto/2026 · 21 dias úteis · sem feriados nacionais",
+    "badge_consoliga": "🏁 CONSOLIGA T2 · Fase Classificatória · Mês 1 · Setembro/2026",
+    "badge_copa": "📅 Setembro/2026 · 21 dias úteis · feriado nacional em 07/09",
     "kpi_total_sub": "vendas · Agosto/2026",
-    "kpi_media_delta": "▲ +2,0 vs 15,0 jul/2026",
+    "kpi_media_delta": "▼ -1,2 vs 18,0 ago/2026",
     "kpi_yoy_lbl": "Percentual Previsto vs Agosto 2025",
     "kpi_yoy_delta": "▲ crescimento YoY projetado",
     "sec_title_previsao": "previsão diária com intervalo de confiança — Agosto 2026",
     "chart_title_main": "Vendas por Dia · Agosto 2026",
     "sec_title_teams": "desempenho por time — Julkho real vs Agosto projetado",
     "sec_title_sugestoes": "sugestões estratégicas para Agosto",
-    "footer_linha1": "Consolide · Forecast Agosto 2026 com Intervalo de Confiança · Atualizado em 01/09/2026",
-    "footer_linha2": "Método: Rolling Forecast ponderado + sazonalidade de agosto/2025 + pipeline real + capacidade por coorte/time + ConsoLiga + calendário e penalidade documental.",
-    "footer_linha3": "Cenário pessimista: 320 · Central: 357 · Otimista: 396"
+    "footer_linha1": "Consolide · Forecast Setembro 2026 com Intervalo de Confiança · Atualizado em 02/09/2026",
+    "footer_linha2": "Método: Rolling Forecast ponderado + sazonalidade de setembro/2025 + pipeline real + capacidade por coorte/time + ConsoLiga + calendário e penalidade documental.",
+    "footer_linha3": "Cenário pessimista: 335 · Central: 373 · Otimista: 411"
   },
   "times": {
     "gui": {
@@ -287,103 +287,88 @@
   "semanas": [
     {
       "n": 1,
-      "dates": "01 a 02/08",
-      "central": 5,
-      "min": 5,
-      "max": 5,
-      "avg_txt": "~2,5/dia · início no fim de semana",
+      "dates": "01 a 06/09",
+      "central": 66,
+      "min": 60,
+      "max": 72,
+      "avg_txt": "~16,5/dia útil · abertura e antecipação pré-feriado",
       "color": "var(--blue-l)",
       "tags": [
         {
           "cls": "warn",
-          "txt": "⚠️ Mês inicia em fim de semana; primeira janela operacional começa em 03/08"
+          "txt": "⚠️ Antecipar retornos e documentação antes do feriado de 07/09"
         }
       ]
     },
     {
       "n": 2,
-      "dates": "03 a 09/08",
-      "central": 83,
-      "min": 75,
-      "max": 92,
-      "avg_txt": "~16,6/dia útil · primeira semana operacional",
+      "dates": "07 a 13/09",
+      "central": 71,
+      "min": 63,
+      "max": 79,
+      "avg_txt": "~17,5/dia útil · feriado e retomada com duplas",
       "color": "var(--blue-l)",
       "tags": [
         {
           "cls": "risk",
-          "txt": "🚨 Ressaca documental possível após 97 registros iniciados entre 29 e 31/07"
+          "txt": "🚨 Feriado em 07/09 reduz a abertura da semana e desloca conversões"
         },
         {
           "cls": "ok",
-          "txt": "✅ Ciclo médio de 4,63 dias favorece conversões do pipeline maduro"
+          "txt": "✅ Duplas, SDRs e retomada pós-feriado favorecem 08 e 09/09"
         }
       ]
     },
     {
       "n": 3,
-      "dates": "10 a 16/08",
-      "central": 84,
-      "min": 75,
-      "max": 93,
-      "avg_txt": "~16,8/dia útil · semana completa",
-      "color": "var(--blue-l)",
+      "dates": "14 a 20/09",
+      "central": 95,
+      "min": 85,
+      "max": 105,
+      "avg_txt": "~19,0/dia útil · maior concentração do mês",
+      "color": "var(--amber)",
       "tags": [
         {
-          "cls": "ok",
-          "txt": "✅ Semana completa para consolidar oportunidades antes do vale sazonal"
+          "cls": "hot",
+          "txt": "🔥 Semana mais forte: 95 vendas centrais previstas entre 14 e 20/09"
+        },
+        {
+          "cls": "risk",
+          "txt": "📄 Picos podem ampliar a ressaca documental nos dias seguintes"
         }
       ]
     },
     {
       "n": 4,
-      "dates": "17 a 23/08",
-      "central": 54,
-      "min": 48,
-      "max": 60,
-      "avg_txt": "~10,8/dia útil · vale sazonal esperado",
-      "color": "var(--amber)",
+      "dates": "21 a 27/09",
+      "central": 84,
+      "min": 76,
+      "max": 92,
+      "avg_txt": "~16,8/dia útil · correção e recomposição",
+      "color": "var(--blue-l)",
       "tags": [
         {
-          "cls": "risk",
-          "txt": "⚠️ Vale histórico: 15 a 21 concentrou apenas 13% de agosto/2025"
-        },
-        {
-          "cls": "risk",
-          "txt": "🚨 Proteger primeiro contato e cadência para recompor o pipeline"
+          "cls": "warn",
+          "txt": "⚠️ Correção após o pico exige recomposição e priorização do pipeline"
         }
       ]
     },
     {
       "n": 5,
-      "dates": "24 a 30/08",
-      "central": 107,
-      "min": 95,
-      "max": 119,
-      "avg_txt": "~21,4/dia útil · maior concentração do mês",
+      "dates": "28 a 30/09",
+      "central": 57,
+      "min": 51,
+      "max": 63,
+      "avg_txt": "~19,0/dia útil · fechamento do mês",
       "color": "var(--amber)",
       "tags": [
         {
           "cls": "hot",
-          "txt": "🔥 Maior concentração prevista: 107 vendas centrais entre 24 e 30/08"
+          "txt": "🏁 Reta final concentra 57 vendas centrais em apenas três dias"
         },
         {
           "cls": "risk",
-          "txt": "📄 Picos de fechamento podem gerar retrabalho documental nos dias seguintes"
-        }
-      ]
-    },
-    {
-      "n": 6,
-      "dates": "31/08",
-      "central": 24,
-      "min": 22,
-      "max": 27,
-      "avg_txt": "~24/dia útil · fechamento da final",
-      "color": "var(--amber)",
-      "tags": [
-        {
-          "cls": "hot",
-          "txt": "🏁 Fechamento da ConsoLiga: 24 vendas centrais previstas em 31/08"
+          "txt": "⚠️ O pico final depende de oportunidades maduras já formadas"
         }
       ]
     }
@@ -391,419 +376,409 @@
   "dias": [
     [
       1,
-      "Sáb",
-      4,
-      4,
-      4,
-      "real",
-      "Fim de semana limita o volume, apesar do início da disputa off-resort.",
-      0
-    ],
-    [
-      2,
-      "Dom",
-      1,
-      1,
-      1,
-      "real",
-      "Domingo histórico de baixíssima produção.",
-      0
-    ],
-    [
-      3,
-      "Seg",
-      10,
-      9,
-      11,
-      "real",
-      "Retomada com possível ressaca dos registros iniciados no fechamento de julho.",
-      11
-    ],
-    [
-      4,
       "Ter",
       13,
       12,
       14,
-      "real",
-      "Pipeline começa a amadurecer, ainda com risco de retrabalho documental.",
+      "work",
+      "Início moderado; o estoque de oportunidades maduras ainda é limitado.",
+      0
+    ],
+    [
+      2,
+      "Qua",
+      17,
+      15,
+      19,
+      "work",
+      "Avanço das oportunidades herdadas de agosto favorece a quarta-feira.",
+      0
+    ],
+    [
+      3,
+      "Qui",
+      14,
+      13,
+      15,
+      "work",
+      "Normalização após a abertura, com atenção à carga documental.",
+      11
+    ],
+    [
+      4,
+      "Sex",
+      18,
+      16,
+      20,
+      "work",
+      "Antecipação de reuniões e pagamentos antes do feriado prolongado.",
       24
     ],
     [
       5,
-      "Qua",
-      17,
-      15,
-      19,
-      "real",
-      "Oportunidades com ciclo médio de 4,63 dias começam a converter.",
+      "Sáb",
+      3,
+      3,
+      3,
+      "weekend",
+      "Fim de semana limita o volume, apesar da antecipação pré-feriado.",
       33
     ],
     [
       6,
-      "Qui",
-      18,
-      16,
-      20,
-      "real",
-      "Pipeline maduro e aceleração inicial dos não classificados.",
+      "Dom",
+      1,
+      1,
+      1,
+      "weekend",
+      "Domingo histórico de atividade residual.",
       21
     ],
     [
       7,
-      "Sex",
-      18,
-      16,
-      20,
-      "real",
-      "Boa sexta, parcialmente limitada pela documentação dos dias anteriores.",
+      "Seg",
+      1,
+      1,
+      1,
+      "holiday",
+      "Feriado nacional; operação e pagamentos em nível mínimo.",
       11
     ],
     [
       8,
-      "Sáb",
-      5,
-      5,
-      6,
-      "real",
-      "Segunda semana historicamente forte, com efeito de sábado.",
+      "Ter",
+      15,
+      13,
+      17,
+      "work",
+      "Retorno do feriado e início das duplas, ainda com adaptação operacional.",
       3
     ],
     [
       9,
-      "Dom",
-      2,
-      2,
-      2,
-      "real",
-      "Produção residual com leve influência da competição.",
+      "Qua",
+      20,
+      18,
+      22,
+      "work",
+      "Rebote pós-feriado e primeiro efeito combinado de duplas e SDRs.",
       1
     ],
     [
       10,
-      "Seg",
-      12,
-      11,
-      13,
-      "real",
-      "Consumo de pipeline após a primeira semana e retrabalho pós-fechamento.",
+      "Qui",
+      16,
+      14,
+      18,
+      "work",
+      "Conversão do estoque trabalhado nos dois dias anteriores.",
       21
     ],
     [
       11,
-      "Ter",
-      16,
-      14,
-      18,
-      "real",
-      "Retomada do ritmo e incentivo off-resort ainda elevado.",
+      "Sex",
+      15,
+      13,
+      17,
+      "work",
+      "Leve ressaca documental após o pico de quarta-feira.",
       11
     ],
     [
       12,
-      "Qua",
-      16,
-      14,
-      18,
-      "real",
-      "Conversão de oportunidades trabalhadas desde a semana anterior.",
+      "Sáb",
+      4,
+      4,
+      4,
+      "weekend",
+      "Fechamentos residuais de pitches realizados durante a semana.",
       20
     ],
     [
       13,
-      "Qui",
-      15,
-      13,
-      17,
-      "real",
-      "Volume saudável, moderado pela documentação acumulada.",
+      "Dom",
+      0,
+      0,
+      0,
+      "weekend",
+      "Vale natural de domingo após a retomada.",
       16
     ],
     [
       14,
-      "Sex",
-      19,
-      17,
-      21,
-      "real",
-      "Fechamento da quinzena concentra oportunidades maduras.",
+      "Seg",
+      16,
+      14,
+      18,
+      "work",
+      "Entrada na faixa historicamente mais forte de setembro.",
       16
     ],
     [
       15,
-      "Sáb",
-      3,
-      3,
-      3,
-      "real",
-      "Entrada na faixa historicamente mais fraca de agosto.",
+      "Ter",
+      21,
+      19,
+      23,
+      "sprint",
+      "Pico sazonal com pipeline recomposto após o feriado.",
       1
     ],
     [
       16,
-      "Dom",
-      3,
-      3,
-      3,
-      "real",
-      "Baixo volume de domingo no início do vale sazonal.",
+      "Qua",
+      19,
+      17,
+      21,
+      "sprint",
+      "Duplas e SDRs completam uma semana de operação.",
       null
     ],
     [
       17,
-      "Seg",
-      6,
-      5,
-      7,
-      "real",
-      "Vale histórico agravado pela ressaca do fechamento da quinzena.",
+      "Qui",
+      18,
+      16,
+      20,
+      "sprint",
+      "Maturação das oportunidades geradas na retomada.",
       9
     ],
     [
       18,
-      "Ter",
-      10,
-      9,
-      11,
-      "real",
-      "Pipeline perde maturidade após o consumo da primeira metade.",
+      "Sex",
+      17,
+      15,
+      19,
+      "sprint",
+      "Produção ainda forte, moderada pelo retrabalho documental.",
       9
     ],
     [
       19,
-      "Qua",
-      10,
-      9,
-      11,
-      "real",
-      "Semana de recomposição de oportunidades, com poucos fechamentos imediatos.",
+      "Sáb",
+      2,
+      2,
+      2,
+      "weekend",
+      "Sábado e consumo do estoque da semana reduzem o volume.",
       21
     ],
     [
       20,
-      "Qui",
-      7,
-      6,
-      8,
-      "real",
-      "Ponto mais fraco entre os dias úteis, coerente com agosto/2025.",
+      "Dom",
+      2,
+      2,
+      2,
+      "weekend",
+      "Vendas residuais, ligeiramente acima do domingo anterior.",
       6
     ],
     [
       21,
-      "Sex",
-      11,
-      10,
+      "Seg",
+      13,
       12,
-      "real",
-      "Primeiros sinais de recuperação antes da semana de maior concentração.",
+      14,
+      "work",
+      "Correção após a semana mais forte do mês.",
       13
     ],
     [
       22,
-      "Sáb",
-      6,
-      5,
-      7,
-      "real",
-      "Início do trecho forte, mesmo com limitação de sábado.",
+      "Ter",
+      12,
+      11,
+      13,
+      "work",
+      "Vale intermediário e necessidade de recompor oportunidades maduras.",
       3
     ],
     [
       23,
-      "Dom",
-      4,
-      4,
-      4,
-      "real",
-      "Domingo acima dos anteriores pela proximidade da reta final.",
+      "Qua",
+      15,
+      13,
+      17,
+      "work",
+      "Retomada gradual das conversões após a correção.",
       null
     ],
     [
       24,
-      "Seg",
+      "Qui",
       15,
       13,
       17,
-      "real",
-      "Aceleração da competição, moderada pela documentação acumulada.",
+      "work",
+      "Capacidade parcialmente consumida pela documentação acumulada.",
       10
     ],
     [
       25,
-      "Ter",
-      20,
-      18,
-      22,
-      "real",
-      "Oportunidades recompostas na terceira semana chegam ao fechamento.",
+      "Sex",
+      21,
+      19,
+      23,
+      "sprint",
+      "Fechamento da semana e proximidade do fim do mês elevam a urgência.",
       25
     ],
     [
       26,
-      "Qua",
-      21,
-      19,
-      23,
-      "real",
-      "Pipeline e urgência competitiva atuam simultaneamente.",
+      "Sáb",
+      5,
+      5,
+      5,
+      "weekend",
+      "Pendências de pagamento da sexta sustentam um sábado mais forte.",
       18
     ],
     [
       27,
-      "Qui",
-      17,
-      15,
-      19,
-      "real",
-      "Boa produção, com pequena redução após os picos.",
+      "Dom",
+      3,
+      3,
+      3,
+      "weekend",
+      "Domingo residual com influência da proximidade da reta final.",
       22
     ],
     [
       28,
-      "Sex",
-      22,
+      "Seg",
       20,
-      24,
-      "real",
-      "Pico semanal sustentado pelo histórico e pela reta final.",
+      18,
+      22,
+      "sprint",
+      "Início da reta final e recuperação de pendências maduras.",
       21
     ],
     [
       29,
-      "Sáb",
-      7,
-      6,
-      8,
-      "real",
-      "Melhor sábado do mês devido ao encerramento próximo.",
+      "Ter",
+      19,
+      17,
+      21,
+      "sprint",
+      "Fechamento de oportunidades em documentação e pagamento.",
       5
     ],
     [
       30,
-      "Dom",
-      5,
-      4,
-      6,
-      "real",
-      "Produção residual elevada pela última oportunidade competitiva.",
+      "Qua",
+      18,
+      16,
+      20,
+      "sprint",
+      "Último dia do mês concentra urgência, limitado pelo estoque disponível.",
       null
-    ],
-    [
-      31,
-      "Seg",
-      24,
-      22,
-      27,
-      "real",
-      "Maior dia previsto: fechamento do mês e da ConsoLiga, apesar do retrabalho.",
-      22
     ]
   ],
   "sugestoes": [
     {
       "n": "01",
-      "titulo": "🧾 Força-tarefa documental no início do mês",
-      "descricao_html": "Os <strong>97 registros iniciados entre 29 e 31/07</strong>, somados a 73,93% de processos com documentação incompleta, justificam uma triagem de pendências, assinaturas e documentos nos primeiros dias úteis para preservar horas de venda ativa.",
+      "titulo": "📆 Preparar a retomada pós-feriado",
+      "descricao_html": "Até 04/09, organizar uma fila específica de retornos, reuniões e oportunidades maduras para <strong>08 e 09/09</strong>, reduzindo o vale provocado pelo feriado nacional de 07/09.",
       "tags": [
-        "documentação",
-        "retrabalho",
-        "início-do-mês"
+        "feriado",
+        "retomada",
+        "pipeline"
       ]
     },
     {
       "n": "02",
-      "titulo": "📆 Antecipar fechamentos antes do vale",
-      "descricao_html": "Agosto/2025 concentrou apenas <strong>13% das vendas entre 15 e 21</strong>. Antecipar reuniões, propostas, documentação e cobranças para 12 a 14/08 reduz a exposição ao vale sazonal da terceira semana.",
+      "titulo": "📞 Medir a produtividade dos SDRs",
+      "descricao_html": "Definir metas de agendas e comparecimento para Stella, Elisangela e Bruno Xavier, separadas das metas de fechamento dos vendedores apoiados, permite medir o ganho real do piloto.",
       "tags": [
-        "sazonalidade",
-        "antecipação",
-        "fechamento"
+        "sdr",
+        "agendas",
+        "produtividade"
       ]
     },
     {
       "n": "03",
-      "titulo": "⚡ Proteger o primeiro contato",
-      "descricao_html": "Com tempo médio de primeiro contato de <strong>6h28</strong>, acompanhar a fila de MQLs e redistribuir rapidamente casos sem abordagem protege conversão durante todo o mês.",
+      "titulo": "🧾 Controlar o piloto documental da Lis",
+      "descricao_html": "Acompanhar taxa de documentos incompletos, horas até iniciar registro e vendas por hora produtiva. O ponto de partida é crítico: <strong>78,49% dos processos</strong> tiveram documentação incompleta.",
       "tags": [
-        "mql",
-        "primeiro-contato",
-        "redistribuição"
+        "documentação",
+        "time-lis",
+        "piloto"
       ]
     },
     {
       "n": "04",
-      "titulo": "🗂️ Priorizar carteira por idade e etapa",
-      "descricao_html": "Revisar diariamente o pipeline por idade, etapa e probabilidade permite trabalhar primeiro oportunidades recentes e maduras, evitando que leads qualificadas envelheçam sem cadência.",
+      "titulo": "🎯 Proteger agendas dos vendedores apoiados",
+      "descricao_html": "Preservar Maria Aline, Marcon, Estevam e Josileia de tarefas operacionais nos dias com maior concentração de agendas amplia o benefício potencial dos SDRs.",
       "tags": [
-        "pipeline",
-        "idade",
-        "priorização"
+        "capacidade",
+        "sdr",
+        "agendas"
       ]
     },
     {
       "n": "05",
-      "titulo": "📞 Atacar perdas evitáveis do funil",
-      "descricao_html": "Sem contato, perda de contato e recusa ao pitch estão entre os principais motivos de lost. Cadências específicas por motivo, com tentativas multicanal e próximo passo definido, reduzem perdas recuperáveis.",
+      "titulo": "🗂️ Priorizar oportunidades maduras na semana forte",
+      "descricao_html": "Entre 14 e 20/09, priorizar documentação, pagamento e oportunidades com pitch realizado. Essa é a semana central mais forte, com <strong>95 vendas previstas</strong>.",
       "tags": [
-        "lost",
-        "cadência",
-        "multicanal"
+        "pipeline",
+        "semana-forte",
+        "fechamento"
       ]
     },
     {
       "n": "06",
-      "titulo": "🎯 Distribuir capacidade na reta final",
-      "descricao_html": "A produção é concentrada e a ConsoLiga cria incentivos diferentes. Direcionar oportunidades maduras aos não classificados com boa atividade, sem sobrecarregar poucos vendedores, reduz dependência e retrabalho documental.",
+      "titulo": "🏁 Entrar na reta final com estoque validado",
+      "descricao_html": "Até 25/09, formar uma lista fechada de oportunidades maduras para 28 a 30/09. MQLs recentes dificilmente compensarão falta de estoque nos três últimos dias.",
       "tags": [
-        "capacidade",
-        "consoliga",
-        "reta-final"
+        "reta-final",
+        "estoque",
+        "conversão"
       ]
     }
   ],
   "gargalos": [
     {
       "tipo": "risk",
-      "data": "03-04/08",
-      "titulo": "Ressaca documental de julho",
-      "desc": "Os 97 registros iniciados entre 29 e 31/07 podem gerar retorno de documentos e reduzir a disponibilidade comercial nos primeiros dias úteis. A taxa de processos com documentos incompletos é 73,93%.",
-      "pill": "📄 97 registros no fechamento de julho"
-    },
-    {
-      "tipo": "risk",
-      "data": "15-21/08",
-      "titulo": "Vale sazonal de agosto",
-      "desc": "O mesmo período concentrou somente 13% das vendas de agosto/2025. Sem antecipação de reuniões e propostas, o estoque de oportunidades maduras pode ficar insuficiente.",
-      "pill": "📉 Faixa historicamente mais fraca"
-    },
-    {
-      "tipo": "risk",
-      "data": "03-07/08",
-      "titulo": "Velocidade do primeiro contato",
-      "desc": "O tempo médio de primeiro contato está em 6h28. Atrasos na entrada do mês comprometem a conversão e reduzem o pipeline disponível para as semanas seguintes.",
-      "pill": "⚡ Tempo médio: 6h28"
+      "data": "05-08/09",
+      "titulo": "Feriado e retomada operacional",
+      "desc": "O feriado nacional de 07/09 cai em uma segunda-feira. Sem antecipação até 04/09, retornos, reuniões e pagamentos podem ser deslocados e enfraquecer a abertura da segunda semana.",
+      "pill": "📅 Feriado nacional em 07/09"
     },
     {
       "tipo": "risk",
       "data": "Durante o mês",
-      "titulo": "Baixa taxa de atendimento",
-      "desc": "A taxa geral de atendimento observada foi 44,58%. O volume de tentativas precisa ser acompanhado junto com contatos efetivos, pitches e próximos passos.",
-      "pill": "📞 Atendimento: 44,58%"
-    },
-    {
-      "tipo": "risk",
-      "data": "Durante o mês",
-      "titulo": "Perdas evitáveis no início do funil",
-      "desc": "Sem contato representa 22,2% dos losts; não querer escutar o pitch, 19,9%; e perda de contato, 10,9%. Cadência inconsistente reduz o aproveitamento das leads.",
-      "pill": "⚠️ Priorizar cadência e recuperação"
+      "titulo": "Regressão após o sprint de agosto",
+      "desc": "Israel, Bruno, Estevam, Marcon, Maria Aline, Stella e Bruna superaram 130% da meta em agosto. Parte do pipeline e da urgência pode não se repetir em setembro.",
+      "pill": "📉 7 vendedores acima de 130%"
     },
     {
       "tipo": "risk",
       "data": "Após dias de pico",
-      "titulo": "Concentração e retrabalho",
-      "desc": "Seis vendedores responderam por aproximadamente 49% das vendas de julho. Picos concentrados elevam a dependência de poucos produtores e a carga documental subsequente.",
-      "pill": "👥 Reduzir dependência operacional"
+      "titulo": "Documentação incompleta e retrabalho",
+      "desc": "A taxa de processos com documentos incompletos é 78,49%, com média de 2,34 retornos por processo e 22h24 úteis até iniciar o registro.",
+      "pill": "📄 78,49% com docs incompletos"
+    },
+    {
+      "tipo": "risk",
+      "data": "Primeiras semanas",
+      "titulo": "Pilotos ainda em adaptação",
+      "desc": "O apoio de SDRs, o time documental da Lis e o trabalho em duplas são mudanças recentes. O ganho pode demorar a aparecer ou variar entre os vendedores.",
+      "pill": "🧪 Benefícios ainda em validação"
+    },
+    {
+      "tipo": "risk",
+      "data": "Durante o mês",
+      "titulo": "Perdas evitáveis no funil",
+      "desc": "Sem contato representa 25,1% dos losts; não querer executar o pitch, 22,7%; lead duplicada, 17,3%; e perda de contato, 10%.",
+      "pill": "📞 Proteger contato e pitch"
+    },
+    {
+      "tipo": "risk",
+      "data": "28-30/09",
+      "titulo": "Dependência de estoque maduro",
+      "desc": "A reta final prevê 57 vendas em três dias. Sem oportunidades já em documentação, pagamento ou com pitch realizado, MQLs recentes não fecham a lacuna.",
+      "pill": "🏁 57 vendas previstas na reta final"
     }
   ]
 }
