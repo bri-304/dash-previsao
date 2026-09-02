@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "01/09/2026 10:21",
-    "status_dias": "Dias 1 à 31 confirmados",
+    "atualizado_em": "02/09/2026 17:52",
+    "status_dias": "Dias 1 à 2 confirmados · Dia 2 parcial · Dias 3 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
     "kpi_total_otim": 411,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 373,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 31)",
-    "kpi_realizado_delta": "▲ 104,5% do total previsto",
+    "kpi_realizado": 30,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 1)",
+    "kpi_realizado_delta": "▲ 7,7% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -19,266 +19,279 @@
     "kpi_ativos": 31,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 10 inativos / férias",
-    "page_title": "Forecast Agosto 2026 - Consolide",
-    "hdr_title_html": "Forecast de Vendas - Agosto 2026",
+    "page_title": "Forecast Setembro 2026 - Consolide",
+    "hdr_title_html": "Forecast de Vendas - Setembro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T2 · Fase Classificatória · Mês 1 · Setembro/2026",
     "badge_copa": "📅 Setembro/2026 · 21 dias úteis · feriado nacional em 07/09",
-    "kpi_total_sub": "vendas · Agosto/2026",
+    "kpi_total_sub": "vendas · Setembro/2026",
     "kpi_media_delta": "▼ -1,2 vs 18,0 ago/2026",
-    "kpi_yoy_lbl": "Percentual Previsto vs Agosto 2025",
+    "kpi_yoy_lbl": "Percentual Previsto vs Setembro 2025",
     "kpi_yoy_delta": "▲ crescimento YoY projetado",
-    "sec_title_previsao": "previsão diária com intervalo de confiança — Agosto 2026",
-    "chart_title_main": "Vendas por Dia · Agosto 2026",
-    "sec_title_teams": "desempenho por time — Julkho real vs Agosto projetado",
-    "sec_title_sugestoes": "sugestões estratégicas para Agosto",
+    "sec_title_previsao": "previsão diária com intervalo de confiança — Setembro 2026",
+    "chart_title_main": "Vendas por Dia · Setembro 2026",
+    "sec_title_teams": "desempenho por time — Agosto real vs Setembro projetado",
+    "sec_title_sugestoes": "sugestões estratégicas para Setembro",
     "footer_linha1": "Consolide · Forecast Setembro 2026 com Intervalo de Confiança · Atualizado em 02/09/2026",
     "footer_linha2": "Método: Rolling Forecast ponderado + sazonalidade de setembro/2025 + pipeline real + capacidade por coorte/time + ConsoLiga + calendário e penalidade documental.",
     "footer_linha3": "Cenário pessimista: 335 · Central: 373 · Otimista: 411"
   },
   "times": {
-    "gui": {
-      "ativos": 6,
-      "mes_passado_total": 15,
-      "mes_passado": 15,
-      "mes_atual_total": 25,
-      "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 25,
-      "prev_atual": "28",
-      "lbl_titulo_comp": "Jul. real vs Ago. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
-      "lbl_vendedor": "Julho vs Agosto — por vendedor",
-      "leg_mes_passado": "Jul.",
-      "leg_mes_atual": "Ago.",
-      "destaque_txt": "⚡ Gabriel, Lorena e Natalia disputam vagas off-resort e terão o primeiro mês completo no time. A previsão de 28 vendas combina rampagem, maior tempo de atuação e o histórico de 16 vendas do grupo em julho.",
-      "atencao_txt": "⚠️ Guilherme, como guia, não compete; seus vendedores ainda estão em rampa. A projeção exige continuidade de cadência e acompanhamento próximo, sem presumir produtividade plena ou distribuição uniforme de leads.",
+    "Alan Marcos": {
+      "ativos": 0,
+      "mes_passado_total": 0,
+      "mes_passado": 0,
+      "mes_atual_total": 0,
+      "dias_confirmados_lbl": "dias 1 - 2",
+      "dias_confirmados_val": 0,
+      "prev_atual": "",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "",
+      "atencao_txt": "",
       "sellers": [
         [
-          "Carla Cristina Ferreira Siqueira",
-          0,
-          8
-        ],
-        [
-          "Lorena Cristina Domingos Pereira",
-          3,
-          5
-        ],
-        [
-          "Gabriel Antonio Bittencourt",
-          3,
-          5
-        ],
-        [
-          "Natalia Oliveira Katrip",
+          "Ivan Conti",
           1,
-          4
-        ],
-        [
-          "Guilherme Lopes Machado",
-          8,
-          2
-        ],
+          0
+        ]
+      ]
+    },
+    "gui": {
+      "ativos": 1,
+      "mes_passado_total": 25,
+      "mes_passado": 0,
+      "mes_atual_total": 1,
+      "dias_confirmados_lbl": "dias 1 - 2",
+      "dias_confirmados_val": 1,
+      "prev_atual": "36",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "⚡ Lorena, Natalia e Lucas avançam na curva de rampagem, e a dupla Guilherme–Lis pode acelerar aprendizado e distribuição de boas práticas. A previsão sobe para 36 vendas.",
+      "atencao_txt": "⚠️ O time produziu 25 vendas em agosto e ainda depende de vendedores em primeiros meses de casa. O cenário central pressupõe evolução gradual, sem tratá-los como plenamente rampados.",
+      "sellers": [
         [
           "Lucas Vinicius Morato",
           0,
           1
+        ],
+        [
+          "Carla Cristina Ferreira Siqueira",
+          8,
+          0
+        ],
+        [
+          "Natalia Oliveira Katrip",
+          5,
+          0
+        ],
+        [
+          "Lorena Cristina Domingos Pereira",
+          5,
+          0
+        ],
+        [
+          "Gabriel Antonio Bittencourt",
+          5,
+          0
+        ],
+        [
+          "Guilherme Lopes Machado",
+          2,
+          0
         ]
       ]
     },
     "isr": {
       "ativos": 10,
-      "mes_passado_total": 107,
-      "mes_passado": 107,
-      "mes_atual_total": 116,
-      "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 116,
-      "prev_atual": "95",
-      "lbl_titulo_comp": "Jul. real vs Ago. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
-      "lbl_vendedor": "Julho vs Agosto — por vendedor",
-      "leg_mes_passado": "Jul.",
-      "leg_mes_atual": "Ago.",
-      "destaque_txt": "⚡ O time combina finalistas com histórico forte e vendedores que disputam vagas off-resort. A previsão de 95 vendas considera regressão de Estevam, Tiago, Camila e Patrícia após julho, parcialmente compensada por Bruno, Elisângela, Noemi e Tayna.",
-      "atencao_txt": "⚠️ A capacidade é concentrada e vários finalistas tiveram forte produção em julho. Relaxamento após a classificação, consumo de pipeline e retrabalho documental podem reduzir o volume se as oportunidades não forem redistribuídas.",
+      "mes_passado_total": 116,
+      "mes_passado": 0,
+      "mes_atual_total": 10,
+      "dias_confirmados_lbl": "dias 1 - 2",
+      "dias_confirmados_val": 10,
+      "prev_atual": "112",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "⚡ Estevam recebe apoio de SDR, enquanto Camila e Patrícia passam a contar com Elisangela nas agendas. A estrutura sustenta previsão de 112 vendas, próxima ao desempenho de agosto, mesmo com regressão parcial dos líderes.",
+      "atencao_txt": "⚠️ Israel, Bruno e Estevam superaram 130% da meta em agosto, e Elisangela está fora da catraca para atuar como SDR. O risco central é depender novamente de poucos produtores e consumir o pipeline cedo.",
       "sellers": [
         [
-          "Bruno Ramos Martins",
-          6,
-          22
-        ],
-        [
           "Israel Riella",
-          17,
-          20
-        ],
-        [
-          "Estevam Silverio Tavares",
-          30,
-          20
-        ],
-        [
-          "Patrícia Lúcio Custódio",
-          15,
-          16
-        ],
-        [
-          "Tayna Inácia de Melo",
-          0,
-          13
-        ],
-        [
-          "Tiago Melo da Silva",
-          29,
-          11
+          20,
+          5
         ],
         [
           "Noemi da Silva Penafort da Costa",
-          2,
-          6
+          6,
+          4
+        ],
+        [
+          "Tiago Melo da Silva",
+          11,
+          1
+        ],
+        [
+          "Bruno Ramos Martins",
+          22,
+          0
+        ],
+        [
+          "Estevam Silverio Tavares",
+          20,
+          0
+        ],
+        [
+          "Patrícia Lúcio Custódio",
+          16,
+          0
+        ],
+        [
+          "Tayna Inácia de Melo",
+          13,
+          0
         ],
         [
           "Elisângela Arias",
-          1,
-          6
+          6,
+          0
         ],
         [
           "Andressa Cristina de Paula",
           2,
-          2
-        ],
-        [
-          "Camila Viana Alves",
-          5,
           0
         ]
       ]
     },
     "lis": {
-      "ativos": 12,
-      "mes_passado_total": 166,
-      "mes_passado": 166,
-      "mes_atual_total": 136,
-      "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 136,
-      "prev_atual": "168",
-      "lbl_titulo_comp": "Jul. real vs Ago. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
-      "lbl_vendedor": "Julho vs Agosto — por vendedor",
-      "leg_mes_passado": "Jul.",
-      "leg_mes_atual": "Ago.",
-      "destaque_txt": "⚡ Maria Aline e Makele chegam como finalistas, enquanto Adriérre, Aline, Danilo, Felipe, Iara, Larissa e Rafael mantêm incentivo pelas vagas off-resort. A combinação sustenta a maior previsão entre os times: 168 vendas.",
-      "atencao_txt": "⚠️ O resultado depende de equilibrar a regressão dos finalistas com a aceleração dos não classificados. A carteira deve ser acompanhada por idade, etapa e documentação para evitar concentração e leads paradas.",
+      "ativos": 16,
+      "mes_passado_total": 136,
+      "mes_passado": 0,
+      "mes_atual_total": 15,
+      "dias_confirmados_lbl": "dias 1 - 2",
+      "dias_confirmados_val": 15,
+      "prev_atual": "151",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "⚡ O time recebe o maior reforço estrutural: apoio documental e SDR para Maria Aline e Marcon. Esses pilotos podem reduzir retrabalho e preservar horas comerciais, sustentando a maior previsão entre os times: 151 vendas.",
+      "atencao_txt": "⚠️ Maria Aline e Marcon vieram de 240% e 140% da meta, respectivamente. A regressão é provável, e o benefício documental ainda precisa reduzir uma base de 78,49% de processos com documentos incompletos.",
       "sellers": [
         [
           "Maria Aline da Silva Ferreira",
-          33,
-          36
+          36,
+          5
         ],
         [
           "Adriérre Marcon",
-          29,
-          21
+          21,
+          4
         ],
         [
           "Makele de Souza Smania",
-          23,
-          16
-        ],
-        [
-          "Larissa Pereira Niehues",
-          25,
-          16
+          16,
+          3
         ],
         [
           "Lisdaisy Vieira Costa",
-          13,
-          14
+          14,
+          1
+        ],
+        [
+          "Larissa Pereira Niehues",
+          16,
+          1
+        ],
+        [
+          "Elisan Antônio",
+          0,
+          1
         ],
         [
           "Iara da Silva Linhares",
-          15,
-          13
+          13,
+          0
         ],
         [
           "Rafael Rodrigues Pedroso",
           8,
-          8
+          0
         ],
         [
           "Felipe Santos Leite",
-          7,
-          6
+          6,
+          0
         ],
         [
           "Aline Cristina da Silva",
-          6,
-          3
+          3,
+          0
         ],
         [
           "Diego Dias de Medeiros",
-          0,
-          2
+          2,
+          0
         ],
         [
           "Lana Mara de Morais Leite",
-          2,
-          1
-        ],
-        [
-          "Danilo Tenfen",
-          5,
+          1,
           0
         ]
       ]
     },
     "stl": {
       "ativos": 6,
-      "mes_passado_total": 55,
-      "mes_passado": 55,
-      "mes_atual_total": 89,
-      "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 89,
-      "prev_atual": "66",
-      "lbl_titulo_comp": "Jul. real vs Ago. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Ago. Realizado Jul.",
-      "lbl_vendedor": "Julho vs Agosto — por vendedor",
-      "leg_mes_passado": "Jul.",
-      "leg_mes_atual": "Ago.",
-      "destaque_txt": "⚡ O time possui ampla exposição à disputa off-resort. Stella, Josilea, Elison, Bruna, Guilherme Carvalho e Ketlin formam uma base capaz de acelerar ao longo do mês, levando a previsão a 66 vendas.",
-      "atencao_txt": "⚠️ A estrutura tem menor folga para ausências e pode ficar dependente de poucos produtores. Velocidade de primeiro contato e passagem de documentação para pagamento são os principais pontos de controle.",
+      "mes_passado_total": 89,
+      "mes_passado": 0,
+      "mes_atual_total": 4,
+      "dias_confirmados_lbl": "dias 1 - 2",
+      "dias_confirmados_val": 4,
+      "prev_atual": "74",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "⚡ Josileia passa a receber apoio de Stella, enquanto Elison, Guilherme Carvalho e Ketlin preservam capacidade de produção. A previsão central do time é de 74 vendas.",
+      "atencao_txt": "⚠️ Stella fez 40 vendas em agosto e agora divide sua capacidade com a função de SDR; Bruna está fora da catraca. O time precisa converter o apoio em agendas sem perder produção própria em excesso.",
       "sellers": [
         [
-          "Stella Nieheus",
-          17,
-          40
-        ],
-        [
-          "Josilea de Melo Rocha",
-          10,
-          15
-        ],
-        [
-          "Bruna Letícia Corrêa Barbosa",
-          7,
-          15
-        ],
-        [
           "Ketlin Madeira Colombo",
-          6,
-          8
+          8,
+          2
         ],
         [
           "Elison da Silva Elias",
-          8,
-          6
+          6,
+          1
+        ],
+        [
+          "Bruna Letícia Corrêa Barbosa",
+          15,
+          1
+        ],
+        [
+          "Stella Nieheus",
+          40,
+          0
+        ],
+        [
+          "Josilea de Melo Rocha",
+          15,
+          0
         ],
         [
           "Guilherme Carvalho Rodrigues",
-          6,
-          5
-        ],
-        [
-          "Mirian Daiane Braga Felix",
-          1,
+          5,
           0
         ]
       ]
@@ -380,9 +393,9 @@
       13,
       12,
       14,
-      "work",
+      "real",
       "Início moderado; o estoque de oportunidades maduras ainda é limitado.",
-      0
+      10
     ],
     [
       2,
@@ -390,9 +403,9 @@
       17,
       15,
       19,
-      "work",
+      "partial",
       "Avanço das oportunidades herdadas de agosto favorece a quarta-feira.",
-      0
+      20
     ],
     [
       3,
