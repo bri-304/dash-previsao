@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "02/09/2026 17:59",
+    "atualizado_em": "02/09/2026 18:20",
     "status_dias": "Dias 1 à 2 confirmados · Dia 2 parcial · Dias 3 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 31,
+    "kpi_realizado": 32,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 1)",
-    "kpi_realizado_delta": "▲ 7,9% do total previsto",
+    "kpi_realizado_delta": "▲ 8,2% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -174,9 +174,9 @@
       "ativos": 16,
       "mes_passado_total": 136,
       "mes_passado": 0,
-      "mes_atual_total": 15,
+      "mes_atual_total": 16,
       "dias_confirmados_lbl": "dias 1 - 2",
-      "dias_confirmados_val": 15,
+      "dias_confirmados_val": 16,
       "prev_atual": "151",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -202,13 +202,13 @@
           3
         ],
         [
-          "Lisdaisy Vieira Costa",
-          14,
-          1
-        ],
-        [
           "Larissa Pereira Niehues",
           16,
+          2
+        ],
+        [
+          "Lisdaisy Vieira Costa",
+          14,
           1
         ],
         [
@@ -393,7 +393,7 @@
       13,
       12,
       14,
-      "work",
+      "real",
       "Início moderado; o estoque de oportunidades maduras ainda é limitado.",
       10
     ],
@@ -403,9 +403,9 @@
       17,
       15,
       19,
-      "work",
+      "partial",
       "Avanço das oportunidades herdadas de agosto favorece a quarta-feira.",
-      21
+      22
     ],
     [
       3,
@@ -415,7 +415,7 @@
       15,
       "work",
       "Normalização após a abertura, com atenção à carga documental.",
-      11
+      null
     ],
     [
       4,
@@ -425,7 +425,7 @@
       20,
       "work",
       "Antecipação de reuniões e pagamentos antes do feriado prolongado.",
-      24
+      null
     ],
     [
       5,
@@ -435,7 +435,7 @@
       3,
       "weekend",
       "Fim de semana limita o volume, apesar da antecipação pré-feriado.",
-      33
+      null
     ],
     [
       6,
@@ -445,7 +445,7 @@
       1,
       "weekend",
       "Domingo histórico de atividade residual.",
-      21
+      null
     ],
     [
       7,
@@ -455,7 +455,7 @@
       1,
       "holiday",
       "Feriado nacional; operação e pagamentos em nível mínimo.",
-      11
+      null
     ],
     [
       8,
@@ -465,7 +465,7 @@
       17,
       "work",
       "Retorno do feriado e início das duplas, ainda com adaptação operacional.",
-      3
+      null
     ],
     [
       9,
@@ -475,7 +475,7 @@
       22,
       "work",
       "Rebote pós-feriado e primeiro efeito combinado de duplas e SDRs.",
-      1
+      null
     ],
     [
       10,
@@ -485,7 +485,7 @@
       18,
       "work",
       "Conversão do estoque trabalhado nos dois dias anteriores.",
-      21
+      null
     ],
     [
       11,
@@ -495,7 +495,7 @@
       17,
       "work",
       "Leve ressaca documental após o pico de quarta-feira.",
-      11
+      null
     ],
     [
       12,
@@ -505,7 +505,7 @@
       4,
       "weekend",
       "Fechamentos residuais de pitches realizados durante a semana.",
-      20
+      null
     ],
     [
       13,
@@ -515,7 +515,7 @@
       0,
       "weekend",
       "Vale natural de domingo após a retomada.",
-      16
+      null
     ],
     [
       14,
@@ -525,7 +525,7 @@
       18,
       "work",
       "Entrada na faixa historicamente mais forte de setembro.",
-      16
+      null
     ],
     [
       15,
@@ -535,7 +535,7 @@
       23,
       "sprint",
       "Pico sazonal com pipeline recomposto após o feriado.",
-      1
+      null
     ],
     [
       16,
@@ -555,7 +555,7 @@
       20,
       "sprint",
       "Maturação das oportunidades geradas na retomada.",
-      9
+      null
     ],
     [
       18,
@@ -565,7 +565,7 @@
       19,
       "sprint",
       "Produção ainda forte, moderada pelo retrabalho documental.",
-      9
+      null
     ],
     [
       19,
@@ -575,7 +575,7 @@
       2,
       "weekend",
       "Sábado e consumo do estoque da semana reduzem o volume.",
-      21
+      null
     ],
     [
       20,
@@ -585,7 +585,7 @@
       2,
       "weekend",
       "Vendas residuais, ligeiramente acima do domingo anterior.",
-      6
+      null
     ],
     [
       21,
@@ -595,7 +595,7 @@
       14,
       "work",
       "Correção após a semana mais forte do mês.",
-      13
+      null
     ],
     [
       22,
@@ -605,7 +605,7 @@
       13,
       "work",
       "Vale intermediário e necessidade de recompor oportunidades maduras.",
-      3
+      null
     ],
     [
       23,
@@ -625,7 +625,7 @@
       17,
       "work",
       "Capacidade parcialmente consumida pela documentação acumulada.",
-      10
+      null
     ],
     [
       25,
@@ -635,7 +635,7 @@
       23,
       "sprint",
       "Fechamento da semana e proximidade do fim do mês elevam a urgência.",
-      25
+      null
     ],
     [
       26,
@@ -645,7 +645,7 @@
       5,
       "weekend",
       "Pendências de pagamento da sexta sustentam um sábado mais forte.",
-      18
+      null
     ],
     [
       27,
@@ -655,7 +655,7 @@
       3,
       "weekend",
       "Domingo residual com influência da proximidade da reta final.",
-      22
+      null
     ],
     [
       28,
@@ -665,7 +665,7 @@
       22,
       "sprint",
       "Início da reta final e recuperação de pendências maduras.",
-      21
+      null
     ],
     [
       29,
@@ -675,7 +675,7 @@
       21,
       "sprint",
       "Fechamento de oportunidades em documentação e pagamento.",
-      5
+      null
     ],
     [
       30,
