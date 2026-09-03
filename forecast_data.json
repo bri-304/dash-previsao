@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "02/09/2026 18:20",
-    "status_dias": "Dias 1 à 2 confirmados · Dia 2 parcial · Dias 3 à 30 com intervalo de confiança",
+    "atualizado_em": "03/09/2026 11:08",
+    "status_dias": "Dias 1 à 3 confirmados · Dia 3 parcial · Dias 4 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
     "kpi_total_otim": 411,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 32,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 1)",
-    "kpi_realizado_delta": "▲ 8,2% do total previsto",
+    "kpi_realizado": 33,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 2)",
+    "kpi_realizado_delta": "▲ 8,5% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -41,7 +41,7 @@
       "mes_passado_total": 0,
       "mes_passado": 0,
       "mes_atual_total": 0,
-      "dias_confirmados_lbl": "dias 1 - 2",
+      "dias_confirmados_lbl": "dias 1 - 3",
       "dias_confirmados_val": 0,
       "prev_atual": "",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
@@ -64,7 +64,7 @@
       "mes_passado_total": 25,
       "mes_passado": 0,
       "mes_atual_total": 1,
-      "dias_confirmados_lbl": "dias 1 - 2",
+      "dias_confirmados_lbl": "dias 1 - 3",
       "dias_confirmados_val": 1,
       "prev_atual": "36",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
@@ -110,9 +110,9 @@
     "isr": {
       "ativos": 10,
       "mes_passado_total": 116,
-      "mes_passado": 0,
+      "mes_passado": 2,
       "mes_atual_total": 10,
-      "dias_confirmados_lbl": "dias 1 - 2",
+      "dias_confirmados_lbl": "dias 1 - 3",
       "dias_confirmados_val": 10,
       "prev_atual": "112",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
@@ -173,10 +173,10 @@
     "lis": {
       "ativos": 16,
       "mes_passado_total": 136,
-      "mes_passado": 0,
-      "mes_atual_total": 16,
-      "dias_confirmados_lbl": "dias 1 - 2",
-      "dias_confirmados_val": 16,
+      "mes_passado": 9,
+      "mes_atual_total": 17,
+      "dias_confirmados_lbl": "dias 1 - 3",
+      "dias_confirmados_val": 17,
       "prev_atual": "151",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -202,14 +202,14 @@
           3
         ],
         [
-          "Larissa Pereira Niehues",
-          16,
+          "Lisdaisy Vieira Costa",
+          14,
           2
         ],
         [
-          "Lisdaisy Vieira Costa",
-          14,
-          1
+          "Larissa Pereira Niehues",
+          16,
+          2
         ],
         [
           "Elisan Antônio",
@@ -253,7 +253,7 @@
       "mes_passado_total": 89,
       "mes_passado": 0,
       "mes_atual_total": 4,
-      "dias_confirmados_lbl": "dias 1 - 2",
+      "dias_confirmados_lbl": "dias 1 - 3",
       "dias_confirmados_val": 4,
       "prev_atual": "74",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
@@ -403,7 +403,7 @@
       17,
       15,
       19,
-      "partial",
+      "real",
       "Avanço das oportunidades herdadas de agosto favorece a quarta-feira.",
       22
     ],
@@ -413,9 +413,9 @@
       14,
       13,
       15,
-      "work",
+      "partial",
       "Normalização após a abertura, com atenção à carga documental.",
-      null
+      1
     ],
     [
       4,
