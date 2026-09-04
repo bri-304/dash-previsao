@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "04/09/2026 13:38",
+    "atualizado_em": "04/09/2026 14:08",
     "status_dias": "Dias 1 à 4 confirmados · Dia 4 parcial · Dias 5 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 40,
+    "kpi_realizado": 42,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 3)",
-    "kpi_realizado_delta": "▲ 10,3% do total previsto",
+    "kpi_realizado_delta": "▲ 10,8% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -164,9 +164,9 @@
       "ativos": 17,
       "mes_passado_total": 136,
       "mes_passado": 17,
-      "mes_atual_total": 20,
+      "mes_atual_total": 22,
       "dias_confirmados_lbl": "dias 1 - 4",
-      "dias_confirmados_val": 20,
+      "dias_confirmados_val": 22,
       "prev_atual": "151",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -202,6 +202,11 @@
           2
         ],
         [
+          "Aline Cristina da Silva",
+          3,
+          2
+        ],
+        [
           "Lucas Vinicius Morato",
           0,
           1
@@ -224,11 +229,6 @@
         [
           "Felipe Santos Leite",
           6,
-          0
-        ],
-        [
-          "Aline Cristina da Silva",
-          3,
           0
         ],
         [
@@ -420,7 +420,7 @@
       20,
       "partial",
       "Antecipação de reuniões e pagamentos antes do feriado prolongado.",
-      1
+      3
     ],
     [
       5,
