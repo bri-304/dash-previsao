@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "04/09/2026 16:38",
+    "atualizado_em": "04/09/2026 17:08",
     "status_dias": "Dias 1 à 4 confirmados · Dia 4 parcial · Dias 5 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,16 +9,16 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 51,
+    "kpi_realizado": 52,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 3)",
-    "kpi_realizado_delta": "▲ 13,1% do total previsto",
+    "kpi_realizado_delta": "▲ 13,3% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
     "kpi_yoy_sub": "373 central vs 377 em setembro/2025",
-    "kpi_ativos": 30,
+    "kpi_ativos": 29,
     "kpi_ativos_sub": "em 3 times competindo",
-    "kpi_inativos_delta": "▼ 11 inativos / férias",
+    "kpi_inativos_delta": "▼ 12 inativos / férias",
     "page_title": "Forecast Setembro 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Setembro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T2 · Fase Classificatória · Mês 1 · Setembro/2026",
@@ -164,9 +164,9 @@
       "ativos": 17,
       "mes_passado_total": 136,
       "mes_passado": 17,
-      "mes_atual_total": 28,
+      "mes_atual_total": 29,
       "dias_confirmados_lbl": "dias 1 - 4",
-      "dias_confirmados_val": 28,
+      "dias_confirmados_val": 29,
       "prev_atual": "151",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -179,7 +179,7 @@
         [
           "Makele de Souza Smania",
           16,
-          8
+          9
         ],
         [
           "Maria Aline da Silva Ferreira",
@@ -420,7 +420,7 @@
       20,
       "partial",
       "Antecipação de reuniões e pagamentos antes do feriado prolongado.",
-      12
+      13
     ],
     [
       5,
