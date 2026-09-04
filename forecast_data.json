@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "04/09/2026 17:38",
+    "atualizado_em": "04/09/2026 18:08",
     "status_dias": "Dias 1 à 4 confirmados · Dia 4 parcial · Dias 5 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 52,
+    "kpi_realizado": 53,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 3)",
-    "kpi_realizado_delta": "▲ 13,3% do total previsto",
+    "kpi_realizado_delta": "▲ 13,6% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -61,7 +61,7 @@
     },
     "gui": {
       "ativos": 1,
-      "mes_passado_total": 20,
+      "mes_passado_total": 15,
       "mes_passado": 0,
       "mes_atual_total": 0,
       "dias_confirmados_lbl": "dias 1 - 4",
@@ -82,11 +82,6 @@
         ],
         [
           "Natalia Oliveira Katrip",
-          5,
-          0
-        ],
-        [
-          "Lorena Cristina Domingos Pereira",
           5,
           0
         ],
@@ -161,12 +156,12 @@
       ]
     },
     "lis": {
-      "ativos": 17,
-      "mes_passado_total": 136,
+      "ativos": 18,
+      "mes_passado_total": 141,
       "mes_passado": 17,
-      "mes_atual_total": 29,
+      "mes_atual_total": 30,
       "dias_confirmados_lbl": "dias 1 - 4",
-      "dias_confirmados_val": 29,
+      "dias_confirmados_val": 30,
       "prev_atual": "151",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -192,6 +187,11 @@
           5
         ],
         [
+          "Rafael Rodrigues Pedroso",
+          8,
+          2
+        ],
+        [
           "Lisdaisy Vieira Costa",
           14,
           2
@@ -205,11 +205,6 @@
           "Aline Cristina da Silva",
           3,
           2
-        ],
-        [
-          "Rafael Rodrigues Pedroso",
-          8,
-          1
         ],
         [
           "Lucas Vinicius Morato",
@@ -229,6 +224,11 @@
         [
           "Felipe Santos Leite",
           6,
+          0
+        ],
+        [
+          "Lorena Cristina Domingos Pereira",
+          5,
           0
         ],
         [
@@ -420,7 +420,7 @@
       20,
       "partial",
       "Antecipação de reuniões e pagamentos antes do feriado prolongado.",
-      13
+      14
     ],
     [
       5,
