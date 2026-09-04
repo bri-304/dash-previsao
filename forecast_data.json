@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "04/09/2026 15:08",
+    "atualizado_em": "04/09/2026 15:38",
     "status_dias": "Dias 1 à 4 confirmados · Dia 4 parcial · Dias 5 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 46,
+    "kpi_realizado": 49,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 3)",
-    "kpi_realizado_delta": "▲ 11,8% do total previsto",
+    "kpi_realizado_delta": "▲ 12,6% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -101,9 +101,9 @@
       "ativos": 10,
       "mes_passado_total": 116,
       "mes_passado": 7,
-      "mes_atual_total": 13,
+      "mes_atual_total": 14,
       "dias_confirmados_lbl": "dias 1 - 4",
-      "dias_confirmados_val": 13,
+      "dias_confirmados_val": 14,
       "prev_atual": "112",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -124,14 +124,14 @@
           4
         ],
         [
-          "Estevam Silverio Tavares",
-          20,
+          "Tiago Melo da Silva",
+          11,
           2
         ],
         [
-          "Tiago Melo da Silva",
-          11,
-          1
+          "Estevam Silverio Tavares",
+          20,
+          2
         ],
         [
           "Bruno Ramos Martins",
@@ -164,9 +164,9 @@
       "ativos": 17,
       "mes_passado_total": 136,
       "mes_passado": 17,
-      "mes_atual_total": 26,
+      "mes_atual_total": 27,
       "dias_confirmados_lbl": "dias 1 - 4",
-      "dias_confirmados_val": 26,
+      "dias_confirmados_val": 27,
       "prev_atual": "151",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -184,7 +184,7 @@
         [
           "Maria Aline da Silva Ferreira",
           36,
-          5
+          6
         ],
         [
           "Adriérre Marcon",
@@ -247,9 +247,9 @@
       "ativos": 6,
       "mes_passado_total": 89,
       "mes_passado": 7,
-      "mes_atual_total": 6,
+      "mes_atual_total": 7,
       "dias_confirmados_lbl": "dias 1 - 4",
-      "dias_confirmados_val": 6,
+      "dias_confirmados_val": 7,
       "prev_atual": "74",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -260,14 +260,14 @@
       "atencao_txt": "⚠️ Stella fez 40 vendas em agosto e agora divide sua capacidade com a função de SDR; Bruna está fora da catraca. O time precisa converter o apoio em agendas sem perder produção própria em excesso.",
       "sellers": [
         [
-          "Bruna Letícia Corrêa Barbosa",
-          15,
+          "Ketlin Madeira Colombo",
+          8,
           3
         ],
         [
-          "Ketlin Madeira Colombo",
-          8,
-          2
+          "Bruna Letícia Corrêa Barbosa",
+          15,
+          3
         ],
         [
           "Elison da Silva Elias",
@@ -420,7 +420,7 @@
       20,
       "partial",
       "Antecipação de reuniões e pagamentos antes do feriado prolongado.",
-      7
+      10
     ],
     [
       5,
