@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "09/09/2026 09:38",
+    "atualizado_em": "09/09/2026 10:08",
     "status_dias": "Dias 1 à 9 confirmados · Dia 9 parcial · Dias 10 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 65,
+    "kpi_realizado": 66,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 8)",
-    "kpi_realizado_delta": "▲ 16,7% do total previsto",
+    "kpi_realizado_delta": "▲ 16,9% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -154,9 +154,9 @@
       "ativos": 19,
       "mes_passado_total": 146,
       "mes_passado": 30,
-      "mes_atual_total": 36,
+      "mes_atual_total": 37,
       "dias_confirmados_lbl": "dias 1 - 9",
-      "dias_confirmados_val": 36,
+      "dias_confirmados_val": 37,
       "prev_atual": "151",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -179,7 +179,7 @@
         [
           "Adriérre Marcon",
           21,
-          7
+          8
         ],
         [
           "Larissa Pereira Niehues",
@@ -468,9 +468,9 @@
       20,
       18,
       22,
-      "work",
+      "partial",
       "Rebote pós-feriado e primeiro efeito combinado de duplas e SDRs.",
-      null
+      1
     ],
     [
       10,
