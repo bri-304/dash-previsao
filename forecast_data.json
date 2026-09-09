@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "09/09/2026 13:38",
+    "atualizado_em": "09/09/2026 14:08",
     "status_dias": "Dias 1 à 9 confirmados · Dia 9 parcial · Dias 10 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 73,
+    "kpi_realizado": 74,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 8)",
-    "kpi_realizado_delta": "▲ 18,7% do total previsto",
+    "kpi_realizado_delta": "▲ 19% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -154,9 +154,9 @@
       "ativos": 19,
       "mes_passado_total": 146,
       "mes_passado": 30,
-      "mes_atual_total": 42,
+      "mes_atual_total": 43,
       "dias_confirmados_lbl": "dias 1 - 9",
-      "dias_confirmados_val": 42,
+      "dias_confirmados_val": 43,
       "prev_atual": "151",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -167,14 +167,14 @@
       "atencao_txt": "⚠️ Maria Aline e Marcon vieram de 240% e 140% da meta, respectivamente. A regressão é provável, e o benefício documental ainda precisa reduzir uma base de 78,49% de processos com documentos incompletos.",
       "sellers": [
         [
-          "Makele de Souza Smania",
-          16,
+          "Maria Aline da Silva Ferreira",
+          36,
           12
         ],
         [
-          "Maria Aline da Silva Ferreira",
-          36,
-          11
+          "Makele de Souza Smania",
+          16,
+          12
         ],
         [
           "Adriérre Marcon",
@@ -470,7 +470,7 @@
       22,
       "partial",
       "Rebote pós-feriado e primeiro efeito combinado de duplas e SDRs.",
-      7
+      8
     ],
     [
       10,
