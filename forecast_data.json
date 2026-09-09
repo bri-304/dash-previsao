@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "09/09/2026 11:38",
+    "atualizado_em": "09/09/2026 12:38",
     "status_dias": "Dias 1 à 9 confirmados · Dia 9 parcial · Dias 10 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 71,
+    "kpi_realizado": 73,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 8)",
-    "kpi_realizado_delta": "▲ 18,2% do total previsto",
+    "kpi_realizado_delta": "▲ 18,7% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -91,9 +91,9 @@
       "ativos": 10,
       "mes_passado_total": 116,
       "mes_passado": 40,
-      "mes_atual_total": 21,
+      "mes_atual_total": 23,
       "dias_confirmados_lbl": "dias 1 - 9",
-      "dias_confirmados_val": 21,
+      "dias_confirmados_val": 23,
       "prev_atual": "112",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -124,14 +124,14 @@
           2
         ],
         [
+          "Bruno Ramos Martins",
+          22,
+          2
+        ],
+        [
           "Patrícia Lúcio Custódio",
           16,
           1
-        ],
-        [
-          "Bruno Ramos Martins",
-          22,
-          0
         ],
         [
           "Tayna Inácia de Melo",
@@ -470,7 +470,7 @@
       22,
       "partial",
       "Rebote pós-feriado e primeiro efeito combinado de duplas e SDRs.",
-      5
+      7
     ],
     [
       10,
