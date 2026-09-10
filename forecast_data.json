@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "10/09/2026 10:38",
+    "atualizado_em": "10/09/2026 11:08",
     "status_dias": "Dias 1 à 10 confirmados · Dia 10 parcial · Dias 11 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 78,
+    "kpi_realizado": 79,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 9)",
-    "kpi_realizado_delta": "▲ 20% do total previsto",
+    "kpi_realizado_delta": "▲ 20,3% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -91,9 +91,9 @@
       "ativos": 10,
       "mes_passado_total": 116,
       "mes_passado": 46,
-      "mes_atual_total": 25,
+      "mes_atual_total": 26,
       "dias_confirmados_lbl": "dias 1 - 10",
-      "dias_confirmados_val": 25,
+      "dias_confirmados_val": 26,
       "prev_atual": "112",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -114,6 +114,11 @@
           4
         ],
         [
+          "Estevam Silverio Tavares",
+          20,
+          3
+        ],
+        [
           "Bruno Ramos Martins",
           22,
           3
@@ -126,11 +131,6 @@
         [
           "Patrícia Lúcio Custódio",
           16,
-          2
-        ],
-        [
-          "Estevam Silverio Tavares",
-          20,
           2
         ],
         [
@@ -480,7 +480,7 @@
       18,
       "partial",
       "Conversão do estoque trabalhado nos dois dias anteriores.",
-      1
+      2
     ],
     [
       11,
