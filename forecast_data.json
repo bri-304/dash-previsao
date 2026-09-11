@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "10/09/2026 20:38",
+    "atualizado_em": "10/09/2026 21:08",
     "status_dias": "Dias 1 à 10 confirmados · Dia 10 parcial · Dias 11 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 93,
+    "kpi_realizado": 94,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 9)",
-    "kpi_realizado_delta": "▲ 23,8% do total previsto",
+    "kpi_realizado_delta": "▲ 24,1% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -154,9 +154,9 @@
       "ativos": 19,
       "mes_passado_total": 146,
       "mes_passado": 37,
-      "mes_atual_total": 52,
+      "mes_atual_total": 53,
       "dias_confirmados_lbl": "dias 1 - 10",
-      "dias_confirmados_val": 52,
+      "dias_confirmados_val": 53,
       "prev_atual": "151",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -169,7 +169,7 @@
         [
           "Maria Aline da Silva Ferreira",
           36,
-          15
+          16
         ],
         [
           "Makele de Souza Smania",
@@ -480,7 +480,7 @@
       18,
       "partial",
       "Conversão do estoque trabalhado nos dois dias anteriores.",
-      16
+      17
     ],
     [
       11,
