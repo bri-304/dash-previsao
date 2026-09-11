@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "11/09/2026 11:38",
+    "atualizado_em": "11/09/2026 12:08",
     "status_dias": "Dias 1 à 11 confirmados · Dia 11 parcial · Dias 12 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 94,
+    "kpi_realizado": 98,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 10)",
-    "kpi_realizado_delta": "▲ 24,1% do total previsto",
+    "kpi_realizado_delta": "▲ 25,1% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -154,9 +154,9 @@
       "ativos": 19,
       "mes_passado_total": 146,
       "mes_passado": 39,
-      "mes_atual_total": 53,
+      "mes_atual_total": 57,
       "dias_confirmados_lbl": "dias 1 - 11",
-      "dias_confirmados_val": 53,
+      "dias_confirmados_val": 57,
       "prev_atual": "151",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -187,13 +187,18 @@
           5
         ],
         [
+          "Lorena Cristina Domingos Pereira",
+          5,
+          3
+        ],
+        [
           "Rafael Rodrigues Pedroso",
           8,
           2
         ],
         [
-          "Lorena Cristina Domingos Pereira",
-          5,
+          "Lucas Vinicius Morato",
+          0,
           2
         ],
         [
@@ -207,8 +212,13 @@
           2
         ],
         [
-          "Lucas Vinicius Morato",
-          0,
+          "Natalia Oliveira Katrip",
+          5,
+          1
+        ],
+        [
+          "Felipe Santos Leite",
+          6,
           1
         ],
         [
@@ -219,16 +229,6 @@
         [
           "Iara da Silva Linhares",
           13,
-          0
-        ],
-        [
-          "Felipe Santos Leite",
-          6,
-          0
-        ],
-        [
-          "Natalia Oliveira Katrip",
-          5,
           0
         ],
         [
@@ -488,9 +488,9 @@
       15,
       13,
       17,
-      "work",
+      "partial",
       "Leve ressaca documental após o pico de quarta-feira.",
-      null
+      4
     ],
     [
       12,
