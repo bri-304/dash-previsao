@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "14/09/2026 17:08",
+    "atualizado_em": "14/09/2026 17:38",
     "status_dias": "Dias 1 à 14 confirmados · Dia 14 parcial · Dias 15 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 109,
+    "kpi_realizado": 111,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 13)",
-    "kpi_realizado_delta": "▲ 27,9% do total previsto",
+    "kpi_realizado_delta": "▲ 28,5% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -154,9 +154,9 @@
       "ativos": 19,
       "mes_passado_total": 146,
       "mes_passado": 65,
-      "mes_atual_total": 63,
+      "mes_atual_total": 65,
       "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 63,
+      "dias_confirmados_val": 65,
       "prev_atual": "151",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -187,6 +187,11 @@
           5
         ],
         [
+          "Lisdaisy Vieira Costa",
+          14,
+          4
+        ],
+        [
           "Rafael Rodrigues Pedroso",
           8,
           3
@@ -199,11 +204,6 @@
         [
           "Lucas Vinicius Morato",
           0,
-          2
-        ],
-        [
-          "Lisdaisy Vieira Costa",
-          14,
           2
         ],
         [
@@ -520,7 +520,7 @@
       18,
       "partial",
       "Entrada na faixa historicamente mais forte de setembro.",
-      8
+      10
     ],
     [
       15,
