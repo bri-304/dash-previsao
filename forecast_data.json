@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "14/09/2026 09:08",
+    "atualizado_em": "14/09/2026 09:38",
     "status_dias": "Dias 1 à 14 confirmados · Dia 14 parcial · Dias 15 à 30 com intervalo de confiança",
     "kpi_total_pess": 335,
     "kpi_total_central": 373,
@@ -9,9 +9,9 @@
     "kpi_media_central": "16,8",
     "kpi_media_min": "15,0 mín",
     "kpi_media_max": "18,6 máx",
-    "kpi_realizado": 100,
+    "kpi_realizado": 101,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 13)",
-    "kpi_realizado_delta": "▲ 25,6% do total previsto",
+    "kpi_realizado_delta": "▲ 25,9% do total previsto",
     "kpi_yoy_pct": "-1%",
     "kpi_yoy_pess": "-11% pess.",
     "kpi_yoy_otim": "+9% otim.",
@@ -247,9 +247,9 @@
       "ativos": 6,
       "mes_passado_total": 89,
       "mes_passado": 44,
-      "mes_atual_total": 9,
+      "mes_atual_total": 10,
       "dias_confirmados_lbl": "dias 1 - 14",
-      "dias_confirmados_val": 9,
+      "dias_confirmados_val": 10,
       "prev_atual": "74",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -275,6 +275,11 @@
           3
         ],
         [
+          "Guilherme Carvalho Rodrigues",
+          5,
+          1
+        ],
+        [
           "Stella Nieheus",
           40,
           0
@@ -282,11 +287,6 @@
         [
           "Josilea de Melo Rocha",
           15,
-          0
-        ],
-        [
-          "Guilherme Carvalho Rodrigues",
-          5,
           0
         ]
       ]
@@ -490,7 +490,7 @@
       17,
       "real",
       "Leve ressaca documental após o pico de quarta-feira.",
-      5
+      6
     ],
     [
       12,
