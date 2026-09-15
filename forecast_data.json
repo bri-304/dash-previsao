@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "15/09/2026 16:08",
+    "atualizado_em": "15/09/2026 16:38",
     "status_dias": "Dias 1 à 15 confirmados · Dia 15 parcial · Dias 16 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 124,
+    "kpi_realizado": 125,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 14)",
-    "kpi_realizado_delta": "▲ 31,8% do total previsto",
+    "kpi_realizado_delta": "▲ 32,1% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 10,
       "mes_passado_total": 116,
       "mes_passado": 66,
-      "mes_atual_total": 36,
+      "mes_atual_total": 37,
       "dias_confirmados_lbl": "dias 1 - 15",
-      "dias_confirmados_val": 36,
+      "dias_confirmados_val": 37,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -121,7 +121,7 @@
         [
           "Tiago Melo da Silva",
           11,
-          4
+          5
         ],
         [
           "Noemi da Silva Penafort da Costa",
@@ -530,7 +530,7 @@
       20,
       "partial",
       "Atendimento imediato reduz o tempo de primeiro contato e favorece conversões.",
-      11
+      12
     ],
     [
       16,
