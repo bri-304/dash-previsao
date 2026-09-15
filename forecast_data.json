@@ -101,7 +101,7 @@
       "leg_mes_passado": "Ago.",
       "leg_mes_atual": "Set.",
       "destaque_txt": "⚡ Com Israel dedicado ao desenvolvimento do time, a previsão de 95 vendas se apoia em Bruno, Estevam, Patricia, Tiago e Noemi. O roteamento imediato dos SDRs a partir de 14/09 ajuda a preservar velocidade de atendimento.",
-      "atencao_txt": "⚠️ Israel deixa de produzir diretamente, Estevam não possui SDR dedicado e seis integrantes do grupo participam do evento de 11/09. A capacidade fica mais concentrada nos vendedores ativos.",
+      "atencao_txt": "⚠️ Israel pode baixar produção direta por não haver meta, Estevam não possui SDR dedicado e seis integrantes do grupo participam do evento de 11/09. A capacidade fica mais concentrada nos vendedores ativos.",
       "sellers": [
         [
           "Israel Riella",
@@ -164,7 +164,7 @@
       "leg_mes_passado": "Ago.",
       "leg_mes_atual": "Set.",
       "destaque_txt": "⚡ O time absorve Lorena, Natalia e Lucas e mantém apoio documental e SDR para Maria Aline e Marcon. A nova estrutura concentra a maior previsão do mês: 168 vendas.",
-      "atencao_txt": "⚠️ Lis deixa a venda para desenvolver um time maior, que passa a representar cerca de 54% do forecast. Integração, distribuição de leads e documentação precisam ser acompanhadas diariamente.",
+      "atencao_txt": "⚠️ Lis foca em desenvolver um time maior, que passa a representar cerca de 54% do forecast. Integração, distribuição de leads e documentação precisam ser acompanhadas diariamente.",
       "sellers": [
         [
           "Maria Aline da Silva Ferreira",
@@ -304,7 +304,7 @@
       "tags": [
         {
           "cls": "warn",
-          "txt": "⚠️ Menor capacidade desde o início: guias deixam de atuar como vendedores"
+          "txt": "⚠️ Menor capacidade desde o início: guias deixam de ter metas."
         }
       ]
     },
@@ -750,7 +750,7 @@
       "tipo": "risk",
       "data": "Durante o mês",
       "titulo": "Redução estrutural da capacidade",
-      "desc": "Israel, Lis e Stella deixam a venda para desenvolver os times; Stella atua exclusivamente como SDR. Guilherme e Carla saem da empresa, reduzindo o teto comercial desde 01/09.",
+      "desc": "Israel, Lis e Stella podem deixar as vendas de lado para desenvolver os times; Stella atua como SDR. Guilherme e Carla saem da empresa, reduzindo o teto comercial desde 01/09.",
       "pill": "👥 Quatro produtores fora da venda"
     },
     {
