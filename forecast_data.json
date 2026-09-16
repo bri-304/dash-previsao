@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "16/09/2026 19:38",
+    "atualizado_em": "16/09/2026 20:08",
     "status_dias": "Dias 1 à 16 confirmados · Dia 16 parcial · Dias 17 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 125,
+    "kpi_realizado": 126,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 15)",
-    "kpi_realizado_delta": "▲ 32,1% do total previsto",
+    "kpi_realizado_delta": "▲ 32,3% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -179,9 +179,9 @@
       "ativos": 19,
       "mes_passado_total": 146,
       "mes_passado": 65,
-      "mes_atual_total": 84,
+      "mes_atual_total": 85,
       "dias_confirmados_lbl": "dias 1 - 16",
-      "dias_confirmados_val": 84,
+      "dias_confirmados_val": 85,
       "prev_atual": "168",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -232,6 +232,11 @@
           3
         ],
         [
+          "Iara da Silva Linhares",
+          13,
+          2
+        ],
+        [
           "Felipe Santos Leite",
           6,
           2
@@ -244,11 +249,6 @@
         [
           "Natalia Oliveira Katrip",
           5,
-          1
-        ],
-        [
-          "Iara da Silva Linhares",
-          13,
           1
         ],
         [
@@ -540,7 +540,7 @@
       19,
       "partial",
       "Leads roteadas imediatamente começam a amadurecer no funil.",
-      13
+      14
     ],
     [
       17,
