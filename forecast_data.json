@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "16/09/2026 17:08",
+    "atualizado_em": "16/09/2026 17:38",
     "status_dias": "Dias 1 à 16 confirmados · Dia 16 parcial · Dias 17 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,16 +9,16 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 123,
+    "kpi_realizado": 125,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 15)",
-    "kpi_realizado_delta": "▲ 31,5% do total previsto",
+    "kpi_realizado_delta": "▲ 32,1% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
     "kpi_yoy_sub": "312 central vs 377 em setembro/2025",
-    "kpi_ativos": 26,
+    "kpi_ativos": 25,
     "kpi_ativos_sub": "em 3 times competindo",
-    "kpi_inativos_delta": "▼ 12 inativos / férias",
+    "kpi_inativos_delta": "▼ 13 inativos / férias",
     "page_title": "Forecast Setembro 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Setembro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T2 · Fase Classificatória · Mês 1 · Setembro/2026",
@@ -91,9 +91,9 @@
       "ativos": 15,
       "mes_passado_total": 163,
       "mes_passado": 80,
-      "mes_atual_total": 54,
+      "mes_atual_total": 56,
       "dias_confirmados_lbl": "dias 1 - 16",
-      "dias_confirmados_val": 54,
+      "dias_confirmados_val": 56,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -106,7 +106,7 @@
         [
           "Israel Riella",
           20,
-          12
+          14
         ],
         [
           "Bruno Ramos Martins",
@@ -540,7 +540,7 @@
       19,
       "partial",
       "Leads roteadas imediatamente começam a amadurecer no funil.",
-      11
+      13
     ],
     [
       17,
