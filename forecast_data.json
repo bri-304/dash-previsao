@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "16/09/2026 16:38",
+    "atualizado_em": "16/09/2026 17:08",
     "status_dias": "Dias 1 à 16 confirmados · Dia 16 parcial · Dias 17 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 120,
+    "kpi_realizado": 123,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 15)",
-    "kpi_realizado_delta": "▲ 30,8% do total previsto",
+    "kpi_realizado_delta": "▲ 31,5% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -60,7 +60,7 @@
       ]
     },
     "gui": {
-      "ativos": 1,
+      "ativos": 0,
       "mes_passado_total": 10,
       "mes_passado": 6,
       "mes_atual_total": 0,
@@ -88,12 +88,12 @@
       ]
     },
     "isr": {
-      "ativos": 10,
-      "mes_passado_total": 116,
-      "mes_passado": 66,
-      "mes_atual_total": 38,
+      "ativos": 15,
+      "mes_passado_total": 163,
+      "mes_passado": 80,
+      "mes_atual_total": 54,
       "dias_confirmados_lbl": "dias 1 - 16",
-      "dias_confirmados_val": 38,
+      "dias_confirmados_val": 54,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -129,9 +129,34 @@
           4
         ],
         [
+          "Guilherme Carvalho Rodrigues",
+          5,
+          4
+        ],
+        [
           "Estevam Silverio Tavares",
           20,
           4
+        ],
+        [
+          "Ketlin Madeira Colombo",
+          8,
+          3
+        ],
+        [
+          "Josilea de Melo Rocha",
+          14,
+          3
+        ],
+        [
+          "Elison da Silva Elias",
+          5,
+          3
+        ],
+        [
+          "Bruna Letícia Corrêa Barbosa",
+          15,
+          3
         ],
         [
           "Tayna Inácia de Melo",
@@ -244,12 +269,12 @@
       ]
     },
     "stl": {
-      "ativos": 6,
-      "mes_passado_total": 87,
-      "mes_passado": 44,
-      "mes_atual_total": 13,
+      "ativos": 1,
+      "mes_passado_total": 40,
+      "mes_passado": 30,
+      "mes_atual_total": 0,
       "dias_confirmados_lbl": "dias 1 - 16",
-      "dias_confirmados_val": 13,
+      "dias_confirmados_val": 0,
       "prev_atual": "49",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -260,33 +285,8 @@
       "atencao_txt": "⚠️ A retirada das 40 vendas realizadas por Stella em agosto reduz fortemente o teto do time. O ganho com SDR precisa aparecer em agendas, pitches e conversão dos vendedores ativos.",
       "sellers": [
         [
-          "Guilherme Carvalho Rodrigues",
-          5,
-          4
-        ],
-        [
-          "Ketlin Madeira Colombo",
-          8,
-          3
-        ],
-        [
-          "Elison da Silva Elias",
-          5,
-          3
-        ],
-        [
-          "Bruna Letícia Corrêa Barbosa",
-          15,
-          3
-        ],
-        [
           "Stella Nieheus",
           40,
-          0
-        ],
-        [
-          "Josilea de Melo Rocha",
-          14,
           0
         ]
       ]
@@ -540,7 +540,7 @@
       19,
       "partial",
       "Leads roteadas imediatamente começam a amadurecer no funil.",
-      8
+      11
     ],
     [
       17,
