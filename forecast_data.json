@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/09/2026 17:38",
+    "atualizado_em": "17/09/2026 18:08",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 129,
+    "kpi_realizado": 130,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 16)",
-    "kpi_realizado_delta": "▲ 33,1% do total previsto",
+    "kpi_realizado_delta": "▲ 33,3% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 15,
       "mes_passado_total": 162,
       "mes_passado": 83,
-      "mes_atual_total": 57,
+      "mes_atual_total": 58,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 57,
+      "dias_confirmados_val": 58,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -159,6 +159,11 @@
           3
         ],
         [
+          "Andressa Cristina de Paula",
+          2,
+          1
+        ],
+        [
           "Tayna Inácia de Melo",
           13,
           0
@@ -166,11 +171,6 @@
         [
           "Elisângela Arias",
           6,
-          0
-        ],
-        [
-          "Andressa Cristina de Paula",
-          2,
           0
         ]
       ]
@@ -550,7 +550,7 @@
       18,
       "partial",
       "Conversão das oportunidades geradas após a nova regra dos SDRs.",
-      3
+      4
     ],
     [
       18,
