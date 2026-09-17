@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/09/2026 09:38",
+    "atualizado_em": "17/09/2026 10:08",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 126,
+    "kpi_realizado": 127,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 16)",
-    "kpi_realizado_delta": "▲ 32,3% do total previsto",
+    "kpi_realizado_delta": "▲ 32,6% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -89,7 +89,7 @@
     },
     "isr": {
       "ativos": 15,
-      "mes_passado_total": 163,
+      "mes_passado_total": 162,
       "mes_passado": 83,
       "mes_atual_total": 56,
       "dias_confirmados_lbl": "dias 1 - 17",
@@ -145,7 +145,7 @@
         ],
         [
           "Josilea de Melo Rocha",
-          14,
+          13,
           3
         ],
         [
@@ -179,9 +179,9 @@
       "ativos": 19,
       "mes_passado_total": 146,
       "mes_passado": 71,
-      "mes_atual_total": 85,
+      "mes_atual_total": 86,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 85,
+      "dias_confirmados_val": 86,
       "prev_atual": "168",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -242,6 +242,11 @@
           2
         ],
         [
+          "Elisan Antônio",
+          0,
+          2
+        ],
+        [
           "Aline Cristina da Silva",
           3,
           2
@@ -249,11 +254,6 @@
         [
           "Natalia Oliveira Katrip",
           5,
-          1
-        ],
-        [
-          "Elisan Antônio",
-          0,
           1
         ],
         [
@@ -548,9 +548,9 @@
       16,
       14,
       18,
-      "sprint",
+      "partial",
       "Conversão das oportunidades geradas após a nova regra dos SDRs.",
-      null
+      1
     ],
     [
       18,
