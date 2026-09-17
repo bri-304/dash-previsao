@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/09/2026 14:08",
+    "atualizado_em": "17/09/2026 14:38",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 127,
+    "kpi_realizado": 128,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 16)",
-    "kpi_realizado_delta": "▲ 32,6% do total previsto",
+    "kpi_realizado_delta": "▲ 32,8% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -179,9 +179,9 @@
       "ativos": 19,
       "mes_passado_total": 146,
       "mes_passado": 71,
-      "mes_atual_total": 86,
+      "mes_atual_total": 87,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 86,
+      "dias_confirmados_val": 87,
       "prev_atual": "168",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -209,7 +209,7 @@
         [
           "Larissa Pereira Niehues",
           16,
-          9
+          10
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -550,7 +550,7 @@
       18,
       "partial",
       "Conversão das oportunidades geradas após a nova regra dos SDRs.",
-      1
+      2
     ],
     [
       18,
