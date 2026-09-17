@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "17/09/2026 16:38",
+    "atualizado_em": "17/09/2026 17:08",
     "status_dias": "Dias 1 à 17 confirmados · Dia 17 parcial · Dias 18 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 128,
+    "kpi_realizado": 129,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 16)",
-    "kpi_realizado_delta": "▲ 32,8% do total previsto",
+    "kpi_realizado_delta": "▲ 33,1% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -60,7 +60,7 @@
       ]
     },
     "gui": {
-      "ativos": 0,
+      "ativos": 1,
       "mes_passado_total": 10,
       "mes_passado": 6,
       "mes_atual_total": 0,
@@ -91,9 +91,9 @@
       "ativos": 15,
       "mes_passado_total": 162,
       "mes_passado": 83,
-      "mes_atual_total": 56,
+      "mes_atual_total": 57,
       "dias_confirmados_lbl": "dias 1 - 17",
-      "dias_confirmados_val": 56,
+      "dias_confirmados_val": 57,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -129,6 +129,11 @@
           4
         ],
         [
+          "Ketlin Madeira Colombo",
+          8,
+          4
+        ],
+        [
           "Guilherme Carvalho Rodrigues",
           5,
           4
@@ -137,11 +142,6 @@
           "Estevam Silverio Tavares",
           20,
           4
-        ],
-        [
-          "Ketlin Madeira Colombo",
-          8,
-          3
         ],
         [
           "Josilea de Melo Rocha",
@@ -550,7 +550,7 @@
       18,
       "partial",
       "Conversão das oportunidades geradas após a nova regra dos SDRs.",
-      2
+      3
     ],
     [
       18,
