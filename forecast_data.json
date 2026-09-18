@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "18/09/2026 17:08",
+    "atualizado_em": "18/09/2026 17:38",
     "status_dias": "Dias 1 à 18 confirmados · Dia 18 parcial · Dias 19 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 155,
+    "kpi_realizado": 158,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 17)",
-    "kpi_realizado_delta": "▲ 39,7% do total previsto",
+    "kpi_realizado_delta": "▲ 40,5% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 15,
       "mes_passado_total": 163,
       "mes_passado": 87,
-      "mes_atual_total": 62,
+      "mes_atual_total": 65,
       "dias_confirmados_lbl": "dias 1 - 18",
-      "dias_confirmados_val": 62,
+      "dias_confirmados_val": 65,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -114,14 +114,19 @@
           8
         ],
         [
+          "Tiago Melo da Silva",
+          11,
+          6
+        ],
+        [
           "Patrícia Lúcio Custódio",
           16,
           6
         ],
         [
-          "Tiago Melo da Silva",
-          11,
-          5
+          "Elison da Silva Elias",
+          6,
+          6
         ],
         [
           "Noemi da Silva Penafort da Costa",
@@ -141,11 +146,6 @@
         [
           "Estevam Silverio Tavares",
           20,
-          4
-        ],
-        [
-          "Elison da Silva Elias",
-          6,
           4
         ],
         [
@@ -560,7 +560,7 @@
       16,
       "partial",
       "Produção ainda forte, moderada pelo retrabalho documental.",
-      5
+      8
     ],
     [
       19,
