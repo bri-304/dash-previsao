@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "18/09/2026 14:08",
+    "atualizado_em": "18/09/2026 14:38",
     "status_dias": "Dias 1 à 18 confirmados · Dia 18 parcial · Dias 19 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,16 +9,16 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 152,
+    "kpi_realizado": 154,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 17)",
-    "kpi_realizado_delta": "▲ 39% do total previsto",
+    "kpi_realizado_delta": "▲ 39,5% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
     "kpi_yoy_sub": "312 central vs 377 em setembro/2025",
-    "kpi_ativos": 25,
+    "kpi_ativos": 24,
     "kpi_ativos_sub": "em 3 times competindo",
-    "kpi_inativos_delta": "▼ 13 inativos / férias",
+    "kpi_inativos_delta": "▼ 14 inativos / férias",
     "page_title": "Forecast Setembro 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Setembro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T2 · Fase Classificatória · Mês 1 · Setembro/2026",
@@ -91,9 +91,9 @@
       "ativos": 15,
       "mes_passado_total": 163,
       "mes_passado": 87,
-      "mes_atual_total": 60,
+      "mes_atual_total": 61,
       "dias_confirmados_lbl": "dias 1 - 18",
-      "dias_confirmados_val": 60,
+      "dias_confirmados_val": 61,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -111,7 +111,7 @@
         [
           "Bruno Ramos Martins",
           22,
-          7
+          8
         ],
         [
           "Patrícia Lúcio Custódio",
@@ -179,9 +179,9 @@
       "ativos": 19,
       "mes_passado_total": 146,
       "mes_passado": 74,
-      "mes_atual_total": 90,
+      "mes_atual_total": 91,
       "dias_confirmados_lbl": "dias 1 - 18",
-      "dias_confirmados_val": 90,
+      "dias_confirmados_val": 91,
       "prev_atual": "168",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -209,7 +209,7 @@
         [
           "Larissa Pereira Niehues",
           16,
-          10
+          11
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -560,7 +560,7 @@
       16,
       "partial",
       "Produção ainda forte, moderada pelo retrabalho documental.",
-      2
+      4
     ],
     [
       19,
