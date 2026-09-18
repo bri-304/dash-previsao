@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "18/09/2026 13:38",
+    "atualizado_em": "18/09/2026 14:08",
     "status_dias": "Dias 1 à 18 confirmados · Dia 18 parcial · Dias 19 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -94,13 +94,13 @@
       "mes_atual_total": 60,
       "dias_confirmados_lbl": "dias 1 - 18",
       "dias_confirmados_val": 60,
-      "prev_atual": "144",
+      "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
       "lbl_vendedor": "Agosto vs Setembro — por vendedor",
       "leg_mes_passado": "Ago.",
       "leg_mes_atual": "Set.",
-      "destaque_txt": "⚡ Com Israel dedicado ao desenvolvimento do time, a previsão de 144 vendas se apoia em Bruno, Estevam, Patricia, Tiago e Noemi e novos vendedores do time da Stella. O roteamento imediato dos SDRs a partir de 14/09 ajuda a preservar velocidade de atendimento.",
+      "destaque_txt": "⚡ Com Israel dedicado ao desenvolvimento do time, a previsão de 95 vendas se apoia em Bruno, Estevam, Patricia, Tiago e Noemi. O roteamento imediato dos SDRs a partir de 14/09 ajuda a preservar velocidade de atendimento.",
       "atencao_txt": "⚠️ Israel pode baixar produção direta por não haver meta, Estevam não possui SDR dedicado e seis integrantes do grupo participam do evento de 11/09. A capacidade fica mais concentrada nos vendedores ativos.",
       "sellers": [
         [
@@ -281,7 +281,7 @@
       "lbl_vendedor": "Agosto vs Setembro — por vendedor",
       "leg_mes_passado": "Ago.",
       "leg_mes_atual": "Set.",
-      "destaque_txt": "⚡ Com Stella dedicada integralmente à função de SDR, favorecendo o desenvolvimento de SDRs",
+      "destaque_txt": "⚡ Com Stella dedicada integralmente à função de SDR, o resultado de 49 vendas depende de Josileia, Elison, Guilherme Carvalho e Ketlin, apoiados por gestão e agendamento.",
       "atencao_txt": "⚠️ A retirada das 40 vendas realizadas por Stella em agosto reduz fortemente o teto do time. O ganho com SDR precisa aparecer em agendas, pitches e conversão dos vendedores ativos.",
       "sellers": [
         [
