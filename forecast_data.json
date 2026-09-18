@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "18/09/2026 09:15",
+    "atualizado_em": "18/09/2026 09:38",
     "status_dias": "Dias 1 à 18 confirmados · Dia 18 parcial · Dias 19 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 130,
+    "kpi_realizado": 150,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 17)",
-    "kpi_realizado_delta": "▲ 33,3% do total previsto",
+    "kpi_realizado_delta": "▲ 38,5% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -400,7 +400,7 @@
       16,
       "real",
       "Pipeline herdado sustenta recuperação moderada, apesar da redução de capacidade.",
-      19
+      22
     ],
     [
       3,
@@ -420,7 +420,7 @@
       17,
       "real",
       "Antecipação de reuniões e pagamentos antes do feriado prolongado.",
-      8
+      14
     ],
     [
       5,
@@ -470,7 +470,7 @@
       18,
       "real",
       "Rebote das oportunidades acumuladas durante o feriado.",
-      8
+      11
     ],
     [
       10,
@@ -480,7 +480,7 @@
       15,
       "real",
       "Antecipação parcial de follow-ups antes do evento dos vencedores.",
-      15
+      17
     ],
     [
       11,
@@ -520,7 +520,7 @@
       16,
       "real",
       "Começam o roteamento aberto dos SDRs e a contagem da Makele como franqueada.",
-      10
+      12
     ],
     [
       15,
@@ -530,7 +530,7 @@
       20,
       "real",
       "Atendimento imediato reduz o tempo de primeiro contato e favorece conversões.",
-      15
+      16
     ],
     [
       16,
@@ -550,7 +550,7 @@
       18,
       "real",
       "Conversão das oportunidades geradas após a nova regra dos SDRs.",
-      4
+      7
     ],
     [
       18,
