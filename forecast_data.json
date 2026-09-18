@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "18/09/2026 11:38",
+    "atualizado_em": "18/09/2026 12:08",
     "status_dias": "Dias 1 à 18 confirmados · Dia 18 parcial · Dias 19 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 151,
+    "kpi_realizado": 152,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 17)",
-    "kpi_realizado_delta": "▲ 38,7% do total previsto",
+    "kpi_realizado_delta": "▲ 39% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 15,
       "mes_passado_total": 163,
       "mes_passado": 87,
-      "mes_atual_total": 59,
+      "mes_atual_total": 60,
       "dias_confirmados_lbl": "dias 1 - 18",
-      "dias_confirmados_val": 59,
+      "dias_confirmados_val": 60,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -144,13 +144,13 @@
           4
         ],
         [
-          "Josilea de Melo Rocha",
-          13,
-          3
-        ],
-        [
           "Elison da Silva Elias",
           6,
+          4
+        ],
+        [
+          "Josilea de Melo Rocha",
+          13,
           3
         ],
         [
@@ -560,7 +560,7 @@
       16,
       "partial",
       "Produção ainda forte, moderada pelo retrabalho documental.",
-      1
+      2
     ],
     [
       19,
