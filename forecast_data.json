@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "19/09/2026 17:38",
+    "atualizado_em": "19/09/2026 18:08",
     "status_dias": "Dias 1 à 19 confirmados · Dia 19 parcial · Dias 20 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 158,
+    "kpi_realizado": 159,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 18)",
-    "kpi_realizado_delta": "▲ 40,5% do total previsto",
+    "kpi_realizado_delta": "▲ 40,8% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 15,
       "mes_passado_total": 163,
       "mes_passado": 97,
-      "mes_atual_total": 65,
+      "mes_atual_total": 66,
       "dias_confirmados_lbl": "dias 1 - 19",
-      "dias_confirmados_val": 65,
+      "dias_confirmados_val": 66,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -124,14 +124,14 @@
           6
         ],
         [
-          "Elison da Silva Elias",
+          "Noemi da Silva Penafort da Costa",
           6,
           6
         ],
         [
-          "Noemi da Silva Penafort da Costa",
+          "Elison da Silva Elias",
           6,
-          5
+          6
         ],
         [
           "Ketlin Madeira Colombo",
@@ -568,9 +568,9 @@
       1,
       1,
       1,
-      "weekend",
+      "partial",
       "Sábado e consumo do estoque semanal reduzem o volume.",
-      null
+      1
     ],
     [
       20,
