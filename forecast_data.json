@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "20/09/2026 15:38",
+    "atualizado_em": "20/09/2026 16:08",
     "status_dias": "Dias 1 à 20 confirmados · Dia 20 parcial · Dias 21 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 162,
+    "kpi_realizado": 164,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 19)",
-    "kpi_realizado_delta": "▲ 41,5% do total previsto",
+    "kpi_realizado_delta": "▲ 42,1% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 15,
       "mes_passado_total": 163,
       "mes_passado": 103,
-      "mes_atual_total": 69,
+      "mes_atual_total": 71,
       "dias_confirmados_lbl": "dias 1 - 20",
-      "dias_confirmados_val": 69,
+      "dias_confirmados_val": 71,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -134,6 +134,11 @@
           6
         ],
         [
+          "Josilea de Melo Rocha",
+          13,
+          5
+        ],
+        [
           "Ketlin Madeira Colombo",
           8,
           4
@@ -150,11 +155,6 @@
         ],
         [
           "Tayna Inácia de Melo",
-          13,
-          3
-        ],
-        [
-          "Josilea de Melo Rocha",
           13,
           3
         ],
@@ -578,9 +578,9 @@
       2,
       2,
       2,
-      "weekend",
+      "partial",
       "Atividade residual de domingo.",
-      null
+      2
     ],
     [
       21,
