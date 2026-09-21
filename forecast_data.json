@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "21/09/2026 16:38",
+    "atualizado_em": "21/09/2026 17:08",
     "status_dias": "Dias 1 à 21 confirmados · Dia 21 parcial · Dias 22 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 174,
+    "kpi_realizado": 176,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 20)",
-    "kpi_realizado_delta": "▲ 44,6% do total previsto",
+    "kpi_realizado_delta": "▲ 45,1% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 15,
       "mes_passado_total": 163,
       "mes_passado": 107,
-      "mes_atual_total": 75,
+      "mes_atual_total": 77,
       "dias_confirmados_lbl": "dias 1 - 21",
-      "dias_confirmados_val": 75,
+      "dias_confirmados_val": 77,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -114,6 +114,11 @@
           8
         ],
         [
+          "Tiago Melo da Silva",
+          11,
+          7
+        ],
+        [
           "Patrícia Lúcio Custódio",
           16,
           7
@@ -122,11 +127,6 @@
           "Noemi da Silva Penafort da Costa",
           6,
           7
-        ],
-        [
-          "Tiago Melo da Silva",
-          11,
-          6
         ],
         [
           "Elison da Silva Elias",
@@ -144,13 +144,13 @@
           5
         ],
         [
-          "Ketlin Madeira Colombo",
-          8,
-          4
-        ],
-        [
           "Estevam Silverio Tavares",
           20,
+          5
+        ],
+        [
+          "Ketlin Madeira Colombo",
+          8,
           4
         ],
         [
@@ -590,7 +590,7 @@
       12,
       "partial",
       "Correção após a semana mais forte e necessidade de recompor estoque.",
-      9
+      11
     ],
     [
       22,
