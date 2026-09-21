@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "21/09/2026 17:38",
+    "atualizado_em": "21/09/2026 18:08",
     "status_dias": "Dias 1 à 21 confirmados · Dia 21 parcial · Dias 22 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 176,
+    "kpi_realizado": 179,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 20)",
-    "kpi_realizado_delta": "▲ 45,1% do total previsto",
+    "kpi_realizado_delta": "▲ 45,9% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 15,
       "mes_passado_total": 163,
       "mes_passado": 107,
-      "mes_atual_total": 77,
+      "mes_atual_total": 78,
       "dias_confirmados_lbl": "dias 1 - 21",
-      "dias_confirmados_val": 77,
+      "dias_confirmados_val": 78,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -109,14 +109,14 @@
           15
         ],
         [
-          "Bruno Ramos Martins",
-          22,
+          "Tiago Melo da Silva",
+          11,
           8
         ],
         [
-          "Tiago Melo da Silva",
-          11,
-          7
+          "Bruno Ramos Martins",
+          22,
+          8
         ],
         [
           "Patrícia Lúcio Custódio",
@@ -179,9 +179,9 @@
       "ativos": 19,
       "mes_passado_total": 146,
       "mes_passado": 89,
-      "mes_atual_total": 97,
+      "mes_atual_total": 99,
       "dias_confirmados_lbl": "dias 1 - 21",
-      "dias_confirmados_val": 97,
+      "dias_confirmados_val": 99,
       "prev_atual": "168",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -199,7 +199,7 @@
         [
           "Makele de Souza Smania",
           16,
-          20
+          21
         ],
         [
           "Larissa Pereira Niehues",
@@ -209,7 +209,7 @@
         [
           "Adriérre Marcon",
           21,
-          12
+          13
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -590,7 +590,7 @@
       12,
       "partial",
       "Correção após a semana mais forte e necessidade de recompor estoque.",
-      11
+      14
     ],
     [
       22,
