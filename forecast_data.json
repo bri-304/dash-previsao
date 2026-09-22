@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "22/09/2026 15:38",
+    "atualizado_em": "22/09/2026 16:08",
     "status_dias": "Dias 1 à 22 confirmados · Dia 22 parcial · Dias 23 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 189,
+    "kpi_realizado": 192,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 21)",
-    "kpi_realizado_delta": "▲ 48,5% do total previsto",
+    "kpi_realizado_delta": "▲ 49,2% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 16,
       "mes_passado_total": 163,
       "mes_passado": 110,
-      "mes_atual_total": 84,
+      "mes_atual_total": 85,
       "dias_confirmados_lbl": "dias 1 - 22",
-      "dias_confirmados_val": 84,
+      "dias_confirmados_val": 85,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -166,7 +166,7 @@
         [
           "Camila Viana Alves",
           0,
-          1
+          2
         ],
         [
           "Andressa Cristina de Paula",
@@ -184,9 +184,9 @@
       "ativos": 19,
       "mes_passado_total": 146,
       "mes_passado": 85,
-      "mes_atual_total": 103,
+      "mes_atual_total": 105,
       "dias_confirmados_lbl": "dias 1 - 22",
-      "dias_confirmados_val": 103,
+      "dias_confirmados_val": 105,
       "prev_atual": "168",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -209,12 +209,12 @@
         [
           "Adriérre Marcon",
           21,
-          15
+          16
         ],
         [
           "Larissa Pereira Niehues",
           16,
-          14
+          15
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -605,7 +605,7 @@
       11,
       "partial",
       "Menor disponibilidade de oportunidades maduras após o pico.",
-      8
+      11
     ],
     [
       23,
