@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "22/09/2026 10:08",
+    "atualizado_em": "22/09/2026 10:38",
     "status_dias": "Dias 1 à 22 confirmados · Dia 22 parcial · Dias 23 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 181,
+    "kpi_realizado": 182,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 21)",
-    "kpi_realizado_delta": "▲ 46,4% do total previsto",
+    "kpi_realizado_delta": "▲ 46,7% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -88,12 +88,12 @@
       ]
     },
     "isr": {
-      "ativos": 15,
+      "ativos": 16,
       "mes_passado_total": 163,
       "mes_passado": 110,
-      "mes_atual_total": 80,
+      "mes_atual_total": 81,
       "dias_confirmados_lbl": "dias 1 - 22",
-      "dias_confirmados_val": 80,
+      "dias_confirmados_val": 81,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -162,6 +162,11 @@
           "Tayna Inácia de Melo",
           13,
           3
+        ],
+        [
+          "Camila Viana Alves",
+          0,
+          1
         ],
         [
           "Andressa Cristina de Paula",
@@ -590,7 +595,7 @@
       12,
       "real",
       "Correção após a semana mais forte e necessidade de recompor estoque.",
-      15
+      16
     ],
     [
       22,
