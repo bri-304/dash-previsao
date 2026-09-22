@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "22/09/2026 19:08",
+    "atualizado_em": "22/09/2026 19:38",
     "status_dias": "Dias 1 à 22 confirmados · Dia 22 parcial · Dias 23 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 195,
+    "kpi_realizado": 197,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 21)",
-    "kpi_realizado_delta": "▲ 50% do total previsto",
+    "kpi_realizado_delta": "▲ 50,5% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 16,
       "mes_passado_total": 163,
       "mes_passado": 110,
-      "mes_atual_total": 86,
+      "mes_atual_total": 88,
       "dias_confirmados_lbl": "dias 1 - 22",
-      "dias_confirmados_val": 86,
+      "dias_confirmados_val": 88,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -106,7 +106,7 @@
         [
           "Israel Riella",
           20,
-          15
+          17
         ],
         [
           "Bruno Ramos Martins",
@@ -605,7 +605,7 @@
       11,
       "partial",
       "Menor disponibilidade de oportunidades maduras após o pico.",
-      15
+      17
     ],
     [
       23,
