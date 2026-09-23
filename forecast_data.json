@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "23/09/2026 13:38",
+    "atualizado_em": "23/09/2026 14:08",
     "status_dias": "Dias 1 à 23 confirmados · Dia 23 parcial · Dias 24 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 201,
+    "kpi_realizado": 204,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 22)",
-    "kpi_realizado_delta": "▲ 51,5% do total previsto",
+    "kpi_realizado_delta": "▲ 52,3% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 16,
       "mes_passado_total": 163,
       "mes_passado": 110,
-      "mes_atual_total": 89,
+      "mes_atual_total": 92,
       "dias_confirmados_lbl": "dias 1 - 23",
-      "dias_confirmados_val": 89,
+      "dias_confirmados_val": 92,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -106,7 +106,7 @@
         [
           "Israel Riella",
           20,
-          17
+          18
         ],
         [
           "Bruno Ramos Martins",
@@ -129,6 +129,11 @@
           8
         ],
         [
+          "Estevam Silverio Tavares",
+          20,
+          8
+        ],
+        [
           "Patrícia Lúcio Custódio",
           16,
           7
@@ -137,11 +142,6 @@
           "Elison da Silva Elias",
           6,
           7
-        ],
-        [
-          "Estevam Silverio Tavares",
-          20,
-          6
         ],
         [
           "Guilherme Carvalho Rodrigues",
@@ -615,7 +615,7 @@
       15,
       "partial",
       "Retomada gradual das conversões do fluxo iniciado em 14/09.",
-      3
+      6
     ],
     [
       24,
