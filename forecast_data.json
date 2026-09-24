@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "24/09/2026 19:38",
+    "atualizado_em": "24/09/2026 20:08",
     "status_dias": "Dias 1 à 24 confirmados · Dia 24 parcial · Dias 25 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 221,
+    "kpi_realizado": 222,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 23)",
-    "kpi_realizado_delta": "▲ 56,7% do total previsto",
+    "kpi_realizado_delta": "▲ 56,9% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 16,
       "mes_passado_total": 163,
       "mes_passado": 114,
-      "mes_atual_total": 103,
+      "mes_atual_total": 104,
       "dias_confirmados_lbl": "dias 1 - 24",
-      "dias_confirmados_val": 103,
+      "dias_confirmados_val": 104,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -134,13 +134,13 @@
           8
         ],
         [
-          "Patrícia Lúcio Custódio",
-          16,
-          7
-        ],
-        [
           "Elison da Silva Elias",
           6,
+          8
+        ],
+        [
+          "Patrícia Lúcio Custódio",
+          16,
           7
         ],
         [
@@ -625,7 +625,7 @@
       16,
       "partial",
       "Pipeline se estabiliza, mas a documentação consome capacidade.",
-      6
+      7
     ],
     [
       25,
