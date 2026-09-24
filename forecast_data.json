@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "24/09/2026 18:38",
+    "atualizado_em": "24/09/2026 19:08",
     "status_dias": "Dias 1 à 24 confirmados · Dia 24 parcial · Dias 25 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 220,
+    "kpi_realizado": 221,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 23)",
-    "kpi_realizado_delta": "▲ 56,4% do total previsto",
+    "kpi_realizado_delta": "▲ 56,7% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 16,
       "mes_passado_total": 163,
       "mes_passado": 114,
-      "mes_atual_total": 102,
+      "mes_atual_total": 103,
       "dias_confirmados_lbl": "dias 1 - 24",
-      "dias_confirmados_val": 102,
+      "dias_confirmados_val": 103,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -109,6 +109,11 @@
           19
         ],
         [
+          "Josilea de Melo Rocha",
+          13,
+          11
+        ],
+        [
           "Bruno Ramos Martins",
           22,
           11
@@ -116,11 +121,6 @@
         [
           "Tiago Melo da Silva",
           11,
-          10
-        ],
-        [
-          "Josilea de Melo Rocha",
-          13,
           10
         ],
         [
@@ -625,7 +625,7 @@
       16,
       "partial",
       "Pipeline se estabiliza, mas a documentação consome capacidade.",
-      5
+      6
     ],
     [
       25,
