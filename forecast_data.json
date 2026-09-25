@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "25/09/2026 12:08",
+    "atualizado_em": "25/09/2026 12:38",
     "status_dias": "Dias 1 à 25 confirmados · Dia 25 parcial · Dias 26 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 224,
+    "kpi_realizado": 228,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 24)",
-    "kpi_realizado_delta": "▲ 57,4% do total previsto",
+    "kpi_realizado_delta": "▲ 58,5% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 16,
       "mes_passado_total": 163,
       "mes_passado": 124,
-      "mes_atual_total": 106,
+      "mes_atual_total": 110,
       "dias_confirmados_lbl": "dias 1 - 25",
-      "dias_confirmados_val": 106,
+      "dias_confirmados_val": 110,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -109,13 +109,13 @@
           19
         ],
         [
-          "Josilea de Melo Rocha",
-          13,
-          11
-        ],
-        [
           "Estevam Silverio Tavares",
           20,
+          15
+        ],
+        [
+          "Josilea de Melo Rocha",
+          13,
           11
         ],
         [
@@ -635,7 +635,7 @@
       20,
       "partial",
       "Fechamento semanal e proximidade da reta final elevam a urgência.",
-      2
+      6
     ],
     [
       26,
