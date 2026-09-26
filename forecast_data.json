@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "26/09/2026 16:38",
+    "atualizado_em": "26/09/2026 17:08",
     "status_dias": "Dias 1 à 26 confirmados · Dia 26 parcial · Dias 27 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 238,
+    "kpi_realizado": 240,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 25)",
-    "kpi_realizado_delta": "▲ 61% do total previsto",
+    "kpi_realizado_delta": "▲ 61,5% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 16,
       "mes_passado_total": 163,
       "mes_passado": 132,
-      "mes_atual_total": 113,
+      "mes_atual_total": 115,
       "dias_confirmados_lbl": "dias 1 - 26",
-      "dias_confirmados_val": 113,
+      "dias_confirmados_val": 115,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -144,14 +144,14 @@
           7
         ],
         [
-          "Guilherme Carvalho Rodrigues",
-          5,
+          "Ketlin Madeira Colombo",
+          8,
           6
         ],
         [
-          "Ketlin Madeira Colombo",
-          8,
-          4
+          "Guilherme Carvalho Rodrigues",
+          5,
+          6
         ],
         [
           "Bruna Letícia Corrêa Barbosa",
@@ -645,7 +645,7 @@
       5,
       "partial",
       "Pagamentos pendentes da sexta sustentam vendas residuais.",
-      1
+      3
     ],
     [
       27,
