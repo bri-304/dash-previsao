@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "26/09/2026 10:38",
+    "atualizado_em": "26/09/2026 11:08",
     "status_dias": "Dias 1 à 26 confirmados · Dia 26 parcial · Dias 27 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 237,
+    "kpi_realizado": 238,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 25)",
-    "kpi_realizado_delta": "▲ 60,8% do total previsto",
+    "kpi_realizado_delta": "▲ 61% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 16,
       "mes_passado_total": 163,
       "mes_passado": 132,
-      "mes_atual_total": 112,
+      "mes_atual_total": 113,
       "dias_confirmados_lbl": "dias 1 - 26",
-      "dias_confirmados_val": 112,
+      "dias_confirmados_val": 113,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -131,7 +131,7 @@
         [
           "Noemi da Silva Penafort da Costa",
           6,
-          9
+          10
         ],
         [
           "Elison da Silva Elias",
@@ -643,9 +643,9 @@
       4,
       4,
       5,
-      "weekend",
+      "partial",
       "Pagamentos pendentes da sexta sustentam vendas residuais.",
-      null
+      1
     ],
     [
       27,
