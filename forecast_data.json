@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "28/09/2026 18:08",
+    "atualizado_em": "28/09/2026 18:38",
     "status_dias": "Dias 1 à 28 confirmados · Dia 28 parcial · Dias 29 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -104,14 +104,14 @@
       "atencao_txt": "⚠️ Israel pode baixar produção direta por não haver meta, Estevam não possui SDR dedicado e seis integrantes do grupo participam do evento de 11/09. A capacidade fica mais concentrada nos vendedores ativos.",
       "sellers": [
         [
-          "Israel Riella",
-          20,
-          21
-        ],
-        [
           "Estevam Silverio Tavares",
           20,
           20
+        ],
+        [
+          "Israel Riella",
+          20,
+          19
         ],
         [
           "Josilea de Melo Rocha",
@@ -139,13 +139,13 @@
           10
         ],
         [
-          "Patrícia Lúcio Custódio",
-          16,
-          7
-        ],
-        [
           "Guilherme Carvalho Rodrigues",
           5,
+          9
+        ],
+        [
+          "Patrícia Lúcio Custódio",
+          16,
           7
         ],
         [
