@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "30/09/2026 18:38",
+    "atualizado_em": "30/09/2026 19:08",
     "status_dias": "Dias 1 à 30 confirmados · Dia 30 parcial · Dias 31 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 292,
+    "kpi_realizado": 293,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 29)",
-    "kpi_realizado_delta": "▲ 74,9% do total previsto",
+    "kpi_realizado_delta": "▲ 75,1% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -91,9 +91,9 @@
       "ativos": 16,
       "mes_passado_total": 164,
       "mes_passado": 154,
-      "mes_atual_total": 141,
+      "mes_atual_total": 142,
       "dias_confirmados_lbl": "dias 1 - 30",
-      "dias_confirmados_val": 141,
+      "dias_confirmados_val": 142,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -121,7 +121,7 @@
         [
           "Guilherme Carvalho Rodrigues",
           5,
-          11
+          12
         ],
         [
           "Elison da Silva Elias",
@@ -685,7 +685,7 @@
       17,
       "partial",
       "Último dia concentra urgência, limitado pela nova capacidade do time.",
-      20
+      21
     ]
   ],
   "sugestoes": [
