@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "01/10/2026 08:38",
-    "status_dias": "Dia 1 confirmado · Dia 1 parcial · Dias 2 à 31 com intervalo de confiança",
+    "atualizado_em": "30/09/2026 23:08",
+    "status_dias": "Dias 1 à 30 confirmados · Dia 30 parcial · Dias 31 à 30 com intervalo de confiança",
     "kpi_total_pess": 276,
     "kpi_total_central": 312,
     "kpi_total_otim": 350,
@@ -9,9 +9,9 @@
     "kpi_media_central": "14",
     "kpi_media_min": "12,3 mín",
     "kpi_media_max": "15,8 máx",
-    "kpi_realizado": 1,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
-    "kpi_realizado_delta": "▲ 0,3% do total previsto",
+    "kpi_realizado": 298,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 29)",
+    "kpi_realizado_delta": "▲ 76,4% do total previsto",
     "kpi_yoy_pct": "-17%",
     "kpi_yoy_pess": "-27% pess.",
     "kpi_yoy_otim": "-7% otim.",
@@ -19,194 +19,255 @@
     "kpi_ativos": 24,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 13 inativos / férias",
-    "page_title": "Forecast Outubro 2026 - Consolide",
-    "hdr_title_html": "Forecast de Vendas - Outubro 2026",
+    "page_title": "Forecast Setembro 2026 - Consolide",
+    "hdr_title_html": "Forecast de Vendas - Setembro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T2 · Fase Classificatória · Mês 1 · Setembro/2026",
     "badge_copa": "📅 Setembro/2026 · 21 dias úteis · feriado nacional em 07/09",
-    "kpi_total_sub": "vendas · Outubro/2026",
+    "kpi_total_sub": "vendas · Setembro/2026",
     "kpi_media_delta": "▼ -4,0 vs 18,0 ago/2026",
-    "kpi_yoy_lbl": "Percentual Previsto vs Outubro 2025",
+    "kpi_yoy_lbl": "Percentual Previsto vs Setembro 2025",
     "kpi_yoy_delta": "▲ crescimento YoY projetado",
-    "sec_title_previsao": "previsão diária com intervalo de confiança — Outubro 2026",
-    "chart_title_main": "Vendas por Dia · Outubro 2026",
-    "sec_title_teams": "desempenho por time — Setembro real vs Outubro projetado",
-    "sec_title_sugestoes": "sugestões estratégicas para Outubro",
+    "sec_title_previsao": "previsão diária com intervalo de confiança — Setembro 2026",
+    "chart_title_main": "Vendas por Dia · Setembro 2026",
+    "sec_title_teams": "desempenho por time — Agosto real vs Setembro projetado",
+    "sec_title_sugestoes": "sugestões estratégicas para Setembro",
     "footer_linha1": "Consolide · Forecast Revisado Setembro 2026 com Intervalo de Confiança · Atualizado em 15/09/2026",
     "footer_linha2": "Método: Rolling Forecast ponderado + sazonalidade de setembro/2025 + pipeline real + capacidade revisada por time + mudanças de guias/SDRs + calendário e penalidade documental.",
     "footer_linha3": "Cenário pessimista: 276 · Central: 312 · Otimista: 350"
   },
   "times": {
-    "isr": {
-      "ativos": 15,
-      "mes_passado_total": 144,
-      "mes_passado": 5,
-      "mes_atual_total": 1,
-      "dias_confirmados_lbl": "dias 1 - 1",
-      "dias_confirmados_val": 1,
-      "prev_atual": "95",
-      "lbl_titulo_comp": "Set. real vs Out. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
-      "lbl_vendedor": "Setembro vs Outubro — por vendedor",
-      "leg_mes_passado": "Set.",
-      "leg_mes_atual": "Out.",
-      "destaque_txt": "⚡ Com Israel dedicado ao desenvolvimento do time, a previsão de 95 vendas se apoia em Bruno, Estevam, Patricia, Tiago e Noemi. O roteamento imediato dos SDRs a partir de 14/09 ajuda a preservar velocidade de atendimento.",
-      "atencao_txt": "⚠️ Israel pode baixar produção direta por não haver meta, Estevam não possui SDR dedicado e seis integrantes do grupo participam do evento de 11/09. A capacidade fica mais concentrada nos vendedores ativos.",
+    "Alan Marcos": {
+      "ativos": 0,
+      "mes_passado_total": 0,
+      "mes_passado": 0,
+      "mes_atual_total": 0,
+      "dias_confirmados_lbl": "dias 1 - 30",
+      "dias_confirmados_val": 0,
+      "prev_atual": "",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "",
+      "atencao_txt": "",
       "sellers": [
         [
-          "Estevam Silverio Tavares",
-          24,
-          1
-        ],
-        [
-          "Israel Riella",
-          19,
-          0
-        ],
-        [
-          "Josilea de Melo Rocha",
-          18,
-          0
-        ],
-        [
-          "Guilherme Carvalho Rodrigues",
-          12,
-          0
-        ],
-        [
-          "Elison da Silva Elias",
-          11,
-          0
-        ],
-        [
-          "Bruno Ramos Martins",
-          11,
-          0
-        ],
-        [
-          "Tiago Melo da Silva",
-          10,
-          0
-        ],
-        [
-          "Noemi da Silva Penafort da Costa",
-          10,
-          0
-        ],
-        [
-          "Ketlin Madeira Colombo",
-          8,
-          0
-        ],
-        [
-          "Bruna Letícia Corrêa Barbosa",
-          8,
-          0
-        ],
-        [
-          "Patrícia Lúcio Custódio",
-          7,
-          0
-        ],
-        [
-          "Tayna Inácia de Melo",
-          3,
-          0
-        ],
-        [
-          "Camila Viana Alves",
-          2,
-          0
-        ],
-        [
-          "Andressa Cristina de Paula",
+          "Ivan Conti",
           1,
           0
         ]
       ]
     },
-    "lis": {
-      "ativos": 17,
-      "mes_passado_total": 152,
-      "mes_passado": 5,
+    "gui": {
+      "ativos": 0,
+      "mes_passado_total": 10,
+      "mes_passado": 10,
       "mes_atual_total": 0,
-      "dias_confirmados_lbl": "dias 1 - 1",
+      "dias_confirmados_lbl": "dias 1 - 30",
       "dias_confirmados_val": 0,
+      "prev_atual": "0",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "⚡ O time do Guilherme foi encerrado. Lorena, Natalia e Lucas foram transferidos para a Lis e suas contribuições estão incluídas na previsão daquele time.",
+      "atencao_txt": "⚠️ Guilherme e Carla saíram da empresa. Nenhuma venda foi projetada para esta estrutura, evitando dupla contagem dos vendedores transferidos.",
+      "sellers": [
+        [
+          "Carla Cristina Ferreira Siqueira",
+          8,
+          0
+        ],
+        [
+          "Guilherme Lopes Machado",
+          2,
+          0
+        ]
+      ]
+    },
+    "isr": {
+      "ativos": 16,
+      "mes_passado_total": 164,
+      "mes_passado": 154,
+      "mes_atual_total": 143,
+      "dias_confirmados_lbl": "dias 1 - 30",
+      "dias_confirmados_val": 143,
+      "prev_atual": "95",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
+      "destaque_txt": "⚡ Com Israel dedicado ao desenvolvimento do time, a previsão de 95 vendas se apoia em Bruno, Estevam, Patricia, Tiago e Noemi. O roteamento imediato dos SDRs a partir de 14/09 ajuda a preservar velocidade de atendimento.",
+      "atencao_txt": "⚠️ Israel pode baixar produção direta por não haver meta, Estevam não possui SDR dedicado e seis integrantes do grupo participam do evento de 11/09. A capacidade fica mais concentrada nos vendedores ativos.",
+      "sellers": [
+        [
+          "Estevam Silverio Tavares",
+          20,
+          24
+        ],
+        [
+          "Israel Riella",
+          20,
+          19
+        ],
+        [
+          "Josilea de Melo Rocha",
+          14,
+          18
+        ],
+        [
+          "Guilherme Carvalho Rodrigues",
+          5,
+          12
+        ],
+        [
+          "Elison da Silva Elias",
+          6,
+          11
+        ],
+        [
+          "Bruno Ramos Martins",
+          22,
+          11
+        ],
+        [
+          "Tiago Melo da Silva",
+          11,
+          10
+        ],
+        [
+          "Noemi da Silva Penafort da Costa",
+          6,
+          10
+        ],
+        [
+          "Bruna Letícia Corrêa Barbosa",
+          15,
+          8
+        ],
+        [
+          "Patrícia Lúcio Custódio",
+          16,
+          7
+        ],
+        [
+          "Ketlin Madeira Colombo",
+          8,
+          7
+        ],
+        [
+          "Tayna Inácia de Melo",
+          13,
+          3
+        ],
+        [
+          "Camila Viana Alves",
+          0,
+          2
+        ],
+        [
+          "Andressa Cristina de Paula",
+          2,
+          1
+        ],
+        [
+          "Elisângela Arias",
+          6,
+          0
+        ]
+      ]
+    },
+    "lis": {
+      "ativos": 19,
+      "mes_passado_total": 146,
+      "mes_passado": 134,
+      "mes_atual_total": 152,
+      "dias_confirmados_lbl": "dias 1 - 30",
+      "dias_confirmados_val": 152,
       "prev_atual": "168",
-      "lbl_titulo_comp": "Set. real vs Out. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
-      "lbl_vendedor": "Setembro vs Outubro — por vendedor",
-      "leg_mes_passado": "Set.",
-      "leg_mes_atual": "Out.",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
       "destaque_txt": "⚡ O time absorve Lorena, Natalia e Lucas e mantém apoio documental e SDR para Maria Aline e Marcon. A nova estrutura concentra a maior previsão do mês: 168 vendas.",
       "atencao_txt": "⚠️ Lis foca em desenvolver um time maior, que passa a representar cerca de 54% do forecast. Integração, distribuição de leads e documentação precisam ser acompanhadas diariamente.",
       "sellers": [
         [
           "Maria Aline da Silva Ferreira",
-          38,
-          0
+          36,
+          38
         ],
         [
           "Makele de Souza Smania",
-          25,
-          0
+          16,
+          25
         ],
         [
           "Adriérre Marcon",
-          22,
-          0
+          21,
+          22
         ],
         [
           "Larissa Pereira Niehues",
-          19,
-          0
+          16,
+          19
         ],
         [
           "Rafael Rodrigues Pedroso",
-          12,
-          0
+          8,
+          12
         ],
         [
           "Aline Cristina da Silva",
-          7,
-          0
+          3,
+          7
         ],
         [
           "Lorena Cristina Domingos Pereira",
-          6,
-          0
+          5,
+          6
         ],
         [
           "Elisan Antônio",
-          6,
-          0
+          0,
+          6
         ],
         [
           "Lucas Vinicius Morato",
-          5,
-          0
+          0,
+          5
         ],
         [
           "Lisdaisy Vieira Costa",
-          4,
-          0
+          14,
+          4
         ],
         [
           "Iara da Silva Linhares",
-          3,
-          0
+          13,
+          3
         ],
         [
           "Felipe Santos Leite",
-          3,
-          0
+          6,
+          3
         ],
         [
           "Natalia Oliveira Katrip",
-          1,
-          0
+          5,
+          1
         ],
         [
           "Diego Dias de Medeiros",
+          2,
+          1
+        ],
+        [
+          "Lana Mara de Morais Leite",
           1,
           0
         ]
@@ -214,24 +275,24 @@
     },
     "stl": {
       "ativos": 1,
-      "mes_passado_total": 1,
-      "mes_passado": 0,
-      "mes_atual_total": 0,
-      "dias_confirmados_lbl": "dias 1 - 1",
-      "dias_confirmados_val": 0,
+      "mes_passado_total": 40,
+      "mes_passado": 39,
+      "mes_atual_total": 1,
+      "dias_confirmados_lbl": "dias 1 - 30",
+      "dias_confirmados_val": 1,
       "prev_atual": "49",
-      "lbl_titulo_comp": "Set. real vs Out. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
-      "lbl_vendedor": "Setembro vs Outubro — por vendedor",
-      "leg_mes_passado": "Set.",
-      "leg_mes_atual": "Out.",
+      "lbl_titulo_comp": "Ago. real vs Set. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
+      "lbl_vendedor": "Agosto vs Setembro — por vendedor",
+      "leg_mes_passado": "Ago.",
+      "leg_mes_atual": "Set.",
       "destaque_txt": "⚡ Com Stella dedicada integralmente à função de SDR, o resultado de 49 vendas depende de Josileia, Elison, Guilherme Carvalho e Ketlin, apoiados por gestão e agendamento.",
       "atencao_txt": "⚠️ A retirada das 40 vendas realizadas por Stella em agosto reduz fortemente o teto do time. O ganho com SDR precisa aparecer em agendas, pitches e conversão dos vendedores ativos.",
       "sellers": [
         [
           "Stella Nieheus",
-          1,
-          0
+          40,
+          1
         ]
       ]
     }
@@ -332,9 +393,9 @@
       11,
       10,
       12,
-      "partial",
+      "real",
       "Nova estrutura inicia com menor capacidade direta: os guias não atuam como vendedores.",
-      1
+      10
     ],
     [
       2,
@@ -344,7 +405,7 @@
       16,
       "real",
       "Pipeline herdado sustenta recuperação moderada, apesar da redução de capacidade.",
-      null
+      22
     ],
     [
       3,
@@ -354,7 +415,7 @@
       14,
       "real",
       "Redistribuição de leads e papéis ainda em adaptação.",
-      null
+      7
     ],
     [
       4,
@@ -364,7 +425,7 @@
       17,
       "real",
       "Antecipação de reuniões e pagamentos antes do feriado prolongado.",
-      null
+      14
     ],
     [
       5,
@@ -404,7 +465,7 @@
       13,
       "real",
       "Retomada pós-feriado com menor capacidade direta dos guias.",
-      null
+      13
     ],
     [
       9,
@@ -414,7 +475,7 @@
       18,
       "real",
       "Rebote das oportunidades acumuladas durante o feriado.",
-      null
+      11
     ],
     [
       10,
@@ -424,7 +485,7 @@
       15,
       "real",
       "Antecipação parcial de follow-ups antes do evento dos vencedores.",
-      null
+      17
     ],
     [
       11,
@@ -434,7 +495,7 @@
       10,
       "real",
       "Nove participantes estarão no evento da temporada 1 e não terão foco em vendas.",
-      null
+      8
     ],
     [
       12,
@@ -464,7 +525,7 @@
       16,
       "real",
       "Começam o roteamento aberto dos SDRs e a contagem da Makele como franqueada.",
-      null
+      13
     ],
     [
       15,
@@ -474,7 +535,7 @@
       20,
       "real",
       "Atendimento imediato reduz o tempo de primeiro contato e favorece conversões.",
-      null
+      15
     ],
     [
       16,
@@ -484,7 +545,7 @@
       19,
       "real",
       "Leads roteadas imediatamente começam a amadurecer no funil.",
-      null
+      14
     ],
     [
       17,
@@ -494,7 +555,7 @@
       18,
       "real",
       "Conversão das oportunidades geradas após a nova regra dos SDRs.",
-      null
+      7
     ],
     [
       18,
@@ -504,7 +565,7 @@
       16,
       "real",
       "Produção ainda forte, moderada pelo retrabalho documental.",
-      null
+      11
     ],
     [
       19,
@@ -514,7 +575,7 @@
       1,
       "real",
       "Sábado e consumo do estoque semanal reduzem o volume.",
-      null
+      2
     ],
     [
       20,
@@ -524,7 +585,7 @@
       2,
       "real",
       "Atividade residual de domingo.",
-      null
+      2
     ],
     [
       21,
@@ -534,7 +595,7 @@
       12,
       "real",
       "Correção após a semana mais forte e necessidade de recompor estoque.",
-      null
+      16
     ],
     [
       22,
@@ -544,7 +605,7 @@
       11,
       "real",
       "Menor disponibilidade de oportunidades maduras após o pico.",
-      null
+      18
     ],
     [
       23,
@@ -554,7 +615,7 @@
       15,
       "real",
       "Retomada gradual das conversões do fluxo iniciado em 14/09.",
-      null
+      16
     ],
     [
       24,
@@ -564,7 +625,7 @@
       16,
       "real",
       "Pipeline se estabiliza, mas a documentação consome capacidade.",
-      null
+      7
     ],
     [
       25,
@@ -574,7 +635,7 @@
       20,
       "real",
       "Fechamento semanal e proximidade da reta final elevam a urgência.",
-      null
+      15
     ],
     [
       26,
@@ -584,7 +645,7 @@
       5,
       "real",
       "Pagamentos pendentes da sexta sustentam vendas residuais.",
-      null
+      3
     ],
     [
       27,
@@ -604,7 +665,7 @@
       19,
       "real",
       "Início da reta final com foco em oportunidades maduras.",
-      null
+      17
     ],
     [
       29,
@@ -614,7 +675,7 @@
       18,
       "real",
       "Fechamento de oportunidades em documentação e pagamento.",
-      null
+      14
     ],
     [
       30,
@@ -624,7 +685,7 @@
       17,
       "partial",
       "Último dia concentra urgência, limitado pela nova capacidade do time.",
-      null
+      26
     ]
   ],
   "sugestoes": [
