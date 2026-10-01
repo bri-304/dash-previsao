@@ -91,9 +91,9 @@
       "ativos": 16,
       "mes_passado_total": 164,
       "mes_passado": 154,
-      "mes_atual_total": 143,
+      "mes_atual_total": 144,
       "dias_confirmados_lbl": "dias 1 - 30",
-      "dias_confirmados_val": 143,
+      "dias_confirmados_val": 144,
       "prev_atual": "95",
       "lbl_titulo_comp": "Ago. real vs Set. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Set. Realizado Ago.",
@@ -156,7 +156,7 @@
         [
           "Ketlin Madeira Colombo",
           8,
-          7
+          8
         ],
         [
           "Tayna Inácia de Melo",
@@ -685,7 +685,7 @@
       17,
       "partial",
       "Último dia concentra urgência, limitado pela nova capacidade do time.",
-      26
+      27
     ]
   ],
   "sugestoes": [
