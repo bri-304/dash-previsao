@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "02/10/2026 15:08",
+    "atualizado_em": "02/10/2026 15:38",
     "status_dias": "Dias 1 à 2 confirmados · Dia 2 parcial · Dias 3 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 16,
+    "kpi_realizado": 18,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 1)",
-    "kpi_realizado_delta": "▲ 4,1% do total previsto",
+    "kpi_realizado_delta": "▲ 4,6% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -40,9 +40,9 @@
       "ativos": 15,
       "mes_passado_total": 145,
       "mes_passado": 14,
-      "mes_atual_total": 9,
+      "mes_atual_total": 10,
       "dias_confirmados_lbl": "dias 1 - 2",
-      "dias_confirmados_val": 9,
+      "dias_confirmados_val": 10,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -73,6 +73,11 @@
           1
         ],
         [
+          "Elison da Silva Elias",
+          11,
+          1
+        ],
+        [
           "Bruna Letícia Corrêa Barbosa",
           8,
           1
@@ -84,11 +89,6 @@
         ],
         [
           "Noemi da Silva Penafort da Costa",
-          11,
-          0
-        ],
-        [
-          "Elison da Silva Elias",
           11,
           0
         ],
@@ -128,9 +128,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 17,
-      "mes_atual_total": 7,
+      "mes_atual_total": 8,
       "dias_confirmados_lbl": "dias 1 - 2",
-      "dias_confirmados_val": 7,
+      "dias_confirmados_val": 8,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -148,6 +148,11 @@
         [
           "Makele de Souza Smania",
           25,
+          1
+        ],
+        [
+          "Lucas Vinicius Morato",
+          5,
           1
         ],
         [
@@ -178,11 +183,6 @@
         [
           "Elisan Antônio",
           6,
-          0
-        ],
-        [
-          "Lucas Vinicius Morato",
-          5,
           0
         ],
         [
@@ -344,7 +344,7 @@
       11,
       "partial",
       "Carteira próxima do fechamento compensa parte da baixa inicial; persiste carga documental.",
-      6
+      8
     ],
     [
       3,
