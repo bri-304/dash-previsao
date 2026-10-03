@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "03/10/2026 10:38",
+    "atualizado_em": "03/10/2026 11:08",
     "status_dias": "Dias 1 à 3 confirmados · Dia 3 parcial · Dias 4 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 20,
+    "kpi_realizado": 23,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 2)",
-    "kpi_realizado_delta": "▲ 5,1% do total previsto",
+    "kpi_realizado_delta": "▲ 5,9% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -40,9 +40,9 @@
       "ativos": 15,
       "mes_passado_total": 145,
       "mes_passado": 19,
-      "mes_atual_total": 11,
+      "mes_atual_total": 14,
       "dias_confirmados_lbl": "dias 1 - 3",
-      "dias_confirmados_val": 11,
+      "dias_confirmados_val": 14,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -52,6 +52,11 @@
       "destaque_txt": "⚡ Estevam passa a ter apoio fixo de SDR. O time Israel concentra produção em Estevam, Josileia, Bruno, Tiago, Elison, Guilherme e Noemi; a catraca mantém distribuição conforme desempenho.",
       "atencao_txt": "⚠️ Monitorar atendimento e documentação: Ketlin tem 5 retornos por processo, Noemi 4,88 e Elison 3,43. Guilherme e Elison recebem regressão moderada após superar 130% da meta em setembro. Guias seguem sem meta de venda.",
       "sellers": [
+        [
+          "Israel Riella",
+          19,
+          3
+        ],
         [
           "Guilherme Carvalho Rodrigues",
           12,
@@ -81,11 +86,6 @@
           "Bruna Letícia Corrêa Barbosa",
           8,
           1
-        ],
-        [
-          "Israel Riella",
-          19,
-          0
         ],
         [
           "Noemi da Silva Penafort da Costa",
@@ -352,9 +352,9 @@
       2,
       2,
       2,
-      "weekend",
+      "partial",
       "Produção baixa de sábado, preservada pelo histórico e pelos modificadores próprios da data.",
-      null
+      3
     ],
     [
       4,
