@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "05/10/2026 15:38",
+    "atualizado_em": "05/10/2026 16:08",
     "status_dias": "Dias 1 à 5 confirmados · Dia 5 parcial · Dias 6 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 26,
+    "kpi_realizado": 30,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 4)",
-    "kpi_realizado_delta": "▲ 6,7% do total previsto",
+    "kpi_realizado_delta": "▲ 7,7% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -128,9 +128,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 30,
-      "mes_atual_total": 11,
+      "mes_atual_total": 15,
       "dias_confirmados_lbl": "dias 1 - 5",
-      "dias_confirmados_val": 11,
+      "dias_confirmados_val": 15,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -140,6 +140,11 @@
       "destaque_txt": "⚡ Maria Aline e Adriérre mantêm apoio fixo de SDR. Makele já atua como franqueada; Larissa e agentes em rampa ajudam a sustentar a carteira. Outubro é o mês 2 classificatório, com motivação neutra.",
       "atencao_txt": "⚠️ Maria Aline tem 106 leads no pipe e Adriérre 38; evitar esgotamento de oportunidades. Incompletos: Maria Aline 86,84%, Adriérre 86,36% e Makele 92%. Maria Aline recebe ajuste de antecipação após 140,7% da meta em setembro.",
       "sellers": [
+        [
+          "Adriérre Marcon",
+          22,
+          5
+        ],
         [
           "Rafael Rodrigues Pedroso",
           12,
@@ -168,11 +173,6 @@
         [
           "Lorena Cristina Domingos Pereira",
           6,
-          1
-        ],
-        [
-          "Adriérre Marcon",
-          22,
           1
         ],
         [
@@ -374,7 +374,7 @@
       12,
       "partial",
       "Prior individual de outubro/2025 favorece retomada da semana.",
-      2
+      6
     ],
     [
       6,
