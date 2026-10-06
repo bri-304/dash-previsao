@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "05/10/2026 21:38",
+    "atualizado_em": "05/10/2026 22:08",
     "status_dias": "Dias 1 à 5 confirmados · Dia 5 parcial · Dias 6 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 31,
+    "kpi_realizado": 32,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 4)",
-    "kpi_realizado_delta": "▲ 7,9% do total previsto",
+    "kpi_realizado_delta": "▲ 8,2% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -128,9 +128,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 30,
-      "mes_atual_total": 15,
+      "mes_atual_total": 16,
       "dias_confirmados_lbl": "dias 1 - 5",
-      "dias_confirmados_val": 15,
+      "dias_confirmados_val": 16,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -153,7 +153,7 @@
         [
           "Larissa Pereira Niehues",
           19,
-          2
+          3
         ],
         [
           "Maria Aline da Silva Ferreira",
@@ -374,7 +374,7 @@
       12,
       "partial",
       "Prior individual de outubro/2025 favorece retomada da semana.",
-      7
+      8
     ],
     [
       6,
