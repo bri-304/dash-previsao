@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "06/10/2026 14:08",
+    "atualizado_em": "06/10/2026 14:38",
     "status_dias": "Dias 1 à 6 confirmados · Dia 6 parcial · Dias 7 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,16 +9,16 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 33,
+    "kpi_realizado": 41,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 5)",
-    "kpi_realizado_delta": "▲ 8,5% do total previsto",
+    "kpi_realizado_delta": "▲ 10,5% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
     "kpi_yoy_sub": "236 central vs 272 em outubro/2025",
-    "kpi_ativos": 24,
+    "kpi_ativos": 0,
     "kpi_ativos_sub": "em 3 times competindo",
-    "kpi_inativos_delta": "▼ 13 inativos / férias",
+    "kpi_inativos_delta": "▼ 0 inativos / férias",
     "page_title": "Forecast Outubro 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Outubro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T2 · Fase Classificatória · Mês 2 · Outubro/2026",
@@ -40,9 +40,9 @@
       "ativos": 15,
       "mes_passado_total": 145,
       "mes_passado": 22,
-      "mes_atual_total": 16,
+      "mes_atual_total": 24,
       "dias_confirmados_lbl": "dias 1 - 6",
-      "dias_confirmados_val": 16,
+      "dias_confirmados_val": 24,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -55,7 +55,7 @@
         [
           "Estevam Silverio Tavares",
           24,
-          4
+          12
         ],
         [
           "Israel Riella",
@@ -384,7 +384,7 @@
       13,
       "partial",
       "Boa base de terça, com pequena redução pela carga documental após os fechamentos.",
-      1
+      9
     ],
     [
       7,
