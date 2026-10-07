@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "07/10/2026 15:38",
+    "atualizado_em": "07/10/2026 16:08",
     "status_dias": "Dias 1 à 7 confirmados · Dia 7 parcial · Dias 8 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 50,
+    "kpi_realizado": 52,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 6)",
-    "kpi_realizado_delta": "▲ 12,8% do total previsto",
+    "kpi_realizado_delta": "▲ 13,3% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -40,9 +40,9 @@
       "ativos": 15,
       "mes_passado_total": 145,
       "mes_passado": 22,
-      "mes_atual_total": 28,
+      "mes_atual_total": 29,
       "dias_confirmados_lbl": "dias 1 - 7",
-      "dias_confirmados_val": 28,
+      "dias_confirmados_val": 29,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -78,6 +78,11 @@
           3
         ],
         [
+          "Patrícia Lúcio Custódio",
+          7,
+          1
+        ],
+        [
           "Noemi da Silva Penafort da Costa",
           11,
           1
@@ -103,11 +108,6 @@
           0
         ],
         [
-          "Patrícia Lúcio Custódio",
-          7,
-          0
-        ],
-        [
           "Tayna Inácia de Melo",
           3,
           0
@@ -128,9 +128,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 30,
-      "mes_atual_total": 22,
+      "mes_atual_total": 23,
       "dias_confirmados_lbl": "dias 1 - 7",
-      "dias_confirmados_val": 22,
+      "dias_confirmados_val": 23,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -166,6 +166,11 @@
           2
         ],
         [
+          "Iara da Silva Linhares",
+          3,
+          2
+        ],
+        [
           "Lucas Vinicius Morato",
           5,
           1
@@ -173,11 +178,6 @@
         [
           "Lorena Cristina Domingos Pereira",
           6,
-          1
-        ],
-        [
-          "Iara da Silva Linhares",
-          3,
           1
         ],
         [
@@ -394,7 +394,7 @@
       17,
       "partial",
       "Quarta forte e pico histórico do começo do mês favorecem fechamentos.",
-      3
+      5
     ],
     [
       8,
