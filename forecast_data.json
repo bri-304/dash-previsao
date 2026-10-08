@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "08/10/2026 14:08",
+    "atualizado_em": "08/10/2026 14:38",
     "status_dias": "Dias 1 à 8 confirmados · Dia 8 parcial · Dias 9 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,16 +9,16 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 59,
+    "kpi_realizado": 60,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 7)",
-    "kpi_realizado_delta": "▲ 15,1% do total previsto",
+    "kpi_realizado_delta": "▲ 15,4% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
     "kpi_yoy_sub": "236 central vs 272 em outubro/2025",
-    "kpi_ativos": 24,
+    "kpi_ativos": 0,
     "kpi_ativos_sub": "em 3 times competindo",
-    "kpi_inativos_delta": "▼ 14 inativos / férias",
+    "kpi_inativos_delta": "▼ 0 inativos / férias",
     "page_title": "Forecast Outubro 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Outubro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T2 · Fase Classificatória · Mês 2 · Outubro/2026",
@@ -128,9 +128,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 37,
-      "mes_atual_total": 26,
+      "mes_atual_total": 27,
       "dias_confirmados_lbl": "dias 1 - 8",
-      "dias_confirmados_val": 26,
+      "dias_confirmados_val": 27,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -141,6 +141,11 @@
       "atencao_txt": "⚠️ Maria Aline tem 106 leads no pipe e Adriérre 38; evitar esgotamento de oportunidades. Incompletos: Maria Aline 86,84%, Adriérre 86,36% e Makele 92%. Maria Aline recebe ajuste de antecipação após 140,7% da meta em setembro.",
       "sellers": [
         [
+          "Larissa Pereira Niehues",
+          19,
+          6
+        ],
+        [
           "Rafael Rodrigues Pedroso",
           12,
           5
@@ -148,11 +153,6 @@
         [
           "Maria Aline da Silva Ferreira",
           38,
-          5
-        ],
-        [
-          "Larissa Pereira Niehues",
-          19,
           5
         ],
         [
@@ -404,7 +404,7 @@
       8,
       "partial",
       "Vale histórico e efeito documental posterior ao dia forte de 07/10.",
-      1
+      2
     ],
     [
       9,
