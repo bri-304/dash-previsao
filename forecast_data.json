@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "08/10/2026 13:38",
+    "atualizado_em": "08/10/2026 14:08",
     "status_dias": "Dias 1 à 8 confirmados · Dia 8 parcial · Dias 9 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 58,
+    "kpi_realizado": 59,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 7)",
-    "kpi_realizado_delta": "▲ 14,9% do total previsto",
+    "kpi_realizado_delta": "▲ 15,1% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -128,9 +128,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 37,
-      "mes_atual_total": 25,
+      "mes_atual_total": 26,
       "dias_confirmados_lbl": "dias 1 - 8",
-      "dias_confirmados_val": 25,
+      "dias_confirmados_val": 26,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -151,14 +151,14 @@
           5
         ],
         [
-          "Adriérre Marcon",
-          22,
+          "Larissa Pereira Niehues",
+          19,
           5
         ],
         [
-          "Larissa Pereira Niehues",
-          19,
-          4
+          "Adriérre Marcon",
+          22,
+          5
         ],
         [
           "Makele de Souza Smania",
@@ -402,9 +402,9 @@
       7,
       6,
       8,
-      "work",
+      "partial",
       "Vale histórico e efeito documental posterior ao dia forte de 07/10.",
-      null
+      1
     ],
     [
       9,
