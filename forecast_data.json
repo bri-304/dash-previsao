@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "09/10/2026 13:38",
+    "atualizado_em": "09/10/2026 14:08",
     "status_dias": "Dias 1 à 9 confirmados · Dia 9 parcial · Dias 10 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 63,
+    "kpi_realizado": 64,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 8)",
-    "kpi_realizado_delta": "▲ 16,2% do total previsto",
+    "kpi_realizado_delta": "▲ 16,4% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -128,9 +128,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 43,
-      "mes_atual_total": 29,
+      "mes_atual_total": 30,
       "dias_confirmados_lbl": "dias 1 - 9",
-      "dias_confirmados_val": 29,
+      "dias_confirmados_val": 30,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -163,7 +163,7 @@
         [
           "Makele de Souza Smania",
           25,
-          2
+          3
         ],
         [
           "Iara da Silva Linhares",
@@ -414,7 +414,7 @@
       9,
       "partial",
       "Sexta anterior ao feriado prolongado; ajustes de formato e calendário reduzem o volume.",
-      1
+      2
     ],
     [
       10,
