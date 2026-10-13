@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "12/10/2026 16:38",
-    "status_dias": "Dias 1 à 12 confirmados · Dia 12 parcial · Dias 13 à 31 com intervalo de confiança",
+    "atualizado_em": "13/10/2026 15:55",
+    "status_dias": "Dias 1 à 13 confirmados · Dia 13 parcial · Dias 14 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
     "kpi_total_otim": 277,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 84,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 11)",
-    "kpi_realizado_delta": "▲ 21,5% do total previsto",
+    "kpi_realizado": 88,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 12)",
+    "kpi_realizado_delta": "▲ 22,6% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -40,9 +40,9 @@
       "ativos": 15,
       "mes_passado_total": 145,
       "mes_passado": 42,
-      "mes_atual_total": 50,
-      "dias_confirmados_lbl": "dias 1 - 12",
-      "dias_confirmados_val": 50,
+      "mes_atual_total": 52,
+      "dias_confirmados_lbl": "dias 1 - 13",
+      "dias_confirmados_val": 52,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -65,7 +65,7 @@
         [
           "Tiago Melo da Silva",
           10,
-          6
+          7
         ],
         [
           "Elison da Silva Elias",
@@ -83,6 +83,11 @@
           3
         ],
         [
+          "Noemi da Silva Penafort da Costa",
+          11,
+          2
+        ],
+        [
           "Camila Viana Alves",
           2,
           2
@@ -91,11 +96,6 @@
           "Bruna Letícia Corrêa Barbosa",
           8,
           2
-        ],
-        [
-          "Noemi da Silva Penafort da Costa",
-          11,
-          1
         ],
         [
           "Josilea de Melo Rocha",
@@ -128,9 +128,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 59,
-      "mes_atual_total": 33,
-      "dias_confirmados_lbl": "dias 1 - 12",
-      "dias_confirmados_val": 33,
+      "mes_atual_total": 35,
+      "dias_confirmados_lbl": "dias 1 - 13",
+      "dias_confirmados_val": 35,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -148,7 +148,7 @@
         [
           "Adriérre Marcon",
           22,
-          7
+          8
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -163,7 +163,7 @@
         [
           "Makele de Souza Smania",
           25,
-          4
+          5
         ],
         [
           "Iara da Silva Linhares",
@@ -217,7 +217,7 @@
       "mes_passado_total": 1,
       "mes_passado": 0,
       "mes_atual_total": 1,
-      "dias_confirmados_lbl": "dias 1 - 12",
+      "dias_confirmados_lbl": "dias 1 - 13",
       "dias_confirmados_val": 1,
       "prev_atual": "49",
       "lbl_titulo_comp": "Set. real vs Out. Real",
@@ -432,9 +432,9 @@
       1,
       1,
       1,
-      "weekend",
+      "real",
       "Domingo anterior ao feriado, com volume residual.",
-      null
+      1
     ],
     [
       12,
@@ -452,9 +452,9 @@
       13,
       11,
       15,
-      "work",
+      "partial",
       "Retomada de contatos e pagamentos após o feriado; formato histórico favorável.",
-      null
+      3
     ],
     [
       14,
