@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "15/10/2026 16:38",
+    "atualizado_em": "15/10/2026 17:08",
     "status_dias": "Dias 1 à 15 confirmados · Dia 15 parcial · Dias 16 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 112,
+    "kpi_realizado": 116,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 14)",
-    "kpi_realizado_delta": "▲ 28,7% do total previsto",
+    "kpi_realizado_delta": "▲ 29,7% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -40,9 +40,9 @@
       "ativos": 15,
       "mes_passado_total": 145,
       "mes_passado": 51,
-      "mes_atual_total": 55,
+      "mes_atual_total": 56,
       "dias_confirmados_lbl": "dias 1 - 15",
-      "dias_confirmados_val": 55,
+      "dias_confirmados_val": 56,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -98,6 +98,11 @@
           2
         ],
         [
+          "Ketlin Madeira Colombo",
+          8,
+          1
+        ],
+        [
           "Josilea de Melo Rocha",
           18,
           1
@@ -105,11 +110,6 @@
         [
           "Bruno Ramos Martins",
           11,
-          0
-        ],
-        [
-          "Ketlin Madeira Colombo",
-          8,
           0
         ],
         [
@@ -128,9 +128,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 77,
-      "mes_atual_total": 53,
+      "mes_atual_total": 55,
       "dias_confirmados_lbl": "dias 1 - 15",
-      "dias_confirmados_val": 53,
+      "dias_confirmados_val": 55,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -146,14 +146,14 @@
           14
         ],
         [
+          "Makele de Souza Smania",
+          25,
+          11
+        ],
+        [
           "Maria Aline da Silva Ferreira",
           38,
           10
-        ],
-        [
-          "Makele de Souza Smania",
-          25,
-          9
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -216,9 +216,9 @@
       "ativos": 1,
       "mes_passado_total": 1,
       "mes_passado": 0,
-      "mes_atual_total": 3,
+      "mes_atual_total": 4,
       "dias_confirmados_lbl": "dias 1 - 15",
-      "dias_confirmados_val": 3,
+      "dias_confirmados_val": 4,
       "prev_atual": "49",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -231,7 +231,7 @@
         [
           "Stella Nieheus",
           1,
-          3
+          4
         ]
       ]
     }
@@ -474,7 +474,7 @@
       12,
       "partial",
       "Formato histórico favorece a metade do mês, com pequena contenção documental.",
-      13
+      17
     ],
     [
       16,
