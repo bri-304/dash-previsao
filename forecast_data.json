@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "15/10/2026 10:08",
+    "atualizado_em": "15/10/2026 10:38",
     "status_dias": "Dias 1 à 15 confirmados · Dia 15 parcial · Dias 16 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 100,
+    "kpi_realizado": 101,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 14)",
-    "kpi_realizado_delta": "▲ 25,6% do total previsto",
+    "kpi_realizado_delta": "▲ 25,9% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -128,9 +128,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 77,
-      "mes_atual_total": 44,
+      "mes_atual_total": 45,
       "dias_confirmados_lbl": "dias 1 - 15",
-      "dias_confirmados_val": 44,
+      "dias_confirmados_val": 45,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -146,14 +146,14 @@
           11
         ],
         [
-          "Adriérre Marcon",
-          22,
+          "Rafael Rodrigues Pedroso",
+          12,
           8
         ],
         [
-          "Rafael Rodrigues Pedroso",
-          12,
-          7
+          "Adriérre Marcon",
+          22,
+          8
         ],
         [
           "Maria Aline da Silva Ferreira",
@@ -474,7 +474,7 @@
       12,
       "partial",
       "Formato histórico favorece a metade do mês, com pequena contenção documental.",
-      2
+      3
     ],
     [
       16,
