@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "15/10/2026 18:08",
+    "atualizado_em": "15/10/2026 18:38",
     "status_dias": "Dias 1 à 15 confirmados · Dia 15 parcial · Dias 16 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 117,
+    "kpi_realizado": 119,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 14)",
-    "kpi_realizado_delta": "▲ 30% do total previsto",
+    "kpi_realizado_delta": "▲ 30,5% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -37,12 +37,12 @@
   },
   "times": {
     "isr": {
-      "ativos": 15,
+      "ativos": 16,
       "mes_passado_total": 145,
       "mes_passado": 51,
-      "mes_atual_total": 57,
+      "mes_atual_total": 59,
       "dias_confirmados_lbl": "dias 1 - 15",
-      "dias_confirmados_val": 57,
+      "dias_confirmados_val": 59,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -100,6 +100,11 @@
         [
           "Josilea de Melo Rocha",
           18,
+          2
+        ],
+        [
+          "João Vitor Dias Todesco Triano",
+          0,
           2
         ],
         [
@@ -474,7 +479,7 @@
       12,
       "partial",
       "Formato histórico favorece a metade do mês, com pequena contenção documental.",
-      18
+      20
     ],
     [
       16,
