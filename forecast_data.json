@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "19/10/2026 18:08",
+    "atualizado_em": "19/10/2026 18:38",
     "status_dias": "Dias 1 à 19 confirmados · Dia 19 parcial · Dias 20 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 136,
+    "kpi_realizado": 137,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 18)",
-    "kpi_realizado_delta": "▲ 34,9% do total previsto",
+    "kpi_realizado_delta": "▲ 35,1% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -133,9 +133,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 92,
-      "mes_atual_total": 61,
+      "mes_atual_total": 62,
       "dias_confirmados_lbl": "dias 1 - 19",
-      "dias_confirmados_val": 61,
+      "dias_confirmados_val": 62,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -186,13 +186,13 @@
           1
         ],
         [
-          "Aline Cristina da Silva",
-          7,
-          0
-        ],
-        [
           "Elisan Antônio",
           6,
+          1
+        ],
+        [
+          "Aline Cristina da Silva",
+          7,
           0
         ],
         [
@@ -519,7 +519,7 @@
       6,
       "partial",
       "Vale histórico e carga documental após a sequência anterior reduzem o dia.",
-      3
+      4
     ],
     [
       20,
