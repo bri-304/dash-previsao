@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "20/10/2026 17:08",
+    "atualizado_em": "20/10/2026 17:38",
     "status_dias": "Dias 1 à 20 confirmados · Dia 20 parcial · Dias 21 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,16 +9,16 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 142,
+    "kpi_realizado": 143,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 19)",
-    "kpi_realizado_delta": "▲ 36,4% do total previsto",
+    "kpi_realizado_delta": "▲ 36,7% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
     "kpi_yoy_sub": "236 central vs 272 em outubro/2025",
-    "kpi_ativos": 0,
+    "kpi_ativos": 26,
     "kpi_ativos_sub": "em 3 times competindo",
-    "kpi_inativos_delta": "▼ 0 inativos / férias",
+    "kpi_inativos_delta": "▼ 13 inativos / férias",
     "page_title": "Forecast Outubro 2026 - Consolide",
     "hdr_title_html": "Forecast de Vendas - Outubro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T2 · Fase Classificatória · Mês 2 · Outubro/2026",
@@ -133,9 +133,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 92,
-      "mes_atual_total": 63,
+      "mes_atual_total": 64,
       "dias_confirmados_lbl": "dias 1 - 20",
-      "dias_confirmados_val": 63,
+      "dias_confirmados_val": 64,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -158,7 +158,7 @@
         [
           "Makele de Souza Smania",
           25,
-          12
+          13
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -529,7 +529,7 @@
       13,
       "partial",
       "Base de terça sustenta retomada moderada, limitada pela recomposição de carteira.",
-      5
+      6
     ],
     [
       21,
