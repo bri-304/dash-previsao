@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "21/10/2026 23:08",
-    "status_dias": "Dias 1 à 21 confirmados · Dia 21 parcial · Dias 22 à 31 com intervalo de confiança",
+    "atualizado_em": "22/10/2026 07:08",
+    "status_dias": "Dias 1 à 22 confirmados · Dia 22 parcial · Dias 23 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
     "kpi_total_otim": 277,
@@ -10,7 +10,7 @@
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
     "kpi_realizado": 151,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 20)",
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 21)",
     "kpi_realizado_delta": "▲ 38,7% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
@@ -39,9 +39,9 @@
     "isr": {
       "ativos": 16,
       "mes_passado_total": 145,
-      "mes_passado": 80,
+      "mes_passado": 88,
       "mes_atual_total": 77,
-      "dias_confirmados_lbl": "dias 1 - 21",
+      "dias_confirmados_lbl": "dias 1 - 22",
       "dias_confirmados_val": 77,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
@@ -132,9 +132,9 @@
     "lis": {
       "ativos": 17,
       "mes_passado_total": 152,
-      "mes_passado": 100,
+      "mes_passado": 109,
       "mes_atual_total": 68,
-      "dias_confirmados_lbl": "dias 1 - 21",
+      "dias_confirmados_lbl": "dias 1 - 22",
       "dias_confirmados_val": 68,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
@@ -220,9 +220,9 @@
     "stl": {
       "ativos": 1,
       "mes_passado_total": 1,
-      "mes_passado": 0,
+      "mes_passado": 1,
       "mes_atual_total": 5,
-      "dias_confirmados_lbl": "dias 1 - 21",
+      "dias_confirmados_lbl": "dias 1 - 22",
       "dias_confirmados_val": 5,
       "prev_atual": "49",
       "lbl_titulo_comp": "Set. real vs Out. Real",
@@ -537,7 +537,7 @@
       11,
       9,
       13,
-      "partial",
+      "real",
       "Quarta com formato histórico menos favorável nesta data.",
       7
     ],
