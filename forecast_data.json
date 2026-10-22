@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "22/10/2026 08:38",
+    "atualizado_em": "22/10/2026 09:08",
     "status_dias": "Dias 1 à 22 confirmados · Dia 22 parcial · Dias 23 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 151,
+    "kpi_realizado": 152,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 21)",
-    "kpi_realizado_delta": "▲ 38,7% do total previsto",
+    "kpi_realizado_delta": "▲ 39% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -133,9 +133,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 109,
-      "mes_atual_total": 68,
+      "mes_atual_total": 69,
       "dias_confirmados_lbl": "dias 1 - 22",
-      "dias_confirmados_val": 68,
+      "dias_confirmados_val": 69,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -151,14 +151,14 @@
           16
         ],
         [
-          "Makele de Souza Smania",
-          25,
+          "Maria Aline da Silva Ferreira",
+          38,
           14
         ],
         [
-          "Maria Aline da Silva Ferreira",
-          38,
-          13
+          "Makele de Souza Smania",
+          25,
+          14
         ],
         [
           "Adriérre Marcon",
@@ -547,9 +547,9 @@
       10,
       8,
       12,
-      "work",
+      "partial",
       "Começa o bloco historicamente mais produtivo, sem supor sprint coletivo.",
-      null
+      1
     ],
     [
       23,
