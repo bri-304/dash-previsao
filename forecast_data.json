@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "22/10/2026 17:38",
+    "atualizado_em": "22/10/2026 18:08",
     "status_dias": "Dias 1 à 22 confirmados · Dia 22 parcial · Dias 23 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -130,12 +130,12 @@
       ]
     },
     "lis": {
-      "ativos": 17,
+      "ativos": 18,
       "mes_passado_total": 152,
       "mes_passado": 109,
-      "mes_atual_total": 75,
+      "mes_atual_total": 76,
       "dias_confirmados_lbl": "dias 1 - 22",
-      "dias_confirmados_val": 75,
+      "dias_confirmados_val": 76,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -176,13 +176,18 @@
           4
         ],
         [
-          "Lucas Vinicius Morato",
+          "Lucas Vinicius Morato ttt",
           5,
           1
         ],
         [
           "Lorena Cristina Domingos Pereira",
           6,
+          1
+        ],
+        [
+          "Laís Marguti",
+          0,
           1
         ],
         [
