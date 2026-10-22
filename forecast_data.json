@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "22/10/2026 10:08",
+    "atualizado_em": "22/10/2026 10:38",
     "status_dias": "Dias 1 à 22 confirmados · Dia 22 parcial · Dias 23 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 154,
+    "kpi_realizado": 155,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 21)",
-    "kpi_realizado_delta": "▲ 39,5% do total previsto",
+    "kpi_realizado_delta": "▲ 39,7% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -133,9 +133,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 109,
-      "mes_atual_total": 69,
+      "mes_atual_total": 70,
       "dias_confirmados_lbl": "dias 1 - 22",
-      "dias_confirmados_val": 69,
+      "dias_confirmados_val": 70,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -153,7 +153,7 @@
         [
           "Maria Aline da Silva Ferreira",
           38,
-          14
+          15
         ],
         [
           "Makele de Souza Smania",
@@ -549,7 +549,7 @@
       12,
       "partial",
       "Começa o bloco historicamente mais produtivo, sem supor sprint coletivo.",
-      3
+      4
     ],
     [
       23,
