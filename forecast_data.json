@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "22/10/2026 13:38",
+    "atualizado_em": "22/10/2026 14:08",
     "status_dias": "Dias 1 à 22 confirmados · Dia 22 parcial · Dias 23 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 160,
+    "kpi_realizado": 163,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 21)",
-    "kpi_realizado_delta": "▲ 41% do total previsto",
+    "kpi_realizado_delta": "▲ 41,8% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -40,9 +40,9 @@
       "ativos": 16,
       "mes_passado_total": 145,
       "mes_passado": 88,
-      "mes_atual_total": 78,
+      "mes_atual_total": 80,
       "dias_confirmados_lbl": "dias 1 - 22",
-      "dias_confirmados_val": 78,
+      "dias_confirmados_val": 80,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -53,13 +53,13 @@
       "atencao_txt": "⚠️ Monitorar atendimento e documentação: Ketlin tem 5 retornos por processo, Noemi 4,88 e Elison 3,43. Guilherme e Elison recebem regressão moderada após superar 130% da meta em setembro. Guias seguem sem meta de venda.",
       "sellers": [
         [
-          "Tiago Melo da Silva",
-          10,
-          14
-        ],
-        [
           "Estevam Silverio Tavares",
           24,
+          16
+        ],
+        [
+          "Tiago Melo da Silva",
+          10,
           14
         ],
         [
@@ -133,9 +133,9 @@
       "ativos": 17,
       "mes_passado_total": 152,
       "mes_passado": 109,
-      "mes_atual_total": 74,
+      "mes_atual_total": 75,
       "dias_confirmados_lbl": "dias 1 - 22",
-      "dias_confirmados_val": 74,
+      "dias_confirmados_val": 75,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -158,7 +158,7 @@
         [
           "Makele de Souza Smania",
           25,
-          14
+          15
         ],
         [
           "Adriérre Marcon",
@@ -549,7 +549,7 @@
       12,
       "partial",
       "Começa o bloco historicamente mais produtivo, sem supor sprint coletivo.",
-      9
+      12
     ],
     [
       23,
