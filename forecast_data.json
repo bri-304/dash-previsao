@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "23/10/2026 21:38",
+    "atualizado_em": "23/10/2026 22:08",
     "status_dias": "Dias 1 à 23 confirmados · Dia 23 parcial · Dias 24 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 188,
+    "kpi_realizado": 192,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 22)",
-    "kpi_realizado_delta": "▲ 48,2% do total previsto",
+    "kpi_realizado_delta": "▲ 49,2% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -133,9 +133,9 @@
       "ativos": 18,
       "mes_passado_total": 152,
       "mes_passado": 115,
-      "mes_atual_total": 80,
+      "mes_atual_total": 84,
       "dias_confirmados_lbl": "dias 1 - 23",
-      "dias_confirmados_val": 80,
+      "dias_confirmados_val": 84,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -163,7 +163,7 @@
         [
           "Adriérre Marcon",
           22,
-          10
+          14
         ],
         [
           "Rafael Rodrigues Pedroso",
@@ -564,7 +564,7 @@
       14,
       "partial",
       "Prior positivo com pequena absorção documental após os fechamentos.",
-      17
+      21
     ],
     [
       24,
