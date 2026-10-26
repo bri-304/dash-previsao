@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "26/10/2026 14:08",
+    "atualizado_em": "26/10/2026 14:38",
     "status_dias": "Dias 1 à 26 confirmados · Dia 26 parcial · Dias 27 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 195,
+    "kpi_realizado": 196,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 25)",
-    "kpi_realizado_delta": "▲ 50% do total previsto",
+    "kpi_realizado_delta": "▲ 50,3% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -133,9 +133,9 @@
       "ativos": 18,
       "mes_passado_total": 152,
       "mes_passado": 123,
-      "mes_atual_total": 85,
+      "mes_atual_total": 86,
       "dias_confirmados_lbl": "dias 1 - 26",
-      "dias_confirmados_val": 85,
+      "dias_confirmados_val": 86,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -158,7 +158,7 @@
         [
           "Makele de Souza Smania",
           25,
-          16
+          17
         ],
         [
           "Adriérre Marcon",
@@ -594,7 +594,7 @@
       8,
       "partial",
       "Segunda mais fraca dentro de uma semana favorável; ressaca documental contém capacidade.",
-      1
+      2
     ],
     [
       27,
