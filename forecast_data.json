@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "27/10/2026 14:08",
+    "atualizado_em": "27/10/2026 14:38",
     "status_dias": "Dias 1 à 27 confirmados · Dia 27 parcial · Dias 28 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 205,
+    "kpi_realizado": 207,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 26)",
-    "kpi_realizado_delta": "▲ 52,6% do total previsto",
+    "kpi_realizado_delta": "▲ 53,1% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -40,9 +40,9 @@
       "ativos": 16,
       "mes_passado_total": 145,
       "mes_passado": 115,
-      "mes_atual_total": 108,
+      "mes_atual_total": 109,
       "dias_confirmados_lbl": "dias 1 - 27",
-      "dias_confirmados_val": 108,
+      "dias_confirmados_val": 109,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -55,7 +55,7 @@
         [
           "Estevam Silverio Tavares",
           24,
-          23
+          24
         ],
         [
           "Tiago Melo da Silva",
@@ -133,9 +133,9 @@
       "ativos": 18,
       "mes_passado_total": 152,
       "mes_passado": 123,
-      "mes_atual_total": 90,
+      "mes_atual_total": 91,
       "dias_confirmados_lbl": "dias 1 - 27",
-      "dias_confirmados_val": 90,
+      "dias_confirmados_val": 91,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -148,7 +148,7 @@
         [
           "Maria Aline da Silva Ferreira",
           38,
-          21
+          22
         ],
         [
           "Larissa Pereira Niehues",
@@ -604,7 +604,7 @@
       19,
       "partial",
       "Pico localizado: expectativa de 14,662 arredonda para 15, mais uma venda de ajuste da soma mensal.",
-      4
+      6
     ],
     [
       28,
