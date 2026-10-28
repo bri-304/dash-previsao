@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "28/10/2026 16:38",
+    "atualizado_em": "28/10/2026 17:08",
     "status_dias": "Dias 1 à 28 confirmados · Dia 28 parcial · Dias 29 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 221,
+    "kpi_realizado": 224,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 27)",
-    "kpi_realizado_delta": "▲ 56,7% do total previsto",
+    "kpi_realizado_delta": "▲ 57,4% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -130,12 +130,12 @@
       ]
     },
     "lis": {
-      "ativos": 18,
+      "ativos": 20,
       "mes_passado_total": 152,
       "mes_passado": 128,
-      "mes_atual_total": 97,
+      "mes_atual_total": 100,
       "dias_confirmados_lbl": "dias 1 - 28",
-      "dias_confirmados_val": 97,
+      "dias_confirmados_val": 100,
       "prev_atual": "168",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -148,7 +148,7 @@
         [
           "Maria Aline da Silva Ferreira",
           38,
-          22
+          23
         ],
         [
           "Makele de Souza Smania",
@@ -191,7 +191,17 @@
           1
         ],
         [
+          "Lana Mara de Morais Leite",
+          0,
+          1
+        ],
+        [
           "Laís Marguti",
+          0,
+          1
+        ],
+        [
+          "Bianca Gonçalves de Araujo",
           0,
           1
         ],
@@ -614,7 +624,7 @@
       17,
       "partial",
       "Forte base de quarta, contida pela carga documental; ponto facultativo federal sem suspensão comercial declarada.",
-      8
+      11
     ],
     [
       29,
