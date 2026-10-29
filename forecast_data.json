@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "29/10/2026 10:08",
+    "atualizado_em": "29/10/2026 10:38",
     "status_dias": "Dias 1 à 29 confirmados · Dia 29 parcial · Dias 30 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 226,
+    "kpi_realizado": 228,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 28)",
-    "kpi_realizado_delta": "▲ 57,9% do total previsto",
+    "kpi_realizado_delta": "▲ 58,5% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -37,12 +37,12 @@
   },
   "times": {
     "isr": {
-      "ativos": 16,
+      "ativos": 17,
       "mes_passado_total": 144,
       "mes_passado": 135,
-      "mes_atual_total": 117,
+      "mes_atual_total": 119,
       "dias_confirmados_lbl": "dias 1 - 29",
-      "dias_confirmados_val": 117,
+      "dias_confirmados_val": 119,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -115,6 +115,11 @@
         [
           "Josilea de Melo Rocha",
           18,
+          2
+        ],
+        [
+          "Dhulia Mendes Martins",
+          0,
           2
         ],
         [
@@ -634,7 +639,7 @@
       12,
       "partial",
       "Boa curva histórica com ressaca documental após 27–28/10.",
-      2
+      4
     ],
     [
       30,
