@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "30/10/2026 17:38",
+    "atualizado_em": "30/10/2026 18:08",
     "status_dias": "Dias 1 à 30 confirmados · Dia 30 parcial · Dias 31 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 256,
+    "kpi_realizado": 258,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 29)",
-    "kpi_realizado_delta": "▲ 65,6% do total previsto",
+    "kpi_realizado_delta": "▲ 66,2% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -40,9 +40,9 @@
       "ativos": 17,
       "mes_passado_total": 145,
       "mes_passado": 145,
-      "mes_atual_total": 132,
+      "mes_atual_total": 134,
       "dias_confirmados_lbl": "dias 1 - 30",
-      "dias_confirmados_val": 132,
+      "dias_confirmados_val": 134,
       "prev_atual": "95",
       "lbl_titulo_comp": "Set. real vs Out. Real",
       "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
@@ -60,7 +60,7 @@
         [
           "Tiago Melo da Silva",
           10,
-          18
+          20
         ],
         [
           "Patrícia Lúcio Custódio",
@@ -654,7 +654,7 @@
       14,
       "partial",
       "Fechamento do mês favorável, limitado pela reposição de oportunidades e documentação.",
-      18
+      20
     ],
     [
       31,
