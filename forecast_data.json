@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "30/10/2026 08:38",
+    "atualizado_em": "30/10/2026 09:08",
     "status_dias": "Dias 1 à 30 confirmados · Dia 30 parcial · Dias 31 à 31 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 238,
+    "kpi_realizado": 232,
     "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 29)",
-    "kpi_realizado_delta": "▲ 61% do total previsto",
+    "kpi_realizado_delta": "▲ 59,5% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -241,29 +241,6 @@
           0
         ]
       ]
-    },
-    "stl": {
-      "ativos": 1,
-      "mes_passado_total": 1,
-      "mes_passado": 1,
-      "mes_atual_total": 6,
-      "dias_confirmados_lbl": "dias 1 - 30",
-      "dias_confirmados_val": 6,
-      "prev_atual": "49",
-      "lbl_titulo_comp": "Set. real vs Out. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
-      "lbl_vendedor": "Setembro vs Outubro — por vendedor",
-      "leg_mes_passado": "Set.",
-      "leg_mes_atual": "Out.",
-      "destaque_txt": "⚡ Stella permanece exclusivamente SDR. O apoio fixo atual é para Maria Aline, Adriérre e Estevam, com atendimento imediato encaminhado a qualquer vendedor disponível conforme a regra vigente.",
-      "atencao_txt": "⚠️ Não há time comercial independente da Stella. Bruno Xavier saiu; possível novo SDR ainda está em testes, sem capacidade adicional presumida. Avaliar apoio por agendas, pitches e conversão dos vendedores atendidos.",
-      "sellers": [
-        [
-          "Stella Nieheus",
-          1,
-          6
-        ]
-      ]
     }
   },
   "semanas": [
@@ -434,7 +411,7 @@
       8,
       "real",
       "Vale histórico e efeito documental posterior ao dia forte de 07/10.",
-      4
+      3
     ],
     [
       9,
@@ -504,7 +481,7 @@
       12,
       "real",
       "Formato histórico favorece a metade do mês, com pequena contenção documental.",
-      21
+      19
     ],
     [
       16,
@@ -544,7 +521,7 @@
       6,
       "real",
       "Vale histórico e carga documental após a sequência anterior reduzem o dia.",
-      4
+      3
     ],
     [
       20,
@@ -554,7 +531,7 @@
       13,
       "real",
       "Base de terça sustenta retomada moderada, limitada pela recomposição de carteira.",
-      7
+      6
     ],
     [
       21,
@@ -574,7 +551,7 @@
       12,
       "real",
       "Começa o bloco historicamente mais produtivo, sem supor sprint coletivo.",
-      20
+      19
     ],
     [
       23,
