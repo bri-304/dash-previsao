@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": "31/10/2026 23:08",
-    "status_dias": "Dias 1 à 31 confirmados · Dia 31 parcial · Dias 32 à 31 com intervalo de confiança",
+    "atualizado_em": "03/11/2026 10:08",
+    "status_dias": "Dias 1 à 3 confirmados · Dia 3 parcial · Dias 4 à 30 com intervalo de confiança",
     "kpi_total_pess": 194,
     "kpi_total_central": 236,
     "kpi_total_otim": 277,
@@ -9,9 +9,9 @@
     "kpi_media_central": "10,5",
     "kpi_media_min": "8,6 mín",
     "kpi_media_max": "12,4 máx",
-    "kpi_realizado": 264,
-    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 30)",
-    "kpi_realizado_delta": "▲ 67,7% do total previsto",
+    "kpi_realizado": 3,
+    "kpi_realizado_sub": "Vendas Confirmadas (dias 1 à 2)",
+    "kpi_realizado_delta": "▲ 0,8% do total previsto",
     "kpi_yoy_pct": "-13,2%",
     "kpi_yoy_pess": "-28,7% pess.",
     "kpi_yoy_otim": "+1,8% otim.",
@@ -19,249 +19,191 @@
     "kpi_ativos": 23,
     "kpi_ativos_sub": "em 3 times competindo",
     "kpi_inativos_delta": "▼ 13 inativos / férias",
-    "page_title": "Forecast Outubro 2026 - Consolide",
-    "hdr_title_html": "Forecast de Vendas - Outubro 2026",
+    "page_title": "Forecast Novembro 2026 - Consolide",
+    "hdr_title_html": "Forecast de Vendas - Novembro 2026",
     "badge_consoliga": "🏁 CONSOLIGA T2 · Fase Classificatória · Mês 2 · Outubro/2026",
     "badge_copa": "📅 Outubro/2026 · 21 dias úteis · feriado nacional em 12/10",
-    "kpi_total_sub": "vendas · Outubro/2026",
+    "kpi_total_sub": "vendas · Novembro/2026",
     "kpi_media_delta": "▼ -3,4 vs 14,0/dia útil set./2026",
-    "kpi_yoy_lbl": "Percentual Previsto vs Outubro 2025",
+    "kpi_yoy_lbl": "Percentual Previsto vs Novembro 2025",
     "kpi_yoy_delta": "▲ crescimento YoY projetado",
-    "sec_title_previsao": "previsão diária com intervalo de confiança — Outubro 2026",
-    "chart_title_main": "Vendas por Dia · Outubro 2026",
-    "sec_title_teams": "desempenho por time — Setembro real vs Outubro projetado",
-    "sec_title_sugestoes": "sugestões estratégicas para Outubro",
+    "sec_title_previsao": "previsão diária com intervalo de confiança — Novembro 2026",
+    "chart_title_main": "Vendas por Dia · Novembro 2026",
+    "sec_title_teams": "desempenho por time — Outubro real vs Novembro projetado",
+    "sec_title_sugestoes": "sugestões estratégicas para Novembro",
     "footer_linha1": "Consolide · Forecast Outubro/2026 · Base em 01/10/2026 · Inserido em 02/10/2026 · Sem incorporar vendas realizadas de outubro",
     "footer_linha2": "Método: rolling ponderado 335,12 × sazonalidade 0,7010 = 234,93; pipeline estimado 238,46; reconciliação 60%/40% = 236. Capacidade estimada 286,99; ConsoLiga mês 2 neutro; calendário e documentação.",
     "footer_linha3": "Cenários operacionais: pessimista 194 · provável 236 · otimista 277. Sem cobertura estatística calibrada. Min/max diários rateados proporcionalmente ao perfil central, com inteiros e somas exatas."
   },
   "times": {
     "isr": {
-      "ativos": 17,
-      "mes_passado_total": 145,
-      "mes_passado": 153,
-      "mes_atual_total": 137,
-      "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 137,
+      "ativos": 15,
+      "mes_passado_total": 137,
+      "mes_passado": 14,
+      "mes_atual_total": 1,
+      "dias_confirmados_lbl": "dias 1 - 3",
+      "dias_confirmados_val": 1,
       "prev_atual": "95",
-      "lbl_titulo_comp": "Set. real vs Out. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
-      "lbl_vendedor": "Setembro vs Outubro — por vendedor",
-      "leg_mes_passado": "Set.",
-      "leg_mes_atual": "Out.",
+      "lbl_titulo_comp": "Out. real vs Nov. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Nov. Realizado Out.",
+      "lbl_vendedor": "Outubro vs Novembro — por vendedor",
+      "leg_mes_passado": "Out.",
+      "leg_mes_atual": "Nov.",
       "destaque_txt": "⚡ Estevam passa a ter apoio fixo de SDR. O time Israel concentra produção em Estevam, Josileia, Bruno, Tiago, Elison, Guilherme e Noemi; a catraca mantém distribuição conforme desempenho.",
       "atencao_txt": "⚠️ Monitorar atendimento e documentação: Ketlin tem 5 retornos por processo, Noemi 4,88 e Elison 3,43. Guilherme e Elison recebem regressão moderada após superar 130% da meta em setembro. Guias seguem sem meta de venda.",
       "sellers": [
         [
+          "Josilea de Melo Rocha",
+          4,
+          1
+        ],
+        [
           "Estevam Silverio Tavares",
-          24,
-          30
+          30,
+          0
         ],
         [
           "Tiago Melo da Silva",
-          10,
-          20
+          20,
+          0
         ],
         [
           "Patrícia Lúcio Custódio",
-          7,
-          16
+          16,
+          0
         ],
         [
           "Elison da Silva Elias",
-          11,
-          12
+          12,
+          0
         ],
         [
           "Bruna Letícia Corrêa Barbosa",
-          8,
-          12
+          12,
+          0
         ],
         [
           "Ketlin Madeira Colombo",
           8,
-          8
+          0
         ],
         [
           "Camila Viana Alves",
-          2,
-          8
+          8,
+          0
         ],
         [
           "Noemi da Silva Penafort da Costa",
-          11,
-          7
+          7,
+          0
         ],
         [
           "Bruno Ramos Martins",
-          11,
-          6
+          6,
+          0
         ],
         [
           "Guilherme Carvalho Rodrigues",
-          12,
-          5
-        ],
-        [
-          "Josilea de Melo Rocha",
-          18,
-          4
+          5,
+          0
         ],
         [
           "Israel Riella",
-          19,
-          4
+          4,
+          0
         ],
         [
           "João Vitor Dias Todesco Triano",
-          0,
-          3
-        ],
-        [
-          "Dhulia Mendes Martins",
-          0,
-          2
-        ],
-        [
-          "Tayna Inácia de Melo",
           3,
           0
         ],
         [
-          "Andressa Cristina de Paula",
-          1,
+          "Dhulia Mendes Martins",
+          2,
           0
         ]
       ]
     },
     "lis": {
-      "ativos": 21,
-      "mes_passado_total": 152,
-      "mes_passado": 154,
-      "mes_atual_total": 118,
-      "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 118,
+      "ativos": 15,
+      "mes_passado_total": 118,
+      "mes_passado": 10,
+      "mes_atual_total": 2,
+      "dias_confirmados_lbl": "dias 1 - 3",
+      "dias_confirmados_val": 2,
       "prev_atual": "168",
-      "lbl_titulo_comp": "Set. real vs Out. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
-      "lbl_vendedor": "Setembro vs Outubro — por vendedor",
-      "leg_mes_passado": "Set.",
-      "leg_mes_atual": "Out.",
+      "lbl_titulo_comp": "Out. real vs Nov. Real",
+      "lbl_titulo_mes_passado_prev": "Prev. Nov. Realizado Out.",
+      "lbl_vendedor": "Outubro vs Novembro — por vendedor",
+      "leg_mes_passado": "Out.",
+      "leg_mes_atual": "Nov.",
       "destaque_txt": "⚡ Maria Aline e Adriérre mantêm apoio fixo de SDR. Makele já atua como franqueada; Larissa e agentes em rampa ajudam a sustentar a carteira. Outubro é o mês 2 classificatório, com motivação neutra.",
       "atencao_txt": "⚠️ Maria Aline tem 106 leads no pipe e Adriérre 38; evitar esgotamento de oportunidades. Incompletos: Maria Aline 86,84%, Adriérre 86,36% e Makele 92%. Maria Aline recebe ajuste de antecipação após 140,7% da meta em setembro.",
       "sellers": [
         [
-          "Maria Aline da Silva Ferreira",
-          38,
-          28
+          "Larissa Pereira Niehues",
+          21,
+          2
         ],
         [
-          "Larissa Pereira Niehues",
-          19,
-          21
+          "Maria Aline da Silva Ferreira",
+          28,
+          0
         ],
         [
           "Makele de Souza Smania",
-          25,
-          20
+          20,
+          0
         ],
         [
           "Adriérre Marcon",
-          22,
-          15
+          15,
+          0
         ],
         [
           "Rafael Rodrigues Pedroso",
-          12,
-          11
+          11,
+          0
         ],
         [
           "Iara da Silva Linhares",
-          3,
-          8
+          8,
+          0
         ],
         [
           "Fernanda Chemin Toreti",
-          0,
-          5
+          5,
+          0
         ],
         [
           "Bianca Gonçalves de Araujo",
-          0,
-          3
-        ],
-        [
-          "Lorena Cristina Domingos Pereira",
-          6,
-          2
-        ],
-        [
-          "Elisan Antônio",
-          6,
-          2
-        ],
-        [
-          "Lucas Vinicius Morato",
-          5,
-          1
-        ],
-        [
-          "Lana Mara de Morais Leite",
-          0,
-          1
-        ],
-        [
-          "Laís Marguti",
-          0,
-          1
-        ],
-        [
-          "Aline Cristina da Silva",
-          7,
-          0
-        ],
-        [
-          "Lisdaisy Vieira Costa",
-          4,
-          0
-        ],
-        [
-          "Felipe Santos Leite",
           3,
           0
         ],
         [
-          "Natalia Oliveira Katrip",
+          "Lorena Cristina Domingos Pereira",
+          2,
+          0
+        ],
+        [
+          "Elisan Antônio",
+          2,
+          0
+        ],
+        [
+          "Lucas Vinicius Morato",
           1,
           0
         ],
         [
-          "Diego Dias de Medeiros",
+          "Lana Mara de Morais Leite",
           1,
           0
-        ]
-      ]
-    },
-    "stl": {
-      "ativos": 1,
-      "mes_passado_total": 0,
-      "mes_passado": 0,
-      "mes_atual_total": 8,
-      "dias_confirmados_lbl": "dias 1 - 31",
-      "dias_confirmados_val": 8,
-      "prev_atual": "49",
-      "lbl_titulo_comp": "Set. real vs Out. Real",
-      "lbl_titulo_mes_passado_prev": "Prev. Out. Realizado Set.",
-      "lbl_vendedor": "Setembro vs Outubro — por vendedor",
-      "leg_mes_passado": "Set.",
-      "leg_mes_atual": "Out.",
-      "destaque_txt": "⚡ Stella permanece exclusivamente SDR. O apoio fixo atual é para Maria Aline, Adriérre e Estevam, com atendimento imediato encaminhado a qualquer vendedor disponível conforme a regra vigente.",
-      "atencao_txt": "⚠️ Não há time comercial independente da Stella. Bruno Xavier saiu; possível novo SDR ainda está em testes, sem capacidade adicional presumida. Avaliar apoio por agendas, pitches e conversão dos vendedores atendidos.",
-      "sellers": [
+        ],
         [
-          "Stella Niehues",
-          0,
-          8
+          "Laís Marguti",
+          1,
+          0
         ]
       ]
     }
@@ -382,7 +324,7 @@
       2,
       2,
       2,
-      "real",
+      "partial",
       "Produção baixa de sábado, preservada pelo histórico e pelos modificadores próprios da data.",
       3
     ],
@@ -404,7 +346,7 @@
       12,
       "real",
       "Prior individual de outubro/2025 favorece retomada da semana.",
-      8
+      null
     ],
     [
       6,
@@ -414,7 +356,7 @@
       13,
       "real",
       "Boa base de terça, com pequena redução pela carga documental após os fechamentos.",
-      15
+      null
     ],
     [
       7,
@@ -424,7 +366,7 @@
       17,
       "real",
       "Quarta forte e pico histórico do começo do mês favorecem fechamentos.",
-      11
+      null
     ],
     [
       8,
@@ -434,7 +376,7 @@
       8,
       "real",
       "Vale histórico e efeito documental posterior ao dia forte de 07/10.",
-      4
+      null
     ],
     [
       9,
@@ -444,7 +386,7 @@
       9,
       "real",
       "Sexta anterior ao feriado prolongado; ajustes de formato e calendário reduzem o volume.",
-      20
+      null
     ],
     [
       10,
@@ -454,7 +396,7 @@
       2,
       "real",
       "Fim de semana prolongado contém produção; vendas residuais de sábado.",
-      2
+      null
     ],
     [
       11,
@@ -464,7 +406,7 @@
       1,
       "real",
       "Domingo anterior ao feriado, com volume residual.",
-      1
+      null
     ],
     [
       12,
@@ -484,7 +426,7 @@
       15,
       "real",
       "Retomada de contatos e pagamentos após o feriado; formato histórico favorável.",
-      4
+      null
     ],
     [
       14,
@@ -494,7 +436,7 @@
       14,
       "real",
       "Retorno pós-feriado ainda ajuda, com absorção da carga documental.",
-      10
+      null
     ],
     [
       15,
@@ -504,7 +446,7 @@
       12,
       "real",
       "Formato histórico favorece a metade do mês, com pequena contenção documental.",
-      21
+      null
     ],
     [
       16,
@@ -514,7 +456,7 @@
       14,
       "real",
       "Prior positivo supera a pequena perda de capacidade após os fechamentos anteriores.",
-      12
+      null
     ],
     [
       17,
@@ -524,7 +466,7 @@
       2,
       "real",
       "Sábado baixo; sem aceleração presumida da ConsoLiga no mês classificatório 2.",
-      1
+      null
     ],
     [
       18,
@@ -544,7 +486,7 @@
       6,
       "real",
       "Vale histórico e carga documental após a sequência anterior reduzem o dia.",
-      4
+      null
     ],
     [
       20,
@@ -554,7 +496,7 @@
       13,
       "real",
       "Base de terça sustenta retomada moderada, limitada pela recomposição de carteira.",
-      7
+      null
     ],
     [
       21,
@@ -564,7 +506,7 @@
       13,
       "real",
       "Quarta com formato histórico menos favorável nesta data.",
-      7
+      null
     ],
     [
       22,
@@ -574,7 +516,7 @@
       12,
       "real",
       "Começa o bloco historicamente mais produtivo, sem supor sprint coletivo.",
-      20
+      null
     ],
     [
       23,
@@ -584,7 +526,7 @@
       14,
       "real",
       "Prior positivo com pequena absorção documental após os fechamentos.",
-      23
+      null
     ],
     [
       24,
@@ -614,7 +556,7 @@
       8,
       "real",
       "Segunda mais fraca dentro de uma semana favorável; ressaca documental contém capacidade.",
-      8
+      null
     ],
     [
       27,
@@ -624,7 +566,7 @@
       19,
       "real",
       "Pico localizado: expectativa de 14,662 arredonda para 15, mais uma venda de ajuste da soma mensal.",
-      11
+      null
     ],
     [
       28,
@@ -634,7 +576,7 @@
       17,
       "real",
       "Forte base de quarta, contida pela carga documental; ponto facultativo federal sem suspensão comercial declarada.",
-      11
+      null
     ],
     [
       29,
@@ -644,7 +586,7 @@
       12,
       "real",
       "Boa curva histórica com ressaca documental após 27–28/10.",
-      14
+      null
     ],
     [
       30,
@@ -654,7 +596,7 @@
       14,
       "real",
       "Fechamento do mês favorável, limitado pela reposição de oportunidades e documentação.",
-      21
+      null
     ],
     [
       31,
@@ -664,7 +606,7 @@
       4,
       "partial",
       "Último dia historicamente mais forte, ainda em sábado; produção residual de três vendas.",
-      5
+      null
     ]
   ],
   "sugestoes": [
