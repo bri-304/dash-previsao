@@ -15,7 +15,7 @@ Teste e produção são dois projetos: o `.clasp-teste.json` é o teste e o `.cl
    `clasp update-deployment <DEPLOYMENT_ID> --versionNumber <N> --description "Dashboard Forecast de Vendas"`
 6. `clasp list-deployments`: confira que o Deployment ID oficial mostra `@N`. Se não mudou, não diga que está publicado.
 7. Se `oauthScopes` mudou no manifesto, avise a Brianna: ela precisa autorizar de novo no editor do projeto de produção.
-8. Diga, em uma frase, que está publicado e que quem estiver com o dash aberto precisa recarregar.
+8. Diga, em uma frase, que está publicado e que quem estiver com o dash aberto precisa recarregar. O link divulgado é sempre o com `/a/~/`: `https://script.google.com/a/~/macros/s/<DEPLOYMENT_ID>/exec`.
 9. Tag git: `git tag v<N>` e `git push origin apps-script v<N>`.
 
 Se algo der errado: volte para a versão anterior com `clasp update-deployment <DEPLOYMENT_ID> --versionNumber <N-1> --description "Dashboard Forecast de Vendas"`.

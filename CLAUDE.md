@@ -128,7 +128,8 @@ Diferença ou regra nova: atualize `motivoConhecido_` em `Regras.gs` e esta tabe
 - Roda como a dona. Ninguém precisa da planilha nem da pasta compartilhadas.
 - Quem vê = aba `Emails Autorizados` (coluna A, e-mail completo), relida a cada leitura. A dona entra sempre. **No projeto de teste, só a dona** (`ehProjetoTeste_`).
 - Login igual ao dash de leads: sessão no `localStorage` (`forecastToken`), nunca na URL; bilhete `?tk=` só entrega a página sem números. Sessão sem prazo; `encerrarTodasAsSessoes()` no editor derruba todas.
-- Propriedades do script em cada projeto: `OAUTH_CLIENT_ID` e `OAUTH_CLIENT_SECRET`. Cada `/exec` e `/dev` usado precisa estar nos URIs de redirecionamento autorizados da credencial OAuth.
+- Propriedades do script em cada projeto: `OAUTH_CLIENT_ID` e `OAUTH_CLIENT_SECRET`.
+- **Endereços sempre com `/a/~/`**: `https://script.google.com/a/~/macros/s/<ID>/exec` (pedido da Brianna). Sem isso, com conta Google logada, Samsung e Safari podem cair em `/macros/u/1/...` e dar erro do Drive antes do `doGet`. `urlBase_()` já devolve esse formato, e ele também é o `redirect_uri`: cada `/exec` e `/dev` usado precisa estar assim nos URIs de redirecionamento autorizados da credencial, senão o login dá erro 400. O link divulgado e `CONFIG.URL_OFICIAL` seguem o mesmo formato.
 - Log em `Logs de Acesso` (Data e hora, E-mail, Evento, Ambiente), 90 dias.
 - Função nova sem `_` no fim pode ser chamada por qualquer um via `google.script.run`: as de dados começam com `conferirSessao_`; as de manutenção, com `soNoEditor_`.
 

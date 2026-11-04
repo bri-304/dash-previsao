@@ -26,7 +26,7 @@ var CONFIG = {
   FAIXA_JORNADA: 'D17:D60',
   // No projeto de teste só a dona entra; o resto do código é o mesmo nos dois projetos
   SCRIPT_ID_TESTE: '1nxbIWLV719M78d3Ej6JLM5eLIyxB4axSfFrkV1BHApEJMi99mFgF9RDN',
-  URL_OFICIAL: '',   // preencher com o /exec da implantação oficial quando ela existir
+  URL_OFICIAL: '',   // preencher com o /exec da implantação oficial quando ela existir, no formato com /a/~/
   PASTA_HISTORICO: 'Forecast - Histórico',
   MINUTOS_CACHE: 5   // 0 desliga
 };
@@ -87,8 +87,8 @@ function conferirSessao_(token) {
    - SESSÃO: abre os dados. Vai só para o localStorage, nunca para a URL.
    - BILHETE (?tk=): só faz o doGet entregar a página, sem números.
    Propriedades do script: OAUTH_CLIENT_ID e OAUTH_CLIENT_SECRET (Google Cloud);
-   TOKEN_SECRET é criado sozinho. O /exec e o /dev usados precisam estar nos URIs
-   de redirecionamento autorizados da credencial.
+   TOKEN_SECRET é criado sozinho. O /exec e o /dev usados, no formato com /a/~/ (urlBase_),
+   precisam estar nos URIs de redirecionamento autorizados da credencial.
    ------------------------------------------------------------------ */
 var LOGIN = {
   URL_AUTORIZAR: 'https://accounts.google.com/o/oauth2/v2/auth',
@@ -104,7 +104,10 @@ function segredoToken_() {
   return s;
 }
 
-function urlBase_() { return ScriptApp.getService().getUrl(); }
+// Endereço com /a/~/: com conta Google logada, o Google pode redirecionar o /macros/s/.../exec para
+// /macros/u/1/... e dar o erro do Drive "Não foi possível abrir o arquivo", antes do doGet (Samsung, Safari).
+// Este também é o redirect_uri do login: precisa estar igual nos URIs da credencial.
+function urlBase_() { return ScriptApp.getService().getUrl().replace(/^https:\/\/script\.google\.com\/.*?\/s\//, 'https://script.google.com/a/~/macros/s/'); }
 function b64u_(bytes) { return Utilities.base64EncodeWebSafe(bytes).replace(/=+$/, ''); }
 function assinar_(texto) { return b64u_(Utilities.computeHmacSha256Signature(texto, segredoToken_())); }
 
