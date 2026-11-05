@@ -26,7 +26,7 @@ var CONFIG = {
   FAIXA_JORNADA: 'D17:D60',
   // No projeto de teste só a dona entra; o resto do código é o mesmo nos dois projetos
   SCRIPT_ID_TESTE: '1nxbIWLV719M78d3Ej6JLM5eLIyxB4axSfFrkV1BHApEJMi99mFgF9RDN',
-  URL_OFICIAL: '',   // preencher com o /exec da implantação oficial quando ela existir, no formato com /a/~/
+  URL_OFICIAL: 'https://script.google.com/a/~/macros/s/AKfycbx8BVb6KG6DzgYU_6jNT-kN-k3bFVHGvtDKRbth921A921nCmlUsPSDRBGPlAEkXRLl4A/exec',
   PASTA_HISTORICO: 'Forecast - Histórico',
   MINUTOS_CACHE: 5   // 0 desliga
 };

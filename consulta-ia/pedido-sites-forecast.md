@@ -9,7 +9,7 @@ Este plugin é separado do "Consolide Consultas", que não muda.
 3. **Não cole a chave no chat.** Quando o Sites pedir o segredo `FORECAST_CHAVE`, informe a chave no campo de segredos dele.
 4. Publique para "só eu", nunca público. Depois instale o plugin e teste com `@Consolide Forecast`.
 
-Por enquanto, o endereço é o do projeto de teste. Quando o Forecast for para a produção, rode `gerarChaveForecast()` lá também e troque, no Sites, o endereço e o segredo.
+O pedido abaixo usa o endereço do projeto de teste. Para a produção, rode `gerarChaveForecast()` no editor de produção e troque, no Sites, o segredo e o endereço para `https://script.google.com/macros/s/AKfycbx8BVb6KG6DzgYU_6jNT-kN-k3bFVHGvtDKRbth921A921nCmlUsPSDRBGPlAEkXRLl4A/exec`.
 
 ---
 

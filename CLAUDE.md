@@ -11,7 +11,7 @@ Dashboard em Google Apps Script (app da Web), na branch `apps-script` do reposit
 
 - Deployment ID teste (`/exec`, descrição "TESTE Forecast"): `AKfycbz08KM66CbFQeE6_PfIHsjRMlI_A6PCFNHosW0-USmJa0HpSHmr04RSTDtNKPGL65QoNg`
 - Deployment ID teste (`/dev`, @HEAD): `AKfycbwWiXDKy03fw_pNTh_pyp_1ynNxu1MAltkUdhC1VmD9`
-- Deployment ID oficial: ainda não criado (passo final da migração, depois da aprovação no teste). Criado, anote aqui e em `CONFIG.URL_OFICIAL`.
+- Deployment ID oficial (`/exec`, descrição "Dashboard Forecast de Vendas"): `AKfycbx8BVb6KG6DzgYU_6jNT-kN-k3bFVHGvtDKRbth921A921nCmlUsPSDRBGPlAEkXRLl4A`. Está em `CONFIG.URL_OFICIAL`. Nunca crie outra implantação de produção: isso muda o link.
 - Planilha da IA e do acesso: "Dados IA - Previsão", `1xO6594dHGlajnzqdNTMrxbtU9_SYXzpDXewtwuTBAV4` (`CONFIG.ID_PLANILHA`).
 - Planilha de vendas: "Dados Vendas Ligações e Funil", `1dPYm8QGUsounTdhPIRunlz5rpSoUrBUYaE7dBp9Tp5s` (`CONFIG.ID_PLANILHA_VENDAS`).
 - Conta dona dos projetos e do clasp: `brianna.hahn@consolidesuamarca.com.br`.
