@@ -310,6 +310,25 @@ function montarDias_(linhasPrevisao, porDia, hoje) {
   });
 }
 
+// Linha "Ritmo da meta" do gráfico: soma das metas do mês na aba Metas por pessoa ÷ dias úteis.
+// Dia útil = tipo da previsão diferente de weekend e holiday (o tipo da aba, antes de virar real/partial).
+// Sem meta ou com a aba de previsão de outro mês, null: a página esconde a linha.
+function ritmoMeta_(metas, linhasPrevisao, hoje) {
+  var mesRef = hoje.ano + '-' + pad2_(hoje.mes);
+  var total = (metas || []).reduce(function (s, m) {
+    return m.mes === mesRef && typeof m.meta === 'number' ? s + m.meta : s;
+  }, 0);
+  if (!total) return null;
+  var mesAba = pad2_(hoje.mes) + '/' + hoje.ano;
+  var uteis = (linhasPrevisao || []).filter(function (l) {
+    var m = String(l.mes || '').trim().match(/^(\d{1,2})\/(\d{4})$/);
+    return m && pad2_(+m[1]) + '/' + m[2] === mesAba && inteiro_(l.dia_num) > 0 &&
+      ['weekend', 'holiday'].indexOf(String(l.tipo || '').trim().toLowerCase()) < 0;
+  }).map(function (l) { return inteiro_(l.dia_num); });
+  if (!uteis.length) return null;
+  return { meta: total, dias_uteis: uteis, por_dia: Math.round(total / uteis.length * 10) / 10 };
+}
+
 /* ---------- objeto completo ---------- */
 
 /* fontes = {
@@ -318,6 +337,7 @@ function montarDias_(linhasPrevisao, porDia, hoje) {
      configTimes: [{ time, chave, valor }] (Configuracoes times),
      semanas, semanaTags, sugestoes, gargalos, diasPrevisao: linhas das abas da IA (objetos pelo cabeçalho),
      inativos:    número de desmarcados na Jornada de Estrelas; null se ela não abrir,
+     metas:       [{ mes:'AAAA-MM', pessoa, meta }] da aba Metas por pessoa; null sem a aba,
      atualizadoEm:'dd/MM/yyyy HH:mm'
    }
    hoje = { ano, mes, dia }  */
@@ -350,6 +370,7 @@ function montarForecast_(fontes, hoje) {
       kpi_realizado_sub: realizadoSub_(hoje),
       kpi_realizado_delta: realizadoDelta_(realizado, central),
       realizado_sem_backoffice: vendasPorDia_(fontes.vendas, hoje.ano, hoje.mes, true),   // { dia: vendas }, para o seletor da página
+      ritmo_meta: ritmoMeta_(fontes.metas, fontes.diasPrevisao, hoje),
       kpi_yoy_pct: texto_(ia.kpi_yoy_pct),
       kpi_yoy_pess: texto_(ia.kpi_yoy_pess),
       kpi_yoy_otim: texto_(ia.kpi_yoy_otim),
@@ -394,6 +415,7 @@ function motivoConhecido_(caminho, novo, json, hoje) {
   if (caminho === 'meta.atualizado_em') return 'Horário da leitura.';
   if (caminho === 'meta.kpi_yoy_delta') return 'Agora sai do sinal de kpi_yoy_pct; a planilha trazia um texto digitado à mão.';
   if (/^meta\.realizado_sem_backoffice/.test(caminho)) return 'Campo novo: vendas sem o backoffice, para o seletor da página.';
+  if (/^meta\.ritmo_meta/.test(caminho)) return 'Campo novo: meta do mês ÷ dias úteis, para a linha do gráfico (antes era 17 fixo na página).';
   if (caminho === 'meta.kpi_ativos') return 'Pedido da Brianna: conta quem vendeu (a planilha contava os checkboxes da Jornada de Estrelas).';
   if (caminho === 'meta.kpi_realizado_delta') return 'Corrigido: a planilha dividia por 390 fixo; agora é o central da previsão.';
   if (caminho === 'meta.kpi_realizado' || /^times\.[^.]+\.(mes_atual_total|dias_confirmados_val)$/.test(caminho) || /^times\.[^.]+\.sellers\[.*\]\.2$/.test(caminho)) {

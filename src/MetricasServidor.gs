@@ -249,18 +249,23 @@ function calcularGrupoMetricas_(grupo, hoje, ss, avisos) {
 
 /* ---------- pacote no Drive ---------- */
 
-function pastaMetricas_() {
+// Pasta dentro da do histórico, com o ID guardado nas propriedades do script.
+function subpastaHistorico_(propriedade, nome) {
   var props = PropertiesService.getScriptProperties();
-  var id = props.getProperty('PASTA_METRICAS_ID');
+  var id = props.getProperty(propriedade);
   if (id) {
     try { return DriveApp.getFolderById(id); }
-    catch (e) { console.warn('Pasta de métricas não encontrada pelo ID: ' + e); }
+    catch (e) { console.warn('Pasta "' + nome + '" não encontrada pelo ID: ' + e); }
   }
   var pai = pastaHistorico_();
-  var achadas = pai.getFoldersByName(CONFIG_METRICAS.PASTA);
-  var pasta = achadas.hasNext() ? achadas.next() : pai.createFolder(CONFIG_METRICAS.PASTA);
-  props.setProperty('PASTA_METRICAS_ID', pasta.getId());
+  var achadas = pai.getFoldersByName(nome);
+  var pasta = achadas.hasNext() ? achadas.next() : pai.createFolder(nome);
+  props.setProperty(propriedade, pasta.getId());
   return pasta;
+}
+
+function pastaMetricas_() {
+  return subpastaHistorico_('PASTA_METRICAS_ID', CONFIG_METRICAS.PASTA);
 }
 
 function listarPacotes_() {

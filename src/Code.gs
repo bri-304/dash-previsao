@@ -32,7 +32,7 @@ var CONFIG = {
 };
 
 // Mude quando o formato do objeto mudar: invalida o cache antigo na hora.
-var PREFIXO_CACHE = 'forecast_v3_';
+var PREFIXO_CACHE = 'forecast_v4_';
 
 var COLUNAS_VENDAS = {
   id: 'ID_LEAD', consultor: 'CONSULTOR', produtoMeta: 'PRODUTO_CONTA_META', data: 'DATA_PAGAMENTO',
@@ -474,6 +474,12 @@ function lerInativos_() {
   }
 }
 
+// Metas por pessoa (lerMetas_, em MetricasServidor.gs). Aba com problema não derruba o dash: só some a linha da meta.
+function lerMetasDoDash_(ss) {
+  try { return lerMetas_(ss); }
+  catch (e) { console.warn('Metas por pessoa indisponível: ' + e); return null; }
+}
+
 function lerFontes_(ss) {
   return {
     vendas: lerVendas_(),
@@ -487,6 +493,7 @@ function lerFontes_(ss) {
     gargalos: lerObjetos_(ss, CONFIG.ABA_GARGALOS),
     diasPrevisao: lerObjetos_(ss, CONFIG.ABA_DIAS_PREVISAO),
     inativos: lerInativos_(),
+    metas: lerMetasDoDash_(ss),
     atualizadoEm: Utilities.formatDate(new Date(), fuso_(), 'dd/MM/yyyy HH:mm')
   };
 }

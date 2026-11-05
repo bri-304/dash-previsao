@@ -26,7 +26,9 @@ Todo comando para o teste leva `-P .clasp-teste.json`; sem ele, o clasp usa a **
 - `src/index.html` (template), `src/css.html`, `src/js.html` (entram por `include`).
 - `src/appsscript.json`: fuso `America/Sao_Paulo` (define o "hoje"), `executeAs = USER_DEPLOYING`, `access = ANYONE_ANONYMOUS` (o login próprio é o portão). Mudou escopo: só a dona reautoriza, no editor de cada projeto.
 - `src/Metricas.gs`, `src/MetricasServidor.gs`, `src/metricas.html`: métricas para a IA (seção "Métricas da IA").
+- `src/Foto.gs`, `src/FotoServidor.gs`: foto diária para a previsão dinâmica (seção "Foto diária").
 - `scripts/testar-metricas.js`: confere as contas de `Metricas.gs` no node, com uma base pequena feita à mão.
+- `scripts/testar-foto.js`: o mesmo para `Foto.gs`, e confere se o pipeline da foto conta igual ao do pacote de métricas.
 - `scripts/testar-regras.js`: roda `Regras.gs` no node com a aba bruta real e compara com um JSON.
 - `scripts/montar-previa.js` + `scripts/servir-previa.js`: prévia local da página com `google.script.run` simulado.
 - `forecast_data.json` e `historico/` ficaram na branch só como referência: o dash lê a planilha e a pasta do Drive.
@@ -58,6 +60,7 @@ Da planilha "Dados IA - Previsão", o dash só usa: `Campos_previsao_IA`, `seman
 | `kpi_ativos` | Pessoas distintas nas listas dos times (quem vendeu no mês atual ou no anterior) |
 | `kpi_ativos_sub` | "em N times competindo", N = times do objeto |
 | `realizado_sem_backoffice` | `vendasPorDia_` sem `AREA` com Backoffice, `{ dia: vendas }`, para o seletor |
+| `ritmo_meta` | `{ meta, dias_uteis, por_dia }`: soma de `META` do mês em `Metas por pessoa` ÷ dias úteis (tipo da aba de previsão diferente de `weekend` e `holiday`), para a linha "Ritmo da meta" do gráfico. `null` sem meta ou com a aba de previsão de outro mês: a linha some |
 | `kpi_inativos_delta` | Desmarcados em `D17:D60` da Jornada de Estrelas (`CONFIG.ID_PLANILHA_JORNADA`); sem acesso, fica vazio e some da tela |
 | `kpi_yoy_delta` | Sinal de `kpi_yoy_pct` (`yoyDelta_`): queda em vermelho, crescimento em verde |
 | `badge_*`, `kpi_total_central/pess/otim/delta`, `kpi_media_*`, `kpi_yoy_pct/pess/otim/sub`, `footer_linha1-3` | IA, aba `Campos_previsao_IA` |
@@ -150,6 +153,25 @@ Tiram os prints de dashboards que a Brianna mandava ao GPT. Uma conta só: `gera
 Não há conferência automática, por pedido da Brianna: ela compara a página com os dashboards. Compare sempre com as tabelas de hoje, não com prints antigos: vendas que fecham no começo do mês seguinte mudam os meses recentes (setembro/2026 era 271 em 01/10 e 300 em 04/11).
 
 **Seletor de backoffice no dash** (`realizado_sem_backoffice` em `meta`, `comSeletorBackoffice` em `js.html`): com "Incluir vendas do backoffice" desmarcado, o realizado do KPI, do gráfico e da tabela diária tira quem tem `AREA` com Backoffice. Os cards de time não mudam. Padrão: marcado; a escolha fica no navegador. Meses salvos antes de o campo existir não mostram o seletor.
+
+## Foto diária (base da previsão dinâmica)
+
+Guarda como as coisas estavam em cada dia, porque o pipeline e a previsão são sobrescritos e o realizado muda depois. Nada aparece no dash nem no plugin ainda: é o que o teste e a previsão dinâmica vão usar. Decisão combinada com a Brianna: os números da previsão dinâmica saem do código; o GPT faz a previsão mensal e propõe ajustes por eventos.
+
+- Um arquivo por dia: `foto-AAAA-MM-DD.json` em `Fotos diárias`, dentro da pasta do histórico (ID em `PASTA_FOTOS_ID`). Teste e produção têm pastas separadas.
+- **Gatilho**: `instalarGatilhoFoto()` no editor, uma vez; roda entre 23h e 0h. `removerGatilhoFoto()` tira. Grupo que falha vira erro no fim, e o Google avisa a dona por e-mail.
+- **No editor**: `fotoDiariaAgora()` refaz a de hoje; `completarFotoDiaria()` calcula só o que faltou. O registro mostra um resumo para conferir.
+- Salva depois de cada grupo. Passou de 270 s, não começa outro. O pipeline é o que não dá para recuperar depois.
+
+| `secoes` | Conteúdo | Origem |
+|---|---|---|
+| `previsao` | `mes_da_aba` e o objeto completo do dash (`forecast`), com previsão e realizado do momento | `lerFontes_` + `montarForecast_` |
+| `realizado` | Vendas por dia de 14 meses, como estavam naquele dia | `metricasMatriz_` |
+| `pipeline` | Total, por etapa, gerente e consultor, e os `ID_LEAD` de cada etapa | `dados_funil`, filtros da seção `pipeline` |
+| `atividade` | `ld, lm, mq, lo, lt, lmv, ten, uni, fal, pit, pf, ve, vv, proc, prot, pipe` do dia, por time e por consultor | Métricas de alerta do dash de leads; precisa de `CONSULTA_CHAVE` |
+| `leads` | Leads, vendas e losts do dia por canal | Painel de leads; precisa de `CONSULTA_CHAVE` |
+
+Para saber a previsão original de um mês, use a primeira foto em que `mes_da_aba` é aquele mês: não há arquivo separado.
 
 ## Acesso e login
 

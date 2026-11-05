@@ -211,4 +211,17 @@ assert.strictEqual(ctx.yoyDelta_('+1,8%'), '▲ crescimento YoY projetado');
 assert.strictEqual(ctx.yoyDelta_('0%'), '= estável vs ano passado');
 assert.strictEqual(ctx.yoyDelta_(''), '');
 
+// --- ritmo da meta: novembro/2026 tem 400 de meta e 19 dias úteis (8 de fim de semana e 3 feriados)
+const tiposNov = { 1: 'weekend', 2: 'holiday', 7: 'weekend', 8: 'weekend', 14: 'weekend', 15: 'holiday', 20: 'holiday', 21: 'weekend', 22: 'weekend', 28: 'weekend', 29: 'weekend' };
+const linhasNov = Array.from({ length: 30 }, (_, i) => ({ mes: '11/2026', dia_num: String(i + 1), tipo: tiposNov[i + 1] || (i > 21 ? 'sprint' : 'work') }));
+const metasNov = [{ mes: '2026-11', pessoa: 'Ana', meta: 300 }, { mes: '2026-11', pessoa: 'Bia', meta: 100 }, { mes: '2026-11', pessoa: 'Caio', meta: null },
+  { mes: '2026-10', pessoa: 'Ana', meta: 50 }];
+const ritmo = puro(ctx.ritmoMeta_(metasNov, linhasNov, hoje));
+assert.strictEqual(ritmo.meta, 400, 'só as metas do mês');
+assert.strictEqual(ritmo.dias_uteis.length, 19);
+assert.ok(ritmo.dias_uteis.indexOf(23) >= 0 && ritmo.dias_uteis.indexOf(2) < 0, 'sprint conta; feriado não');
+assert.strictEqual(ritmo.por_dia, 21.1);
+assert.strictEqual(ctx.ritmoMeta_(null, linhasNov, hoje), null, 'sem a aba de metas');
+assert.strictEqual(ctx.ritmoMeta_(metasNov, linhasNov.map((l) => Object.assign({}, l, { mes: '10/2026' })), hoje), null, 'previsão de outro mês');
+
 console.log('Métricas: todas as contas conferem.');
