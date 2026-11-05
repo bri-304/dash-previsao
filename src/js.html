@@ -96,12 +96,17 @@ function applyMeta(meta) {
   setText('kpi-yoy-pess', meta.kpi_yoy_pess);
   setText('kpi-yoy-otim', meta.kpi_yoy_otim);
   setText('kpi-yoy-sub',  meta.kpi_yoy_sub);
-  if (meta.kpi_yoy_delta) setText('kpi-yoy-delta', meta.kpi_yoy_delta);
+  const yoyDelta = document.getElementById('kpi-yoy-delta');
+  yoyDelta.textContent = meta.kpi_yoy_delta || '';
+  yoyDelta.hidden = !meta.kpi_yoy_delta;
+  yoyDelta.classList.toggle('dn', String(meta.kpi_yoy_delta || '').charAt(0) === '▼');
+  yoyDelta.classList.toggle('up', String(meta.kpi_yoy_delta || '').charAt(0) !== '▼');
 
   // KPI 5 — Vendedores ativos
   setText('kpi-ativos',         meta.kpi_ativos);
   setText('kpi-ativos-sub',     meta.kpi_ativos_sub);
   setText('kpi-inativos-delta', meta.kpi_inativos_delta);
+  document.getElementById('kpi-inativos-delta').hidden = !meta.kpi_inativos_delta;
 
   // Títulos de seção e gráfico
   if (meta.sec_title_previsao)  setText('sec-title-previsao',  meta.sec_title_previsao);
@@ -629,6 +634,40 @@ function lerResposta(texto) {
   return data;
 }
 
+// Seletor de backoffice: vale para o realizado do KPI, do gráfico e da tabela diária. Os cards de time não mudam.
+// Mês salvo antes de o seletor existir não traz as vendas sem backoffice: o seletor some.
+function incluirBackoffice() {
+  const chk = document.getElementById('backoffice-chk');
+  return !chk || chk.checked;
+}
+
+function comSeletorBackoffice(data) {
+  const semBack = data.meta.realizado_sem_backoffice;
+  document.getElementById('backoffice-box').hidden = !semBack;
+  if (!semBack || incluirBackoffice()) return data;
+  const dias = data.dias.map(d => {
+    if (d[7] === null || d[7] === undefined || d[7] === '') return d;
+    const novo = d.slice();
+    novo[7] = semBack[d[0]] || 0;
+    return novo;
+  });
+  const realizado = dias.reduce((t, d) => t + (Number(d[7]) || 0), 0);
+  const central = Number(data.meta.kpi_total_central) || 0;
+  const delta = central ? `▲ ${String(Math.round(realizado / central * 1000) / 10).replace('.', ',')}% do total previsto` : '▲ — do total previsto';
+  return Object.assign({}, data, { dias, meta: Object.assign({}, data.meta, { kpi_realizado: realizado, kpi_realizado_delta: delta }) });
+}
+
+function desenhar(data) { initDashboard(comSeletorBackoffice(data)); }
+
+function ligarSeletorBackoffice() {
+  const chk = document.getElementById('backoffice-chk');
+  try { chk.checked = localStorage.getItem('forecastBackoffice') !== 'nao'; } catch (e) {}
+  chk.addEventListener('change', () => {
+    try { localStorage.setItem('forecastBackoffice', chk.checked ? 'sim' : 'nao'); } catch (e) {}
+    if (ultimoTexto !== null) desenhar(lerResposta(ultimoTexto));
+  });
+}
+
 // O seletor de mês chama isto: 'atual' ou 'AAAA-MM'.
 async function carregarPeriodo(valor, label) {
   const primeira = ultimoTexto === null;
@@ -641,7 +680,7 @@ async function carregarPeriodo(valor, label) {
     periodoAtivo = valor;
     ultimoTexto = texto;
     mostrarConteudo();
-    initDashboard(data);
+    desenhar(data);
     aplicarModoHistorico(valor !== 'atual', label);
   } catch (err) {
     const msg = mensagemErro(err);
@@ -665,7 +704,7 @@ async function relerMesAtual() {
     const texto = await chamarServidor('getForecastData', '', SESSAO);
     if (periodoAtivo === 'atual' && texto !== ultimoTexto) {
       ultimoTexto = texto;
-      initDashboard(lerResposta(texto));
+      desenhar(lerResposta(texto));
     }
   } catch (err) {
     const msg = mensagemErro(err);
@@ -692,6 +731,11 @@ function preencherSeletorMeses(meses) {
 function ligarSnapshot(ctx) {
   const caixa = document.getElementById('snapshot-box');
   if (!ctx.dona) return;
+  const linkMetricas = document.getElementById('metricas-link');
+  if (window.BILHETE_INJETADO) {
+    linkMetricas.href = `${window.URL_DASH}?tk=${encodeURIComponent(window.BILHETE_INJETADO)}&pagina=metricas`;
+    linkMetricas.hidden = false;
+  }
   const sel = document.getElementById('snapshot-mes');
   const rotulo = id => { const [a, m] = id.split('-'); return `${m}/${a}`; };
   sel.innerHTML = [ctx.mesAtual, ctx.mesAnterior].map(id => `<option value="${id}">${rotulo(id)}</option>`).join('');
@@ -739,6 +783,7 @@ async function boot() {
   prepararSessao();
   if (!SESSAO) { mostrarErro('LOGIN'); return; }
 
+  ligarSeletorBackoffice();
   const sel = document.getElementById('periodo-sel');
   sel.addEventListener('change', e => {
     const opt = e.target.selectedOptions[0];

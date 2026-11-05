@@ -200,6 +200,10 @@ tr:hover td{background:var(--card2)}
 .snapshot-box{display:inline-flex;gap:6px;align-items:center}
 #snapshot-btn{white-space:nowrap}
 #snapshot-btn:disabled{opacity:.6;cursor:default}
+.backoffice-sel{display:inline-flex;gap:6px;align-items:center;cursor:pointer;white-space:nowrap}
+.backoffice-sel input{accent-color:var(--blue-l);cursor:pointer}
+.backoffice-sel:focus-within,.metricas-link:focus-visible{outline:2px solid var(--blue-l);outline-offset:2px}
+.metricas-link{text-decoration:none;white-space:nowrap}
 @media(prefers-reduced-motion:reduce){.estado-giro{animation-duration:3s}}
 
 .footer{text-align:center;padding:28px;font-family:var(--fm);font-size:10px;color:var(--muted);border-top:1px solid var(--border);margin-top:8px}
@@ -208,6 +212,11 @@ tr:hover td{background:var(--card2)}
 .d1{animation-delay:.05s}.d2{animation-delay:.1s}.d3{animation-delay:.15s}.d4{animation-delay:.2s}.d5{animation-delay:.25s}.d6{animation-delay:.3s}
 ::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
 /* ===================== RESPONSIVO ===================== */
+/* header com seletor, snapshot, mês e selos: quebra em duas linhas antes de espremer o título */
+@media(max-width:1360px){
+  .hdr{flex-wrap:wrap;gap:10px}
+  .hdr-r{width:100%;flex-wrap:wrap}
+}
 @media(max-width:1100px){
   .kpi-strip{grid-template-columns:repeat(3,1fr)}
   .teams-grid{grid-template-columns:1fr}

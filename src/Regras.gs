@@ -58,12 +58,16 @@ function vendaConta_(v) {
          !!v.id;
 }
 
+function ehBackoffice_(area) { return semAcento_(area).indexOf('backoffice') >= 0; }
+
 // Tabela "Vendas por dia Mês Atual": ID_LEAD diferentes por dia.
-function vendasPorDia_(vendas, ano, mes) {
+// semBackoffice: tira também quem é de AREA com "Backoffice" (o seletor da página).
+function vendasPorDia_(vendas, ano, mes, semBackoffice) {
   var r = intervaloMes_(ano, mes), dias = {};
   vendas.forEach(function (v) {
     if (v.data < r.ini || v.data > r.fim || !vendaConta_(v)) return;
     if (semAcento_(v.consultor) === REGRAS.CONSULTOR_FORA_DO_DIA) return;
+    if (semBackoffice && ehBackoffice_(v.area)) return;
     var d = parseInt(v.data.slice(8), 10);
     (dias[d] = dias[d] || {})[v.id] = true;
   });
@@ -206,7 +210,7 @@ function montarTimes_(vendas, hoje, configTimes, rotulos) {
   return times;
 }
 
-/* ---------- textos da aba 'Configuracoes mes' ---------- */
+/* ---------- textos calculados da data, antes na aba 'Configuracoes mes' ---------- */
 
 function numeroBr_(n) { return String(n).replace('.', ','); }
 
@@ -240,6 +244,14 @@ function realizadoSub_(hoje) {
 }
 
 // Corrigido: a planilha dividia por 390 fixo; agora é o central da previsão atual.
+// Texto ao lado do percentual vs ano passado, pelo sinal do percentual escrito pela IA.
+function yoyDelta_(pct) {
+  var n = parseFloat(texto_(pct).replace('−', '-').replace('%', '').replace(',', '.'));
+  if (isNaN(n)) return '';
+  if (n < 0) return '▼ queda YoY projetada';
+  return n > 0 ? '▲ crescimento YoY projetado' : '= estável vs ano passado';
+}
+
 function realizadoDelta_(realizado, central) {
   if (!central) return '▲ — do total previsto';
   return '▲ ' + numeroBr_(Math.round(realizado / central * 1000) / 10) + '% do total previsto';
@@ -303,15 +315,14 @@ function montarDias_(linhasPrevisao, porDia, hoje) {
 /* fontes = {
      vendas:      [{ id, consultor, produtoMeta, data:'AAAA-MM-DD', area, status, contar, gerente }],
      camposIA:    { chave: valor } (Campos_previsao_IA),
-     configMes:   { chave: valor } (só os textos digitados à mão em 'Configuracoes mes'),
      configTimes: [{ time, chave, valor }] (Configuracoes times),
      semanas, semanaTags, sugestoes, gargalos, diasPrevisao: linhas das abas da IA (objetos pelo cabeçalho),
-     inativos:    número de desmarcados na Jornada de Estrelas,
+     inativos:    número de desmarcados na Jornada de Estrelas; null se ela não abrir,
      atualizadoEm:'dd/MM/yyyy HH:mm'
    }
    hoje = { ano, mes, dia }  */
 function montarForecast_(fontes, hoje) {
-  var ia = fontes.camposIA || {}, cfg = fontes.configMes || {};
+  var ia = fontes.camposIA || {};
   var rotulos = rotulosDoMes_(hoje);
   var porDia = vendasPorDia_(fontes.vendas, hoje.ano, hoje.mes);
   var realizado = somaValores_(porDia);
@@ -338,13 +349,14 @@ function montarForecast_(fontes, hoje) {
       kpi_realizado: realizado,
       kpi_realizado_sub: realizadoSub_(hoje),
       kpi_realizado_delta: realizadoDelta_(realizado, central),
+      realizado_sem_backoffice: vendasPorDia_(fontes.vendas, hoje.ano, hoje.mes, true),   // { dia: vendas }, para o seletor da página
       kpi_yoy_pct: texto_(ia.kpi_yoy_pct),
       kpi_yoy_pess: texto_(ia.kpi_yoy_pess),
       kpi_yoy_otim: texto_(ia.kpi_yoy_otim),
       kpi_yoy_sub: texto_(ia.kpi_yoy_sub),
       kpi_ativos: Object.keys(pessoas).length,   // pedido da Brianna: pessoas que venderam, igual ao card de cada time
       kpi_ativos_sub: 'em ' + qtdTimes + (qtdTimes === 1 ? ' time competindo' : ' times competindo'),
-      kpi_inativos_delta: inativos === null || inativos === undefined ? texto_(cfg.kpi_inativos_delta) : '▼ ' + inativos + ' inativos / férias',
+      kpi_inativos_delta: inativos === null || inativos === undefined ? '' : '▼ ' + inativos + ' inativos / férias',
       page_title: 'Forecast ' + mesAno + ' - Consolide',
       hdr_title_html: 'Forecast de Vendas - ' + mesAno,
       badge_consoliga: texto_(ia.badge_consoliga),
@@ -352,7 +364,7 @@ function montarForecast_(fontes, hoje) {
       kpi_total_sub: 'vendas · ' + rotulos.mes + '/' + hoje.ano,
       kpi_media_delta: texto_(ia.kpi_media_delta),
       kpi_yoy_lbl: 'Percentual Previsto vs ' + rotulos.mes + ' ' + (hoje.ano - 1),
-      kpi_yoy_delta: texto_(cfg.kpi_yoy_delta),
+      kpi_yoy_delta: yoyDelta_(ia.kpi_yoy_pct),
       sec_title_previsao: 'previsão diária com intervalo de confiança — ' + mesAno,
       chart_title_main: 'Vendas por Dia · ' + mesAno,
       sec_title_teams: 'desempenho por time — ' + rotulos.mesAnterior + ' real vs ' + rotulos.mes + ' projetado',
@@ -380,6 +392,8 @@ function motivoConhecido_(caminho, novo, json, hoje) {
     return 'Corrigido: quando o mês anterior é mais curto, o "até hoje" da planilha passava para o mês seguinte.';
   }
   if (caminho === 'meta.atualizado_em') return 'Horário da leitura.';
+  if (caminho === 'meta.kpi_yoy_delta') return 'Agora sai do sinal de kpi_yoy_pct; a planilha trazia um texto digitado à mão.';
+  if (/^meta\.realizado_sem_backoffice/.test(caminho)) return 'Campo novo: vendas sem o backoffice, para o seletor da página.';
   if (caminho === 'meta.kpi_ativos') return 'Pedido da Brianna: conta quem vendeu (a planilha contava os checkboxes da Jornada de Estrelas).';
   if (caminho === 'meta.kpi_realizado_delta') return 'Corrigido: a planilha dividia por 390 fixo; agora é o central da previsão.';
   if (caminho === 'meta.kpi_realizado' || /^times\.[^.]+\.(mes_atual_total|dias_confirmados_val)$/.test(caminho) || /^times\.[^.]+\.sellers\[.*\]\.2$/.test(caminho)) {

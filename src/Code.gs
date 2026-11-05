@@ -7,16 +7,16 @@
 
 var CONFIG = {
   ID_PLANILHA: '1xO6594dHGlajnzqdNTMrxbtU9_SYXzpDXewtwuTBAV4',   // "Dados IA - Previsão"
+  // Vendas: "Dados Vendas Ligações e Funil", com todo o histórico. Também é a base das métricas da IA.
+  ID_PLANILHA_VENDAS: '1dPYm8QGUsounTdhPIRunlz5rpSoUrBUYaE7dBp9Tp5s',
   ABA_VENDAS: 'Dados Leads 100% Pagas',
   ABA_CAMPOS_IA: 'Campos_previsao_IA',
-  ABA_CONFIG_MES: 'Configuracoes mes',       // só os textos digitados à mão (kpi_yoy_delta)
-  ABA_CONFIG_TIMES: 'Configuracoes times',   // previsão e textos de cada time, escritos pela IA
+  ABA_CONFIG_TIMES: 'Configuracoes times',   // só prev_atual, destaque_txt e atencao_txt de cada time, escritos pela IA
   ABA_SEMANAS: 'semana',
   ABA_SEMANA_TAGS: 'semana-tags',
   ABA_SUGESTOES: 'sugestoes-estratégias',
   ABA_GARGALOS: 'campos-gargalos',
   ABA_DIAS_PREVISAO: 'Vendas Previstas por dia Mês Atual',
-  ABA_ATUALIZACAO: 'data_atualização_dash',  // A2, se o Pentaho preencher; vazia = horário da leitura
   ABA_ACESSO: 'Emails Autorizados',
   ABA_LOG_ACESSO: 'Logs de Acesso',
   DIAS_LOG_ACESSO: 90,
@@ -32,7 +32,7 @@ var CONFIG = {
 };
 
 // Mude quando o formato do objeto mudar: invalida o cache antigo na hora.
-var PREFIXO_CACHE = 'forecast_v1_';
+var PREFIXO_CACHE = 'forecast_v3_';
 
 var COLUNAS_VENDAS = {
   id: 'ID_LEAD', consultor: 'CONSULTOR', produtoMeta: 'PRODUTO_CONTA_META', data: 'DATA_PAGAMENTO',
@@ -239,10 +239,12 @@ function limparLogAcesso_(log) {
    ------------------------------------------------------------------ */
 function doGet(e) {
   var p = (e && e.parameter) || {};
+  if (p.consulta) return metricas_responder_(p);   // plugin do forecast: só com a chave, sem login
   if (p.code) return tratarCallbackLogin_(p);
   if (p.error) return paginaEntrada_('erro', '', 'O login foi cancelado. Tente de novo.');
   var email = emailDoBilhete_(p.tk || '');
   if (!email) return paginaEntrada_('login');
+  if (p.pagina === 'metricas') return servirMetricas_(email, p.tk);
   return servirDash_(email, '', p.tk);
 }
 
@@ -439,42 +441,23 @@ function letraColuna_(i) {
   return s;
 }
 
-// Lê só as colunas usadas da aba bruta (Sheets API); sem o serviço, cai para a aba inteira.
-function lerVendas_(ss) {
-  var aba = abaObrigatoria_(ss, CONFIG.ABA_VENDAS);
-  var ultCol = aba.getLastColumn();
-  if (!ultCol) throw new Error('A aba "' + CONFIG.ABA_VENDAS + '" está vazia.');
-  var cab = aba.getRange(1, 1, 1, ultCol).getDisplayValues()[0].map(function (c) { return String(c).trim(); });
+// Lê só as colunas usadas pela Sheets API. A aba tem todo o histórico: guarda só os meses que o dash pode pedir
+// (o atual e os anteriores até o snapshot do mês passado, que olha o mês anterior a ele).
+function lerVendas_() {
   var campos = Object.keys(COLUNAS_VENDAS);
-  var indices = campos.map(function (c) {
-    var i = cab.indexOf(COLUNAS_VENDAS[c]);
-    if (i < 0) throw new Error('A coluna ' + COLUNAS_VENDAS[c] + ' não foi encontrada na aba "' + CONFIG.ABA_VENDAS + '".');
-    return i;
-  });
-
-  var colunas;
-  try {
-    var nomeA1 = "'" + CONFIG.ABA_VENDAS.replace(/'/g, "''") + "'!";
-    var resp = Sheets.Spreadsheets.Values.batchGet(CONFIG.ID_PLANILHA, {
-      ranges: indices.map(function (i) { var l = letraColuna_(i); return nomeA1 + l + '2:' + l; }),
-      majorDimension: 'COLUMNS',
-      valueRenderOption: 'FORMATTED_VALUE'
-    });
-    colunas = (resp.valueRanges || []).map(function (r) { return (r.values && r.values[0]) || []; });
-  } catch (e) {
-    console.warn('Sheets API indisponível, lendo a aba inteira: ' + e);
-    var tudo = aba.getDataRange().getDisplayValues().slice(1);
-    colunas = indices.map(function (i) { return tudo.map(function (l) { return l[i]; }); });
-  }
-
-  var n = colunas.reduce(function (m, c) { return Math.max(m, c.length); }, 0);
-  if (!n) throw new Error('A aba "' + CONFIG.ABA_VENDAS + '" está sem linhas (carga em andamento?).');
+  var t = lerColunasMetricas_(CONFIG.ID_PLANILHA_VENDAS, CONFIG.ABA_VENDAS, campos.map(function (c) { return COLUNAS_VENDAS[c]; }));
+  var corte = somarMeses_(mesRefDe_(hojeSP_()), -3) + '-01';
   var vendas = [];
-  for (var l = 0; l < n; l++) {
+  for (var l = 0; l < t.n; l++) {
+    var data = normalizarData_(t[COLUNAS_VENDAS.data][l]);
+    if (!data || data < corte) continue;
     var v = {};
-    campos.forEach(function (c, k) { v[c] = String(colunas[k][l] === undefined ? '' : colunas[k][l]).trim(); });
+    campos.forEach(function (c) {
+      var x = t[COLUNAS_VENDAS[c]][l];
+      v[c] = String(x === undefined || x === null ? '' : x).trim();
+    });
     if (!v.id) continue;
-    v.data = normalizarData_(v.data);
+    v.data = data;
     vendas.push(v);
   }
   return vendas;
@@ -491,29 +474,19 @@ function lerInativos_() {
   }
 }
 
-function lerAtualizadoEm_(ss) {
-  try {
-    var aba = ss.getSheetByName(CONFIG.ABA_ATUALIZACAO);
-    var v = aba ? String(aba.getRange('A2').getDisplayValue() || '').trim() : '';
-    if (v) return v;
-  } catch (e) {}
-  return Utilities.formatDate(new Date(), fuso_(), 'dd/MM/yyyy HH:mm');
-}
-
 function lerFontes_(ss) {
   return {
-    vendas: lerVendas_(ss),
+    vendas: lerVendas_(),
     camposIA: lerChaveValor_(ss, CONFIG.ABA_CAMPOS_IA),
-    configMes: lerChaveValor_(ss, CONFIG.ABA_CONFIG_MES),
     configTimes: lerObjetos_(ss, CONFIG.ABA_CONFIG_TIMES).map(function (l) {
       return { time: String(l.time || '').trim(), chave: String(l.chave || '').trim(), valor: l.valor };
-    }),
+    }).filter(function (l) { return /_(prev_atual|destaque_txt|atencao_txt)$/.test(l.chave); }),
     semanas: lerObjetos_(ss, CONFIG.ABA_SEMANAS),
     semanaTags: lerObjetos_(ss, CONFIG.ABA_SEMANA_TAGS),
     sugestoes: lerObjetos_(ss, CONFIG.ABA_SUGESTOES),
     gargalos: lerObjetos_(ss, CONFIG.ABA_GARGALOS),
     diasPrevisao: lerObjetos_(ss, CONFIG.ABA_DIAS_PREVISAO),
     inativos: lerInativos_(),
-    atualizadoEm: lerAtualizadoEm_(ss)
+    atualizadoEm: Utilities.formatDate(new Date(), fuso_(), 'dd/MM/yyyy HH:mm')
   };
 }

@@ -46,7 +46,6 @@ if (!json.times.stl) configTimes.push({ time: 'stl', chave: 'stl_prev_atual', va
 const fontes = {
   vendas,
   camposIA,
-  configMes: { kpi_yoy_delta: json.meta.kpi_yoy_delta },
   configTimes,
   semanas: json.semanas.map((s) => ({ n: s.n, dates: s.dates, central: s.central, min: s.min, max: s.max, avg_txt: s.avg_txt, color: s.color })),
   semanaTags: json.semanas.flatMap((s) => s.tags.map((t) => ({ semana: s.n, cls: t.cls, txt: t.txt }))),
