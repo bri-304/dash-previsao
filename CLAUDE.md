@@ -27,10 +27,12 @@ Todo comando para o teste leva `-P .clasp-teste.json`; sem ele, o clasp usa a **
 - `src/appsscript.json`: fuso `America/Sao_Paulo` (define o "hoje"), `executeAs = USER_DEPLOYING`, `access = ANYONE_ANONYMOUS` (o login próprio é o portão). Mudou escopo: só a dona reautoriza, no editor de cada projeto.
 - `src/Metricas.gs`, `src/MetricasServidor.gs`, `src/metricas.html`: métricas para a IA (seção "Métricas da IA").
 - `src/Foto.gs`, `src/FotoServidor.gs`: foto diária para a previsão dinâmica (seção "Foto diária").
+- `src/Pipeline.gs`, `src/PipelineServidor.gs`: previsão pelo pipeline, na página (seção "Previsão pelo pipeline").
 - `scripts/testar-metricas.js`: confere as contas de `Metricas.gs` no node, com uma base pequena feita à mão.
 - `scripts/testar-foto.js`: o mesmo para `Foto.gs`, e confere se o pipeline da foto conta igual ao do pacote de métricas.
+- `scripts/testar-pipeline.js`: o mesmo para `Pipeline.gs`.
 - `scripts/testar-regras.js`: roda `Regras.gs` no node com a aba bruta real e compara com um JSON.
-- `scripts/montar-previa.js` + `scripts/servir-previa.js`: prévia local da página com `google.script.run` simulado.
+- `scripts/montar-previa.js` + `scripts/servir-previa.js`: prévia local da página com `google.script.run` simulado. O 4º argumento opcional é um JSON da previsão pelo pipeline.
 - `forecast_data.json` e `historico/` ficaram na branch só como referência: o dash lê a planilha e a pasta do Drive.
 
 ## O que saiu do ETL do Pentaho
@@ -172,6 +174,26 @@ Guarda como as coisas estavam em cada dia, porque o pipeline e a previsão são 
 | `leads` | Leads, vendas e losts do dia por canal | Painel de leads; precisa de `CONSULTA_CHAVE` |
 
 Para saber a previsão original de um mês, use a primeira foto em que `mes_da_aba` é aquele mês: não há arquivo separado.
+
+## Previsão pelo pipeline (em teste)
+
+Pedido da Brianna: chance de cada lead aberta pagar, pela etapa, pela idade e pelo segmento, calculada pelo código e mostrada no dash, sem planilha nem função no editor e sem depender das fotos.
+
+**O que a base permite** (conferido na `dados_funil` em 05/11/2026): `data_funil_comercial` é a data de finalização da lead, ou hoje se ela está no Pipeline; não é a data de entrada na etapa, e a base não tem essa data. `CICLO_VENDA_ATE_SER_PAGO` = `DATA_PAGAMENTO` − `criado_em`. Pendente jurídico vem depois do pagamento (quase não há lead aberta lá): a última etapa aberta é Assinatura e pagamento. `data_contrato` aparece depois do pagamento e não serve como entrada em Assinatura.
+
+**Conta** (`previsaoPipeline_` em `Pipeline.gs`):
+- Leads com os filtros do funil (sem backoffice, produto Sim ou não definido, sem Interesse em Parceria), criadas nos últimos 180 dias. Venda = finalização Ganho (não Ganho Cobrança) com `CONTAR_VENDA` = 1, no dia da `DATA_PAGAMENTO`.
+- Chance de pagar em cada um dos próximos 30 dias, para uma lead ainda aberta com idade X (exata até 29 dias; depois, faixas a partir de 30, 45, 60, 90, 120 e 180) e que chegou pelo menos à etapa s. Nas leads antigas a etapa é a mais avançada a que chegaram (a base não diz a etapa de cada dia). Célula com menos de 30 leads usa a idade anterior.
+- Segmentos: vendas de verdade ÷ esperadas, por origem, origem › campanha e origem › campanha › keyword, encolhidas para o grupo de cima (peso 10). Separados para o começo do funil (MQL e prospecção, base etapa 1) e o fim (oportunidades e assinatura, base etapa 3).
+- Previsão de amanhã até o fim do mês = leads abertas (chance × multiplicador do segmento) + leads novas (média por dia da semana dos últimos 28 dias × chance de quem tem 0 dia). Peso do dia da semana pelas vendas dos últimos 84 dias, vezes o peso da posição do dia útil no mês (3 primeiros, meio, 5 últimos), pelas vendas dos últimos 182 dias. Feriado vale como domingo: aba `Feriados e Dias Úteis` da planilha da IA (DATA preenchida e FERIADO NACIONAL = SIM), mais os `holiday` da previsão do mês.
+- Hoje: chance de quem está aberto pagar ainda hoje × parte das vendas do dia que costuma entrar depois do horário do cálculo (`HORA_PAGAMENTO` dos últimos 90 dias na aba de vendas, sem os `00:00:00` e `08:00:00` de preenchimento). A página soma o vendido hoje.
+- Teste: nos últimos 20 dias úteis, a previsão dos 5 dias seguintes sem a etapa, contra o realizado e contra a média por dia da semana. As chances usam esses mesmos meses: o teste é um pouco otimista.
+
+**Execução** (`PipelineServidor.gs`): `getPrevisaoPipeline(token)` devolve o cálculo de hoje (cache e arquivo `Previsão pelo pipeline/pipeline-AAAA-MM-DD.json`, dentro da pasta do histórico; o último do dia fica, como registro). Sem arquivo do dia, com `versao` diferente de `PIPE.VERSAO` ou com mais de 2 horas, calcula na hora. Mudou o formato do resultado: suba `PIPE.VERSAO`. O gatilho `gatilhoPipeline` roda de hora em hora, das 7h às 22h, e é instalado por `getContexto` quando a dona abre o dash. `calcularPipelineAgora()` e `removerGatilhoPipeline()` no editor.
+
+**Página**: linha ciano "Pelo pipeline" no gráfico (de hoje, com o vendido mais o que falta, ao fim do mês) e a seção "previsão pelo pipeline — em teste" abaixo dele, só no mês atual. Não inclui o backoffice; a projeção do mês soma o realizado do dash.
+
+**Produção × teste** (pedido da Brianna em 06/11/2026): a conta é a mesma nos dois. Na produção, `getPrevisaoPipeline` tira `segmentos` e as linhas do teste, e a página mostra só a linha do gráfico, os 4 cartões e a tabela de chances por etapa e idade. As tabelas de segmentos (por campanha, o padrão, ou por keyword) e a do teste ficam só no projeto de teste, para ela acompanhar. Valores de vendas aparecem inteiros; as partes somam o total mostrado.
 
 ## Acesso e login
 

@@ -201,7 +201,39 @@ window.URL_DASH = <?!= urlJson ?>;
     A faixa tracejada é o intervalo de confiança (mín–máx). · Acumulado no eixo direito (laranja).
   </div>
     <div class="chart-scroll"><div class="chart-canvas"><canvas id="mainChart"></canvas></div></div>
+  <div class="chart-note pipe-leg" id="pipe-leg" hidden>
+    <span class="pipe-ponto"></span> <strong>Pelo pipeline</strong> (em teste): vendas esperadas de hoje (o já vendido mais o que falta até o fim do dia) até o fim do mês, pela chance de cada lead aberta e das leads que ainda vão entrar. Não inclui o backoffice.
+  </div>
 </div>
+
+<!-- PREVISÃO PELO PIPELINE (em teste): montada por renderPipeline() a partir de getPrevisaoPipeline -->
+<section id="pipe-sec" hidden>
+  <div class="sec-title fade-in d2">previsão pelo pipeline — em teste</div>
+  <div class="pipe-box">
+    <div class="pipe-estado" id="pipe-estado" role="status"></div>
+    <div id="pipe-corpo" hidden>
+      <div class="pipe-kpis" id="pipe-kpis"></div>
+      <div class="pipe-sub">Chance de pagar nos próximos 5 dias, pela etapa atual e pela idade da lead (dias desde a criação). Entre parênteses, quantas leads abertas estão hoje em cada faixa.</div>
+      <div class="pipe-scroll"><table class="pipe-tbl" id="pipe-chances"></table></div>
+      <div id="pipe-detalhes">
+      <div class="pipe-sub pipe-sub-seg">
+        Segmentos que vendem acima ou abaixo do esperado para a etapa e a idade das leads (× 1,5 = 50% a mais). Grupos pequenos ficam perto de × 1.
+        <select id="pipe-nivel" class="periodo-sel pipe-nivel" aria-label="Segmento">
+          <option value="campanhas" selected>Por campanha</option>
+          <option value="keywords">Por keyword</option>
+        </select>
+      </div>
+      <div class="pipe-seg" id="pipe-seg"></div>
+      <details class="pipe-teste">
+        <summary id="pipe-teste-resumo">Teste nos últimos dias úteis</summary>
+        <div class="pipe-sub">Para cada dia, a previsão dos 5 dias seguintes feita só com as leads abertas naquele dia, sem a etapa (a base não guarda em que etapa a lead estava). As chances foram aprendidas com esses mesmos meses, então o teste é um pouco otimista.</div>
+        <div class="pipe-scroll"><table class="pipe-tbl" id="pipe-teste"></table></div>
+      </details>
+      </div>
+      <div class="pipe-rodape" id="pipe-rodape"></div>
+    </div>
+  </div>
+</section>
 
 <!-- WEEKLY -->
 <div class="sec-title fade-in d3">resumo do previsto por semana</div>

@@ -361,6 +361,9 @@ function getContexto(token) {
   var h = hojeSP_(), ant = mesAnterior_(h.ano, h.mes);
   var meses = [];
   try { meses = listarMeses_(); } catch (e) { console.warn('Histórico indisponível: ' + e); }
+  if (s.email === emailDono_()) {
+    try { garantirGatilhoPipeline_(); } catch (e) { console.warn('Gatilho da previsão pelo pipeline: ' + e); }
+  }
   return {
     email: s.email,
     dona: s.email === emailDono_(),

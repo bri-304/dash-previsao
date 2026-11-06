@@ -74,6 +74,38 @@ body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse
 .chart-note{font-family:var(--fm);font-size:10px;color:var(--muted);margin-bottom:14px;padding:8px 12px;background:rgba(129,140,248,.07);border-left:2px solid rgba(129,140,248,.4);border-radius:0 4px 4px 0}
 .chart-canvas{position:relative;height:330px}
 
+/* PREVISÃO PELO PIPELINE */
+.pipe-leg{margin:12px 0 0}
+.pipe-ponto{display:inline-block;width:9px;height:9px;border-radius:50%;background:#22d3ee;vertical-align:middle}
+.pipe-box{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);padding:22px;margin-bottom:22px}
+.pipe-estado{font-family:var(--fm);font-size:11px;color:var(--dim)}
+.pipe-estado:empty{display:none}
+.pipe-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.pipe-kpi{background:var(--card2);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px}
+.pipe-kpi-lbl{font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.pipe-kpi-val{font-family:var(--fh);font-size:30px;font-weight:900;line-height:1.1;color:#22d3ee}
+.pipe-kpi-sub{font-family:var(--fm);font-size:10px;color:var(--dim);margin-top:2px}
+.pipe-sub{font-family:var(--fm);font-size:10px;color:var(--muted);margin:6px 0 10px}
+.pipe-sub-seg{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.pipe-nivel{font-size:11px}
+.pipe-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.pipe-tbl td,.pipe-tbl th{padding:6px 10px;white-space:nowrap}
+.pipe-tbl td.num{font-family:var(--fm);text-align:right}
+.pipe-tbl th.num{text-align:right}
+.pipe-cel{font-family:var(--fm);text-align:center}
+.pipe-cel small{color:var(--muted);font-size:9px}
+.pipe-seg{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.pipe-seg-box{background:var(--card2);border:1px solid var(--border);border-radius:var(--r);padding:10px 12px;min-width:0}
+.pipe-seg-tit{font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.pipe-seg-nome{white-space:normal!important;max-width:320px}
+.pipe-seg-nome small{display:block;color:var(--muted);font-size:9px}
+.pipe-up{color:var(--green)}.pipe-dn{color:#f87171}
+.pipe-teste{margin-top:16px}
+.pipe-teste summary{cursor:pointer;font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:1px;color:var(--dim)}
+.pipe-rodape{font-family:var(--fm);font-size:9px;color:var(--muted);margin-top:14px}
+@media(max-width:860px){.pipe-kpis{grid-template-columns:repeat(2,1fr)}.pipe-seg{grid-template-columns:1fr}}
+@media(max-width:560px){.pipe-box{padding:14px}.pipe-kpi-val{font-size:24px}}
+
 /* METHODOLOGY BOX */
 .method-box{background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.2);border-radius:var(--r);padding:14px 18px;margin-bottom:22px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .method-item{}
