@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<base target="_top">
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<?!= include('css') ?>
+<script>
+window.TOKEN_INJETADO = <?!= sessaoJson ?>;
+window.BILHETE_INJETADO = <?!= bilheteJson ?>;
+window.URL_DASH = <?!= urlJson ?>;
+</script>
+</head>
+<body>
+
+<!-- Atualização em segundo plano (troca de mês e releitura) -->
+<div class="data-loading" id="loading-indicator" role="status">⟳ Atualizando dados...</div>
+<!-- Aviso rápido: resultado do snapshot, falha ao abrir um mês do histórico -->
+<div class="aviso" id="aviso" role="status" hidden></div>
+
+<header class="hdr">
+  <div class="hdr-l">
+    <span class="logo">CONSOLIDE</span>
+    <div>
+      <div class="hdr-title" id="hdr-title">Forecast de Vendas</div>
+      <div class="hdr-sub" id="hdr-sub"></div>
+    </div>
+  </div>
+  <div class="hdr-r">
+    <label class="periodo-sel backoffice-sel" id="backoffice-box" hidden>
+      <input type="checkbox" id="backoffice-chk" checked> Incluir vendas do backoffice
+    </label>
+    <a class="periodo-sel metricas-link" id="metricas-link" target="_top" hidden>📐 Métricas da IA</a>
+    <span class="snapshot-box" id="snapshot-box" hidden>
+      <select id="snapshot-mes" class="periodo-sel" aria-label="Mês do snapshot"></select>
+      <button type="button" id="snapshot-btn" class="periodo-sel">💾 Salvar snapshot</button>
+    </span>
+    <select id="periodo-sel" class="periodo-sel" aria-label="Período">
+      <option value="atual">📊 Mês atual</option>
+    </select>
+    <span class="badge badge-gold" id="badge-consoliga" hidden></span>
+    <span class="badge badge-purple" id="badge-copa" hidden></span>
+  </div>
+</header>
+
+<!-- Primeira carga: nada de número até os dados chegarem -->
+<div class="estado" id="estado-carregando" role="status">
+  <div class="estado-giro" aria-hidden="true"></div>
+  <div class="estado-titulo">Carregando o forecast…</div>
+  <div class="estado-texto">Lendo a planilha de dados. Pode levar alguns segundos.</div>
+</div>
+
+<div class="estado" id="estado-erro" role="alert" hidden>
+  <div class="estado-titulo" id="estado-erro-titulo">Não foi possível carregar os dados</div>
+  <div class="estado-texto" id="estado-erro-texto"></div>
+  <button type="button" class="estado-botao" id="estado-erro-tentar">Tentar de novo</button>
+  <a class="estado-botao" id="estado-erro-entrar" target="_top" hidden>Entrar com o Google</a>
+</div>
+
+<div class="wrap" id="conteudo" hidden>
+
+<div class="hist-banner" id="hist-banner">
+  📁 Visualizando dados históricos de <strong id="hist-banner-mes"></strong> — mês fechado, valores não são mais atualizados.
+</div>
+
+<!-- KPI STRIP -->
+<div class="sec-title fade-in d1">indicadores-chave do mês</div>
+<div class="kpi-strip fade-in d1">
+
+  <div class="kpi c-blue">
+    <div class="kpi-lbl">Total Previsto (com margem)</div>
+    <div class="range-wrap">
+      <!-- ▼ PLACEHOLDER: cenário pessimista -->
+      <span class="range-lo" id="kpi-total-pess">325</span>
+      <span class="range-sep">—</span>
+      <!-- ▼ PLACEHOLDER: cenário central (animado por counter) -->
+      <span class="range-c" id="kpi1">0</span>
+      <span class="range-sep">—</span>
+      <!-- ▼ PLACEHOLDER: cenário otimista -->
+      <span class="range-hi" id="kpi-total-otim">455</span>
+      <span class="range-lbl-i">pessimista</span>
+      <span></span>
+      <span class="range-lbl-i">central</span>
+      <span></span>
+      <span class="range-lbl-i">otimista</span>
+    </div>
+    <div class="kpi-sub" id="kpi-total-sub">vendas · junho/2026</div>
+    <!-- ▼ PLACEHOLDER: delta vs mês anterior -->
+    <div class="delta up" id="kpi-total-delta">▲ +0,5% vs maio (central)</div>
+  </div>
+
+  <div class="kpi c-gold">
+    <div class="kpi-lbl">Média / Dia Útil (previsto) </div>
+    <!-- ▼ PLACEHOLDER: média central por dia útil -->
+    <div class="kpi-val gold" id="kpi-media-val">17,2</div>
+    <div class="range-lbls" style="justify-content:flex-start;gap:6px">
+      <!-- ▼ PLACEHOLDER: mínimo e máximo da média diária -->
+      <span style="color:#f87171" id="kpi-media-min">15,5 mín</span>
+      <span style="color:#34d399" id="kpi-media-max">21,6 máx</span>
+    </div>
+    <div class="kpi-sub">vendas por dia útil estimado</div>
+    <div class="delta up" id="kpi-media-delta">▲ vs 14,0 jun/2025</div>
+  </div>
+
+  <div class="kpi c-green">
+    <div class="kpi-lbl">Realizado até hoje</div>
+    <!-- ▼ PLACEHOLDER: total realizado acumulado (animado por counter) -->
+    <div class="kpi-val green" id="kpi3">0</div>
+    <!-- ▼ PLACEHOLDER: descrição dos dias confirmados -->
+    <div class="kpi-sub" id="kpi-realizado-sub">vendas confirmadas (dias 1–4 + est. dia 5)</div>
+    <!-- ▼ PLACEHOLDER: % do total previsto já realizado -->
+    <div class="delta up" id="kpi-realizado-delta">▲ 15,9% do total previsto</div>
+  </div>
+
+  <div class="kpi c-amber">
+    <div class="kpi-lbl" id="kpi-yoy-lbl">diferença percentual do previsto vs Junho 2025</div>
+    <!-- ▼ PLACEHOLDER: variação YoY central -->
+    <div class="kpi-val amber" id="kpi-yoy-pct">+31%</div>
+    <div class="range-lbls" style="justify-content:flex-start;gap:6px">
+      <!-- ▼ PLACEHOLDER: variação YoY pessimista e otimista -->
+      <span style="color:#f87171" id="kpi-yoy-pess">+9% pess.</span>
+      <span style="color:#34d399" id="kpi-yoy-otim">+53% otim.</span>
+    </div>
+    <!-- ▼ PLACEHOLDER: comparativo absoluto central vs ano anterior -->
+    <div class="kpi-sub" id="kpi-yoy-sub">390 central vs 298 ano anterior</div>
+    <div class="delta up" id="kpi-yoy-delta">▲ crescimento YoY</div>
+  </div>
+
+  <div class="kpi c-purple">
+    <div class="kpi-lbl">Vendedores Ativos</div>
+    <!-- ▼ PLACEHOLDER: quantidade de vendedores ativos -->
+    <div class="kpi-val purple" id="kpi-ativos">28</div>
+    <!-- ▼ PLACEHOLDER: descrição dos times -->
+    <div class="kpi-sub" id="kpi-ativos-sub">em 3 times competindo</div>
+    <!-- ▼ PLACEHOLDER: inativos/férias -->
+    <div class="delta dn" id="kpi-inativos-delta">▼ 8 inativos / férias</div>
+  </div>
+
+</div>
+  
+<!-- CHART -->
+<!--<div class="sec-title fade-in d2" id="sec-title-previsao">previsão diária com intervalo de confiança — junho 2026</div>
+
+<div class="method-box fade-in d2">
+  <div class="method-item">
+    <div class="method-type" id="method-tipo-0">Dias úteis normais</div>
+    <div class="method-val" id="method-val-0">± 15%</div>
+    <div class="method-desc" id="method-desc-0">Variância histórica estável por dia da semana</div>
+  </div>
+  <div class="method-item">
+    <div class="method-type" id="method-tipo-1">Dias de Copa</div>
+    <div class="method-val" id="method-val-1">± 22%</div>
+    <div class="method-desc" id="method-desc-1">Incerteza de comportamento em dias de jogo do Brasil</div>
+  </div>
+  <div class="method-item">
+    <div class="method-type" id="method-tipo-2">Sprint final (29–30)</div>
+    <div class="method-val" id="method-val-2">± 28%</div>
+    <div class="method-desc" id="method-desc-2">Alta pressão CONSOLIGA: teto maior, risco de queima também</div>
+  </div>
+  <div class="method-item">
+    <div class="method-type" id="method-tipo-3">Finais de semana</div>
+    <div class="method-val" id="method-val-3">± 30%</div>
+    <div class="method-desc" id="method-desc-3">Volume baixo com variação proporcional mais alta</div>
+  </div>
+</div> -->
+<!-- ▼ GRÁFICO: atualizado automaticamente via array dias[] — ver script -->
+<div class="chart-box fade-in d2">
+  <div class="chart-hdr">
+    <div>
+      <div class="chart-title" id="chart-title-main">Vendas por Dia · Junho 2026</div>
+    </div>
+    <div class="legend">
+      <!-- Indicadores de realizado: barra estreita sólida -->
+      <div class="leg">
+        <div style="display:flex;align-items:flex-end;gap:1px;height:14px">
+          <div style="width:10px;height:14px;background:rgba(34,197,94,0.32);border:1px solid rgba(34,197,94,0.6);border-radius:2px"></div>
+          <div style="width:5px;height:14px;background:#22c55e;border-radius:2px;margin-left:-7px"></div>
+        </div>
+        Previsto/confirmado
+      </div>
+      <div class="leg">
+        <div style="display:flex;align-items:flex-end;gap:1px;height:14px">
+          <div style="width:10px;height:14px;background:rgba(245,158,11,0.32);border:1px solid rgba(245,158,11,0.6);border-radius:2px"></div>
+          <div style="width:5px;height:14px;background:#f59e0b;border-radius:2px;margin-left:-7px"></div>
+        </div>
+        Previsto/Realizado hoje
+      </div>
+      <!-- Previsão por tipo: barra larga semitransparente -->
+      <div class="leg"><div class="leg-dot" style="background:rgba(59,130,246,0.45);border:1px solid rgba(59,130,246,0.7)"></div>Prev. dia útil</div>
+      <div class="leg"><div class="leg-dot" style="background:rgba(129,140,248,0.45);border:1px solid rgba(129,140,248,0.7)"></div>Copa</div>
+      <div class="leg"><div class="leg-dot" style="background:rgba(249,115,22,0.45);border:1px solid rgba(249,115,22,0.7)"></div>Sprint</div>
+      <div class="leg">
+        <div style="width:18px;height:8px;background:rgba(59,130,246,0.18);border:1px dashed rgba(100,160,255,0.5);border-radius:2px"></div>
+        Intervalo de confiança
+      </div>
+    </div>
+  </div>
+  <div class="chart-note">
+    Cada dia exibe <strong>duas barras sobrepostas</strong>: a <strong>barra larga semitransparente</strong> representa a previsão central (todos os dias); a <strong>barra estreita e sólida</strong> (verde/âmbar) aparece apenas nos dias com vendas confirmadas ou parciais.
+    A faixa tracejada é o intervalo de confiança (mín–máx). · Acumulado no eixo direito (laranja).
+  </div>
+    <div class="chart-scroll"><div class="chart-canvas"><canvas id="mainChart"></canvas></div></div>
+  <div class="chart-note pipe-leg" id="pipe-leg" hidden>
+    <span class="pipe-ponto"></span> <strong>Pelo pipeline</strong> (em teste): vendas esperadas de hoje (o já vendido mais o que falta até o fim do dia) até o fim do mês, pela chance de cada lead aberta e das leads que ainda vão entrar. Não inclui o backoffice.
+  </div>
+</div>
+
+<!-- PREVISÃO PELO PIPELINE (em teste): montada por renderPipeline() a partir de getPrevisaoPipeline -->
+<section id="pipe-sec" hidden>
+  <div class="sec-title fade-in d2">previsão pelo pipeline — em teste</div>
+  <div class="pipe-box">
+    <div class="pipe-estado" id="pipe-estado" role="status"></div>
+    <div id="pipe-corpo" hidden>
+      <div class="pipe-kpis" id="pipe-kpis"></div>
+      <div class="pipe-sub">Chance de pagar nos próximos 5 dias, pela etapa atual e pela idade da lead (dias desde a criação). Entre parênteses, quantas leads abertas estão hoje em cada faixa.</div>
+      <div class="pipe-scroll"><table class="pipe-tbl" id="pipe-chances"></table></div>
+      <div id="pipe-detalhes">
+      <div class="pipe-sub pipe-sub-seg">
+        Segmentos que vendem acima ou abaixo do esperado para a etapa e a idade das leads (× 1,5 = 50% a mais). Grupos pequenos ficam perto de × 1.
+        <select id="pipe-nivel" class="periodo-sel pipe-nivel" aria-label="Segmento">
+          <option value="campanhas" selected>Por campanha</option>
+          <option value="keywords">Por keyword</option>
+        </select>
+      </div>
+      <div class="pipe-seg" id="pipe-seg"></div>
+      <details class="pipe-teste">
+        <summary id="pipe-teste-resumo">Teste nos últimos dias úteis</summary>
+        <div class="pipe-sub">Para cada dia, a previsão dos 5 dias seguintes feita só com as leads abertas naquele dia, sem a etapa (a base não guarda em que etapa a lead estava). As chances foram aprendidas com esses mesmos meses, então o teste é um pouco otimista.</div>
+        <div class="pipe-scroll"><table class="pipe-tbl" id="pipe-teste"></table></div>
+      </details>
+      </div>
+      <div class="pipe-rodape" id="pipe-rodape"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKLY -->
+<div class="sec-title fade-in d3">resumo do previsto por semana</div>
+<div class="week-grid fade-in d3" id="week-grid"></div>
+
+  <!-- ▼ SEMANA 1: números atualizados via applyWeeks() -->
+  <!-- <div class="week-card">
+    <div class="week-lbl">Semana 1</div>
+    <div class="week-dates" id="week1-dates">01 a 07/06</div>
+    <div class="week-num" id="week1-num" style="color:var(--green)">67</div>
+    <div class="week-range" style="color:var(--muted)">intervalo:
+      <span style="color:#f87171" id="week1-min">61</span> —
+      <span style="color:#34d399" id="week1-max">75</span>
+    </div>
+    <div class="week-avg" id="week1-avg">~12,4/dia útil · impacto feriado</div>
+    <div class="week-tags" id="week1-tags">
+      <span class="wtag warn" id="week1-tag-0">⛔ Corpus Christi 04/06</span>
+      <span class="wtag warn" id="week1-tag-1">⛔ Pto. Fac. 05/06</span>
+      <span class="wtag ok" id="week1-tag-2">✅ Dias 1–4 confirmados</span>
+    </div>
+  </div> --> 
+
+  <!-- ▼ SEMANA 2: números atualizados via applyWeeks() -->
+  <!-- <div class="week-card">
+    <div class="week-lbl">Semana 2</div>
+    <div class="week-dates" id="week2-dates">08 a 14/06</div>
+    <div class="week-num" id="week2-num" style="color:var(--blue-l)">94</div>
+    <div class="week-range" style="color:var(--muted)">intervalo:
+      <span style="color:#f87171" id="week2-min">78</span> —
+      <span style="color:#34d399" id="week2-max">111</span>
+    </div>
+    <div class="week-avg" id="week2-avg">~17,2/dia útil · retorno forte</div>
+    <div class="week-tags" id="week2-tags">
+      <span class="wtag ok" id="week2-tag-0">↩ Retorno pós-4 dias de feriado</span>
+      <span class="wtag copa" id="week2-tag-1">⚽ Copa abre 11/06 (16h)</span>
+      <span class="wtag copa" id="week2-tag-2">⚽ BR × Marrocos 13/06 (19h)</span>
+    </div>
+  </div> --> 
+
+  <!-- ▼ SEMANA 3: números atualizados via applyWeeks() -->
+  <!-- <div class="week-card">
+    <div class="week-lbl">Semana 3</div>
+    <div class="week-dates" id="week3-dates">15 a 21/06</div>
+    <div class="week-num" id="week3-num" style="color:var(--blue-l)">93</div>
+    <div class="week-range" style="color:var(--muted)">intervalo:
+      <span style="color:#f87171" id="week3-min">77</span> —
+      <span style="color:#34d399" id="week3-max">109</span>
+    </div>
+    <div class="week-avg" id="week3-avg">~17,6/dia útil · semana cheia</div>
+    <div class="week-tags" id="week3-tags">
+      <span class="wtag ok" id="week3-tag-0">Semana completa de trabalho</span>
+      <span class="wtag copa" id="week3-tag-1">⚽ BR × Haiti 19/06 (21h30)</span>
+      <span class="wtag hot" id="week3-tag-2">🎯 Deadline Bolão 2 · 19/06</span>
+    </div>
+  </div>-->
+
+  <!-- ▼ SEMANA 4: números atualizados via applyWeeks() -->
+  <!-- <div class="week-card">
+    <div class="week-lbl">Semana 4</div>
+    <div class="week-dates" id="week4-dates">22 a 30/06</div>
+    <div class="week-num" id="week4-num" style="color:var(--amber)">136</div>
+    <div class="week-range" style="color:var(--muted)">intervalo:
+      <span style="color:#f87171" id="week4-min">109</span> —
+      <span style="color:#34d399" id="week4-max">160</span>
+    </div>
+    <div class="week-avg" id="week4-avg">~18,7/dia útil · sprint final!</div>
+    <div class="week-tags" id="week4-tags">
+      <span class="wtag copa" id="week4-tag-0">⚽ BR × Escócia 24/06 (19h)</span>
+      <span class="wtag hot" id="week4-tag-1">🏁 Fechamento CONSOLIGA</span>
+      <span class="wtag hot" id="week4-tag-2">📈 29–30/06: pico do mês</span>
+    </div>
+  </div>
+
+</div> -->
+
+<!-- DAILY TABLE -->
+<div class="sec-title fade-in d3">tabela diária — mínimo · central · máximo</div>
+<!-- ▼ TABELA: regenerada automaticamente via renderTable() quando dias[] é atualizado -->
+<div class="tbl-box fade-in d3">
+  <button class="tbl-toggle" onclick="toggleTable()">
+    <span>▶ Ver / ocultar tabela completa dos 30 dias com margens</span>
+    <span class="arr" id="tbl-arr">▼</span>
+  </button>
+  <div class="tbl-content" id="tbl-body">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th><th>Dia</th>
+          <th class="th-range" colspan="3">Mín — Central — Máx</th>
+          <th class="th-range">Realizado</th>
+          <th style="width:110px">Barra (central)</th>
+          <th>Tipo</th><th>Observação</th>
+        </tr>
+      </thead>
+      <tbody id="tbl-rows"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TEAMS -->
+<div class="sec-title fade-in d4" id="sec-title-teams">desempenho por time — maio real vs junho real</div>
+<div class="teams-grid fade-in d4" id="teams-grid"></div>
+
+<!-- BOTTLENECKS -->
+<div class="sec-title fade-in d5">gargalos e dias críticos</div>
+<!-- ▼ PLACEHOLDER: cards gerados automaticamente via applyGargalos() a partir de gargalos[] no JSON -->
+<div class="risk-grid fade-in d5" id="risk-grid">
+  <div class="risk-card risk" id="risk-card-0">
+    <div class="risk-date" id="risk-date-0">05/06 (Sex) — HOJE</div>
+    <div class="risk-title" id="risk-title-0">Ponto Facultativo Oficial</div>
+    <div class="risk-desc" id="risk-desc-0">Portaria MGI nº 11.460/2025. Clientes e leads também fora. Margem ampla: pessimista 3 — central 5 — otimista 7. Feriadão 4 dias comprime toda a semana 1.</div>
+    <div class="risk-pill" id="risk-pill-0">📉 Previsão: 3 — 5 — 7 vendas</div>
+  </div>
+  <div class="risk-card warn" id="risk-card-1">
+    <div class="risk-date" id="risk-date-1">11–12/06 (Qui–Sex)</div>
+    <div class="risk-title" id="risk-title-1">Copa começa + Dia dos Namorados</div>
+    <div class="risk-desc" id="risk-desc-1">Copa abre na quinta (16h). Véspera do Brasil na sexta reduz engajamento de tarde. Ambos os dias com margem ±22% pela incerteza do evento.</div>
+    <div class="risk-pill" id="risk-pill-1">⚠️ Previsão: 12–20 (Qui) · 14–18 (Sex)</div>
+  </div>
+  <div class="risk-card info" id="risk-card-2">
+    <div class="risk-date" id="risk-date-2">13/06 (Sáb) — 1º Jogo Brasil</div>
+    <div class="risk-title" id="risk-title-2">BR × Marrocos 19h</div>
+    <div class="risk-desc" id="risk-desc-2">Sábado de Copa: mais incerto que sábado comum. Margem ampla ±22%. Pode surpreender para cima se empolgação + Bolão motivarem vendas até o início da tarde.</div>
+    <div class="risk-pill" id="risk-pill-2">⚽ Previsão: 5 — 6 — 7 vendas</div>
+  </div>
+  <div class="risk-card warn" id="risk-card-3">
+    <div class="risk-date" id="risk-date-3">24/06 (Qua) — Jogo 3 do Brasil</div>
+    <div class="risk-title" id="risk-title-3">BR × Escócia 19h + São João</div>
+    <div class="risk-desc" id="risk-desc-3">Jogo às 19h pode encerrar o dia antes. São João tem impacto no NE. Margem copa ±22% gera intervalo 12–18. Quarta é historicamente forte, mas evento pressiona para baixo.</div>
+    <div class="risk-pill" id="risk-pill-3">⚽ Previsão: 12 — 15 — 18 vendas</div>
+  </div>
+  <div class="risk-card oppt" id="risk-card-4">
+    <div class="risk-date" id="risk-date-4">08/06 (Seg) — Retorno pós-feriado</div>
+    <div class="risk-title" id="risk-title-4">Retorno + urgência Bolão 1</div>
+    <div class="risk-desc" id="risk-desc-4">Após 4 dias fora, leads acumuladas reiniciam. Urgência de 5 vendas antes de 13/06. Margem otimista chega a 20 — se o time arrancar forte, pode compensar semana 1.</div>
+    <div class="risk-pill" id="risk-pill-4">📈 Previsão: 14 — 17 — 20 vendas</div>
+  </div>
+  <div class="risk-card oppt" id="risk-card-5">
+    <div class="risk-date" id="risk-date-5">29–30/06 — Sprint Final</div>
+    <div class="risk-title" id="risk-title-5">Fechamento CONSOLIGA Mês 2</div>
+    <div class="risk-desc" id="risk-desc-5">Maior janela de incerteza do mês (±28%), mas para cima! Cenário otimista: 26+36=62 vendas. Cenário pessimista: 14+20=34. Brasil nas oitavas no dia 29 pode elevar euforia e vendas.</div>
+    <div class="risk-pill" id="risk-pill-5">🚀 Previsão: 34–62 nos dois dias</div>
+  </div>
+</div>
+
+<!-- COPA - Não tem mais bolão-->
+<!-- <div class="sec-title fade-in d5">copa do mundo 2026 — bolão consolide</div> -->
+<!-- ▼ PLACEHOLDER: cards gerados automaticamente via applyBolao() a partir de bolao[] no JSON -->
+<!-- <div class="copa-grid fade-in d5" id="copa-grid">
+  <div class="copa-card" id="copa-card-0">
+    <div class="copa-num" id="copa-num-0">BOLÃO 1 · FASE DE GRUPOS</div>
+    <div class="copa-match" id="copa-match-0">🇧🇷 BR × MAR 🇲🇦</div>
+    <div class="copa-dt" id="copa-dt-0">13/06/2026 (Sáb) · 19h · Houston</div>
+    <div class="copa-row"><span class="copa-row-lbl">Período válido</span><span class="copa-row-val" id="copa-periodo-0">01–13/06</span></div>
+    <div class="copa-row"><span class="copa-row-lbl">1 aposta a cada</span><span class="copa-row-val" id="copa-threshold-0">5 vendas</span></div>
+    <div class="copa-row"><span class="copa-row-lbl" id="copa-extra-lbl-0">Status da equipe</span><span class="copa-row-val" id="copa-extra-val-0" style="color:var(--green)">62+ vendas ✓</span></div>
+    <div class="copa-tip" id="copa-tip-0">Bruno (6), Tiago (5) e Stella (6) já cruzaram o 1º threshold. Vendedores com urgência de acumular mais apostas antes de sábado.</div>
+  </div>
+  <div class="copa-card" id="copa-card-1">
+    <div class="copa-num" id="copa-num-1">BOLÃO 2 · FASE DE GRUPOS</div>
+    <div class="copa-match" id="copa-match-1">🇧🇷 BR × HAI 🇭🇹</div>
+    <div class="copa-dt" id="copa-dt-1">19/06/2026 (Sex) · 21h30</div>
+    <div class="copa-row"><span class="copa-row-lbl">Período válido</span><span class="copa-row-val" id="copa-periodo-1">14–19/06 (até 20h)</span></div>
+    <div class="copa-row"><span class="copa-row-lbl">1 aposta a cada</span><span class="copa-row-val" id="copa-threshold-1">5 vendas</span></div>
+    <div class="copa-row"><span class="copa-row-lbl" id="copa-extra-lbl-1">Dias úteis disponíveis</span><span class="copa-row-val" id="copa-extra-val-1">5 dias</span></div>
+    <div class="copa-tip" id="copa-tip-1">Deadline às 20h do dia do jogo cria urgência na sexta. Projeção central de ~88 vendas no período → ~17 apostas coletivas possíveis.</div>
+  </div>
+  <div class="copa-card" id="copa-card-2">
+    <div class="copa-num" id="copa-num-2">BOLÃO 3 · FASE DE GRUPOS</div>
+    <div class="copa-match" id="copa-match-2">🇧🇷 BR × ESC 🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+    <div class="copa-dt" id="copa-dt-2">24/06/2026 (Qua) · 19h</div>
+    <div class="copa-row"><span class="copa-row-lbl">Período válido</span><span class="copa-row-val" id="copa-periodo-2">20–24/06</span></div>
+    <div class="copa-row"><span class="copa-row-lbl">1 aposta a cada</span><span class="copa-row-val" id="copa-threshold-2">5 vendas</span></div>
+    <div class="copa-row"><span class="copa-row-lbl" id="copa-extra-lbl-2">Dias úteis disponíveis</span><span class="copa-row-val" id="copa-extra-val-2">3 dias (⚠️ curto!)</span></div>
+    <div class="copa-tip" id="copa-tip-2">Janela mais curta: só 22, 23 e 24/06. Apenas 3 dias para atingir 5 vendas por aposta. Alta pressão especialmente na segunda e terça.</div>
+  </div>
+</div> -->
+
+<!-- STRATEGIES -->
+<!-- ▼ SUGESTÕES: títulos e descrições atualizados via applySugestoes() -->
+<div class="sec-title fade-in d6" id="sec-title-sugestoes">sugestões estratégicas para junho</div>
+<div class="strat-grid fade-in d6">
+
+  <div class="strat-card">
+    <div class="strat-n">01</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 1 -->
+    <div class="strat-title" id="strat-title-01">🔁 Compensar a Semana 1 na Semana 2</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 1 (aceita <strong> e <em>) -->
+    <div class="strat-desc" id="strat-desc-01">Os feriados de 04 e 05/06 deixaram a semana 1 com ~67 vendas (vs potencial de ~75 no cenário otimista). <strong>Segunda 08/06 é o dia mais crítico do mês</strong>: retorno com follow-ups prontos + urgência Bolão 1. Sugestão: kick-off de manhã com meta de 20 vendas no dia para ativar o time.</div>
+    <!-- ▼ PLACEHOLDER: tags da sugestão 1 (array de strings) -->
+    <div class="strat-tags" id="strat-tags-01"><span class="stag">08/06</span><span class="stag">retorno</span><span class="stag">follow-up</span></div>
+  </div>
+
+  <div class="strat-card">
+    <div class="strat-n">02</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 2 -->
+    <div class="strat-title" id="strat-title-02">🏆 Usar as Deadlines do Bolão como Sprints</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 2 -->
+    <div class="strat-desc" id="strat-desc-02">Cada Bolão cria um mini-sprint natural (13/06, 19/06, 24/06). <strong>Publique ranking de apostas acumuladas antes de cada jogo</strong> para aumentar a competição interna. O Bolão 3 é o mais difícil (3 dias) — crie alerta especial para que ninguém perca o threshold de 5 vendas nos dias 22–24/06.</div>
+    <div class="strat-tags" id="strat-tags-02"><span class="stag">copa</span><span class="stag">gamificação</span><span class="stag">bolão</span></div>
+  </div>
+
+  <div class="strat-card">
+    <div class="strat-n">03</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 3 -->
+    <div class="strat-title" id="strat-title-03">⚠️ Reativar Vendedores Zerados (Dias 1–4)</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 3 -->
+    <div class="strat-desc" id="strat-desc-03">Guilherme Lopes (18/maio), Josilea (16), Adriérre (14), Iara (14) e Lana (8) estão com <strong>0 vendas nos primeiros dias</strong>. Check-in individual até 09/06. Ver leads em "sem 1º contato" na base de cada um — a taxa de atendimento de alguns está abaixo de 50%.</div>
+    <div class="strat-tags" id="strat-tags-03"><span class="stag">pipeline</span><span class="stag">lisdaisy</span><span class="stag">stella</span></div>
+  </div>
+
+  <div class="strat-card">
+    <div class="strat-n">04</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 4 -->
+    <div class="strat-title" id="strat-title-04">🚀 Sprint 29–30/06: Maior Margem do Mês</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 4 -->
+    <div class="strat-desc" id="strat-desc-04">A semana 4 tem a maior incerteza (±28%) mas também o <strong>maior teto otimista (26+36 = 62 vendas em 2 dias)</strong>. Para maximizar: publique ranking CONSOLIGA em 22/06 para acirrar disputa; crie meta de equipe para o dia 30; Brasil nas oitavas no dia 29 pode alavancar euforia e performance.</div>
+    <div class="strat-tags" id="strat-tags-04"><span class="stag">consoliga</span><span class="stag">29-30/06</span><span class="stag">classificação</span></div>
+  </div>
+
+  <div class="strat-card">
+    <div class="strat-n">05</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 5 -->
+    <div class="strat-title" id="strat-title-05">📊 Reduzir Tempo de 1º Contato</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 5 -->
+    <div class="strat-desc" id="strat-desc-05">Com pipeline de 5.118 leads e 7,17% de conversão MQL→Ganho, existe potencial de ~367 fechamentos do pipe atual. <strong>Reduzir o tempo médio de 1º contato de 4h30 para menos de 2h</strong> pode elevar a conversão em 15–20%, empurrando o resultado para o cenário otimista de 455 vendas.</div>
+    <div class="strat-tags" id="strat-tags-05"><span class="stag">pipeline</span><span class="stag">1º contato</span><span class="stag">conversão</span></div>
+  </div>
+
+  <div class="strat-card">
+    <div class="strat-n">06</div>
+    <!-- ▼ PLACEHOLDER: título da sugestão 6 -->
+    <div class="strat-title" id="strat-title-06">📅 Proteger Manhãs nos Dias de Copa</div>
+    <!-- ▼ PLACEHOLDER: descrição da sugestão 6 -->
+    <div class="strat-desc" id="strat-desc-06">65–67% dos movimentos ocorrem de manhã. Nos dias de Copa (11, 13, 19, 24/06) e oitavas (prov. 29/06), <strong>concentrar todas as ligações e pitchs antes das 13h</strong>. Isso protege a meta mesmo que a tarde seja impactada pelo evento.</div>
+    <div class="strat-tags" id="strat-tags-06"><span class="stag">gestão de tempo</span><span class="stag">produtividade</span><span class="stag">dias copa</span></div>
+  </div>
+
+</div>
+
+<div class="footer" id="footer-txt">
+  <!-- ▼ PLACEHOLDER: linhas do rodapé atualizadas via applyMeta() -->
+  <span id="footer-linha1">Consolide · Forecast Junho 2026 com Intervalo de Confiança · Gerado em 05/06/2026</span><br>
+  <span id="footer-linha2">Método: Pipeline Ponderado + Rolling WMA (peso 2 últimos 6m) + Cohort por Time · Margens: CV histórico por tipo de dia (±15% úteis · ±22% Copa · ±28% sprint · ±30% FDS)</span><br>
+  <span id="footer-linha3">Cenário pessimista: ~325 · Central: ~390 · Cenário otimista: ~455</span>
+</div>
+
+</div><!-- /wrap -->
+
+<?!= include('js') ?>
+</body>
+</html>

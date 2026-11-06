@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "previa-forecast",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/servir-previa.js", "previa-local", "8765"],
+      "port": 8765
+    }
+  ]
+}

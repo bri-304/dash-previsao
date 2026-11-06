@@ -1,0 +1,972 @@
+<script>
+// ── CONFIGURAÇÕES DE ESTILO ──────────────────────────────────────────────────
+const typeColor = {
+  real:    '#22c55e',
+  partial: '#f59e0b',
+  work:    '#3b82f6',
+  weekend: 'rgba(100,116,139,0.3)',
+  holiday: '#ef4444',
+  copa:    '#818cf8',
+  sprint:  '#f97316'
+};
+// Cores semitransparentes para as barras de PREVISÃO (fundo largo)
+const typeColorFg = {
+  real:    'rgba(34,197,94,0.32)',
+  partial: 'rgba(245,158,11,0.32)',
+  work:    'rgba(59,130,246,0.32)',
+  weekend: 'rgba(100,116,139,0.18)',
+  holiday: 'rgba(239,68,68,0.32)',
+  copa:    'rgba(129,140,248,0.32)',
+  sprint:  'rgba(249,115,22,0.32)'
+};
+// Bordas para as barras de PREVISÃO
+const typeColorBd = {
+  real:    'rgba(34,197,94,0.65)',
+  partial: 'rgba(245,158,11,0.65)',
+  work:    'rgba(59,130,246,0.65)',
+  weekend: 'rgba(100,116,139,0.35)',
+  holiday: 'rgba(239,68,68,0.65)',
+  copa:    'rgba(129,140,248,0.65)',
+  sprint:  'rgba(249,115,22,0.65)'
+};
+const typePill = {
+  real:'pill-real', partial:'pill-part', work:'pill-fore',
+  weekend:'pill-wknd', holiday:'pill-hol', copa:'pill-copa', sprint:'pill-spr'
+};
+const typeTxt = {
+  real:'REAL', partial:'PARCIAL', work:'PREV.',
+  weekend:'FDS', holiday:'FERIADO', copa:'COPA', sprint:'SPRINT'
+};
+
+// ── UTILITÁRIOS ──────────────────────────────────────────────────────────────
+function setText(id, val) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = val;
+}
+function setHtml(id, html) {
+  const el = document.getElementById(id);
+  if (el) el.innerHTML = html;
+}
+function counter(id, target, dur = 1200) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  let s = 0, step = target / 60;
+  const iv = setInterval(() => {
+    s = Math.min(s + step, target);
+    el.textContent = Math.round(s);
+    if (s >= target) clearInterval(iv);
+  }, dur / 60);
+}
+
+// ── APLICAR META (KPIs e cabeçalho) ─────────────────────────────────────────
+function applyMeta(meta) {
+  // Título da página e cabeçalho
+  if (meta.page_title)      { document.title = meta.page_title; setText('page-title', meta.page_title); }
+  if (meta.hdr_title_html)  setHtml('hdr-title', meta.hdr_title_html);
+  ['consoliga', 'copa'].forEach(n => {
+    const el = document.getElementById('badge-' + n);
+    if (!el) return;
+    el.textContent = meta['badge_' + n] || '';
+    el.hidden = !meta['badge_' + n];
+  });
+
+  // Cabeçalho
+  setText('hdr-sub',
+    `Atualizado em ${meta.atualizado_em} · ${meta.status_dias}`);
+
+  // KPI 1 — Total previsto
+  setText('kpi-total-pess',  meta.kpi_total_pess);
+  setText('kpi-total-otim',  meta.kpi_total_otim);
+  setText('kpi-total-delta', meta.kpi_total_delta);
+  if (meta.kpi_total_sub)  setText('kpi-total-sub', meta.kpi_total_sub);
+
+  // KPI 2 — Média/dia útil
+  setText('kpi-media-val',   meta.kpi_media_central);
+  setText('kpi-media-min',   meta.kpi_media_min);
+  setText('kpi-media-max',   meta.kpi_media_max);
+  if (meta.kpi_media_delta) setText('kpi-media-delta', meta.kpi_media_delta);
+
+  // KPI 3 — Realizado
+  setText('kpi-realizado-sub',   meta.kpi_realizado_sub);
+  setText('kpi-realizado-delta', meta.kpi_realizado_delta);
+
+  // KPI 4 — vs Junho 2025
+  if (meta.kpi_yoy_lbl)  setText('kpi-yoy-lbl',  meta.kpi_yoy_lbl);
+  setText('kpi-yoy-pct',  meta.kpi_yoy_pct);
+  setText('kpi-yoy-pess', meta.kpi_yoy_pess);
+  setText('kpi-yoy-otim', meta.kpi_yoy_otim);
+  setText('kpi-yoy-sub',  meta.kpi_yoy_sub);
+  const yoyDelta = document.getElementById('kpi-yoy-delta');
+  yoyDelta.textContent = meta.kpi_yoy_delta || '';
+  yoyDelta.hidden = !meta.kpi_yoy_delta;
+  yoyDelta.classList.toggle('dn', String(meta.kpi_yoy_delta || '').charAt(0) === '▼');
+  yoyDelta.classList.toggle('up', String(meta.kpi_yoy_delta || '').charAt(0) !== '▼');
+
+  // KPI 5 — Vendedores ativos
+  setText('kpi-ativos',         meta.kpi_ativos);
+  setText('kpi-ativos-sub',     meta.kpi_ativos_sub);
+  setText('kpi-inativos-delta', meta.kpi_inativos_delta);
+  document.getElementById('kpi-inativos-delta').hidden = !meta.kpi_inativos_delta;
+
+  // Títulos de seção e gráfico
+  if (meta.sec_title_previsao)  setText('sec-title-previsao',  meta.sec_title_previsao);
+  if (meta.chart_title_main)    setText('chart-title-main',    meta.chart_title_main);
+  if (meta.sec_title_teams)     setText('sec-title-teams',     meta.sec_title_teams);
+  if (meta.sec_title_sugestoes) setText('sec-title-sugestoes', meta.sec_title_sugestoes);
+
+  // Footer — linhas individuais
+  if (meta.footer_linha1) setText('footer-linha1', meta.footer_linha1);
+  if (meta.footer_linha2) setText('footer-linha2', meta.footer_linha2);
+  if (meta.footer_linha3) setText('footer-linha3', meta.footer_linha3);
+
+  // Contadores animados (após pequeno delay para DOM estar pronto)
+  setTimeout(() => {
+    counter('kpi1', meta.kpi_total_central);
+    counter('kpi3', meta.kpi_realizado);
+  }, 400);
+}
+
+// ── APLICAR SEMANAS ───────────────────────────────────────────────────────────
+function weekCardHtml(s, n) {
+  const tagsHtml = (s.tags || []).map((t, ti) =>
+    `<span class="wtag ${t.cls}" id="week${n}-tag-${ti}">${t.txt}</span>`
+  ).join('');
+  return `
+    <div class="week-card">
+      <div class="week-lbl">Semana ${n}</div>
+      <div class="week-dates" id="week${n}-dates">${s.dates || ''}</div>
+      <div class="week-num" id="week${n}-num" style="color:${s.color || 'var(--blue-l)'}">${s.central}</div>
+      <div class="week-range" style="color:var(--muted)">intervalo:
+        <span style="color:#f87171" id="week${n}-min">${s.min}</span> —
+        <span style="color:#34d399" id="week${n}-max">${s.max}</span>
+      </div>
+      <div class="week-avg" id="week${n}-avg">${s.avg_txt}</div>
+      <div class="week-tags" id="week${n}-tags">${tagsHtml}</div>
+    </div>`;
+}
+
+function applyWeeks(semanas) {
+  const grid = document.getElementById('week-grid');
+  if (!grid) return;
+  grid.innerHTML = semanas.map((s, i) => weekCardHtml(s, i + 1)).join('');
+}
+
+// ── APLICAR SUGESTÕES ESTRATÉGICAS ───────────────────────────────────────────
+function applySugestoes(sugestoes) {
+  sugestoes.forEach(s => {
+    setText(`strat-title-${s.n}`, s.titulo);
+    setHtml(`strat-desc-${s.n}`,  s.descricao_html);
+    // Regenera as tags
+    const tagsEl = document.getElementById(`strat-tags-${s.n}`);
+    if (tagsEl && s.tags) {
+      tagsEl.innerHTML = s.tags.map(t => `<span class="stag">${t}</span>`).join('');
+    }
+  });
+}
+
+// ── APLICAR METODOLOGIA (caixas de intervalo de confiança) ───────────────────
+// Atualiza method-tipo-N / method-val-N / method-desc-N (N = 0..3)
+//  function applyMetodos(metodos) {
+  // if (!metodos) return;
+  // metodos.forEach((m, i) => {
+    // setText(`method-tipo-${i}`, m.tipo);
+    // setText(`method-val-${i}`,  m.val);
+    // setText(`method-desc-${i}`, m.desc);
+  // });
+// }
+
+// ── APLICAR GARGALOS (cards de risco/oportunidade) ───────────────────────────
+// Regenera o innerHTML de #risk-grid a partir do array gargalos[], mantendo
+// ids individuais (risk-card-N, risk-date-N, risk-title-N, risk-desc-N, risk-pill-N)
+function applyGargalos(gargalos) {
+  const grid = document.getElementById('risk-grid');
+  if (!grid || !gargalos) return;
+  grid.innerHTML = gargalos.map((g, i) => `
+    <div class="risk-card ${g.tipo}" id="risk-card-${i}">
+      <div class="risk-date" id="risk-date-${i}">${g.data}</div>
+      <div class="risk-title" id="risk-title-${i}">${g.titulo}</div>
+      <div class="risk-desc" id="risk-desc-${i}">${g.desc}</div>
+      <div class="risk-pill" id="risk-pill-${i}">${g.pill}</div>
+    </div>`).join('');
+}
+
+
+
+// ── RENDERIZAR GRÁFICO DE BARRAS ─────────────────────────────────────────────
+// ⬇ O gráfico é reconstruído a partir do array dias[] — atualiza automaticamente!
+let chartInstance = null;
+
+// function renderChart(dias) { //antigo
+//ajustado abaixo para novo modo de calculo do valor acumulado
+function renderChart(dias, meta) {
+  // Previsão central: todos os dias (barras largas por trás)
+  const forecastVals = dias.map(d => d[2]);
+
+  // Realizado: usa índice 7 do array (campo opcional do JSON),
+  // senão infere pelo tipo. null para dias ainda não confirmados.
+  const realizadoVals = dias.map(d => {
+    // trata "", null e undefined como "sem dado ainda" (evita concatenação de string no acumulado)
+    if (d.length > 7 && d[7] !== null && d[7] !== undefined && d[7] !== '' && !Number.isNaN(Number(d[7]))) {
+      return Number(d[7]);
+    }
+    if (d[5] === 'real') return d[2];
+    return null;
+  });
+
+  const minVals  = dias.map(d => d[3]);
+  const maxVals  = dias.map(d => d[4]);
+
+  // const cumulBase = dias.map((d, i) => realizadoVals[i] != null ? realizadoVals[i] : forecastVals[i]);
+  // const cumul     = cumulBase.reduce((a, v, i) => { a.push((a[i-1]||0)+v); return a; }, []);
+
+  // Acumulado: realizado onde confirmado; 0 em dias passados/hoje sem venda; previsão só para dias futuros (atualizado)
+  // Até o dia atual soma as vendas realizadas, considerando dias onde não houve venda como 0, e dias no futuro soma o realizado  + previsto
+  const [ddHoje] = (meta?.atualizado_em || '').split(' ')[0].split('/');
+  const diaHoje = Number(ddHoje) || 0;
+
+  const cumulBase = dias.map((d, i) => {
+    if (realizadoVals[i] != null) return realizadoVals[i]; // dia confirmado
+    if (d[0] <= diaHoje) return 0;                          // hoje ou passado sem venda → não projeta
+    return forecastVals[i];                                 // dia futuro → usa previsão
+  });
+  const cumul = cumulBase.reduce((a, v, i) => { a.push((a[i-1]||0)+v); return a; }, []);
+  
+  // Ritmo da meta: meta do mês ÷ dias úteis, só nos dias úteis. Sem meta (ou mês salvo antes do campo), a linha some.
+  const ritmo        = meta?.ritmo_meta || null;
+  const diasUteis    = new Set(ritmo ? ritmo.dias_uteis : []);
+  const ritmoTxt     = ritmo ? String(ritmo.por_dia).replace('.', ',') : '';
+  const refLine      = dias.map(d => diasUteis.has(d[0]) ? ritmo.por_dia : null);
+  // Pelo pipeline (em teste): só no mês atual, de amanhã até o fim do mês
+  const pipeDia = {};
+  if (PIPE_DADOS && periodoAtivo === 'atual') {
+    PIPE_DADOS.dias.forEach(p => { pipeDia[p.dia] = p; });
+    // Hoje: o que já foi vendido + o que ainda deve entrar até o fim do dia
+    const resto = PIPE_DADOS.hoje_restante, diaPipe = Number(String(PIPE_DADOS.hoje).slice(8));
+    const linhaHoje = dias.find(d => d[0] === diaPipe);
+    if (resto && linhaHoje && diaPipe === diaHoje) {
+      const vendido = Number(linhaHoje[7]) || 0;
+      pipeDia[diaPipe] = { hoje: true, vendido, restante: resto.total, total: vendido + resto.total };
+    }
+  }
+  const pipeVals = dias.map(d => pipeDia[d[0]] ? Math.round(pipeDia[d[0]].total) : null);
+  // Mês da dica: o mês escolhido no seletor, ou o da leitura no mês atual
+  const mesDica      = periodoAtivo !== 'atual' ? periodoAtivo.slice(5, 7) : ((meta?.atualizado_em || '').split(' ')[0].split('/')[1] || '');
+  const forecastBg   = dias.map(d => typeColorFg[d[5]]);
+  const forecastBd   = dias.map(d => typeColorBd[d[5]]);
+  const realizadoBg  = dias.map(d => d[5] === 'partial' ? '#f59e0b' : '#22c55e');
+
+  // Destrói gráfico anterior se existir (necessário ao recarregar dados)
+  if (chartInstance) {
+    chartInstance.destroy();
+    chartInstance = null;
+  }
+
+  const ctx = document.getElementById('mainChart').getContext('2d');
+  chartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: dias.map(d => `${d[0]}\n${d[1]}`),
+      datasets: [
+        // 0 — Mínimo (line, preenche até Máximo = faixa de confiança)
+        {
+          type:'line', label:'Mínimo',
+          data: minVals,
+          fill:'+1',
+          backgroundColor:'rgba(59,130,246,0.10)',
+          borderColor:'rgba(100,160,255,0.35)',
+          borderWidth:1, borderDash:[3,3],
+          pointRadius:0, tension:0.4,
+          yAxisID:'y', order:5
+        },
+        // 1 — Máximo (line, topo da faixa)
+        {
+          type:'line', label:'Máximo',
+          data: maxVals,
+          fill:false,
+          borderColor:'rgba(100,160,255,0.35)',
+          borderWidth:1, borderDash:[3,3],
+          pointRadius:0, tension:0.4,
+          yAxisID:'y', order:5
+        },
+        // 2 — PREVISÃO: barra LARGA e semitransparente por trás
+        //     grouped:false → não agrupa com outro dataset bar, permitindo sobreposição
+        {
+          type:'bar', label:'Previsão',
+          data: forecastVals,
+          backgroundColor: forecastBg,
+          borderColor: forecastBd,
+          borderWidth: 1,
+          borderRadius:4, borderSkipped:false,
+          grouped: false,
+          barPercentage: 0.85,
+          categoryPercentage: 0.75,
+          yAxisID:'y', order:3
+        },
+        // 3 — REALIZADO: barra ESTREITA e sólida na frente (null para dias futuros)
+        {
+          type:'bar', label:'Realizado',
+          data: realizadoVals,
+          backgroundColor: realizadoBg,
+          borderRadius:4, borderSkipped:false,
+          grouped: false,
+          barPercentage: 0.40,
+          categoryPercentage: 0.75,
+          yAxisID:'y', order:2
+        },
+        // 4 — Acumulado (eixo direito)
+        {
+          type:'line', label:'Acumulado',
+          data: cumul,
+          borderColor:'rgba(248,168,56,0.75)',
+          backgroundColor:'rgba(248,168,56,0.05)',
+          fill:true, borderWidth:2, pointRadius:0,
+          yAxisID:'y2', order:1, tension:0.3
+        },
+        // 5 — Ritmo alvo (linha de referência)
+        {
+          type:'line', label: ritmo ? `Ritmo da meta (${ritmoTxt})` : 'Ritmo da meta',
+          data: refLine,
+          borderColor:'rgba(255,255,255,0.16)',
+          borderWidth:1.5, borderDash:[5,4],
+          pointRadius:0, fill:false,
+          yAxisID:'y', order:4, spanGaps:true
+        },
+        // 6 — Pelo pipeline (em teste)
+        {
+          type:'line', label:'Pelo pipeline',
+          data: pipeVals,
+          borderColor:'#22d3ee', backgroundColor:'#22d3ee',
+          borderWidth:2, pointRadius:3, pointHoverRadius:5,
+          fill:false, tension:0.3, yAxisID:'y', order:0
+        }
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      interaction:{ mode:'index', intersect:false },
+      plugins:{
+        legend:{ display:false },
+        tooltip:{
+          backgroundColor:'rgba(9,18,37,0.97)',
+          borderColor:'rgba(255,255,255,0.1)', borderWidth:1,
+          titleFont:{ family:'JetBrains Mono', size:11 },
+          bodyFont:{ family:'JetBrains Mono', size:11 },
+          filter: item => item.datasetIndex !== 1, // oculta linha Máximo
+          callbacks:{
+            title: ctx => `${dias[ctx[0].dataIndex][0]}${mesDica ? '/' + mesDica : ''} · ${dias[ctx[0].dataIndex][1]}`,
+            label: ctx => {
+              const i = ctx.dataIndex;
+              if (ctx.datasetIndex===0) return ` Intervalo: ${minVals[i]} — ${maxVals[i]}`;
+              if (ctx.datasetIndex===2) return ` Previsão: ${ctx.raw}`;
+              if (ctx.datasetIndex===3 && ctx.raw != null) return ` Realizado: ${ctx.raw}`;
+              if (ctx.datasetIndex===4) return ` Acumulado: ${ctx.raw}`;
+              if (ctx.datasetIndex===5 && ctx.raw) return ` Ritmo da meta: ${ritmoTxt}/dia útil (${ritmo.meta} ÷ ${ritmo.dias_uteis.length} dias úteis)`;
+              if (ctx.datasetIndex===6 && ctx.raw != null) {
+                const p = pipeDia[dias[i][0]];
+                if (p.hoje) { const r = inteiros(p.vendido, p.restante); return ` Pelo pipeline: ${r.total} (vendido ${r.a} + falta ${r.b} até o fim do dia)`; }
+                const r = inteiros(p.pipeline, p.novas);
+                return ` Pelo pipeline: ${r.total} (abertas ${r.a} + novas ${r.b})`;
+              }
+              return null;
+            },
+            afterLabel: ctx => {
+              if (ctx.datasetIndex===2) {
+                const ev = dias[ctx.dataIndex][6];
+                return ev ? ` ${ev}` : null;
+              }
+              return null;
+            }
+          }
+        }
+      },
+      scales:{
+        x:{
+          grid:{ color:'rgba(255,255,255,0.04)' },
+          ticks:{ font:{ family:'JetBrains Mono', size:9 }, color:'rgba(126,155,190,0.7)', maxRotation:0 }
+        },
+        y:{
+          position:'left',
+          grid:{ color:'rgba(255,255,255,0.05)' },
+          ticks:{ font:{ family:'JetBrains Mono', size:10 }, color:'rgba(126,155,190,0.7)' },
+          title:{ display:true, text:'vendas/dia', font:{ family:'JetBrains Mono', size:9 }, color:'rgba(126,155,190,0.4)' }
+        },
+        y2:{
+          position:'right',
+          grid:{ drawOnChartArea:false },
+          ticks:{ font:{ family:'JetBrains Mono', size:10 }, color:'rgba(248,168,56,0.5)' },
+          title:{ display:true, text:'acumulado', font:{ family:'JetBrains Mono', size:9 }, color:'rgba(248,168,56,0.35)' }
+        }
+      },
+      animation:{ duration:1000, easing:'easeOutQuart' }
+    }
+  });
+}
+
+// ── RENDERIZAR TABELA DIÁRIA ─────────────────────────────────────────────────
+function renderTable(dias) {
+  const tbody = document.getElementById('tbl-rows');
+  tbody.innerHTML = '';
+  const maxV = Math.max(...dias.map(d => d[2]));
+
+  dias.forEach((d) => {
+    const [num, dow, val, lo, hi, type, event] = d;
+
+    // Realizado: usa d[7] se o ETL preencheu; senão infere pelo tipo
+    // (mesma lógica do renderChart — ambos ficam sincronizados)
+    let realizado = null;
+    if (d.length > 7 && d[7] !== null && d[7] !== undefined && d[7] !== '' && !Number.isNaN(Number(d[7]))) {
+      realizado = Number(d[7]);
+    }
+    else if (type === 'real') realizado = val;
+
+    const pctPrev = (val / maxV * 100).toFixed(0);
+    const col  = typeColor[type];
+
+    const loTxt = (lo === val)
+      ? `<span style="color:var(--muted);font-size:10px">—</span>`
+      : `<span class="r-lo">${lo}</span>`;
+    const hiTxt = (hi === val)
+      ? `<span style="color:var(--muted);font-size:10px">—</span>`
+      : `<span class="r-hi">${hi}</span>`;
+
+    // Coluna realizado: verde (confirmado), âmbar (parcial), — (futuro)
+    let realTxt;
+    let realCol = null;
+    if (realizado != null) {
+      realCol = type === 'partial' ? '#f59e0b' : '#22c55e';
+      realTxt = `<span class="r-c" style="color:${realCol}">${realizado}</span>`;
+    } else {
+      realTxt = `<span style="color:var(--muted);font-size:10px">—</span>`;
+    }
+
+    const pctReal = realizado != null ? (realizado / maxV * 100).toFixed(0) : 0;
+    const realBarHtml = realizado != null
+      ? `<div class="bar-fill real" style="width:${pctReal}%;background:${realCol}"></div>`
+      : '';
+
+    tbody.innerHTML += `
+      <tr>
+        <td class="td-day">${String(num).padStart(2,'0')}</td>
+        <td class="td-dow">${dow}</td>
+        <td class="td-range" style="text-align:right;min-width:36px">${loTxt}</td>
+        <td class="td-range" style="text-align:center;min-width:50px">
+          <span class="r-c" style="color:${col}">${val}</span>
+        </td>
+        <td class="td-range" style="text-align:left;min-width:36px">${hiTxt}</td>
+        <td class="td-range" style="text-align:center;min-width:50px">${realTxt}</td>
+        <td class="td-bar">
+          <div class="bar-bg">
+            <div class="bar-fill prev" style="width:${pctPrev}%;background:${col}"></div>
+            ${realBarHtml}
+          </div>
+        </td>
+        <td><span class="pill ${typePill[type]}">${typeTxt[type]}</span></td>
+        <td class="td-event">${event || '—'}</td>
+      </tr>`;
+  });
+}
+
+// ── TABELA TOGGLE ─────────────────────────────────────────────────────────────
+function toggleTable() {
+  const b = document.getElementById('tbl-body');
+  const a = document.getElementById('tbl-arr');
+  b.classList.toggle('open');
+  a.style.transform = b.classList.contains('open') ? 'rotate(180deg)' : '';
+}
+
+// ── TIMES: um card por time do objeto; quem forma os times são os dados ─────
+function escHtml(s) {
+  return String(s === null || s === undefined ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+}
+
+// Cor é só apresentação: mantém as cores de sempre e dá a próxima livre para time novo.
+const CORES_TIME = { isr:0, lis:1, stl:2 };
+const PALETA_TIME = [
+  { cor:'var(--blue-l)', hex:'#3b82f6', fundo:'rgba(37,99,235,.1)',   icone:'🔵' },
+  { cor:'var(--gold)',   hex:'#f59e0b', fundo:'rgba(245,158,11,.1)',  icone:'🟡' },
+  { cor:'var(--green)',  hex:'#10b981', fundo:'rgba(16,185,129,.1)',  icone:'🟢' },
+  { cor:'var(--purple)', hex:'#818cf8', fundo:'rgba(129,140,248,.1)', icone:'🟣' },
+  { cor:'var(--amber)',  hex:'#f97316', fundo:'rgba(249,115,22,.1)',  icone:'🟠' },
+  { cor:'var(--red)',    hex:'#ef4444', fundo:'rgba(239,68,68,.1)',   icone:'🔴' },
+];
+
+function vendedorHtml(nome, passado, atual, maximo, tema) {
+  const pctP = (passado / maximo * 100).toFixed(0);
+  const pctA = (atual / maximo * 100).toFixed(0);
+  return `
+    <div class="perf-row" style="align-items:flex-start;gap:6px;margin-bottom:8px">
+      <div class="perf-name" title="${escHtml(nome)}" style="flex:0 0 120px">${escHtml(nome)}</div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:3px">
+        <div style="display:flex;align-items:center;gap:5px">
+          <div class="perf-bar-bg" style="flex:1"><div class="perf-bar" style="width:${pctP}%;background:${tema.hex};opacity:0.3"></div></div>
+          <div class="perf-num" style="min-width:22px;color:var(--muted)">${passado}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:5px">
+          <div class="perf-bar-bg" style="flex:1"><div class="perf-bar" style="width:${pctA}%;background:${tema.hex}"></div></div>
+          <div class="perf-num" style="min-width:22px;color:${tema.hex}">${atual}</div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function cardTimeHtml(chave, t, tema) {
+  const sellers = Array.isArray(t.sellers) ? t.sellers : [];
+  const maximo = Math.max(...sellers.flatMap(s => [s[1], s[2]]), 1);
+  const ordenados = [...sellers].sort((a, b) => b[2] - a[2] || b[1] - a[1]);
+  const valor = `class="tn-val" style="color:${tema.cor}"`;
+  // Meses antigos do histórico podem ter só obs_txt/obs_class no lugar de destaque e atenção
+  const atencao = t.atencao_txt || t.obs_txt || '';
+  const classeAtencao = t.atencao_txt ? 'team-alert' : (t.obs_class || 'team-alert');
+  return `
+  <div class="team-card" data-time="${escHtml(chave)}">
+    <div class="team-hdr" style="background:${tema.fundo}">
+      <div>
+        <div class="team-name" style="color:${tema.cor}">${tema.icone} ${escHtml(t.nome || chave)}</div>
+        <div class="team-ldr">${escHtml(t.ativos)} ativos</div>
+      </div>
+    </div>
+    <div class="team-nums">
+      <div class="tn">
+        <div class="tn-lbl">${escHtml(t.lbl_titulo_comp)}</div>
+        <div style="display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;">
+          <span ${valor}>${escHtml(t.mes_passado)}</span>
+          <span style="font-family:var(--fm); font-size:18px; color:var(--muted);">×</span>
+          <span class="tn-val" style="color:${tema.cor};font-size:24px;">${escHtml(t.mes_atual_total)}</span>
+        </div>
+        <div class="tn-lbl" style="margin-top:4px">referênte aos <span style="font-weight:700">${escHtml(t.dias_confirmados_lbl)}</span></div>
+      </div>
+      <div class="tn" style="border-right:none">
+        <div class="tn-lbl">${escHtml(t.lbl_titulo_mes_passado_prev)}</div>
+        <div ${valor}>~<span>${escHtml(t.prev_atual)}</span></div>
+        <div class="tn-sub" style="font-family:var(--fm);font-size:13px;color:var(--muted);margin-top:2px">${escHtml(t.mes_passado_total)}</div>
+      </div>
+    </div>
+    <div class="perf-list">
+      <div class="perf-lbl" style="display:flex;justify-content:space-between;align-items:center">
+        <span>${escHtml(t.lbl_vendedor)}</span>
+        <span style="display:flex;gap:8px;font-family:var(--fm);font-size:9px;color:var(--muted)">
+          <span><span style="color:${tema.cor};opacity:.3">■</span> ${escHtml(t.leg_mes_passado)}</span>
+          <span><span style="color:${tema.cor};filter:brightness(1.25) saturate(1.1)">■</span> ${escHtml(t.leg_mes_atual)}</span>
+        </span>
+      </div>
+      <div>${ordenados.map(s => vendedorHtml(s[0], s[1], s[2], maximo, tema)).join('')}</div>
+    </div>
+    ${t.destaque_txt ? `<div class="team-ok">${escHtml(t.destaque_txt)}</div>` : ''}
+    ${atencao ? `<div class="${escHtml(classeAtencao)}">${escHtml(atencao)}</div>` : ''}
+  </div>`;
+}
+
+function renderTeams(data) {
+  const grade = document.getElementById('teams-grid');
+  if (!grade) return;
+  const times = (data && data.times) || {};
+  const chaves = Object.keys(times).sort();
+  const livres = PALETA_TIME.map((_, i) => i).filter(i => !chaves.some(k => CORES_TIME[k] === i));
+  let proxima = 0;
+  grade.innerHTML = chaves.map(k => {
+    const idx = k in CORES_TIME ? CORES_TIME[k] : livres[proxima++ % Math.max(livres.length, 1)];
+    return cardTimeHtml(k, times[k], PALETA_TIME[idx === undefined ? 0 : idx]);
+  }).join('');
+}
+
+// ── INICIALIZAR DASHBOARD COM DATA OBJECT ────────────────────────────────────
+function initDashboard(data) {
+  applyMeta(data.meta);
+  applyWeeks(data.semanas);
+  applySugestoes(data.sugestoes);
+ // applyMetodos(data.metodos);
+  applyGargalos(data.gargalos);
+  // applyBolao(data.bolao);
+  // renderChart(data.dias);
+  renderChart(data.dias, data.meta);
+  renderTable(data.dias);
+  renderTeams(data);
+  renderPipeline(data.meta);
+}
+
+// ── PREVISÃO PELO PIPELINE (em teste) ────────────────────────────────────────
+// getPrevisaoPipeline devolve o cálculo da hora (Pipeline.gs). Só no mês atual.
+let PIPE_DADOS = null;
+let PIPE_ERRO = '';
+let pipeBuscando = false;
+
+function numBr(x, casas = 1) {
+  if (x === null || x === undefined || Number.isNaN(Number(x))) return '—';
+  const f = Math.pow(10, casas);
+  return String(Math.round(Number(x) * f) / f).replace('.', ',');
+}
+// Vendas inteiras: total arredondado e duas partes que somam exatamente esse total
+function inteiros(a, b) {
+  const total = Math.round(a + b);
+  const pa = Math.min(total, Math.max(0, Math.round(a)));
+  return { total, a: pa, b: total - pa };
+}
+function pctBr(x) { return x === null || x === undefined ? '—' : numBr(x * 100) + '%'; }
+
+function nomeSegmento(seg) {
+  const partes = seg.split(' › ');
+  const ultimo = partes.pop();
+  return `${escHtml(ultimo)}${partes.length ? `<small>${escHtml(partes.join(' › '))}</small>` : ''}`;
+}
+
+function tabelaSegmentos(titulo, linhas, classe) {
+  if (!linhas.length) return `<div class="pipe-sub">${titulo}: nenhum segmento com dados suficientes.</div>`;
+  return `<div class="pipe-sub">${titulo}</div><div class="pipe-scroll"><table class="pipe-tbl">
+    <thead><tr><th>Segmento</th><th class="num">Leads</th><th class="num">Vendas</th><th class="num">Conversão</th><th class="num">×</th></tr></thead>
+    <tbody>${linhas.map(l => `<tr><td class="pipe-seg-nome">${nomeSegmento(l.segmento)}</td><td class="num">${l.leads}</td>
+      <td class="num">${l.vendas}</td><td class="num">${pctBr(l.leads ? l.vendas / l.leads : null)}</td><td class="num ${classe}">× ${numBr(l.multiplicador, 2)}</td></tr>`).join('')}</tbody>
+  </table></div>`;
+}
+
+function renderPipeline(meta) {
+  const sec = document.getElementById('pipe-sec');
+  const mostrar = periodoAtivo === 'atual';
+  sec.hidden = !mostrar;
+  document.getElementById('pipe-leg').hidden = !(mostrar && PIPE_DADOS);
+  if (!mostrar) return;
+  const estado = document.getElementById('pipe-estado');
+  const corpo = document.getElementById('pipe-corpo');
+  if (!PIPE_DADOS) {
+    estado.textContent = PIPE_ERRO || 'Calculando a previsão pelo pipeline. Na primeira vez do dia pode levar até 2 minutos…';
+    corpo.hidden = true;
+    return;
+  }
+  estado.textContent = '';
+  corpo.hidden = false;
+  const p = PIPE_DADOS;
+  const realizado = Number(meta.kpi_realizado) || 0;
+  const central = Number(meta.kpi_total_central) || 0;
+  const metaMes = meta.ritmo_meta ? meta.ritmo_meta.meta : null;
+  // Projeção inteira; as partes mostradas somam exatamente a projeção
+  const projecao = Math.round(realizado + (p.hoje_restante ? p.hoje_restante.total : 0) + p.ate_fim_do_mes.total);
+  const restoHoje = p.hoje_restante ? Math.round(p.hoje_restante.total) : 0;
+  const ateFim = Math.max(0, projecao - realizado - restoHoje);
+  const prox5 = inteiros(p.proximos_5.pipeline, p.proximos_5.novas);
+  const t = p.teste || {};
+  const melhorQueMedia = t.erro_pipeline !== null && t.erro_media_semana !== null && t.erro_pipeline < t.erro_media_semana;
+  const kpi = (lbl, val, sub) => `<div class="pipe-kpi"><div class="pipe-kpi-lbl">${lbl}</div><div class="pipe-kpi-val">${val}</div><div class="pipe-kpi-sub">${sub}</div></div>`;
+  setHtml('pipe-kpis', [
+    kpi('Próximos 5 dias', prox5.total, `leads abertas ${prox5.a} · leads novas ${prox5.b}`),
+    kpi('Projeção do mês', projecao, `realizado ${realizado}${restoHoje ? ` + ${restoHoje} ainda hoje` : ''} + ${ateFim} até o fim · central do GPT ${central}${metaMes ? ` · meta ${metaMes}` : ''}`),
+    kpi('Leads abertas', p.abertas.total, `${p.abertas.paradas} com menos de 1% de chance em 30 dias`),
+    kpi('Erro no teste', pctBr(t.erro_pipeline), `média por dia da semana: ${pctBr(t.erro_media_semana)} · ${melhorQueMedia ? 'pipeline erra menos' : 'pipeline ainda não ganha da média'}`)
+  ].join(''));
+
+  const rotuloFaixa = f => f.ate === null ? `${f.de}+ dias` : (f.de === f.ate ? `${f.de} dia${f.de === 1 ? '' : 's'}` : `${f.de}–${f.ate} dias`);
+  const faixas = p.chances[0].faixas;
+  setHtml('pipe-chances', `<thead><tr><th>Etapa</th>${faixas.map(f => `<th class="th-range">${rotuloFaixa(f)}</th>`).join('')}</tr></thead>
+    <tbody>${p.chances.map(c => `<tr><td>${escHtml(c.etapa)}</td>${c.faixas.map(f => {
+      const fundo = `rgba(34,211,238,${Math.min(0.5, f.chance_5d * 1.2).toFixed(3)})`;
+      return `<td class="pipe-cel" style="background:${fundo}">${pctBr(f.chance_5d)} <small>(${f.abertas})</small></td>`;
+    }).join('')}</tr>`).join('')}</tbody>`);
+
+  // Segmentos e tabela do teste: só no projeto de teste (na produção o servidor não manda)
+  const detalhes = Array.isArray(p.segmentos);
+  document.getElementById('pipe-detalhes').hidden = !detalhes;
+  if (detalhes) renderPipelineDetalhes(p, t);
+
+  const pos = p.pesos_posicao || {};
+  const curva = p.hoje_restante ? ` Ainda hoje: ${numBr(p.hoje_restante.fracao_do_dia * 100)}% das vendas do dia costumam entrar depois deste horário (${p.hoje_restante.vendas_na_curva} vendas dos últimos 90 dias).` : ' Sem a curva de horário das vendas: o dia de hoje fica de fora.';
+  setText('pipe-rodape', `Calculado em ${p.gerado_em} com ${p.leads_aprendizado} leads criadas nos últimos ${p.janela_dias} dias. Atualiza de hora em hora. Sem backoffice. Peso por posição no mês (dia útil): começo × ${numBr(pos.inicio, 2)} · meio × ${numBr(pos.meio, 2)} · reta final × ${numBr(pos.fim, 2)}.${curva}`);
+}
+
+// Segmentos e tabela do teste (só no projeto de teste)
+function renderPipelineDetalhes(p, t) {
+  const nivel = document.getElementById('pipe-nivel').value;
+  setHtml('pipe-seg', p.segmentos.map(g => {
+    const s = g[nivel];
+    return `<div class="pipe-seg-box"><div class="pipe-seg-tit">${escHtml(g.nome)}</div>
+      ${tabelaSegmentos('Acima do esperado', s.melhores.filter(l => l.multiplicador > 1), 'pipe-up')}
+      ${tabelaSegmentos('Abaixo do esperado', s.piores.filter(l => l.multiplicador < 1), 'pipe-dn')}</div>`;
+  }).join(''));
+
+  setText('pipe-teste-resumo', `Teste nos últimos ${t.dias || 0} dias úteis: erro de ${pctBr(t.erro_pipeline)} contra ${pctBr(t.erro_media_semana)} da média por dia da semana`);
+  const dataBr = iso => `${iso.slice(8, 10)}/${iso.slice(5, 7)}`;
+  setHtml('pipe-teste', `<thead><tr><th>Dia</th><th class="num">Pelo pipeline</th><th class="num">Média do dia da semana</th><th class="num">Realizado</th></tr></thead>
+    <tbody>${(t.linhas || []).map(l => `<tr><td>${dataBr(l.data)} + 5 dias</td><td class="num">${Math.round(l.previsto)}</td>
+      <td class="num">${Math.round(l.media_semana)}</td><td class="num">${l.realizado}</td></tr>`).join('')}</tbody>`);
+}
+
+// Redesenha só o gráfico e a seção do pipeline, sem refazer o resto da página
+function redesenharPipeline() {
+  if (ultimoTexto === null) return;
+  const data = comSeletorBackoffice(lerResposta(ultimoTexto));
+  renderChart(data.dias, data.meta);
+  renderPipeline(data.meta);
+}
+
+async function carregarPipeline() {
+  if (periodoAtivo !== 'atual' || pipeBuscando) return;
+  pipeBuscando = true;
+  try {
+    const novo = JSON.parse(await chamarServidor('getPrevisaoPipeline', SESSAO));
+    const mudou = !PIPE_DADOS || PIPE_DADOS.gerado_em !== novo.gerado_em;
+    PIPE_DADOS = novo;
+    PIPE_ERRO = '';
+    if (mudou) redesenharPipeline();
+  } catch (err) {
+    console.warn('[Pipeline] ' + mensagemErro(err));
+    if (!PIPE_DADOS) {
+      PIPE_ERRO = 'Não foi possível calcular a previsão pelo pipeline agora: ' + mensagemErro(err);
+      redesenharPipeline();
+    }
+  } finally {
+    pipeBuscando = false;
+  }
+}
+
+
+// ══════════════════════════════════════════════════════════════════════
+//  DADOS: mês atual e histórico vêm do servidor por google.script.run
+//  getForecastData(mesRef, sessão): mês corrente = planilha; outro = snapshot.
+// ══════════════════════════════════════════════════════════════════════
+
+const MINUTOS_RELEITURA = 5;   // o cache do servidor é de 5 min: menos que isso não traz dado novo
+
+let periodoAtivo = 'atual';    // 'atual' ou 'AAAA-MM'
+let ultimoTexto = null;        // resposta em tela, para só redesenhar quando muda
+let relendo = false;
+let timerAviso = null;
+let SESSAO = '';
+
+// google.script.run embrulhado em Promise
+function chamarServidor(funcao, ...args) {
+  return new Promise((resolve, reject) => {
+    google.script.run.withSuccessHandler(resolve).withFailureHandler(reject)[funcao](...args);
+  });
+}
+
+function mensagemErro(err) { return String((err && err.message) || err || 'Erro desconhecido.'); }
+function erroDeAcesso(msg) { return msg.indexOf('LOGIN') === 0 || msg.indexOf('SEMACESSO') === 0; }
+
+function mostrarCarregando(sim) { document.getElementById('estado-carregando').hidden = !sim; }
+
+function mostrarConteudo() {
+  mostrarCarregando(false);
+  document.getElementById('estado-erro').hidden = true;
+  document.getElementById('conteudo').hidden = false;
+}
+
+function mostrarErro(msg, aoTentar) {
+  mostrarCarregando(false);
+  document.getElementById('conteudo').hidden = true;
+  document.getElementById('estado-erro').hidden = false;
+  const acesso = erroDeAcesso(msg);
+  const semAcesso = msg.indexOf('SEMACESSO:') === 0;
+  setText('estado-erro-titulo', acesso ? (semAcesso ? 'Sem acesso a este dash' : 'Entre para continuar') : 'Não foi possível carregar os dados');
+  setText('estado-erro-texto', semAcesso
+    ? `A conta ${msg.slice(10)} não está na lista de acessos. Entre com outra conta ou peça para adicionar seu e-mail.`
+    : (acesso ? 'Sua sessão não vale mais. Entre de novo com a sua conta Google.' : msg));
+  const tentar = document.getElementById('estado-erro-tentar');
+  const entrar = document.getElementById('estado-erro-entrar');
+  tentar.hidden = acesso;
+  tentar.onclick = aoTentar;
+  entrar.hidden = !acesso;
+  entrar.href = window.URL_DASH;
+  if (acesso) { try { localStorage.removeItem('forecastToken'); } catch (e) {} }
+}
+
+function mostrarAviso(texto, ehErro) {
+  const el = document.getElementById('aviso');
+  el.textContent = texto;
+  el.classList.toggle('erro', !!ehErro);
+  el.hidden = false;
+  clearTimeout(timerAviso);
+  timerAviso = setTimeout(() => { el.hidden = true; }, ehErro ? 9000 : 5000);
+}
+
+// Mês fechado não tem "previsão restante": esconde gargalos e sugestões
+function aplicarModoHistorico(ehHistorico, label) {
+  const banner = document.getElementById('hist-banner');
+  if (banner) {
+    banner.classList.toggle('on', ehHistorico);
+    if (ehHistorico) setText('hist-banner-mes', label || '');
+  }
+  document.querySelectorAll('.risk-grid, .strat-grid').forEach(el => {
+    el.style.display = ehHistorico ? 'none' : '';
+  });
+  document.querySelectorAll('.sec-title').forEach(el => {
+    const t = el.textContent.toLowerCase();
+    if (t.includes('gargalo') || t.includes('sugest')) {
+      el.style.display = ehHistorico ? 'none' : '';
+    }
+  });
+}
+
+function lerResposta(texto) {
+  const data = JSON.parse(texto);
+  if (!data || !data.meta || !Array.isArray(data.dias)) throw new Error('O servidor devolveu dados incompletos.');
+  return data;
+}
+
+// Seletor de backoffice: vale para o realizado do KPI, do gráfico e da tabela diária. Os cards de time não mudam.
+// Mês salvo antes de o seletor existir não traz as vendas sem backoffice: o seletor some.
+function incluirBackoffice() {
+  const chk = document.getElementById('backoffice-chk');
+  return !chk || chk.checked;
+}
+
+function comSeletorBackoffice(data) {
+  const semBack = data.meta.realizado_sem_backoffice;
+  document.getElementById('backoffice-box').hidden = !semBack;
+  if (!semBack || incluirBackoffice()) return data;
+  const dias = data.dias.map(d => {
+    if (d[7] === null || d[7] === undefined || d[7] === '') return d;
+    const novo = d.slice();
+    novo[7] = semBack[d[0]] || 0;
+    return novo;
+  });
+  const realizado = dias.reduce((t, d) => t + (Number(d[7]) || 0), 0);
+  const central = Number(data.meta.kpi_total_central) || 0;
+  const delta = central ? `▲ ${String(Math.round(realizado / central * 1000) / 10).replace('.', ',')}% do total previsto` : '▲ — do total previsto';
+  return Object.assign({}, data, { dias, meta: Object.assign({}, data.meta, { kpi_realizado: realizado, kpi_realizado_delta: delta }) });
+}
+
+function desenhar(data) { initDashboard(comSeletorBackoffice(data)); }
+
+function ligarSeletorBackoffice() {
+  const chk = document.getElementById('backoffice-chk');
+  try { chk.checked = localStorage.getItem('forecastBackoffice') !== 'nao'; } catch (e) {}
+  chk.addEventListener('change', () => {
+    try { localStorage.setItem('forecastBackoffice', chk.checked ? 'sim' : 'nao'); } catch (e) {}
+    if (ultimoTexto !== null) desenhar(lerResposta(ultimoTexto));
+  });
+}
+
+// O seletor de mês chama isto: 'atual' ou 'AAAA-MM'.
+async function carregarPeriodo(valor, label) {
+  const primeira = ultimoTexto === null;
+  const loader = document.getElementById('loading-indicator');
+  const sel = document.getElementById('periodo-sel');
+  if (primeira) mostrarCarregando(true); else loader.style.display = 'block';
+  try {
+    const texto = await chamarServidor('getForecastData', valor === 'atual' ? '' : valor, SESSAO);
+    const data = lerResposta(texto);
+    periodoAtivo = valor;
+    ultimoTexto = texto;
+    mostrarConteudo();
+    desenhar(data);
+    aplicarModoHistorico(valor !== 'atual', label);
+    carregarPipeline();
+  } catch (err) {
+    const msg = mensagemErro(err);
+    if (primeira || erroDeAcesso(msg)) {
+      mostrarErro(msg, () => { document.getElementById('estado-erro').hidden = true; carregarPeriodo(valor, label); });
+    } else {
+      // troca de mês falhou: os números na tela continuam valendo
+      if (sel) sel.value = periodoAtivo;
+      mostrarAviso(msg, true);
+    }
+  } finally {
+    loader.style.display = 'none';
+  }
+}
+
+// Releitura do mês corrente, sem atrapalhar: falha de rede não apaga os números da tela.
+async function relerMesAtual() {
+  if (relendo || periodoAtivo !== 'atual' || document.hidden || ultimoTexto === null) return;
+  relendo = true;
+  try {
+    const texto = await chamarServidor('getForecastData', '', SESSAO);
+    if (periodoAtivo === 'atual' && texto !== ultimoTexto) {
+      ultimoTexto = texto;
+      desenhar(lerResposta(texto));
+    }
+    carregarPipeline();
+  } catch (err) {
+    const msg = mensagemErro(err);
+    if (erroDeAcesso(msg)) mostrarErro(msg);
+    else console.warn('[Releitura] ' + msg);
+  } finally {
+    relendo = false;
+  }
+}
+
+function preencherSeletorMeses(meses) {
+  const sel = document.getElementById('periodo-sel');
+  sel.querySelectorAll('option:not([value="atual"])').forEach(o => o.remove());
+  (meses || []).forEach(m => {
+    const opt = document.createElement('option');
+    opt.value = m.id;
+    opt.textContent = `📁 ${m.label}`;
+    sel.appendChild(opt);
+  });
+  sel.value = periodoAtivo;
+}
+
+// Snapshot manual: só aparece para a dona (o servidor confere de novo).
+function ligarSnapshot(ctx) {
+  const caixa = document.getElementById('snapshot-box');
+  if (!ctx.dona) return;
+  const linkMetricas = document.getElementById('metricas-link');
+  if (window.BILHETE_INJETADO) {
+    linkMetricas.href = `${window.URL_DASH}?tk=${encodeURIComponent(window.BILHETE_INJETADO)}&pagina=metricas`;
+    linkMetricas.hidden = false;
+  }
+  const sel = document.getElementById('snapshot-mes');
+  const rotulo = id => { const [a, m] = id.split('-'); return `${m}/${a}`; };
+  sel.innerHTML = [ctx.mesAtual, ctx.mesAnterior].map(id => `<option value="${id}">${rotulo(id)}</option>`).join('');
+  caixa.hidden = false;
+  const btn = document.getElementById('snapshot-btn');
+  btn.addEventListener('click', async () => {
+    const mes = sel.value;
+    let meses = ctx.meses;
+    const existe = (meses || []).some(m => m.id === mes);
+    if (!window.confirm(existe ? `Já existe um snapshot de ${rotulo(mes)}. Substituir pelo de agora?` : `Salvar o snapshot de ${rotulo(mes)}?`)) return;
+    btn.disabled = true;
+    try {
+      const r = await chamarServidor('salvarSnapshot', mes, SESSAO);
+      mostrarAviso(`Snapshot de ${r.label} salvo.`);
+      const novo = await chamarServidor('getContexto', SESSAO);
+      ctx.meses = novo.meses;
+      preencherSeletorMeses(novo.meses);
+    } catch (err) {
+      mostrarAviso(mensagemErro(err), true);
+    } finally {
+      btn.disabled = false;
+    }
+  });
+}
+
+// Sessão: vem na página logo depois do login e fica só no navegador. A URL leva apenas o bilhete,
+// que entrega a página sem números; um link copiado cai no "Entrar com o Google".
+function prepararSessao() {
+  let guardada = '';
+  try { guardada = localStorage.getItem('forecastToken') || ''; } catch (e) {}
+  const injetada = window.TOKEN_INJETADO || '';
+  if (injetada) { try { localStorage.setItem('forecastToken', injetada); } catch (e) {} }
+  SESSAO = injetada || guardada;
+  const bilhete = window.BILHETE_INJETADO || '';
+  if (bilhete && google.script.url && google.script.url.getLocation) {
+    google.script.url.getLocation(loc => {
+      const p = (loc && loc.parameter) || {};
+      if (p.tk === bilhete && !p.code && !p.state) return;
+      try { google.script.history.replace(null, { tk: bilhete }); } catch (e) {}
+    });
+  }
+}
+
+async function boot() {
+  prepararSessao();
+  if (!SESSAO) { mostrarErro('LOGIN'); return; }
+
+  ligarSeletorBackoffice();
+  document.getElementById('pipe-nivel').addEventListener('change', redesenharPipeline);
+  const sel = document.getElementById('periodo-sel');
+  sel.addEventListener('change', e => {
+    const opt = e.target.selectedOptions[0];
+    carregarPeriodo(e.target.value, opt.textContent.replace('📁 ', ''));
+  });
+
+  // Os meses do histórico não seguram a tela: os dados começam a carregar junto.
+  chamarServidor('getContexto', SESSAO)
+    .then(ctx => { preencherSeletorMeses(ctx.meses); ligarSnapshot(ctx); })
+    .catch(err => console.warn('[Contexto] ' + mensagemErro(err)));
+
+  await carregarPeriodo('atual');
+  setInterval(relerMesAtual, MINUTOS_RELEITURA * 60000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) relerMesAtual(); });
+}
+
+boot();
+</script>
