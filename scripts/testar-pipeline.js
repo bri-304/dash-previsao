@@ -93,6 +93,52 @@ assert.strictEqual(r.abertas.paradas, 2, 'p1 e p2 têm idade em que ninguém mai
 assert.ok(r.segmentos[0].keywords.melhores.length >= 1);
 assert.ok(r.teste.dias > 0 && r.teste.linhas.every((l) => l.realizado === 0), 'no teste (outubro) não houve vendas');
 
+// --- explicação de cada dia: as partes batem com a conta e somam o total mostrado
+r.dias.forEach((d) => {
+  const c = d.composicao;
+  const soma = c.etapas.reduce((s, e) => s + e.vendas, 0);
+  assert.ok(Math.abs(soma - d.pipeline) < 0.05, `etapas somam o pipeline em ${d.data}: ${soma} ≠ ${d.pipeline}`);
+  assert.strictEqual(c.etapas.reduce((s, e) => s + e.inteiro, 0) + c.novas.inteiro, Math.round(d.total), `inteiros somam o total em ${d.data}`);
+  assert.ok(c.resumo.every((f) => typeof f === 'string' && f.length), 'frases preenchidas');
+});
+assert.strictEqual(r.dias[0].composicao.etapas[3].leads, 1, 'p1 aparece em assinatura');
+assert.ok(r.hoje_restante.composicao.novas === null, 'o restante de hoje não tem leads novas');
+assert.deepStrictEqual(puro(ctx.repartirInteiros_([1.6, 1.6, 0.8], 4)), [2, 1, 1], 'maior resto');
+assert.deepStrictEqual(puro(ctx.repartirInteiros_([2.2, 2.2, 0.2], 5)), [3, 2, 0], 'partes somam o total');
+
+// --- chance que dispara em um único dia vira ponto de atenção, com a base de onde saiu
+const tH = ctx.PIPE.HORIZONTE, fAlvo = ctx.faixaIdade_(30);
+const hPico = { fonte: {} };
+for (let s = 1; s <= 4; s++) {
+  hPico[s] = ctx.PIPE.IDADES.map(() => Array.from({ length: tH }, () => 0.01));
+  hPico.fonte[s] = ctx.PIPE.IDADES.map(() => Array.from({ length: tH }, () => ({ risco: 400, ev: 4 })));
+}
+hPico[4][fAlvo][2] = 0.15;
+hPico.fonte[4][fAlvo][2] = { risco: 40, ev: 6 };
+const hojePico = ctx.diaNum_('2026-11-09');
+const abertasPico = Array.from({ length: 100 }, () => ({ criado: hojePico - 35, etapaAtual: 4, mult: 1 }));
+const pesosPlanos = { semana: [0.2, 1, 1, 1, 1, 1, 0.2], posicao: { inicio: 1, meio: 1, fim: 1 } };
+const novasZero = [0, 0, 0, 0, 0, 0, 0];
+const diasPico = ctx.projetarDias_(abertasPico, hPico, pesosPlanos, novasZero, hojePico, hojePico + 6, {});
+ctx.montarExplicacoes_(diasPico, null, abertasPico, hPico, pesosPlanos, {}, hojePico);
+const quarta = puro(diasPico[1]);
+assert.strictEqual(Math.round(quarta.total), 15, '100 leads × 15%');
+assert.ok(quarta.composicao.celulas[0].pico, 'marcado como pico');
+assert.strictEqual(quarta.composicao.celulas[0].idade, '30 a 44 dias');
+assert.strictEqual(quarta.composicao.celulas[0].base_pagaram, 6);
+assert.ok(/6 de 40 leads/.test(quarta.composicao.alerta), quarta.composicao.alerta);
+assert.ok(quarta.composicao.resumo.some((f) => /acima da média/.test(f)), 'diz que está acima da média');
+assert.ok(quarta.composicao.resumo.some((f) => /Assinatura e pagamento, com 15 vendas/.test(f)), quarta.composicao.resumo.join(' | '));
+assert.strictEqual(puro(diasPico[2]).composicao.alerta, '', 'dia normal sem alerta');
+
+// --- primeiro horário: guarda o que a linha mostra no passado
+const reg = puro(ctx.registroPrimeiroHorario_(Object.assign({}, r, { gerado_em: '05/11/2026 07:10' }), 3, 2));
+assert.strictEqual(reg.dia, 5);
+assert.strictEqual(reg.vendido, 3);
+assert.strictEqual(reg.vendido_sem_backoffice, 2);
+assert.strictEqual(reg.restante, r.hoje_restante.total);
+assert.deepStrictEqual(reg.composicao, r.hoje_restante.composicao);
+
 // --- pesos dos dias da semana somam 7 (média 1) quando há vendas na janela
 perto(puro(ctx.pesosSemana_(ctx.leadsDoPipeline_(t), ctx.diaNum_('2026-09-10'), {})).reduce((a, b) => a + b, 0), 7, 'pesos');
 const novas = puro(ctx.novasPorSemana_(ctx.leadsDoPipeline_(t), ctx.diaNum_('2026-09-10')));

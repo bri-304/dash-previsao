@@ -202,9 +202,21 @@ window.URL_DASH = <?!= urlJson ?>;
   </div>
     <div class="chart-scroll"><div class="chart-canvas"><canvas id="mainChart"></canvas></div></div>
   <div class="chart-note pipe-leg" id="pipe-leg" hidden>
-    <span class="pipe-ponto"></span> <strong>Pelo pipeline</strong> (em teste): vendas esperadas de hoje (o já vendido mais o que falta até o fim do dia) até o fim do mês, pela chance de cada lead aberta e das leads que ainda vão entrar. Não inclui o backoffice.
+    <span class="pipe-ponto"></span> <strong>Pelo pipeline</strong> (em teste): vendas esperadas de hoje (o já vendido mais o que falta até o fim do dia) até o fim do mês, pela chance de cada lead aberta e das leads que ainda vão entrar. Nos dias passados, o valor do primeiro cálculo daquele dia. Não inclui o backoffice. <strong>Clique em um dia</strong> para ver de onde vem o número.
   </div>
 </div>
+
+<!-- Explicação de um dia do gráfico: montada por abrirExplicacaoDia() -->
+<dialog class="dia-dlg" id="dia-dlg" aria-labelledby="dia-dlg-tit">
+  <div class="dia-dlg-topo">
+    <div>
+      <h3 class="dia-dlg-tit" id="dia-dlg-tit"></h3>
+      <div class="dia-dlg-origem" id="dia-dlg-origem"></div>
+    </div>
+    <button type="button" class="dia-dlg-fechar" id="dia-dlg-fechar" aria-label="Fechar">✕</button>
+  </div>
+  <div class="dia-dlg-corpo" id="dia-dlg-corpo"></div>
+</dialog>
 
 <!-- PREVISÃO PELO PIPELINE (em teste): montada por renderPipeline() a partir de getPrevisaoPipeline -->
 <section id="pipe-sec" hidden>

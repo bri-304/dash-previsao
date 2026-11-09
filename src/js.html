@@ -236,21 +236,28 @@ function renderChart(dias, meta) {
   const diasUteis    = new Set(ritmo ? ritmo.dias_uteis : []);
   const ritmoTxt     = ritmo ? String(ritmo.por_dia).replace('.', ',') : '';
   const refLine      = dias.map(d => diasUteis.has(d[0]) ? ritmo.por_dia : null);
-  // Pelo pipeline (em teste): só no mês atual, de amanhã até o fim do mês
+  // Pelo pipeline (em teste): só no mês atual. Dias passados: valor salvo no primeiro cálculo do dia; de amanhã em diante: cálculo da hora
   const pipeDia = {};
   if (PIPE_DADOS && periodoAtivo === 'atual') {
     PIPE_DADOS.dias.forEach(p => { pipeDia[p.dia] = p; });
+    const historico = PIPE_DADOS.historico || {};
     // Hoje: o que já foi vendido + o que ainda deve entrar até o fim do dia
     const resto = PIPE_DADOS.hoje_restante, diaPipe = Number(String(PIPE_DADOS.hoje).slice(8));
+    Object.values(historico).filter(h => h.dia < diaPipe).forEach(h => {
+      const vendido = incluirBackoffice() ? h.vendido : h.vendido_sem_backoffice;
+      pipeDia[h.dia] = { passado: true, vendido, restante: h.restante, total: vendido + h.restante, gerado_em: h.gerado_em, composicao: h.composicao };
+    });
     const linhaHoje = dias.find(d => d[0] === diaPipe);
     if (resto && linhaHoje && diaPipe === diaHoje) {
       const vendido = Number(linhaHoje[7]) || 0;
-      pipeDia[diaPipe] = { hoje: true, vendido, restante: resto.total, total: vendido + resto.total };
+      pipeDia[diaPipe] = { hoje: true, vendido, restante: resto.total, total: vendido + resto.total, composicao: resto.composicao, primeiro: historico[diaPipe] };
     }
   }
   const pipeVals = dias.map(d => pipeDia[d[0]] ? Math.round(pipeDia[d[0]].total) : null);
   // Mês da dica: o mês escolhido no seletor, ou o da leitura no mês atual
   const mesDica      = periodoAtivo !== 'atual' ? periodoAtivo.slice(5, 7) : ((meta?.atualizado_em || '').split(' ')[0].split('/')[1] || '');
+  GRAFICO = { dias, pipeDia, mes: mesDica };
+  ultimoToque = -1;
   const forecastBg   = dias.map(d => typeColorFg[d[5]]);
   const forecastBd   = dias.map(d => typeColorBd[d[5]]);
   const realizadoBg  = dias.map(d => d[5] === 'partial' ? '#f59e0b' : '#22c55e');
@@ -344,6 +351,8 @@ function renderChart(dias, meta) {
     options: {
       responsive:true, maintainAspectRatio:false,
       interaction:{ mode:'index', intersect:false },
+      onClick: (e, els) => cliqueNoGrafico(els),
+      onHover: (e, els) => { e.native.target.style.cursor = els.length && temExplicacao(els[0].index) ? 'pointer' : 'default'; },
       plugins:{
         legend:{ display:false },
         tooltip:{
@@ -351,6 +360,8 @@ function renderChart(dias, meta) {
           borderColor:'rgba(255,255,255,0.1)', borderWidth:1,
           titleFont:{ family:'JetBrains Mono', size:11 },
           bodyFont:{ family:'JetBrains Mono', size:11 },
+          footerFont:{ family:'JetBrains Mono', size:10, weight:'normal' },
+          footerColor:'#22d3ee',
           filter: item => item.datasetIndex !== 1, // oculta linha Máximo
           callbacks:{
             title: ctx => `${dias[ctx[0].dataIndex][0]}${mesDica ? '/' + mesDica : ''} · ${dias[ctx[0].dataIndex][1]}`,
@@ -363,12 +374,14 @@ function renderChart(dias, meta) {
               if (ctx.datasetIndex===5 && ctx.raw) return ` Ritmo da meta: ${ritmoTxt}/dia útil (${ritmo.meta} ÷ ${ritmo.dias_uteis.length} dias úteis)`;
               if (ctx.datasetIndex===6 && ctx.raw != null) {
                 const p = pipeDia[dias[i][0]];
+                if (p.passado) { const r = inteiros(p.vendido, p.restante); return ` Pelo pipeline às ${horaDe(p.gerado_em)}: ${r.total} (vendido ${r.a} + faltava ${r.b})`; }
                 if (p.hoje) { const r = inteiros(p.vendido, p.restante); return ` Pelo pipeline: ${r.total} (vendido ${r.a} + falta ${r.b} até o fim do dia)`; }
                 const r = inteiros(p.pipeline, p.novas);
                 return ` Pelo pipeline: ${r.total} (abertas ${r.a} + novas ${r.b})`;
               }
               return null;
             },
+            footer: ctx => !ctx.length || !temExplicacao(ctx[0].dataIndex) ? '' : (ehToque() ? 'Toque de novo para ver o porquê' : 'Clique para ver o porquê'),
             afterLabel: ctx => {
               if (ctx.datasetIndex===2) {
                 const ev = dias[ctx.dataIndex][6];
@@ -670,6 +683,70 @@ function renderPipeline(meta) {
   setText('pipe-rodape', `Calculado em ${p.gerado_em} com ${p.leads_aprendizado} leads criadas nos últimos ${p.janela_dias} dias. Atualiza de hora em hora. Sem backoffice. Peso por posição no mês (dia útil): começo × ${numBr(pos.inicio, 2)} · meio × ${numBr(pos.meio, 2)} · reta final × ${numBr(pos.fim, 2)}.${curva}`);
 }
 
+// ── Pop-up "por que esse número": clique no dia do gráfico ──
+let GRAFICO = { dias: [], pipeDia: {}, mes: '' };
+let ultimoToque = -1;
+
+function horaDe(geradoEm) { return String(geradoEm || '').slice(-5); }
+function ehToque() { return window.matchMedia('(hover: none)').matches; }
+function temExplicacao(i) {
+  const d = GRAFICO.dias[i], p = d && GRAFICO.pipeDia[d[0]];
+  return !!(p && p.composicao);
+}
+
+// No celular, o primeiro toque mostra a dica e o segundo, no mesmo dia, abre a explicação
+function cliqueNoGrafico(els) {
+  if (!els.length || !temExplicacao(els[0].index)) return;
+  const i = els[0].index;
+  if (ehToque() && ultimoToque !== i) { ultimoToque = i; return; }
+  ultimoToque = -1;
+  abrirExplicacaoDia(i);
+}
+
+function abrirExplicacaoDia(i) {
+  const d = GRAFICO.dias[i], p = GRAFICO.pipeDia[d[0]], c = p.composicao;
+  const partes = (p.hoje || p.passado) ? inteiros(p.vendido, p.restante) : null;
+  const total = partes ? partes.total : Math.round(p.total);
+  setText('dia-dlg-tit', `${d[1]} ${d[0]}${GRAFICO.mes ? '/' + GRAFICO.mes : ''} · ${total} vendas pelo pipeline`);
+
+  let origem = `Previsão calculada em ${PIPE_DADOS.gerado_em}.`;
+  if (p.hoje) {
+    origem = `Vendido até agora: ${partes.a}. Ainda devem entrar: ${partes.b}. Cálculo de ${horaDe(PIPE_DADOS.gerado_em)}.`;
+    if (p.primeiro) origem += ` No primeiro cálculo do dia (${horaDe(p.primeiro.gerado_em)}), a previsão era ${Math.round(p.primeiro.vendido + p.primeiro.restante)}.`;
+  } else if (p.passado) {
+    origem = `Previsão salva no primeiro cálculo do dia (${horaDe(p.gerado_em)}): já vendido ${partes.a}, faltava ${partes.b}. Realizado: ${d[7] === null || d[7] === undefined ? 0 : d[7]}.`;
+  }
+  setText('dia-dlg-origem', origem);
+
+  const linhaGpt = `Previsão do GPT para o dia: ${d[2]} (de ${d[3]} a ${d[4]})${d[6] ? ` · ${d[6]}` : ''}`;
+  const etapas = c.etapas.filter(e => e.leads || e.inteiro);
+  const celulas = c.celulas || [];
+  const pct = x => numBr(x * 100, 1) + '%';
+  setHtml('dia-dlg-corpo', `
+    ${c.resumo.map(f => `<p>${escHtml(f)}</p>`).join('')}
+    ${c.alerta ? `<p class="dia-alerta" role="note">${escHtml(c.alerta)}</p>` : ''}
+    <div class="pipe-sub">De onde vêm as ${total} vendas</div>
+    <div class="pipe-scroll"><table class="pipe-tbl"><thead><tr><th>Parte</th><th class="num">Leads abertas</th><th class="num">Vendas</th></tr></thead><tbody>
+      ${partes ? `<tr><td>Já vendido naquele momento</td><td class="num">—</td><td class="num">${partes.a}</td></tr>` : ''}
+      ${etapas.map(e => `<tr><td>${escHtml(e.etapa)}</td><td class="num">${e.leads}</td><td class="num">${e.inteiro}</td></tr>`).join('')}
+      ${c.novas ? `<tr><td>Leads que ainda vão entrar</td><td class="num">—</td><td class="num">${c.novas.inteiro}</td></tr>` : ''}
+    </tbody></table></div>
+    ${celulas.length ? `<details class="dia-det"${c.alerta ? ' open' : ''}><summary>Grupos que mais pesam neste dia</summary>
+      <div class="pipe-scroll"><table class="pipe-tbl"><thead><tr><th>Etapa e idade</th><th class="num">Leads</th><th class="num">Chance no dia</th><th class="num">Dias vizinhos</th><th class="num">Histórico</th><th class="num">Vendas</th></tr></thead><tbody>
+      ${celulas.map(g => `<tr${g.pico ? ' class="dia-pico"' : ''}><td>${escHtml(g.etapa)} · ${escHtml(g.idade)}</td><td class="num">${g.leads}</td><td class="num">${pct(g.chance)}</td><td class="num">${pct(g.chance_vizinhos)}</td><td class="num">${g.base_pagaram} de ${g.base_leads}</td><td class="num">${numBr(g.vendas, 1)}</td></tr>`).join('')}
+      </tbody></table></div>
+      <dl class="dia-legenda">
+        <dt>Etapa e idade</dt><dd>Em que etapa do funil a lead está e há quantos dias foi criada.</dd>
+        <dt>Leads</dt><dd>Quantas leads abertas estão nesse grupo.</dd>
+        <dt>Chance no dia</dt><dd>De cada 100 leads desse grupo, quantas devem pagar exatamente neste dia.</dd>
+        <dt>Dias vizinhos</dt><dd>A mesma chance nos 2 dias antes e nos 2 dias depois. Se for bem menor, o dia está fora do padrão.</dd>
+        <dt>Histórico</dt><dd>De onde saiu a chance. "${celulas[0].base_pagaram} de ${celulas[0].base_leads}": de ${celulas[0].base_leads} leads parecidas no passado, ${celulas[0].base_pagaram} pagaram nesse mesmo prazo. Quanto menos leads, menos confiável.</dd>
+        <dt>Vendas</dt><dd>Quantas vendas esse grupo deve trazer neste dia, já ajustadas pelo dia da semana, pela época do mês e pela origem das leads.</dd>
+      </dl></details>` : ''}
+    <div class="dia-gpt">${escHtml(linhaGpt)}</div>`);
+  document.getElementById('dia-dlg').showModal();
+}
+
 // Segmentos e tabela do teste (só no projeto de teste)
 function renderPipelineDetalhes(p, t) {
   const nivel = document.getElementById('pipe-nivel').value;
@@ -952,6 +1029,9 @@ async function boot() {
 
   ligarSeletorBackoffice();
   document.getElementById('pipe-nivel').addEventListener('change', redesenharPipeline);
+  const diaDlg = document.getElementById('dia-dlg');
+  document.getElementById('dia-dlg-fechar').addEventListener('click', () => diaDlg.close());
+  diaDlg.addEventListener('click', e => { if (e.target === diaDlg) diaDlg.close(); });   // clique fora da caixa
   const sel = document.getElementById('periodo-sel');
   sel.addEventListener('change', e => {
     const opt = e.target.selectedOptions[0];

@@ -103,6 +103,25 @@ body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse
 .pipe-teste{margin-top:16px}
 .pipe-teste summary{cursor:pointer;font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:1px;color:var(--dim)}
 .pipe-rodape{font-family:var(--fm);font-size:9px;color:var(--muted);margin-top:14px}
+.dia-dlg{margin:auto;width:calc(100% - 32px);max-width:600px;max-height:85vh;overflow-y:auto;background:var(--card);color:var(--text);border:1px solid var(--border2);border-radius:var(--rl);padding:20px 22px}
+.dia-dlg::backdrop{background:rgba(3,7,16,.7)}
+.dia-dlg-topo{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+.dia-dlg-tit{font-family:var(--fh);font-size:20px;font-weight:800;color:#22d3ee;line-height:1.15}
+.dia-dlg-origem{font-family:var(--fm);font-size:10px;color:var(--dim);margin-top:4px;line-height:1.5}
+.dia-dlg-fechar{flex:none;width:32px;height:32px;background:var(--card2);border:1px solid var(--border2);border-radius:var(--r);color:var(--text);font-size:13px;cursor:pointer}
+.dia-dlg-fechar:hover{border-color:#22d3ee}
+.dia-dlg-corpo p{font-size:14px;line-height:1.5;margin-bottom:8px}
+.dia-dlg-corpo .pipe-sub{margin-top:14px}
+.dia-dlg-corpo .pipe-tbl{width:100%}
+.dia-dlg-corpo p.dia-alerta{font-size:13px;background:var(--gold-d);border:1px solid rgba(245,158,11,.4);border-radius:var(--r);padding:8px 12px;margin-top:10px}
+.dia-det{margin-top:14px}
+.dia-det summary{font-family:var(--fm);font-size:10px;color:var(--dim);cursor:pointer;margin-bottom:6px}
+.dia-pico td{color:var(--gold-l)}
+.dia-legenda{display:grid;grid-template-columns:max-content 1fr;gap:5px 12px;margin-top:12px;font-size:12px;line-height:1.4}
+.dia-legenda dt{font-weight:700;color:var(--text)}
+.dia-legenda dd{color:var(--dim)}
+@media(max-width:560px){.dia-legenda{grid-template-columns:1fr;gap:1px}.dia-legenda dd{margin-bottom:6px}}
+.dia-gpt{font-family:var(--fm);font-size:10px;color:var(--muted);line-height:1.5;margin-top:14px;padding-top:10px;border-top:1px solid var(--border)}
 @media(max-width:860px){.pipe-kpis{grid-template-columns:repeat(2,1fr)}.pipe-seg{grid-template-columns:1fr}}
 @media(max-width:560px){.pipe-box{padding:14px}.pipe-kpi-val{font-size:24px}}
 

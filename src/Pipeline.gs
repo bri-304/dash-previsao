@@ -11,7 +11,7 @@
    ------------------------------------------------------------------ */
 
 var PIPE = {
-  VERSAO: 2,                              // mudou o formato do resultado: suba (o arquivo do dia em outra versão é refeito)
+  VERSAO: 3,                              // mudou o formato do resultado: suba (o arquivo do dia em outra versão é refeito)
   JANELA_DIAS: 180,                       // leads criadas nesse período ensinam a conta
   // Idade exata até 29 dias; depois, faixas em que a chance muda pouco
   IDADES: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 45, 60, 90, 120, 180],
@@ -26,6 +26,10 @@ var PIPE = {
   DIAS_INICIO: 3,                         // primeiros dias úteis do mês
   DIAS_FIM: 5,                            // últimos dias úteis do mês (reta final)
   DIAS_HORA: 90,                          // janela para a curva de vendas ao longo do dia
+  CELULAS_POPUP: 3,                       // grupos (etapa × idade) mostrados na explicação de cada dia
+  FAIXA_NORMAL: 0.15,                     // até 15% de diferença da média dos outros dias úteis: "perto da média"
+  PICO_RAZAO: 2,                          // chance do dia N vezes maior que a dos dias vizinhos...
+  PICO_VENDAS: 2,                         // ...e que soma pelo menos estas vendas a mais: vira ponto de atenção
   ETAPAS: { 1: 'MQL - Validação', 2: 'Prospecção', 3: 'Oportunidades', 4: 'Assinatura e pagamento' },
   GRUPOS: [
     { id: 'inicio', nome: 'Começo do funil (MQL e prospecção)', base: 1, etapas: [1, 2] },
@@ -116,21 +120,23 @@ function chancesPorEtapa_(leads, ontem) {
       }
     }
   });
-  var h = {};
+  var h = {}, fonte = {};   // fonte: de quantas leads saiu cada chance (mostrado na explicação do dia)
   for (s = 1; s <= 4; s++) {
-    h[s] = [];
+    h[s] = []; fonte[s] = [];
     for (f = 0; f < F; f++) {
       var risco = 0, linha = zeros_(H);
       for (var j = H - 1; j >= 0; j--) {
         risco += obs[s][f][j];
         linha[j] = { risco: risco, ev: ev[s][f][j] };
       }
-      h[s].push(linha.map(function (c, j) {
-        if (c.risco >= PIPE.MIN_RISCO || (s === 1 && f === 0)) return c.risco ? c.ev / c.risco : 0;
-        return f > 0 ? h[s][f - 1][j] : h[s - 1][f][j];
+      fonte[s].push(linha.map(function (c, j) {
+        if (c.risco >= PIPE.MIN_RISCO || (s === 1 && f === 0)) return c;
+        return f > 0 ? fonte[s][f - 1][j] : fonte[s - 1][f][j];
       }));
+      h[s].push(fonte[s][f].map(function (c) { return c.risco ? c.ev / c.risco : 0; }));
     }
   }
+  h.fonte = fonte;
   return h;
 }
 
@@ -319,6 +325,175 @@ function testarPipeline_(leads, h, pesos, novas, ontem, feriados) {
   return { dias: linhas.length, erro_pipeline: erro('previsto'), erro_media_semana: erro('media_semana'), linhas: linhas.reverse() };
 }
 
+/* ---------- de onde vem o número de cada dia (pop-up do gráfico) ---------- */
+
+// Leads abertas agrupadas por etapa e faixa de idade: é nesse nível que a chance é a mesma
+function celulasAbertas_(abertas, hojeN) {
+  var mapa = {};
+  abertas.forEach(function (l) {
+    var f = faixaIdade_(hojeN - l.criado), k = l.etapaAtual + '|' + f;
+    var c = mapa[k] || (mapa[k] = { etapa: l.etapaAtual, f: f, leads: 0, somaMult: 0 });
+    c.leads++;
+    c.somaMult += l.mult;
+  });
+  return Object.keys(mapa).map(function (k) { return mapa[k]; });
+}
+
+function rotuloIdade_(f) {
+  var de = PIPE.IDADES[f], prox = PIPE.IDADES[f + 1];
+  if (prox === undefined) return de + ' dias ou mais';
+  if (prox === de + 1) return de === 1 ? '1 dia' : de + ' dias';
+  return de + ' a ' + (prox - 1) + ' dias';
+}
+
+// Duas casas seriam ruído na tela: as partes inteiras somam exatamente o total mostrado (maior resto).
+function repartirInteiros_(valores, total) {
+  var saida = valores.map(function (v) { return Math.floor(v); });
+  var falta = total - saida.reduce(function (a, b) { return a + b; }, 0);
+  valores.map(function (v, i) { return { i: i, resto: v - Math.floor(v) }; })
+    .sort(function (a, b) { return b.resto - a.resto; })
+    .forEach(function (x) { if (falta > 0) { saida[x.i]++; falta--; } });
+  return saida;
+}
+
+// Média da chance nos 2 dias antes e nos 2 depois, para saber se o dia destoa
+function mediaVizinhos_(linha, t) {
+  var soma = 0, n = 0;
+  [-2, -1, 1, 2].forEach(function (d) {
+    if (t + d >= 0 && t + d < linha.length) { soma += linha[t + d]; n++; }
+  });
+  return n ? soma / n : 0;
+}
+
+// Quanto cada etapa e cada grupo põe no dia t. fator = peso do calendário (e, hoje, a parte do dia que falta).
+function composicaoDia_(cels, h, t, fator, novas) {
+  var porEtapa = {}, lista = [];
+  [1, 2, 3, 4].forEach(function (s) { porEtapa[s] = { etapa: PIPE.ETAPAS[s], leads: 0, vendas: 0 }; });
+  cels.forEach(function (c) {
+    var vendas = h[c.etapa][c.f][t] * c.somaMult * fator;
+    porEtapa[c.etapa].leads += c.leads;
+    porEtapa[c.etapa].vendas += vendas;
+    lista.push({ c: c, vendas: vendas });
+  });
+  var celulas = lista.sort(function (a, b) { return b.vendas - a.vendas; }).slice(0, PIPE.CELULAS_POPUP)
+    .filter(function (x) { return x.vendas >= 0.05; })
+    .map(function (x) {
+      var c = x.c, linha = h[c.etapa][c.f], chance = linha[t], viz = mediaVizinhos_(linha, t), base = h.fonte[c.etapa][c.f][t];
+      return { etapa: PIPE.ETAPAS[c.etapa], idade: rotuloIdade_(c.f), leads: c.leads, chance: arred_(chance, 4), chance_vizinhos: arred_(viz, 4),
+        multiplicador: arred_(c.somaMult / c.leads, 2), base_leads: base.risco, base_pagaram: base.ev, vendas: arred_(x.vendas, 2),
+        pico: chance >= PIPE.PICO_RAZAO * viz && (chance - viz) * c.somaMult * fator >= PIPE.PICO_VENDAS };
+    });
+  return { etapas: [1, 2, 3, 4].map(function (s) { return porEtapa[s]; }), novas: novas, celulas: celulas };
+}
+
+function qtdVendas_(n) { return n + (n === 1 ? ' venda' : ' vendas'); }
+
+// Dia da semana e posição no mês, em uma frase. Vazio quando não muda quase nada.
+function fraseCalendario_(n, pesos, feriados) {
+  if (feriados[n]) return 'Feriado: a conta usa o peso de um domingo, quando quase não há pagamento.';
+  var w = semanaDoNum_(n);
+  if (w === 0 || w === 6) return (w === 6 ? 'Sábado' : 'Domingo') + ': fim de semana tem poucas vendas.';
+  var mediaUteis = somaAte_(pesos.semana.slice(1, 6), 5) / 5;
+  var efeito = function (nome, f) {
+    var pct = Math.round(Math.abs(f - 1) * 100);
+    return pct < 3 ? null : nome + ' vende ' + pct + '% ' + (f > 1 ? 'mais' : 'menos') + ' que um dia útil médio';
+  };
+  var nomesPos = { inicio: 'O começo do mês', meio: 'O meio do mês', fim: 'A reta final do mês' };
+  var pos = posicaoNoMes_(n, feriados);
+  var partes = [efeito(['', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'][w], mediaUteis ? pesos.semana[w] / mediaUteis : 1), efeito(nomesPos[pos], pesos.posicao[pos])]
+    .filter(function (x) { return x; });
+  return partes.length ? partes.join('; ') + '.' : '';
+}
+
+// Compara com a média dos outros dias úteis e separa o que veio das leads do que veio do calendário.
+// item = { total, peso, comp }; outros = demais dias úteis no mesmo formato.
+function fraseComparacao_(item, outros, frases) {
+  if (!outros.length) return;
+  var media = function (fn) { return outros.reduce(function (s, x) { return s + fn(x); }, 0) / outros.length; };
+  var mediaTotal = media(function (x) { return x.total; });
+  if (mediaTotal < 1) return;
+  var dif = item.total - mediaTotal, mostraMedia = Math.round(mediaTotal);
+  if (Math.abs(dif) / mediaTotal < PIPE.FAIXA_NORMAL) {
+    frases.push('Perto dos outros dias úteis previstos, que têm em média ' + mostraMedia + ' vendas.');
+    return;
+  }
+  var sobe = dif > 0;
+  frases.push(qtdVendas_(Math.round(Math.abs(dif))) + (sobe ? ' acima' : ' abaixo') + ' da média dos outros dias úteis previstos (' + mostraMedia + ').');
+
+  var mediaPeso = media(function (x) { return x.peso; });
+  var mediaBase = media(function (x) { return x.peso ? x.total / x.peso : 0; });
+  var base = item.peso ? item.total / item.peso : 0;
+  if (Math.abs(base * (item.peso - mediaPeso)) > Math.abs((base - mediaBase) * mediaPeso)) {
+    frases.push('O que mais ' + (sobe ? 'puxa para cima' : 'puxa para baixo') + ' é o calendário, não as leads.');
+    return;
+  }
+  // Parte das leads que mais se afasta da média, no sentido da diferença
+  var partes = item.comp.etapas.map(function (e, i) {
+    return { nome: 'as leads em ' + e.etapa, aqui: e.vendas, media: media(function (x) { return x.comp.etapas[i].vendas; }) };
+  });
+  if (item.comp.novas !== null) partes.push({ nome: 'as leads que ainda vão entrar', aqui: item.comp.novas, media: media(function (x) { return x.comp.novas || 0; }) });
+  var maior = partes.sort(function (a, b) { return (sobe ? b.aqui - b.media - (a.aqui - a.media) : a.aqui - a.media - (b.aqui - b.media)); })[0];
+  frases.push('O que mais ' + (sobe ? 'puxa para cima' : 'puxa para baixo') + ': ' + maior.nome + ', com ' + qtdVendas_(Math.round(maior.aqui)) + ' neste dia, contra ' + Math.round(maior.media) + ' em média nos outros.');
+}
+
+// Texto simples e números do dia. t = dias à frente (0 = hoje).
+function explicarDia_(item, outros, t, n, pesos, feriados, inicioFrases) {
+  var comp = item.comp, frases = (inicioFrases || []).slice();
+  if (diaUtil_(n, feriados)) fraseComparacao_(item, outros, frases);
+  var maior = comp.celulas[0];
+  if (maior && maior.vendas >= 1) {
+    var prazo = t === 0 ? 'no mesmo dia' : (t === 1 ? 'no dia seguinte' : 'em ' + t + ' dias');
+    frases.push('Maior grupo: ' + maior.leads + ' leads em ' + maior.etapa + ', com ' + maior.idade + ' de criadas, somando cerca de ' + qtdVendas_(Math.max(1, Math.round(maior.vendas))) +
+      '. No histórico, ' + String(arred_(maior.chance * 100, 1)).replace('.', ',') + '% das leads nessa situação pagaram ' + prazo + '.');
+  }
+  var cal = fraseCalendario_(n, pesos, feriados);
+  if (cal) frases.push(cal);
+
+  var pico = comp.celulas.filter(function (c) { return c.pico; })[0];
+  var alerta = pico ? 'Ponto de atenção: neste dia, a chance das leads em ' + pico.etapa + ' com ' + pico.idade + ' é ' +
+    (pico.chance_vizinhos ? 'cerca de ' + Math.round(pico.chance / pico.chance_vizinhos) + ' vezes a dos dias vizinhos' : 'bem maior que a dos dias vizinhos') +
+    ' (' + pico.base_pagaram + ' de ' + pico.base_leads + ' leads do histórico). Pode ser acaso do histórico, e não uma alta real.' : '';
+
+  var valores = comp.etapas.map(function (e) { return e.vendas; });
+  if (comp.novas !== null) valores.push(comp.novas);
+  var inteiros = repartirInteiros_(valores, Math.round(item.total));
+  return {
+    etapas: comp.etapas.map(function (e, i) { return { etapa: e.etapa, leads: e.leads, vendas: arred_(e.vendas, 2), inteiro: inteiros[i] }; }),
+    novas: comp.novas === null ? null : { vendas: arred_(comp.novas, 2), inteiro: inteiros[comp.etapas.length] },
+    celulas: comp.celulas,
+    resumo: frases,
+    alerta: alerta
+  };
+}
+
+// Coloca a composição em cada dia futuro e no restante de hoje
+function montarExplicacoes_(dias, restanteHoje, abertas, h, pesos, feriados, hojeN) {
+  var cels = celulasAbertas_(abertas, hojeN);
+  var itens = dias.map(function (d, k) {
+    var n = hojeN + k + 1, peso = pesoDoDia_(n, pesos, feriados);
+    return { n: n, t: k + 1, util: diaUtil_(n, feriados), total: d.total, peso: peso, comp: composicaoDia_(cels, h, k + 1, peso, d.novas) };
+  });
+  var uteis = itens.filter(function (x) { return x.util; });
+  itens.forEach(function (x, k) {
+    dias[k].composicao = explicarDia_(x, uteis.filter(function (o) { return o !== x; }), x.t, x.n, pesos, feriados);
+  });
+  if (restanteHoje) {
+    var peso = pesoDoDia_(hojeN, pesos, feriados) * restanteHoje.fracao_do_dia;
+    var hora = pad2_(Math.floor(restanteHoje.minuto / 60)) + ':' + pad2_(restanteHoje.minuto % 60);
+    var abre = [String(arred_(restanteHoje.fracao_do_dia * 100, 0)) + '% das vendas de um dia costumam entrar depois das ' + hora + ': é essa parte que a conta ainda espera.'];
+    // Com o dia quase inteiro pela frente, dá para comparar com os outros dias úteis
+    restanteHoje.composicao = explicarDia_({ total: restanteHoje.total, peso: peso, comp: composicaoDia_(cels, h, 0, peso, null) },
+      restanteHoje.fracao_do_dia >= 0.8 ? uteis : [], 0, hojeN, pesos, feriados, abre);
+  }
+}
+
+// O que fica guardado do primeiro cálculo de um dia. vendido = vendas do dia naquele momento, com e sem backoffice.
+function registroPrimeiroHorario_(r, vendido, vendidoSemBackoffice) {
+  var resto = r.hoje_restante;
+  return { dia: +String(r.hoje).slice(8), data: r.hoje, gerado_em: r.gerado_em, versao: r.versao, vendido: vendido, vendido_sem_backoffice: vendidoSemBackoffice,
+    restante: resto.total, fracao_do_dia: resto.fracao_do_dia, composicao: resto.composicao };
+}
+
 /* ---------- tudo junto ---------- */
 
 // hoje = { ano, mes, dia }; feriados = ['AAAA-MM-DD'] (dias marcados como holiday na previsão do mês).
@@ -348,6 +523,7 @@ function previsaoPipeline_(t, hoje, feriadosIso, agora) {
     restanteHoje = { minuto: agora.minuto, fracao_do_dia: arred_(fracao, 4), vendas_na_curva: agora.vendas.length,
       total: arred_(chanceHoje * pesoDoDia_(hojeN, pesos, feriados) * fracao, 2) };
   }
+  montarExplicacoes_(dias, restanteHoje, abertas, h, pesos, feriados, hojeN);
   var soma = function (lista, campo, n) { return arred_(lista.slice(0, n).reduce(function (s, d) { return s + d[campo]; }, 0), 1); };
 
   // Tabela de chances: etapa × faixa de idade (a chance do primeiro dia da faixa), com as leads abertas em cada célula

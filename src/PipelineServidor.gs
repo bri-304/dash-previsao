@@ -10,7 +10,7 @@ var CONFIG_PIPE = {
   PASTA: 'Previsão pelo pipeline',
   HORA_INICIO: 7,          // o gatilho não roda de madrugada
   HORA_FIM: 22,            // nem às 23h, quando a foto diária usa a trava
-  PREFIXO_CACHE: 'pipe_v2_',
+  PREFIXO_CACHE: 'pipe_v3_',
   MINUTOS_VELHO: 120,      // arquivo do dia mais velho que isso é refeito ao abrir a página
   ABA_FERIADOS: 'Feriados e Dias Úteis'   // na planilha da IA (CONFIG.ID_PLANILHA)
 };
@@ -50,6 +50,22 @@ function agoraParaPipeline_(h) {
   }
 }
 
+// Primeiro cálculo de cada dia, um arquivo por mês (historico-AAAA-MM.json): é o valor que a linha mostra nos dias passados.
+// Nunca sobrescreve um dia já salvo. Falhou ou o dia está sem o restante de hoje: tenta de novo no próximo cálculo.
+// Chamada dentro da trava de calcularPipeline_.
+function primeirosHorariosDoMes_(r, h) {
+  var pasta = pastaPipeline_(), nome = 'historico-' + mesRefDe_(h) + '.json', achados = pasta.getFilesByName(nome);
+  var arquivo = achados.hasNext() ? achados.next() : null;
+  var hist = arquivo ? JSON.parse(arquivo.getBlob().getDataAsString('UTF-8')) : { versao: 1, mes: mesRefDe_(h), dias: {} };
+  if (hist.dias[h.dia] || !r.hoje_restante) return hist.dias;
+  var vendas = lerVendas_();
+  hist.dias[h.dia] = registroPrimeiroHorario_(r, vendasPorDia_(vendas, h.ano, h.mes)[h.dia] || 0, vendasPorDia_(vendas, h.ano, h.mes, true)[h.dia] || 0);
+  var texto = JSON.stringify(hist);
+  if (arquivo) arquivo.setContent(texto);
+  else pasta.createFile(nome, texto, 'application/json');
+  return hist.dias;
+}
+
 function calcularPipeline_() {
   var trava = LockService.getScriptLock();
   if (!trava.tryLock(150000)) throw new Error('A previsão pelo pipeline está sendo calculada agora. Tente de novo em alguns minutos.');
@@ -60,6 +76,8 @@ function calcularPipeline_() {
     });
     var r = previsaoPipeline_(t, h, feriadosParaPipeline_(abrirPlanilha_(), h), agoraParaPipeline_(h));
     r.gerado_em = Utilities.formatDate(new Date(), fuso_(), 'dd/MM/yyyy HH:mm');
+    try { r.historico = primeirosHorariosDoMes_(r, h); }
+    catch (e) { console.warn('Histórico do primeiro horário: ' + e); r.historico = {}; }
     var texto = JSON.stringify(r), nome = 'pipeline-' + r.hoje + '.json', pasta = pastaPipeline_();
     var achados = pasta.getFilesByName(nome);
     if (achados.hasNext()) achados.next().setContent(texto);

@@ -193,6 +193,10 @@ Pedido da Brianna: chance de cada lead aberta pagar, pela etapa, pela idade e pe
 
 **Página**: linha ciano "Pelo pipeline" no gráfico (de hoje, com o vendido mais o que falta, ao fim do mês) e a seção "previsão pelo pipeline — em teste" abaixo dele, só no mês atual. Não inclui o backoffice; a projeção do mês soma o realizado do dash.
 
+**Explicação de cada dia** (pop-up ao clicar no dia; no celular, segundo toque): cada dia de `dias` e `hoje_restante` trazem `composicao` (`montarExplicacoes_` em `Pipeline.gs`): vendas por etapa, leads novas, os 3 grupos (etapa × idade) que mais pesam e `resumo`, as frases em linguagem simples. Diz o que a conta fez, não uma causa: a base não tem a data de entrada na etapa, então não há "movimentações". O grupo cuja chance no dia é 2× a dos dias vizinhos e soma 2 vendas ou mais vira `alerta` (`PIPE.PICO_RAZAO`, `PIPE.PICO_VENDAS`). As barras do GPT só mostram previsão e evento.
+
+**Primeiro horário do dia**: o primeiro cálculo de cada dia fica em `Previsão pelo pipeline/historico-AAAA-MM.json` (`primeirosHorariosDoMes_`, nunca sobrescreve) com vendido, restante e explicação, e chega à página em `historico`. É o que a linha mostra nos dias passados, com a justificativa daquele momento. Sem `hoje_restante` ou com falha, tenta no próximo cálculo. Em meses passados a linha não aparece.
+
 **Produção × teste** (pedido da Brianna em 06/11/2026): a conta é a mesma nos dois. Na produção, `getPrevisaoPipeline` tira `segmentos` e as linhas do teste, e a página mostra só a linha do gráfico, os 4 cartões e a tabela de chances por etapa e idade. As tabelas de segmentos (por campanha, o padrão, ou por keyword) e a do teste ficam só no projeto de teste, para ela acompanhar. Valores de vendas aparecem inteiros; as partes somam o total mostrado.
 
 ## Acesso e login
