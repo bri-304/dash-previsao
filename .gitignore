@@ -1,0 +1,10 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+previa-local/
+.claude/settings.local.json
+# credenciais do clasp ficam na sua pasta de usuário, nunca aqui
+.clasprc.json
+.env

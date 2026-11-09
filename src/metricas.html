@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<base target="_top">
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<?!= include('css') ?>
+<style>
+.m-wrap{position:relative;z-index:1;max-width:1400px;margin:0 auto;padding:20px 28px 48px}
+.m-status{font-size:14px;color:var(--dim);margin-bottom:6px;overflow-wrap:anywhere}
+.m-status b{color:var(--text)}
+.m-avisos{margin:14px 0 0;padding:12px 16px;border:1px solid var(--amber);border-radius:var(--r);background:var(--amber-d);font-size:13px;line-height:1.5}
+.m-avisos li{margin-left:16px}
+.m-sec{margin-top:28px;background:var(--card);border:1px solid var(--border);border-radius:var(--rl);padding:18px 20px}
+.m-sec h2{font-family:var(--fh);font-size:22px;font-weight:800;margin-bottom:4px}
+.m-sec h3{font-family:var(--fh);font-size:16px;font-weight:700;margin:18px 0 6px;color:var(--text)}
+.m-regra{font-size:12.5px;line-height:1.5;color:var(--dim);margin-bottom:10px;max-width:980px}
+.m-rola{overflow:auto;max-height:max(320px,calc(100vh - 120px));border:1px solid var(--border);border-radius:var(--r)}
+table.m-t{border-collapse:collapse;width:100%;font-size:12.5px;font-family:var(--fm)}
+.m-t th,.m-t td{padding:5px 8px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap}
+.m-t th{position:sticky;top:0;background:var(--card2);color:var(--dim);font-weight:500;z-index:2;font-family:var(--fb)}
+.m-t th:first-child,.m-t td:first-child{position:sticky;left:0;text-align:left;background:var(--card);z-index:1;font-family:var(--fb);max-width:240px;overflow:hidden;text-overflow:ellipsis}
+.m-t th:first-child{background:var(--card2);z-index:3}
+.m-t td.txt,.m-t th.txt{text-align:left;font-family:var(--fb)}
+.m-t tr.resumo td{font-weight:600;background:var(--card2)}
+.m-t td.ruim{background:var(--red-d)}.m-t td.medio{background:var(--gold-d)}.m-t td.bom{background:var(--green-d)}
+.m-legenda{font-size:12px;color:var(--dim);margin:8px 0 0}
+.m-controles{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px;font-size:13px;color:var(--dim)}
+.m-botao{background:var(--blue);color:#fff;border:0;border-radius:6px;padding:8px 14px;font-family:var(--fb);font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.m-botao:disabled{opacity:.6;cursor:default}
+.m-botao:focus-visible{outline:2px solid var(--blue-l);outline-offset:2px}
+.m-indice{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;font-size:13px}
+.m-indice a{color:var(--blue-l);text-decoration:none}
+.m-indice a:hover{text-decoration:underline}
+@media(max-width:860px){.m-wrap{padding:14px 16px 40px}.m-sec{padding:14px 12px}}
+</style>
+<script>
+window.URL_DASH = <?!= urlJson ?>;
+window.BILHETE_INJETADO = <?!= bilheteJson ?>;
+</script>
+</head>
+<body>
+<div class="aviso" id="aviso" role="status" hidden></div>
+<header class="hdr">
+  <div class="hdr-l">
+    <span class="logo">CONSOLIDE</span>
+    <div>
+      <div class="hdr-title">Métricas da IA</div>
+      <div class="hdr-sub">o que o plugin do forecast entrega para a previsão</div>
+    </div>
+  </div>
+  <div class="hdr-r">
+    <a class="periodo-sel metricas-link" id="voltar" target="_top">← Voltar ao dash</a>
+    <select id="pacote-sel" class="periodo-sel" aria-label="Pacote de métricas" hidden></select>
+    <button type="button" id="atualizar" class="m-botao">Atualizar métricas</button>
+  </div>
+</header>
+
+<div class="estado" id="estado-carregando" role="status">
+  <div class="estado-giro" aria-hidden="true"></div>
+  <div class="estado-titulo">Carregando as métricas…</div>
+</div>
+<div class="estado" id="estado-erro" role="alert" hidden>
+  <div class="estado-titulo" id="erro-titulo">Não foi possível carregar</div>
+  <div class="estado-texto" id="erro-texto"></div>
+  <button type="button" class="estado-botao" id="erro-tentar">Tentar de novo</button>
+</div>
+
+<main class="m-wrap" id="conteudo" hidden></main>
+
+<script>
+let SESSAO = '';
+let DADOS = null;        // { pacote, datas, secoes }
+let mesDetalhe = '';     // mês escolhido para ciclo, motivos e leads
+
+const chamar = (funcao, ...args) => new Promise((ok, erro) => {
+  google.script.run.withSuccessHandler(ok).withFailureHandler(erro)[funcao](...args);
+});
+const el = id => document.getElementById(id);
+const esc = s => String(s === null || s === undefined ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const mensagem = e => String((e && e.message) || e || 'Erro desconhecido.');
+
+const fmt = {
+  int: v => v === null || v === undefined || v === '' ? '—' : Number(v).toLocaleString('pt-BR'),
+  dec: v => v === null || v === undefined ? '—' : Number(v).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 2 }),
+  pct: v => v === null || v === undefined ? '—' : (v * 100).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 2 }) + '%',
+  mes: v => { const [a, m] = String(v).split('-'); return m ? `${m}/${a}` : String(v); },
+  txt: v => v === null || v === undefined ? '' : String(v),
+  sim: v => v === null || v === undefined ? '—' : (v ? 'Sim' : 'Não')
+};
+
+// cols: [{ t: título, k: chave ou função(linha), f: formato, c: classe(valor) }]
+function tabela(cols, linhas, resumos) {
+  const celula = (c, l) => {
+    const v = typeof c.k === 'function' ? c.k(l) : l[c.k];
+    const f = c.f || 'int';
+    const classes = [f === 'txt' ? 'txt' : '', c.c ? c.c(v, l) : ''].filter(Boolean).join(' ');
+    return `<td${classes ? ` class="${classes}"` : ''}>${esc(fmt[f](v))}</td>`;
+  };
+  const corpo = linhas.map(l => `<tr>${cols.map(c => celula(c, l)).join('')}</tr>`).join('');
+  const fim = (resumos || []).map(l => `<tr class="resumo">${cols.map(c => celula(c, l)).join('')}</tr>`).join('');
+  const cab = cols.map(c => `<th scope="col"${(c.f === 'txt') ? ' class="txt"' : ''}>${esc(c.t)}</th>`).join('');
+  return `<div class="m-rola" tabindex="0"><table class="m-t"><thead><tr>${cab}</tr></thead><tbody>${corpo}${fim}</tbody></table></div>`;
+}
+
+function secao(id, conteudo) {
+  const d = DADOS.secoes.find(s => s.secao === id) || { titulo: id, regra: '' };
+  return `<section class="m-sec" id="s-${id}"><h2>${esc(d.titulo)}</h2><p class="m-regra">${esc(d.regra)}</p>${conteudo}</section>`;
+}
+const semDados = id => secao(id, '<p class="m-regra">Não calculado neste pacote. Veja os avisos no topo.</p>');
+const faixaVenda = v => !v ? '' : v < 9 ? 'ruim' : v <= 15 ? 'medio' : 'bom';
+
+/* ---------- seções ---------- */
+
+function htmlMatriz(x) {
+  if (!x) return semDados('vendas_matriz');
+  const dias = []; for (let d = 1; d <= 31; d++) dias.push({ t: String(d), k: l => l.dias[d - 1] || null, c: faixaVenda });
+  const cols = [{ t: 'Mês', k: 'mes', f: 'mes' }].concat(dias, [{ t: 'Total', k: 'total' }, { t: 'Backoffice', k: 'backoffice' }, { t: '% backoffice', k: 'pct_backoffice', f: 'pct' }]);
+  return secao('vendas_matriz', tabela(cols, x.meses.slice().reverse()) + '<p class="m-legenda">Faixas iguais às da tabela original: menos de 9 ruim, de 9 a 15 razoável, mais de 15 bom. O mês atual está em andamento.</p>');
+}
+
+function htmlDiaSemana(x) {
+  if (!x) return semDados('vendas_dia_semana');
+  const cols = [{ t: 'Mês', k: 'mes', f: 'mes' }].concat(x.dias_semana.map((n, k) => ({ t: n, k: l => l.medias[k], f: 'dec', c: faixaVenda })), [{ t: 'Média 2ª a 6ª', k: 'media_2a_6a', f: 'dec' }]);
+  const resumo = [
+    { mes: 'Média 12 meses', medias: x.media_12_meses },
+    { mes: 'Média 6 meses', medias: x.media_6_meses },
+    { mes: '% na semana (12 meses)', medias: x.representacao_na_semana.map(v => v === null ? null : v * 100) }
+  ];
+  return secao('vendas_dia_semana', tabela(cols, x.meses.slice().reverse(), resumo));
+}
+
+function htmlVendedores(x) {
+  if (!x) return semDados('vendedores');
+  const cols = [
+    { t: 'Vendedor', k: 'nome', f: 'txt' }, { t: 'Gerente atual', k: 'gerente_atual', f: 'txt' }, { t: 'Cargo', k: 'cargo', f: 'txt' },
+    { t: fmt.mes(x.mes_retrasado), k: 'vendas_retrasado' }, { t: fmt.mes(x.mes_passado), k: 'vendas_passado' },
+    { t: 'Meta ' + fmt.mes(x.mes_passado), k: 'meta_passado' }, { t: '% meta', k: 'pct_meta_passado', f: 'pct' },
+    { t: fmt.mes(x.mes_atual) + ' até agora', k: 'vendas_atual' }, { t: 'Meta ' + fmt.mes(x.mes_atual), k: 'meta_atual' },
+    { t: 'Fora da catraca', k: 'fora_da_catraca', f: 'sim' }, { t: 'Contratação', k: 'contratacao', f: 'txt' }, { t: 'Desligamento', k: 'desligamento', f: 'txt' }
+  ];
+  const soma = k => x.linhas.reduce((t, l) => t + (Number(l[k]) || 0), 0);
+  const total = { nome: 'Total', vendas_retrasado: soma('vendas_retrasado'), vendas_passado: soma('vendas_passado'), vendas_atual: soma('vendas_atual'), meta_passado: x.tem_metas ? soma('meta_passado') : null, meta_atual: x.tem_metas ? soma('meta_atual') : null };
+  return secao('vendedores', tabela(cols, x.linhas, [total]));
+}
+
+function htmlFunil(x) {
+  if (!x) return semDados('funil');
+  const taxas = [
+    { t: 'Prosp. ÷ MQL', k: 'tx_mql_prospeccao', f: 'pct' }, { t: 'Oport. ÷ Prosp.', k: 'tx_prospeccao_oportunidades', f: 'pct' },
+    { t: 'Doc. ÷ Oport.', k: 'tx_oportunidades_documentacao', f: 'pct' }, { t: 'Pag. ÷ Doc.', k: 'tx_documentacao_pagamento', f: 'pct' },
+    { t: 'Ganho ÷ Pag.', k: 'tx_pagamento_ganho', f: 'pct' }, { t: 'Ganho ÷ MQL', k: 'tx_mql_ganho', f: 'pct' }, { t: 'Ganho ÷ Prosp.', k: 'tx_prospeccao_ganho', f: 'pct' }
+  ];
+  const etapas = [{ t: 'MQL', k: 'mql' }, { t: 'Prospecção', k: 'prospeccao' }, { t: 'Oportunidades', k: 'oportunidades' }, { t: 'Documentação', k: 'documentacao' }, { t: 'Pagamento', k: 'pagamento' }, { t: 'Ganho', k: 'ganho' }, { t: 'Losts', k: 'losts' }];
+  return secao('funil', tabela([{ t: 'Mês', k: 'mes', f: 'mes' }].concat(etapas, taxas), x.meses.slice().reverse()) +
+    `<h3>Por consultor em ${esc(fmt.mes(x.por_consultor_mes_passado.mes))}</h3>` +
+    tabela([{ t: 'Consultor', k: 'consultor', f: 'txt' }].concat(etapas, [taxas[0], taxas[5], taxas[6]]), x.por_consultor_mes_passado.linhas));
+}
+
+function htmlCiclo(x) {
+  if (!x) return semDados('ciclo_e_lost');
+  const resumoCols = [{ t: 'Mês', k: 'mes', f: 'mes' }, { t: 'Média de dias até 100% pago', k: 'media_dias_ate_100_pago', f: 'dec' }, { t: 'Média de dias até lost', k: 'media_dias_ate_lost', f: 'dec' }, { t: 'Losts', k: 'losts' }];
+  const m = x.meses.find(l => l.mes === mesDetalhe) || x.meses[x.meses.length - 1];
+  let detalhe = '';
+  if (m) {
+    detalhe = `<h3>Ciclo de venda em ${esc(fmt.mes(m.mes))}</h3>` + tabela([{ t: 'Dias', k: 'dias', f: 'txt' }, { t: 'Vendas', k: 'qtd' }, { t: '%', k: 'pct', f: 'pct' }], m.ciclo_de_venda) +
+      `<h3>Motivos de lost em ${esc(fmt.mes(m.mes))}</h3>` + tabela([{ t: 'Motivo', k: 'motivo', f: 'txt' }, { t: 'Registros', k: 'qtd' }, { t: '%', k: 'pct', f: 'pct' }], m.motivos_de_lost) +
+      `<h3>Motivos por etapa em ${esc(fmt.mes(m.mes))}</h3>` + tabela([{ t: 'Etapa', k: 'etapa', f: 'txt' }, { t: 'Motivo', k: 'motivo', f: 'txt' }, { t: 'Registros', k: 'qtd' }, { t: '%', k: 'pct', f: 'pct' }], m.motivos_por_etapa);
+  }
+  return secao('ciclo_e_lost', tabela(resumoCols, x.meses.slice().reverse()) + detalhe);
+}
+
+function htmlPipeline(x) {
+  if (!x) return semDados('pipeline');
+  return secao('pipeline', `<p class="m-regra"><b>Total: ${esc(fmt.int(x.total))} leads</b></p>` +
+    tabela([{ t: 'Etapa', k: 'etapa', f: 'txt' }, { t: 'Leads', k: 'qtd' }, { t: '%', k: 'pct', f: 'pct' }], x.por_etapa) +
+    '<h3>Por gerente</h3>' + tabela([{ t: 'Gerente', k: 'gerente', f: 'txt' }, { t: 'Leads', k: 'qtd' }, { t: '%', k: 'pct', f: 'pct' }], x.por_gerente) +
+    '<h3>Por consultor</h3>' + tabela([{ t: 'Consultor', k: 'consultor', f: 'txt' }, { t: 'Leads', k: 'qtd' }, { t: '%', k: 'pct', f: 'pct' }], x.por_consultor));
+}
+
+function htmlJuridico(x) {
+  if (!x) return semDados('juridico');
+  const cols = [
+    { t: 'Mês', k: 'mes', f: 'mes' }, { t: 'Passaram pend. jurídico', k: 'passaram_pendente_juridico' }, { t: 'Iniciar registro', k: 'iniciar_registro' },
+    { t: 'Docs. incompletos', k: 'documentos_incompletos' }, { t: 'Protocolados', k: 'protocolados' }, { t: 'Docs. ÷ processos', k: 'tx_docs_por_processo', f: 'dec' },
+    { t: '% com docs. incompletos', k: 'pct_processos_com_docs_incompletos', f: 'pct' }, { t: 'Horas úteis pend. → iniciar', k: 'horas_uteis_pendente_ate_iniciar', f: 'dec' },
+    { t: 'Horas úteis iniciar → protocolo', k: 'horas_uteis_iniciar_ate_protocolo', f: 'dec' }
+  ];
+  return secao('juridico', `<p class="m-regra"><b>Processos sem protocolo hoje: ${esc(fmt.int(x.processos_sem_protocolo_hoje))}</b></p>` + tabela(cols, x.meses.slice().reverse()) +
+    `<h3>Por vendedor em ${esc(fmt.mes(x.por_vendedor_mes_passado.mes))}</h3>` +
+    tabela([{ t: 'Vendedor', k: 'nome', f: 'txt' }, { t: 'Gerente', k: 'gerente', f: 'txt' }, { t: 'Processos', k: 'processos' }, { t: 'Docs. incompletos', k: 'documentos_incompletos' }, { t: 'Docs. ÷ processos', k: 'tx_docs_por_processo', f: 'dec' }, { t: '% com docs.', k: 'pct_com_docs_incompletos', f: 'pct' }, { t: 'Horas úteis até iniciar', k: 'horas_uteis_ate_iniciar', f: 'dec' }], x.por_vendedor_mes_passado.linhas) +
+    '<h3>Registros iniciados por dia no mês passado</h3>' +
+    tabela([{ t: 'Dia', k: 'dia', f: 'txt' }, { t: 'Iniciados', k: 'iniciados' }], x.iniciados_por_dia_mes_passado));
+}
+
+function htmlLeads(x) {
+  if (!x) return semDados('leads_distribuicao');
+  const canais = (rotulo, campo) => x.canais.map((n, k) => ({ t: n, k: l => (l[campo] || [])[k] }));
+  const m = x.meses.find(l => l.mes === mesDetalhe) || x.meses[x.meses.length - 1];
+  const dias = m ? Object.keys(m.dias).sort().map(d => ({ dia: d, v: m.dias[d], total: m.dias[d].reduce((a, b) => a + b, 0) })) : [];
+  return secao('leads_distribuicao',
+    tabela([{ t: 'Mês', k: 'mes', f: 'mes' }, { t: 'Total', k: 'total_leads' }, { t: 'Marketing', k: 'leads_marketing' }].concat(canais('', 'leads_por_canal')), x.meses.slice().reverse()) +
+    '<h3>Vendas por canal</h3>' + tabela([{ t: 'Mês', k: 'mes', f: 'mes' }].concat(canais('', 'vendas_por_canal')), x.meses.slice().reverse()) +
+    '<h3>Losts por canal</h3>' + tabela([{ t: 'Mês', k: 'mes', f: 'mes' }].concat(canais('', 'losts_por_canal')), x.meses.slice().reverse()) +
+    (m ? `<h3>Leads por semana em ${esc(fmt.mes(m.mes))}</h3>` + tabela([{ t: 'Dias', k: l => `${l.de} a ${l.ate}`, f: 'txt' }, { t: 'Total', k: 'total' }, { t: 'Marketing', k: 'marketing' }].concat(canais('', 'leads_por_canal')), m.semanas) +
+      `<h3>Leads por dia em ${esc(fmt.mes(m.mes))}</h3>` + tabela([{ t: 'Dia', k: 'dia', f: 'txt' }, { t: 'Total', k: 'total' }].concat(x.canais.map((n, k) => ({ t: n, k: l => l.v[k] }))), dias) : ''));
+}
+
+function htmlIndicadores(id, x) {
+  if (!x) return semDados(id);
+  const cols = (rotulos, y) => rotulos.concat(y.metricas.map((mt, k) => ({ t: mt.nome, k: l => l.atual[k], f: mt.codigo === 'tc' || mt.codigo === 'pf' ? 'pct' : 'int' })));
+  const compCols = (rotulos, y) => rotulos.concat(y.metricas.map((mt, k) => ({ t: mt.nome, k: l => l.comparativo[k], f: mt.codigo === 'tc' || mt.codigo === 'pf' ? 'pct' : 'int' })));
+  const per = p => p ? `${p.de} a ${p.ate}` : '';
+  return secao(id,
+    `<p class="m-regra">Período: ${esc(per(x.por_time.periodo))} · Comparativo: ${esc(per(x.por_time.comparativo))}</p>` +
+    '<h3>Por time, período</h3>' + tabela(cols([{ t: 'Time', k: 'time', f: 'txt' }], x.por_time), x.por_time.linhas) +
+    '<h3>Por time, comparativo</h3>' + tabela(compCols([{ t: 'Time', k: 'time', f: 'txt' }], x.por_time), x.por_time.linhas) +
+    '<h3>Por consultor, período</h3>' + tabela(cols([{ t: 'Consultor', k: 'consultor', f: 'txt' }, { t: 'Gerente atual', k: 'gerente_atual', f: 'txt' }], x.por_consultor), x.por_consultor.linhas));
+}
+
+/* ---------- tela ---------- */
+
+function desenhar() {
+  const p = DADOS.pacote;
+  const sel = el('pacote-sel');
+  sel.innerHTML = DADOS.datas.map(d => `<option value="${esc(d)}">${esc(d.split('-').reverse().join('/'))}</option>`).join('');
+  sel.hidden = !DADOS.datas.length;
+  if (p) sel.value = p.hoje;
+  const main = el('conteudo');
+  if (!p) {
+    main.innerHTML = '<div class="m-sec"><h2>Nenhum pacote ainda</h2><p class="m-regra">Clique em "Atualizar métricas". Leva alguns minutos.</p></div>';
+    return;
+  }
+  const s = p.secoes || {};
+  const mesesDisponiveis = ((s.ciclo_e_lost && s.ciclo_e_lost.meses) || (s.leads_distribuicao && s.leads_distribuicao.meses) || []).map(m => m.mes).sort().reverse();
+  if (!mesDetalhe) mesDetalhe = p.mes_passado;
+  const avisos = (p.avisos || []).concat(p.pendentes && p.pendentes.length ? ['Pacote incompleto, faltam: ' + p.pendentes.join(', ') + '.'] : []);
+  main.innerHTML =
+    `<p class="m-status">Pacote de <b>${esc(p.gerado_em)}</b> · mês da previsão <b>${esc(fmt.mes(p.mes_ref))}</b> · mês passado <b>${esc(fmt.mes(p.mes_passado))}</b> · mesmo mês do ano passado <b>${esc(fmt.mes(p.mesmo_mes_ano_passado))}</b></p>` +
+    (avisos.length ? `<ul class="m-avisos">${avisos.map(a => `<li>${esc(a)}</li>`).join('')}</ul>` : '') +
+    `<div class="m-controles" style="margin-top:14px"><label for="mes-detalhe">Mês do detalhe (ciclo, motivos, semanas e dias):</label>
+      <select id="mes-detalhe" class="periodo-sel">${mesesDisponiveis.map(m => `<option value="${esc(m)}"${m === mesDetalhe ? ' selected' : ''}>${esc(fmt.mes(m))}</option>`).join('')}</select></div>` +
+    `<nav class="m-indice" aria-label="Seções">${DADOS.secoes.map(d => `<a href="#s-${esc(d.secao)}" target="_self">${esc(d.titulo)}</a>`).join('')}</nav>` +
+    htmlMatriz(s.vendas_matriz) + htmlDiaSemana(s.vendas_dia_semana) + htmlVendedores(s.vendedores) +
+    htmlFunil(s.funil) + htmlCiclo(s.ciclo_e_lost) + htmlPipeline(s.pipeline) + htmlJuridico(s.juridico) + htmlLeads(s.leads_distribuicao) +
+    htmlIndicadores('indicadores_mes_passado', s.indicadores_mes_passado) + htmlIndicadores('indicadores_ultimos_7_dias', s.indicadores_ultimos_7_dias);
+  const m = el('mes-detalhe');
+  if (m) m.addEventListener('change', e => { mesDetalhe = e.target.value; const y = window.scrollY; desenhar(); window.scrollTo(0, y); });
+  main.querySelectorAll('.m-indice a').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    const alvo = document.querySelector(a.getAttribute('href'));
+    if (alvo) alvo.scrollIntoView();
+  }));
+}
+
+function mostrarAviso(texto, ehErro) {
+  const a = el('aviso');
+  a.textContent = texto;
+  a.classList.toggle('erro', !!ehErro);
+  a.hidden = false;
+  clearTimeout(mostrarAviso.t);
+  mostrarAviso.t = setTimeout(() => { a.hidden = true; }, ehErro ? 9000 : 5000);
+}
+
+async function carregar(data) {
+  el('estado-erro').hidden = true;
+  el('estado-carregando').hidden = false;
+  el('conteudo').hidden = true;
+  try {
+    DADOS = JSON.parse(await chamar('getMetricas', SESSAO, data || ''));
+    el('estado-carregando').hidden = true;
+    el('conteudo').hidden = false;
+    desenhar();
+  } catch (e) {
+    el('estado-carregando').hidden = true;
+    el('estado-erro').hidden = false;
+    const msg = mensagem(e), acesso = /^(LOGIN|SEMACESSO)/.test(msg);
+    el('erro-titulo').textContent = acesso ? 'Entre para continuar' : 'Não foi possível carregar';
+    el('erro-texto').textContent = acesso ? 'Entre pelo dash com a conta da dona e abra as métricas de novo.' : msg;
+    el('erro-tentar').hidden = acesso;
+    el('erro-tentar').onclick = () => carregar(data);
+  }
+}
+
+async function atualizar() {
+  const btn = el('atualizar');
+  btn.disabled = true;
+  btn.textContent = 'Atualizando…';
+  try {
+    let r = await chamar('gerarMetricas', SESSAO, false);
+    while (r.pendentes && r.pendentes.length) {
+      btn.textContent = `Falta: ${r.pendentes.join(', ')}`;
+      r = await chamar('gerarMetricas', SESSAO, true);
+    }
+    await carregar(r.hoje);
+    mostrarAviso(r.avisos && r.avisos.length ? 'Pacote pronto, com avisos no topo.' : 'Pacote pronto.');
+  } catch (e) {
+    mostrarAviso(mensagem(e), true);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Atualizar métricas';
+  }
+}
+
+function iniciar() {
+  try { SESSAO = localStorage.getItem('forecastToken') || ''; } catch (e) {}
+  el('voltar').href = `${window.URL_DASH}?tk=${encodeURIComponent(window.BILHETE_INJETADO || '')}`;
+  el('atualizar').addEventListener('click', atualizar);
+  el('pacote-sel').addEventListener('change', e => carregar(e.target.value));
+  carregar('');
+}
+iniciar();
+</script>
+</body>
+</html>
