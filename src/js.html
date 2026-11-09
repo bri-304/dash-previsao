@@ -688,6 +688,7 @@ let GRAFICO = { dias: [], pipeDia: {}, mes: '' };
 let ultimoToque = -1;
 
 function horaDe(geradoEm) { return String(geradoEm || '').slice(-5); }
+function textoBase(g) { return `${g.base_pagaram} de ${g.base_leads}${g.base_dias > 1 ? ` em ${g.base_dias} dias` : ''}`; }
 function ehToque() { return window.matchMedia('(hover: none)').matches; }
 function temExplicacao(i) {
   const d = GRAFICO.dias[i], p = d && GRAFICO.pipeDia[d[0]];
@@ -733,14 +734,14 @@ function abrirExplicacaoDia(i) {
     </tbody></table></div>
     ${celulas.length ? `<details class="dia-det"${c.alerta ? ' open' : ''}><summary>Grupos que mais pesam neste dia</summary>
       <div class="pipe-scroll"><table class="pipe-tbl"><thead><tr><th>Etapa e idade</th><th class="num">Leads</th><th class="num">Chance no dia</th><th class="num">Dias vizinhos</th><th class="num">Histórico</th><th class="num">Vendas</th></tr></thead><tbody>
-      ${celulas.map(g => `<tr${g.pico ? ' class="dia-pico"' : ''}><td>${escHtml(g.etapa)} · ${escHtml(g.idade)}</td><td class="num">${g.leads}</td><td class="num">${pct(g.chance)}</td><td class="num">${pct(g.chance_vizinhos)}</td><td class="num">${g.base_pagaram} de ${g.base_leads}</td><td class="num">${numBr(g.vendas, 1)}</td></tr>`).join('')}
+      ${celulas.map(g => `<tr${g.pico ? ' class="dia-pico"' : ''}><td>${escHtml(g.etapa)} · ${escHtml(g.idade)}</td><td class="num">${g.leads}</td><td class="num">${pct(g.chance)}</td><td class="num">${pct(g.chance_vizinhos)}</td><td class="num">${textoBase(g)}</td><td class="num">${numBr(g.vendas, 1)}</td></tr>`).join('')}
       </tbody></table></div>
       <dl class="dia-legenda">
         <dt>Etapa e idade</dt><dd>Em que etapa do funil a lead está e há quantos dias foi criada.</dd>
         <dt>Leads</dt><dd>Quantas leads abertas estão nesse grupo.</dd>
         <dt>Chance no dia</dt><dd>De cada 100 leads desse grupo, quantas devem pagar exatamente neste dia.</dd>
         <dt>Dias vizinhos</dt><dd>A mesma chance nos 2 dias antes e nos 2 dias depois. Se for bem menor, o dia está fora do padrão.</dd>
-        <dt>Histórico</dt><dd>De onde saiu a chance. "${celulas[0].base_pagaram} de ${celulas[0].base_leads}": de ${celulas[0].base_leads} leads parecidas no passado, ${celulas[0].base_pagaram} pagaram nesse mesmo prazo. Quanto menos leads, menos confiável.</dd>
+        <dt>Histórico</dt><dd>De onde saiu a chance. "${textoBase(celulas[0])}": de ${celulas[0].base_leads} leads parecidas no passado, ${celulas[0].base_pagaram} pagaram ${celulas[0].base_dias > 1 ? `em algum dos ${celulas[0].base_dias} dias perto desse prazo, e a chance é dividida entre esses dias` : 'nesse mesmo prazo'}. Quanto menos leads, menos confiável.</dd>
         <dt>Vendas</dt><dd>Quantas vendas esse grupo deve trazer neste dia, já ajustadas pelo dia da semana, pela época do mês e pela origem das leads.</dd>
       </dl></details>` : ''}
     <div class="dia-gpt">${escHtml(linhaGpt)}</div>`);

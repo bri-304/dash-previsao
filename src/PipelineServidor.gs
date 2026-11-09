@@ -10,7 +10,7 @@ var CONFIG_PIPE = {
   PASTA: 'Previsão pelo pipeline',
   HORA_INICIO: 7,          // o gatilho não roda de madrugada
   HORA_FIM: 22,            // nem às 23h, quando a foto diária usa a trava
-  PREFIXO_CACHE: 'pipe_v3_',
+  PREFIXO_CACHE: 'pipe_v4_',
   MINUTOS_VELHO: 120,      // arquivo do dia mais velho que isso é refeito ao abrir a página
   ABA_FERIADOS: 'Feriados e Dias Úteis'   // na planilha da IA (CONFIG.ID_PLANILHA)
 };

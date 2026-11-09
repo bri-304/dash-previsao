@@ -11,7 +11,7 @@
    ------------------------------------------------------------------ */
 
 var PIPE = {
-  VERSAO: 3,                              // mudou o formato do resultado: suba (o arquivo do dia em outra versão é refeito)
+  VERSAO: 4,                            // mudou o formato do resultado: suba (o arquivo do dia em outra versão é refeito)
   JANELA_DIAS: 180,                       // leads criadas nesse período ensinam a conta
   // Idade exata até 29 dias; depois, faixas em que a chance muda pouco
   IDADES: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 45, 60, 90, 120, 180],
@@ -26,7 +26,9 @@ var PIPE = {
   DIAS_INICIO: 3,                         // primeiros dias úteis do mês
   DIAS_FIM: 5,                            // últimos dias úteis do mês (reta final)
   DIAS_HORA: 90,                          // janela para a curva de vendas ao longo do dia
-  CELULAS_POPUP: 3,                       // grupos (etapa × idade) mostrados na explicação de cada dia
+  DIA_FIRME: 10,                          // pagamentos em um mesmo prazo para confiar nele sozinho; menos que isso divide com os dias próximos
+  JANELA_SUAVE: 7,                        // até quantos dias para cada lado essa divisão vai
+  CELULAS_POPUP: 3,                     // grupos (etapa × idade) mostrados na explicação de cada dia
   FAIXA_NORMAL: 0.15,                     // até 15% de diferença da média dos outros dias úteis: "perto da média"
   PICO_RAZAO: 2,                          // chance do dia N vezes maior que a dos dias vizinhos...
   PICO_VENDAS: 2,                         // ...e que soma pelo menos estas vendas a mais: vira ponto de atenção
@@ -129,15 +131,47 @@ function chancesPorEtapa_(leads, ontem) {
         risco += obs[s][f][j];
         linha[j] = { risco: risco, ev: ev[s][f][j] };
       }
+      suavizarLinha_(linha);
       fonte[s].push(linha.map(function (c, j) {
         if (c.risco >= PIPE.MIN_RISCO || (s === 1 && f === 0)) return c;
         return f > 0 ? fonte[s][f - 1][j] : fonte[s - 1][f][j];
       }));
-      h[s].push(fonte[s][f].map(function (c) { return c.risco ? c.ev / c.risco : 0; }));
+      h[s].push(fonte[s][f].map(function (c) { return c.taxa; }));
     }
   }
   h.fonte = fonte;
   return h;
+}
+
+// Poucos pagamentos em um prazo exato são acaso: 3 em 53 leads não querem dizer que aquele dia vende mais que os vizinhos.
+// Prazo com pelo menos DIA_FIRME pagamentos fica como está. Os outros somam com os prazos próximos (também sem base firme),
+// até juntar DIA_FIRME pagamentos ou chegar a JANELA_SUAVE dias para cada lado. O total da linha não muda: só a distribuição.
+// Cada c ganha taxa (chance usada), pagaram e dias (o que entrou na conta, mostrado na explicação do dia).
+function suavizarLinha_(linha) {
+  var firme = function (c) { return c.ev >= PIPE.DIA_FIRME; };
+  var antes = 0, depois = 0;
+  linha.forEach(function (c, j) {
+    c.taxa = c.risco ? c.ev / c.risco : 0;
+    c.pagaram = c.ev;
+    c.dias = 1;
+    if (firme(c)) return;
+    antes += c.taxa;
+    var ev = c.ev, risco = c.risco, dias = 1;
+    for (var k = 1; k <= PIPE.JANELA_SUAVE && ev < PIPE.DIA_FIRME; k++) {
+      [linha[j - k], linha[j + k]].forEach(function (v) {
+        if (!v || firme(v)) return;
+        ev += v.ev;
+        risco += v.risco;
+        dias++;
+      });
+    }
+    c.taxa = risco ? ev / risco : 0;
+    c.pagaram = ev;
+    c.dias = dias;
+    depois += c.taxa;
+  });
+  if (!depois) return;
+  linha.forEach(function (c) { if (!firme(c)) c.taxa *= antes / depois; });
 }
 
 function zeros_(n) { var a = []; for (var i = 0; i < n; i++) a.push(0); return a; }
@@ -380,7 +414,7 @@ function composicaoDia_(cels, h, t, fator, novas) {
     .map(function (x) {
       var c = x.c, linha = h[c.etapa][c.f], chance = linha[t], viz = mediaVizinhos_(linha, t), base = h.fonte[c.etapa][c.f][t];
       return { etapa: PIPE.ETAPAS[c.etapa], idade: rotuloIdade_(c.f), leads: c.leads, chance: arred_(chance, 4), chance_vizinhos: arred_(viz, 4),
-        multiplicador: arred_(c.somaMult / c.leads, 2), base_leads: base.risco, base_pagaram: base.ev, vendas: arred_(x.vendas, 2),
+        multiplicador: arred_(c.somaMult / c.leads, 2), base_leads: base.risco, base_pagaram: base.pagaram === undefined ? base.ev : base.pagaram, base_dias: base.dias || 1, vendas: arred_(x.vendas, 2),
         pico: chance >= PIPE.PICO_RAZAO * viz && (chance - viz) * c.somaMult * fator >= PIPE.PICO_VENDAS };
     });
   return { etapas: [1, 2, 3, 4].map(function (s) { return porEtapa[s]; }), novas: novas, celulas: celulas };
@@ -444,7 +478,8 @@ function explicarDia_(item, outros, t, n, pesos, feriados, inicioFrases) {
   if (maior && maior.vendas >= 1) {
     var prazo = t === 0 ? 'no mesmo dia' : (t === 1 ? 'no dia seguinte' : 'em ' + t + ' dias');
     frases.push('Maior grupo: ' + maior.leads + ' leads em ' + maior.etapa + ', com ' + maior.idade + ' de criadas, somando cerca de ' + qtdVendas_(Math.max(1, Math.round(maior.vendas))) +
-      '. No histórico, ' + String(arred_(maior.chance * 100, 1)).replace('.', ',') + '% das leads nessa situação pagaram ' + prazo + '.');
+      '. No histórico, ' + (maior.base_dias > 1 ? 'cerca de ' : '') + String(arred_(maior.chance * 100, 1)).replace('.', ',') + '% das leads nessa situação pagaram ' +
+      (maior.base_dias > 1 ? 'a cada dia, perto desse prazo' : prazo) + '.');
   }
   var cal = fraseCalendario_(n, pesos, feriados);
   if (cal) frases.push(cal);
@@ -452,7 +487,7 @@ function explicarDia_(item, outros, t, n, pesos, feriados, inicioFrases) {
   var pico = comp.celulas.filter(function (c) { return c.pico; })[0];
   var alerta = pico ? 'Ponto de atenção: neste dia, a chance das leads em ' + pico.etapa + ' com ' + pico.idade + ' é ' +
     (pico.chance_vizinhos ? 'cerca de ' + Math.round(pico.chance / pico.chance_vizinhos) + ' vezes a dos dias vizinhos' : 'bem maior que a dos dias vizinhos') +
-    ' (' + pico.base_pagaram + ' de ' + pico.base_leads + ' leads do histórico). Pode ser acaso do histórico, e não uma alta real.' : '';
+    ' (' + pico.base_pagaram + ' de ' + pico.base_leads + ' leads do histórico' + (pico.base_dias > 1 ? ', em ' + pico.base_dias + ' dias' : '') + '). Pode ser acaso do histórico, e não uma alta real.' : '';
 
   var valores = comp.etapas.map(function (e) { return e.vendas; });
   if (comp.novas !== null) valores.push(comp.novas);

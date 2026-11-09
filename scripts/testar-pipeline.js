@@ -71,6 +71,25 @@ perto(h[1][1][1], 50 / 101, 'idade 1: paga no dia seguinte');
 perto(h[4][0][2], 50 / 51, 'quem chegou ao fim do funil: quase todas pagaram');
 perto(h[1][7][0] + h[1][30][0], 0, 'depois de 7 dias ninguém mais paga');
 
+// --- poucos pagamentos em um prazo não viram pico; prazo com base firme fica como está
+const linhaT = (evs) => evs.map((ev) => ({ risco: 53, ev }));
+const zerosT = (n) => Array.from({ length: n }, () => 0);
+const lPico = linhaT([...zerosT(2), 3, ...zerosT(28)]);
+ctx.suavizarLinha_(lPico);
+perto(lPico.reduce((s, c) => s + c.taxa, 0), 3 / 53, 'o total da linha não muda');
+assert.ok(lPico[2].taxa < 0.01, `3 de 53 não vira 5,7% em um dia só: ${lPico[2].taxa}`);
+assert.ok(lPico[3].taxa > 0 && Math.abs(lPico[2].taxa - lPico[3].taxa) < 0.001, 'dias próximos ficam com chance parecida');
+assert.strictEqual(lPico[2].pagaram, 3);
+assert.strictEqual(lPico[2].dias, 10, 'dias 0 a 9 entram na divisão do prazo 2');
+assert.strictEqual(lPico[20].taxa, 0, 'longe do pagamento continua zero');
+const lFirme = linhaT([0, 0, 20, 2, ...zerosT(27)]);
+ctx.suavizarLinha_(lFirme);
+perto(lFirme[2].taxa, 20 / 53, 'prazo com base firme fica como está');
+perto(lFirme[0].taxa + lFirme[3].taxa + lFirme.slice(4).reduce((s, c) => s + c.taxa, 0) + lFirme[1].taxa, 2 / 53, 'o resto não pega nada do prazo firme');
+const lMedia = linhaT([4, 4, 4, 4, ...zerosT(27)]);
+ctx.suavizarLinha_(lMedia);
+assert.strictEqual(lMedia[1].dias, 3, 'para de juntar ao chegar em 10 pagamentos');
+
 // --- segmentos: "registro de marca" (30 das 50 vendas em 30 leads) vende acima do esperado
 const mult = ctx.multiplicadores_(ctx.leadsDoPipeline_(t), h, ontem);
 const kwBoa = 'Google › Marca › registro de marca', kwRuim = 'Google › Marca › como registrar';
